@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://vfebhebrb-sudo.github.io/robo1/sitemap.xml
