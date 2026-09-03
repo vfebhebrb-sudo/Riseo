@@ -10999,3 +10999,192 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const character =
+        document.querySelector(".ai-character");
+
+
+    if(!character) return;
+
+
+    /* هر 10 ثانیه */
+
+    setInterval(()=>{
+
+
+        /* حرکت توجه */
+
+        character.classList.remove(
+            "ai-attention"
+        );
+
+
+        /* مجبور می‌کنیم انیمیشن دوباره اجرا شود */
+
+        void character.offsetWidth;
+
+
+        character.classList.add(
+            "ai-attention"
+        );
+
+
+        /* بعد از تمام شدن حرکت،
+           دوباره حالت شناور عادی */
+
+        setTimeout(()=>{
+
+            character.classList.remove(
+                "ai-attention"
+            );
+
+        },1600);
+
+
+    },10000);
+
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const aiImage =
+        document.querySelector(".ai-character img");
+
+
+    if(!aiImage) return;
+
+
+    let lastScrollY =
+        window.scrollY;
+
+    let scrollTimeout;
+
+
+    window.addEventListener(
+        "scroll",
+        ()=>{
+
+
+            const currentScrollY =
+                window.scrollY;
+
+
+            /* =========================
+               تشخیص جهت اسکرول
+            ========================= */
+
+            if(currentScrollY > lastScrollY){
+
+                aiImage.classList.remove(
+                    "ai-scroll-up"
+                );
+
+                void aiImage.offsetWidth;
+
+                aiImage.classList.add(
+                    "ai-scroll-down"
+                );
+
+            }
+
+            else if(currentScrollY < lastScrollY){
+
+                aiImage.classList.remove(
+                    "ai-scroll-down"
+                );
+
+                void aiImage.offsetWidth;
+
+                aiImage.classList.add(
+                    "ai-scroll-up"
+                );
+
+            }
+
+
+            lastScrollY =
+                currentScrollY;
+
+
+            /* =========================
+               پاک کردن کلاس
+            ========================= */
+
+            clearTimeout(scrollTimeout);
+
+
+            scrollTimeout =
+                setTimeout(()=>{
+
+                    aiImage.classList.remove(
+                        "ai-scroll-down",
+                        "ai-scroll-up"
+                    );
+
+                },700);
+
+
+        },
+        {
+            passive:true
+        }
+
+    );
+
+});
+
