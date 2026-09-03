@@ -13,9 +13,9 @@ const API_URL =
 
     :
 
-    "https://konkur-backend.onrender.com/api";
+   "https://iran-go4q.onrender.com/api";
 
-
+// const API_URL = "https://iran-go4q.onrender.com/api";
 // بعد از آنلاین شدن بک‌اند Render فقط همین خط تغییر می‌کند
 // مثال:
 // const API_URL = "https://your-backend.onrender.com";
