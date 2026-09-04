@@ -2632,7 +2632,53 @@ else{
 
 
 
+document.addEventListener("DOMContentLoaded",()=>{
 
+
+const backBtn = document.getElementById("backBtn");
+
+
+
+if(backBtn){
+
+
+    backBtn.addEventListener("click",()=>{
+
+
+        if(history.length > 1){
+
+
+            history.back();
+
+
+        }
+
+        else{
+
+
+            window.location.href="../index1.html";
+
+
+        }
+
+
+    });
+
+
+}
+
+
+
+if(window.lucide){
+
+
+    lucide.createIcons();
+
+
+}
+
+
+});
 
 
 

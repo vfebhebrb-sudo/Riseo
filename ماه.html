@@ -1,0 +1,3561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+    <style>
+
+
+
+/* =========================
+      HEADER
+========================= */
+
+
+body {
+    /* margin: 0; */
+    background:#111315;
+    color: #FFFFFF;
+    direction: rtl;
+    font-family: "Vazirmatn", sans-serif;
+}
+
+
+
+
+
+
+/* ==========================================
+        THEME SYSTEM
+========================================== */
+
+
+:root{
+
+
+    --background:#111315;
+
+    --surface:#191c21;
+
+    --surface-hover:#22262d;
+
+    --text:#f9fafb;
+
+    --text-secondary:#9ca3af;
+
+    --border:#292e36;
+
+
+    --accent:#3b82f6;
+
+    --accent-soft:#172554;
+
+
+    --shadow:
+    0 8px 25px rgba(0,0,0,.35);
+
+
+}
+
+
+
+.light-theme{
+
+
+    --background:#f5f6f8;
+
+    --surface:#ffffff;
+
+    --surface-hover:#f3f4f6;
+
+    --text:#111827;
+
+    --text-secondary:#6b7280;
+
+    --border:#e5e7eb;
+
+
+    --accent:#2563eb;
+
+    --accent-soft:#eff6ff;
+
+
+    --shadow:
+    0 8px 25px rgba(0,0,0,.06);
+
+
+}
+
+
+
+        /* =====================================
+        HEADER
+===================================== */
+
+
+.header{
+
+    height:64px;
+
+    width:100%;
+
+
+    background:
+    rgba(25,28,33,.75);
+
+
+    backdrop-filter:
+    blur(15px);
+
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    box-shadow:
+
+    var(--shadow);
+
+
+
+    border-radius:14px;
+
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+    position:relative;
+
+    direction:rtl;
+
+
+}
+
+
+
+/* =====================================
+        RIGHT SIDE
+===================================== */
+
+
+.header-right{
+
+
+    position:absolute;
+
+
+    right:20px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+}
+
+
+
+.back-btn{
+
+
+    width:38px;
+
+    height:38px;
+
+
+    border-radius:12px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+    background:
+
+    var(--surface);
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.back-btn svg{
+
+    width:18px;
+
+}
+
+
+
+.back-btn:hover{
+
+
+    background:
+
+    var(--accent);
+
+
+    color:white;
+
+
+}
+
+
+
+
+.page-title{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:8px;
+
+
+
+    color:
+
+    var(--text);
+
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.page-title svg{
+
+
+    width:18px;
+
+    color:
+
+    var(--accent);
+
+
+}
+
+
+
+
+
+/* =====================================
+        LOGO
+===================================== */
+
+
+.logo{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:8px;
+
+
+    color:
+
+    var(--accent);
+
+
+
+    font-size:22px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+.logo svg{
+
+
+    width:25px;
+
+
+    height:25px;
+
+
+}
+
+
+
+
+/* =====================================
+        LEFT BUTTONS
+===================================== */
+
+
+.header-left{
+
+
+    position:absolute;
+
+
+    left:20px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+}
+
+
+
+.icon-btn,
+.profile-btn{
+
+
+    width:38px;
+
+
+    height:38px;
+
+
+    border-radius:12px;
+
+
+
+    background:
+
+    var(--surface);
+
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    cursor:pointer;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.icon-btn svg,
+.profile-btn svg{
+
+
+    width:18px;
+
+
+    height:18px;
+
+
+}
+
+
+
+.icon-btn:hover,
+.profile-btn:hover{
+
+
+    background:
+
+    var(--surface-hover);
+
+
+    color:
+
+    var(--text);
+
+
+    transform:
+
+    translateY(-2px);
+
+
+}
+
+
+
+/* =====================================
+        MOBILE
+===================================== */
+
+
+@media(max-width:700px){
+
+
+.header{
+
+    height:58px;
+
+}
+
+
+
+.page-title span{
+
+    display:none;
+
+}
+
+
+
+.logo{
+
+    font-size:18px;
+
+}
+
+
+.header-right{
+
+    right:10px;
+
+}
+
+
+.header-left{
+
+    left:10px;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+        LIVE DATE CARD
+===================================== */
+
+
+.live-date-card{
+
+
+    margin-top:12px;
+
+
+    width:100%;
+
+
+    min-height:90px;
+
+
+
+    background:
+
+    rgba(25,28,33,.75);
+
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+
+    border:
+
+    1px solid var(--border);
+
+
+
+    border-radius:16px;
+
+
+
+    box-shadow:
+
+    var(--shadow);
+
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+
+    align-items:center;
+
+
+
+    direction:rtl;
+
+
+}
+
+
+
+
+
+.date-item{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:12px;
+
+
+
+    border-left:
+
+    1px solid var(--border);
+
+
+}
+
+
+
+.date-item:last-child{
+
+
+    border-left:none;
+
+
+}
+
+
+
+.date-item svg{
+
+
+    width:28px;
+
+
+    height:28px;
+
+
+
+    color:
+
+    var(--accent);
+
+
+}
+
+
+
+
+.date-item span{
+
+
+    display:block;
+
+
+
+    color:
+
+    var(--text-secondary);
+
+
+
+    font-size:12px;
+
+
+}
+
+
+
+.date-item strong{
+
+
+    display:block;
+
+
+
+    margin-top:4px;
+
+
+
+    color:
+
+    var(--text);
+
+
+
+    font-size:18px;
+
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+.exam-count svg{
+
+
+    color:#f59e0b;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+.live-date-card{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+
+    padding:10px;
+
+
+}
+
+
+
+
+.date-item{
+
+
+    min-height:60px;
+
+
+}
+
+
+
+.date-item:nth-child(2){
+
+
+    border-left:none;
+
+
+}
+
+
+
+.date-item strong{
+
+
+    font-size:15px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exam-months-container{
+
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+
+    gap:20px;
+
+
+    padding:20px;
+
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+.exam-important-months{
+
+
+    margin-top:20px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(2,350px);
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+}
+
+
+
+
+
+
+
+.exam-month-box{
+
+
+    width:100%;
+
+    height:100px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    gap:6px;
+
+
+    box-sizing:border-box;
+
+
+    overflow:hidden;
+
+
+}
+
+
+/* هدر ماه */
+
+.exam-month-title{
+
+
+    height:30px;
+
+
+    width:100%;
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:8px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:0 10px;
+
+
+    box-sizing:border-box;
+
+
+}
+
+
+
+.exam-month-title span{
+
+
+    font-size:11px;
+
+    font-weight:700;
+
+
+    color:var(--text);
+
+
+}
+
+
+
+.exam-month-title small{
+
+
+    font-size:9px;
+
+
+    color:var(--text-secondary);
+
+
+}
+
+
+
+
+/* قسمت روزها */
+
+
+.exam-month-grid{
+
+
+    height:150px;
+
+
+    width:100%;
+
+
+    background:var(--surface-hover);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:8px;
+
+
+    padding:7px;
+
+
+    box-sizing:border-box;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(10,5px);
+
+
+    grid-auto-rows:5px;
+
+
+    gap:5px;
+
+
+    direction:ltr;
+
+
+}
+
+
+
+/* مربع روز */
+
+
+.exam-month-grid span{
+
+
+    width:5px;
+
+    height:5px;
+
+
+    background:#374151;
+
+
+    border-radius:2px;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.exam-month-grid span.done{
+
+
+    background:var(--accent);
+
+
+}
+
+
+
+.exam-month-grid span:hover{
+
+
+    transform:scale(2);
+
+
+}
+
+
+
+
+
+.exam-month-box{
+
+
+    width:100%;
+
+    height:200px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    gap:8px;
+
+
+    box-sizing:border-box;
+
+
+    overflow:hidden;
+
+
+}
+
+
+.exam-month-title{
+
+
+    height:42px;
+
+    flex-shrink:0;
+
+
+}
+
+.exam-month-grid{
+
+
+    flex:1;
+
+
+    padding:14px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exam-month-grid{
+
+
+    flex:1;
+
+
+    background:var(--surface-hover);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:10px;
+
+
+    padding:12px;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(10, 1fr);
+
+
+    grid-auto-rows:28px;
+
+
+    gap:7px;
+
+
+    direction:ltr;
+
+
+    align-content:start;
+
+
+    justify-content:center;
+
+
+    box-sizing:border-box;
+
+
+}
+
+
+
+/* روزها */
+
+.exam-month-grid span{
+
+
+    width:28px;
+
+    height:28px;
+
+
+    justify-self:center;
+
+    align-self:center;
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:6px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:var(--text-secondary);
+
+
+    font-size:10px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.25s ease;
+
+
+    box-sizing:border-box;
+
+
+}
+
+
+
+
+.exam-month-grid span:hover{
+
+
+    transform:scale(1.15);
+
+
+    background:var(--accent);
+
+
+    border-color:var(--accent);
+
+
+    color:white;
+
+
+}
+
+
+
+
+.exam-month-grid span.done{
+
+
+    background:var(--accent);
+
+
+    border-color:var(--accent);
+
+
+    color:white;
+
+
+}
+
+
+
+
+.exam-month-grid{
+
+
+    flex:1;
+
+
+    background:var(--surface-hover);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:10px;
+
+
+    padding:12px;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(9, 1fr);
+
+
+    grid-auto-rows:28px;
+
+
+    gap:8px;
+
+
+    direction:ltr;
+
+
+    align-content:start;
+
+
+    justify-content:center;
+
+
+    box-sizing:border-box;
+
+
+}
+
+
+
+.exam-month-grid span{
+
+
+    width:28px;
+
+    height:28px;
+
+
+    justify-self:center;
+
+    align-self:center;
+
+
+    background:var(--surface);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:6px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:var(--text-secondary);
+
+
+    font-size:10px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.25s ease;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.exam-month-box{
+
+    width:100%;
+
+    height:210px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+        DAY TASK MODAL
+====================================== */
+
+
+.day-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+    rgba(0,0,0,.65);
+
+    backdrop-filter:
+    blur(12px);
+
+    z-index:9999;
+
+}
+
+
+
+.day-modal.show{
+
+    display:flex;
+
+    animation:
+    modalFade .3s ease;
+
+}
+
+
+
+/* =========================
+        BOX
+========================= */
+
+
+.modal-box{
+
+
+    width:380px;
+
+    max-width:90%;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(25,28,33,.95),
+        rgba(17,19,21,.98)
+    );
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    border-radius:22px;
+
+
+    padding:22px;
+
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.55);
+
+
+    transform-origin:center;
+
+
+}
+
+
+
+
+@keyframes modalFade{
+
+
+from{
+
+opacity:0;
+
+transform:
+scale(.85)
+translateY(20px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+scale(1)
+translateY(0);
+
+}
+
+
+}
+
+
+
+/* =========================
+        HEADER
+========================= */
+
+
+.modal-header{
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+
+padding-bottom:15px;
+
+
+border-bottom:
+
+1px solid var(--border);
+
+
+}
+
+
+
+.modal-header h3{
+
+
+margin:0;
+
+
+font-size:17px;
+
+
+color:var(--text);
+
+
+font-weight:700;
+
+
+}
+
+
+
+#closeModal{
+
+
+width:34px;
+
+height:34px;
+
+
+border:none;
+
+
+border-radius:10px;
+
+
+background:
+
+var(--surface-hover);
+
+
+color:var(--text-secondary);
+
+
+font-size:22px;
+
+
+cursor:pointer;
+
+
+transition:.25s;
+
+
+}
+
+
+
+#closeModal:hover{
+
+
+background:#ef4444;
+
+color:white;
+
+
+transform:rotate(90deg);
+
+
+}
+
+
+
+/* =========================
+        FORM
+========================= */
+
+
+.task-form{
+
+
+margin-top:20px;
+
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+
+}
+
+
+
+.task-form input,
+.task-form textarea{
+
+
+width:100%;
+
+
+box-sizing:border-box;
+
+
+background:
+
+var(--surface-hover);
+
+
+border:
+
+1px solid var(--border);
+
+
+border-radius:14px;
+
+
+padding:13px 15px;
+
+
+color:var(--text);
+
+
+font-family:"Vazirmatn";
+
+
+font-size:13px;
+
+
+outline:none;
+
+
+transition:.25s;
+
+
+}
+
+
+
+.task-form textarea{
+
+
+height:100px;
+
+
+resize:none;
+
+
+}
+
+
+
+
+.task-form input:focus,
+.task-form textarea:focus{
+
+
+border-color:
+
+var(--accent);
+
+
+box-shadow:
+
+0 0 0 3px rgba(59,130,246,.15);
+
+
+}
+
+
+
+/* =========================
+        PRIORITY
+========================= */
+
+
+.priority{
+
+
+display:grid;
+
+
+grid-template-columns:
+repeat(3,1fr);
+
+
+gap:10px;
+
+
+}
+
+
+
+
+.priority button{
+
+
+height:42px;
+
+
+border:none;
+
+
+border-radius:12px;
+
+
+font-family:"Vazirmatn";
+
+
+font-size:12px;
+
+
+font-weight:600;
+
+
+cursor:pointer;
+
+
+transition:.25s;
+
+
+opacity:.8;
+
+
+}
+
+
+
+.priority button:hover{
+
+
+transform:
+
+translateY(-3px);
+
+
+opacity:1;
+
+
+}
+
+
+
+
+.red{
+
+
+background:
+
+rgba(239,68,68,.15);
+
+
+color:#f87171;
+
+
+border:
+
+1px solid rgba(239,68,68,.3)!important;
+
+
+}
+
+
+
+.yellow{
+
+
+background:
+
+rgba(234,179,8,.15);
+
+
+color:#facc15;
+
+
+border:
+
+1px solid rgba(234,179,8,.3)!important;
+
+
+}
+
+
+
+
+.green{
+
+
+background:
+
+rgba(34,197,94,.15);
+
+
+color:#4ade80;
+
+
+border:
+
+1px solid rgba(34,197,94,.3)!important;
+
+
+}
+
+
+
+
+/* =========================
+        SAVE
+========================= */
+
+
+#saveTask{
+
+
+height:45px;
+
+
+border:none;
+
+
+border-radius:14px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#3b82f6,
+#6366f1
+);
+
+
+color:white;
+
+
+font-family:"Vazirmatn";
+
+
+font-size:14px;
+
+
+font-weight:700;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+margin-top:8px;
+
+
+}
+
+
+
+#saveTask:hover{
+
+
+transform:
+
+translateY(-2px);
+
+
+box-shadow:
+
+0 10px 25px rgba(59,130,246,.35);
+
+
+}
+
+
+.priority button{
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-family:"Vazirmatn";
+
+    font-size:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    opacity:.8;
+
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.day-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:
+    rgba(0,0,0,0);
+
+
+    backdrop-filter:
+    blur(0);
+
+
+    opacity:0;
+
+    pointer-events:none;
+
+
+    transition:
+
+    opacity .45s ease,
+    backdrop-filter .45s ease;
+
+
+    z-index:9999;
+
+}
+
+
+
+.day-modal.show{
+
+
+    opacity:1;
+
+    pointer-events:auto;
+
+
+    background:
+    rgba(0,0,0,.55);
+
+
+    backdrop-filter:
+    blur(10px);
+
+
+}
+
+.modal-box{
+
+
+    transform:
+
+    scale(.9)
+    translateY(30px);
+
+
+    opacity:0;
+
+
+    transition:
+
+    .45s cubic-bezier(.2,.8,.2,1);
+
+
+}
+
+
+.day-modal.show .modal-box{
+
+
+    transform:
+
+    scale(1)
+    translateY(0);
+
+
+    opacity:1;
+
+
+}
+
+
+
+#saveTask{
+
+
+height:45px;
+
+
+border:none;
+
+
+border-radius:14px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#374151,
+#1f2937
+);
+
+
+color:#f9fafb;
+
+
+font-family:"Vazirmatn";
+
+
+font-size:14px;
+
+
+font-weight:700;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+margin-top:8px;
+
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+#saveTask:hover{
+
+
+transform:
+
+translateY(-2px);
+
+
+background:
+
+linear-gradient(
+135deg,
+#4b5563,
+#374151
+);
+
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.35);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.priority-box{
+
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-top:20px;
+
+}
+
+
+
+.priority-btn{
+
+    flex:1;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    transition:.25s;
+
+    opacity:.7;
+
+}
+
+
+
+.priority-btn.red{
+
+    background:#ef4444;
+
+}
+
+
+
+.priority-btn.yellow{
+
+    background:#eab308;
+
+}
+
+
+
+.priority-btn.green{
+
+    background:#22c55e;
+
+}
+
+
+
+.priority-btn:hover{
+
+    transform:translateY(-2px);
+
+    opacity:1;
+
+}
+
+
+
+.priority-btn.active{
+
+    opacity:1;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 15px rgba(255,255,255,.25);
+
+}
+
+
+
+
+
+
+
+
+
+
+.exam-month-grid span.passed{
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+
+
+.exam-month-grid span.today{
+
+    background:#eab308;
+
+    color:white;
+
+    animation:todayPulse 1.5s infinite;
+
+}
+
+
+
+@keyframes todayPulse{
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+    </style>
+
+</head>
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header page-animate">
+
+
+    <!-- RIGHT -->
+
+    <div class="header-right">
+
+
+        <a href="./index1.html" class="back-btn">
+
+            <i data-lucide="arrow-right"></i>
+
+        </a>
+
+
+        <div class="page-title">
+
+            <i data-lucide="calendar-days"></i>
+
+            <span>
+                مسیر کنکور
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- CENTER LOGO -->
+
+    <div class="logo">
+
+
+        <i data-lucide="graduation-cap"></i>
+
+
+        <span>
+            برنامه کنکور
+        </span>
+
+
+    </div>
+
+
+
+
+    <!-- LEFT -->
+
+    <div class="header-left">
+
+
+        <button class="icon-btn" id="settingsBtn">
+
+            <i data-lucide="settings"></i>
+
+        </button>
+
+
+
+        <button class="icon-btn">
+
+            <i data-lucide="moon"></i>
+
+        </button>
+
+
+
+        <button class="profile-btn">
+
+            <i data-lucide="user"></i>
+
+        </button>
+
+
+
+    </div>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     10 MONTHS CONTAINER
+========================= -->
+
+<div class="exam-months-container">
+
+
+    <!-- ماه 1 -->
+    <div class="exam-month-box">
+
+        <div class="exam-month-title">
+
+            <span>
+                شهریور ۱۴۰۵
+            </span>
+
+            <small>
+                12 گذشته | 18 مانده
+            </small>
+
+        </div>
+
+
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+
+    </div>
+
+
+
+    <!-- ماه 2 -->
+    <div class="exam-month-box">
+
+        <div class="exam-month-title">
+
+            <span>
+                مهر ۱۴۰۵
+            </span>
+
+            <small>
+                0 گذشته | 30 مانده
+            </small>
+
+        </div>
+
+
+
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+
+    </div>
+
+
+
+    <!-- ماه 3 -->
+    <div class="exam-month-box">
+        <div class="exam-month-title">
+            <span>آبان ۱۴۰۵</span>
+            <small>0 گذشته | 30 مانده</small>
+        </div>
+
+        
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+    </div>
+
+
+
+    <!-- ماه 4 -->
+    <div class="exam-month-box">
+        <div class="exam-month-title">
+            <span>آذر ۱۴۰۵</span>
+            <small>0 گذشته | 30 مانده</small>
+        </div>
+
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+    </div>
+
+
+
+    <!-- ماه 5 -->
+    <div class="exam-month-box">
+        <div class="exam-month-title">
+            <span>دی ۱۴۰۵</span>
+            <small>0 گذشته | 30 مانده</small>
+        </div>
+
+        
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+    </div>
+
+
+
+    <!-- ماه 6 -->
+    <div class="exam-month-box">
+        <div class="exam-month-title">
+            <span>بهمن ۱۴۰۵</span>
+            <small>0 گذشته | 30 مانده</small>
+        </div>
+
+       
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+    </div>
+
+
+
+    <!-- ماه 7 -->
+    <div class="exam-month-box">
+        <div class="exam-month-title">
+            <span>اسفند ۱۴۰۵</span>
+            <small>0 گذشته | 29 مانده</small>
+        </div>
+
+       
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+    </div>
+
+
+
+    <!-- ماه 8 -->
+    <div class="exam-month-box">
+        <div class="exam-month-title">
+            <span>فروردین ۱۴۰۶</span>
+            <small>0 گذشته | 31 مانده</small>
+        </div>
+
+        
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+    </div>
+
+
+
+</div>
+
+
+
+
+<!-- =========================
+     IMPORTANT FINAL MONTHS
+========================= -->
+
+
+<div class="exam-important-months">
+
+
+    <div class="exam-month-box important">
+
+        <div class="exam-month-title">
+
+            <span>
+                اردیبهشت ۱۴۰۶
+            </span>
+
+            <small>
+                ماه سرنوشت
+            </small>
+
+        </div>
+
+
+
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+
+
+    </div>
+
+
+
+
+    <div class="exam-month-box important">
+
+        <div class="exam-month-title">
+
+            <span>
+                خرداد ۱۴۰۶
+            </span>
+
+            <small>
+                کنکور
+            </small>
+
+        </div>
+
+
+
+<div class="exam-month-grid">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
+    <span>13</span>
+    <span>14</span>
+    <span>15</span>
+    <span>16</span>
+    <span>17</span>
+    <span>18</span>
+    <span>19</span>
+    <span>20</span>
+    <span>21</span>
+    <span>22</span>
+    <span>23</span>
+    <span>24</span>
+    <span>25</span>
+    <span>26</span>
+    <span>27</span>
+    <span>28</span>
+    <span>29</span>
+    <span>30</span>
+
+</div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="day-modal" id="dayModal">
+
+
+<div class="modal-box">
+
+
+<div class="modal-header">
+
+    <h3 id="modalDate">
+نشان گزاری 
+    </h3>
+
+
+    <button id="closeModal">
+        ×
+    </button>
+
+</div>
+
+
+<div class="task-form">
+
+
+<input 
+id="taskTitle"
+placeholder="عنوان کار">
+
+
+<textarea
+id="taskDesc"
+placeholder="توضیحات">
+</textarea>
+
+
+<div class="priority-box">
+
+
+    <button type="button" class="priority-btn red" data-color="red">
+        خیلی مهم
+    </button>
+
+
+    <button type="button" class="priority-btn yellow" data-color="yellow">
+        مهم
+    </button>
+
+
+    <button type="button" class="priority-btn green" data-color="green">
+        عادی
+    </button>
+
+
+</div>
+
+
+<button id="saveTask">
+    ذخیره
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded",()=>{
+
+
+// =====================================
+// تاریخ شروع برنامه
+// شهریور 1405
+// =====================================
+
+const currentMonthIndex = 0; 
+const currentDay = 12;
+
+
+
+// گرفتن تمام ماه ها
+
+const monthBoxes = 
+document.querySelectorAll(
+".exam-month-box"
+);
+
+
+
+monthBoxes.forEach((monthBox,index)=>{
+
+
+const days =
+monthBox.querySelectorAll(
+".exam-month-grid span"
+);
+
+
+
+let passed = 0;
+let remain = 0;
+
+
+
+days.forEach(day=>{
+
+
+const dayNumber =
+Number(day.textContent);
+
+
+
+day.classList.remove(
+"passed",
+"today"
+);
+
+
+
+
+// ===============================
+// ماه فعلی
+// ===============================
+
+if(index === currentMonthIndex){
+
+
+
+    if(dayNumber < currentDay){
+
+
+        day.classList.add(
+        "passed"
+        );
+
+
+        passed++;
+
+
+    }
+
+
+
+    else if(dayNumber === currentDay){
+
+
+        day.classList.add(
+        "today"
+        );
+
+
+        passed++;
+
+
+    }
+
+
+
+    else{
+
+
+        remain++;
+
+
+    }
+
+
+
+}
+
+
+
+
+// ===============================
+// ماه های گذشته
+// ===============================
+
+else if(index < currentMonthIndex){
+
+
+
+    day.classList.add(
+    "passed"
+    );
+
+
+    passed++;
+
+
+
+}
+
+
+
+// ===============================
+// ماه های آینده
+// ===============================
+
+else{
+
+
+    remain =
+    days.length;
+
+
+
+}
+
+
+
+});
+
+
+
+
+// ===============================
+// تغییر متن هدر ماه
+// ===============================
+
+const info =
+monthBox.querySelector(
+".exam-month-title small"
+);
+
+
+
+if(info){
+
+
+info.innerHTML =
+
+`
+<span>${passed} گذشته</span>
+ |
+<span>${remain} مانده</span>
+`;
+
+
+}
+
+
+
+});
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const days =
+document.querySelectorAll(
+".exam-month-grid span"
+);
+
+
+const modal =
+document.getElementById("dayModal");
+
+
+days.forEach(day=>{
+
+
+day.onclick=()=>{
+
+
+modal.classList.add("show");
+
+
+}
+
+
+});
+
+
+
+document
+.getElementById("closeModal")
+.onclick=()=>{
+
+
+modal.classList.remove("show");
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let selectedPriority = null;
+
+
+document.querySelectorAll(".priority-btn")
+.forEach(btn=>{
+
+
+    btn.addEventListener("click",()=>{
+
+
+        document
+        .querySelectorAll(".priority-btn")
+        .forEach(b=>{
+
+            b.classList.remove("active");
+
+        });
+
+
+
+        btn.classList.add("active");
+
+
+        selectedPriority =
+        btn.dataset.color;
+
+
+
+        console.log(
+            "Priority:",
+            selectedPriority
+        );
+
+
+    });
+
+
+});
+
+document
+.getElementById("saveTask")
+.addEventListener("click",()=>{
+
+
+    if(!selectedDay || !selectedPriority){
+
+        alert("اول روز و اهمیت را انتخاب کن");
+
+        return;
+
+    }
+
+
+
+    selectedDay.classList.remove(
+        "priority-red",
+        "priority-yellow",
+        "priority-green"
+    );
+
+
+
+    selectedDay.classList.add(
+        "priority-" + selectedPriority
+    );
+
+
+
+});
+
+
+
+</script>
+
+<!-- فعال کردن آیکون ها -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
+
+</body>
+</html>

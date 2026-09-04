@@ -57,13 +57,19 @@
 
 
 
-    <button class="icon-btn">
+    <!-- <button class="icon-btn">
 
         <i data-lucide="settings"></i>
 
-    </button>
+    </button> -->
 
+<!-- BACK BUTTON -->
 
+<button class="back-btn" id="backBtn">
+
+    <i data-lucide="arrow-right"></i>
+
+</button>
 
 </header>
 
@@ -695,6 +701,61 @@
 
 
 <script>
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+const backBtn = document.getElementById("backBtn");
+
+
+
+if(backBtn){
+
+
+    backBtn.addEventListener("click",()=>{
+
+
+        if(history.length > 1){
+
+
+            history.back();
+
+
+        }
+
+        else{
+
+
+            window.location.href="./index1.html";
+
+
+        }
+
+
+    });
+
+
+}
+
+
+
+if(window.lucide){
+
+
+    lucide.createIcons();
+
+
+}
+
+
+});
 
 lucide.createIcons();
 
