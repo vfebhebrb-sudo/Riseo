@@ -11248,7 +11248,7 @@ workspaceBtn.onclick = ()=>{
 
 
 window.location.href =
-"./login/workspace/اتاق کار.html";
+"اتاق کار.html";
 
 
 };
