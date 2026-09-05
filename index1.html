@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="cssکمکی.css">
     <link rel="stylesheet" href="schedule.css">
 
-   <link rel="icon" href="./icon.png">
+   <link rel="icon" href="../icon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="manifest" href="./manifest.json">
@@ -67,20 +67,30 @@
 
         </a> -->
 
+<button 
+    class="icon-btn" 
+    id="workspaceBtn"
+    title="اتاق کار"
+>
+    <i data-lucide="layout-dashboard"></i>
+</button>
 
-
-<a href="perfo.html" class="header-icon-link">
-
+<button 
+    class="icon-btn"
+    onclick="location.href='perfo.html'"
+    title="پیشرفت"
+>
     <i data-lucide="chart-no-axes-column"></i>
+</button>
 
-</a>
 
-
-<a href="./ماه.html" class="header-icon-link">
-
+<button 
+    class="icon-btn"
+    onclick="location.href='./ماه.html'"
+    title="تقویم ماه"
+>
     <i data-lucide="calendar-days"></i>
-
-</a>
+</button>
 
         <!-- <a href="#" class="menu-item">
 
@@ -117,13 +127,13 @@
      <div class="header-left">
 <div class="profile-menu">
 
-
-<button class="profile-btn" id="profileBtn">
-
-<i data-lucide="user"></i>
-
+<button 
+    class="profile-btn icon-btn" 
+    id="profileBtn"
+    title="پروفایل"
+>
+    <i data-lucide="user"></i>
 </button>
-
 
 
 <div class="profile-dropdown" id="profileDropdown">

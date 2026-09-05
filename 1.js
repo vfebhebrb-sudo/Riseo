@@ -11188,3 +11188,81 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+const workspaceBtn =
+document.getElementById(
+    "workspaceBtn"
+);
+
+
+
+if(workspaceBtn){
+
+
+workspaceBtn.onclick = ()=>{
+
+
+window.location.href =
+"./login/workspace/اتاق کار.html";
+
+
+};
+
+
+}
+
+
+
+if(window.lucide){
+
+lucide.createIcons();
+
+}
+
+
+});

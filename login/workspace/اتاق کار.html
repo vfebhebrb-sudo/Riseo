@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+        rel="stylesheet">
+
+<link rel="stylesheet" href="./اتاق کار.css">
+
+   <link rel="icon" href="./icon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0b0b0b">
+
+</head>
+<body>
+
+
+<div class="workspace-main">
+
+    <!-- =====================================
+         WORKSPACE TOP BAR
+    ====================================== -->
+
+    <div class="workspace-topbar">
+
+        <!-- سمت راست: صفحات -->
+
+        <div class="workspace-page-controls">
+
+            <button
+                class="workspace-control-btn"
+                id="previousPageBtn"
+                title="صفحه قبل"
+            >
+                <i data-lucide="chevron-right"></i>
+            </button>
+
+            <div
+                class="workspace-page-number"
+                id="pageNumber"
+            >
+                <span>1</span>
+                <small>/</small>
+                <span>1</span>
+            </div>
+
+            <button
+                class="workspace-control-btn"
+                id="nextPageBtn"
+                title="صفحه بعد"
+            >
+                <i data-lucide="chevron-left"></i>
+            </button>
+
+        </div>
+
+
+        <!-- عنوان فایل -->
+
+        <div class="workspace-document-title">
+
+            <i data-lucide="file-text"></i>
+
+            <span id="workspaceFileName">
+                بدون فایل
+            </span>
+
+        </div>
+
+
+        <!-- سمت چپ: Zoom و ابزارهای نمایش -->
+
+        <div class="workspace-view-controls">
+
+            <button
+                class="workspace-control-btn"
+                id="zoomOutBtn"
+                title="کوچک‌نمایی"
+            >
+                <i data-lucide="zoom-out"></i>
+            </button>
+
+
+            <button
+                class="workspace-zoom-value"
+                id="zoomValue"
+                title="اندازه نمایش"
+            >
+                100%
+            </button>
+
+
+            <button
+                class="workspace-control-btn"
+                id="zoomInBtn"
+                title="بزرگ‌نمایی"
+            >
+                <i data-lucide="zoom-in"></i>
+            </button>
+
+
+            <div class="workspace-control-divider"></div>
+
+
+            <button
+                class="workspace-control-btn"
+                id="fitPageBtn"
+                title="جا دادن صفحه"
+            >
+                <i data-lucide="scan"></i>
+            </button>
+
+
+            <button
+                class="workspace-control-btn"
+                id="fullscreenBtn"
+                title="تمام صفحه"
+            >
+                <i data-lucide="maximize"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="workspace">
+
+    <!-- =========================
+         LEFT SIDEBAR
+    ========================== -->
+
+<aside
+    class="workspace-sidebar left-sidebar"
+    id="leftSidebar"
+>
+
+    <div class="sidebar-top">
+
+        <button
+            class="sidebar-toggle"
+            id="leftSidebarToggle"
+            type="button"
+            title="بستن"
+        >
+            <i data-lucide="panel-left-close"></i>
+        </button>
+
+    </div>
+
+
+    <div class="sidebar-content">
+
+    <button
+        class="open-file-btn"
+        id="openFileBtn"
+        type="button"
+    >
+
+        <i data-lucide="folder-open"></i>
+
+        <span>
+            باز کردن فایل
+        </span>
+
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="sidebar-tools">
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="file-plus"></i>
+
+<span>
+سند جدید
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="folder-open"></i>
+
+<span>
+باز کردن فایل
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn active">
+
+<i data-lucide="mouse-pointer"></i>
+
+<span>
+انتخاب
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="pen"></i>
+
+<span>
+مداد
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="highlighter"></i>
+
+<span>
+هایلایتر
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="eraser"></i>
+
+<span>
+پاک‌کن
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="shapes"></i>
+
+<span>
+اشکال
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="type"></i>
+
+<span>
+متن
+</span>
+
+</button>
+
+
+
+<button class="workspace-tool-btn">
+
+<i data-lucide="hand"></i>
+
+<span>
+جابجایی صفحه
+</span>
+
+</button>
+
+
+</div>
+
+
+
+
+
+</aside>
+
+
+<button
+    class="sidebar-tab left-sidebar-tab"
+    id="leftSidebarTab"
+    type="button"
+    title="باز کردن سایدبار"
+>
+    <i data-lucide="panel-left-open"></i>
+</button>
+
+<section class="workspace-center">
+
+    <div class="a4-preview-box">
+
+
+        <div
+            class="a4-pages-container"
+            id="a4PagesContainer"
+        >
+
+
+            <div class="a4-empty-state">
+
+
+                <div class="empty-icon">
+                    <i data-lucide="file-text"></i>
+                </div>
+
+
+                <strong>
+                    فایل را برای نمایش انتخاب کنید
+                </strong>
+
+
+                <span>
+                    پیش‌نمایش فایل در این قسمت نمایش داده می‌شود
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<aside
+    class="workspace-sidebar right-sidebar"
+    id="rightSidebar"
+>
+
+    <div class="sidebar-top">
+
+        <button
+            class="sidebar-toggle"
+            id="rightSidebarToggle"
+            type="button"
+            title="بستن"
+        >
+            <i data-lucide="panel-right-close"></i>
+        </button>
+
+    </div>
+
+
+<div class="pdf-tools-panel">
+
+
+    <!-- TOOL MODE -->
+
+    <div class="tool-box">
+
+        <div class="tool-box-title">
+            <i data-lucide="pen-tool"></i>
+            ابزار
+        </div>
+
+
+        <div class="tool-grid">
+
+
+            <button class="tool-btn active"
+            data-tooltip="انتخاب و حرکت">
+                <i data-lucide="mouse-pointer"></i>
+            </button>
+
+
+            <button class="tool-btn"
+            data-tooltip="مداد">
+                <i data-lucide="pencil"></i>
+            </button>
+
+
+            <button class="tool-btn"
+            data-tooltip="هایلایت">
+                <i data-lucide="highlighter"></i>
+            </button>
+
+
+            <button class="tool-btn"
+            data-tooltip="افزودن متن">
+                <i data-lucide="type"></i>
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- COLORS -->
+
+    <div class="tool-box">
+
+
+        <div class="tool-box-title">
+
+            <i data-lucide="palette"></i>
+
+            رنگ
+
+        </div>
+
+
+        <div class="colors">
+
+
+            <button class="color black"></button>
+
+            <button class="color red"></button>
+
+            <button class="color blue"></button>
+
+            <button class="color green"></button>
+
+            <button class="color yellow"></button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- SIZE -->
+
+    <div class="tool-box">
+
+
+        <div class="tool-box-title">
+
+            <i data-lucide="sliders-horizontal"></i>
+
+            تنظیم قلم
+
+        </div>
+
+
+
+        <label>
+            ضخامت
+        </label>
+
+
+        <input 
+        type="range"
+        min="1"
+        max="20"
+        value="5"
+        >
+
+
+        <label>
+            شفافیت
+        </label>
+
+
+        <input 
+        type="range"
+        min="10"
+        max="100"
+        value="100"
+        >
+
+
+    </div>
+
+
+
+
+
+
+    <!-- ERASER -->
+
+    <div class="tool-box">
+
+
+        <div class="tool-box-title">
+
+            <i data-lucide="eraser"></i>
+
+            پاک کن
+
+        </div>
+
+
+
+        <button class="action-btn">
+
+            پاک کردن انتخابی
+
+        </button>
+
+
+        <button class="action-btn danger">
+
+            حذف همه
+
+        </button>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- SHAPES -->
+
+    <div class="tool-box">
+
+
+        <div class="tool-box-title">
+
+            <i data-lucide="shapes"></i>
+
+            شکل‌ها
+
+        </div>
+
+
+        <div class="shape-grid">
+
+
+            <button>
+                □
+            </button>
+
+
+            <button>
+                ○
+            </button>
+
+
+            <button>
+                △
+            </button>
+
+
+            <button>
+                →
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- VIEW -->
+
+    <div class="tool-box">
+
+
+        <div class="tool-box-title">
+
+            <i data-lucide="monitor"></i>
+
+            نمایش
+
+        </div>
+
+
+
+        <div class="view-buttons">
+
+
+            <button>
+                <i data-lucide="zoom-in"></i>
+            </button>
+
+
+            <button>
+                <i data-lucide="scan"></i>
+            </button>
+
+
+            <button>
+                <i data-lucide="maximize"></i>
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+    
+
+</aside>
+
+
+<button
+    class="sidebar-tab right-sidebar-tab"
+    id="rightSidebarTab"
+    type="button"
+    title="باز کردن سایدبار"
+>
+    <i data-lucide="panel-right-open"></i>
+</button>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+     OPEN FILE MODAL
+========================================= -->
+
+<div
+    class="file-modal"
+    id="fileModal"
+>
+
+    <div
+        class="file-modal-box"
+        id="fileModalBox"
+    >
+
+        <div class="file-modal-header">
+
+            <div class="file-modal-title">
+
+                <i data-lucide="folder-open"></i>
+
+                <span>
+                    باز کردن فایل
+                </span>
+
+            </div>
+
+            <button
+                class="file-modal-close"
+                id="fileModalClose"
+                type="button"
+                title="بستن"
+            >
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+<div class="file-modal-content">
+
+    <!-- =========================
+         LESSONS
+    ========================== -->
+
+    <div class="file-lessons-box">
+
+        <div class="file-section-header">
+
+            <i data-lucide="book-open"></i>
+
+            <span>
+                درس‌ها
+            </span>
+
+        </div>
+
+        <div class="file-lessons-list" id="fileLessonsList">
+<div
+    class="file-lessons-list"
+    id="fileLessonsList"
+>
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="شیمی"
+    >
+        <i data-lucide="flask-conical"></i>
+
+        <span>
+            شیمی
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="فیزیک"
+    >
+        <i data-lucide="atom"></i>
+
+        <span>
+            فیزیک
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="حسابان"
+    >
+        <i data-lucide="calculator"></i>
+
+        <span>
+            حسابان
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="هندسه"
+    >
+        <i data-lucide="triangle"></i>
+
+        <span>
+            هندسه
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="گسسته"
+    >
+        <i data-lucide="network"></i>
+
+        <span>
+            گسسته
+        </span>
+    </button>
+
+</div>
+
+<button 
+    class="lesson-item" 
+    type="button" 
+    data-lesson="سایر"
+>
+
+    <i data-lucide="book-open"></i>
+
+    <span>
+        سایر
+    </span>
+
+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FILE VIEWER
+    ========================== -->
+
+    <div class="file-viewer-box">
+
+        <div class="file-section-header">
+
+            <i data-lucide="file-text"></i>
+
+            <span>
+                نمایش فایل
+            </span>
+
+        </div>
+
+        <div class="file-viewer-content" id="fileViewerContent">
+
+            <!-- نمایش فایل بعداً اینجا قرار می‌گیرد -->
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- PDF JS -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script>
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+</script> -->
+
+
+<!-- LUCIDE -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<!-- MAIN JS -->
+<script src="./22222222222.js"></script>
+
+
+<script>
+
+if(window.lucide){
+
+    lucide.createIcons();
+
+}
+
+</script>
+
+
+</body>
+</html>

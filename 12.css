@@ -1,43 +1,16 @@
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    /* font-family:"Vazirmatn",sans-serif; */
 }
-
-
-
-
-
-
-
-
-
-/* =====================================
-   PERFORMANCE PAGE
-===================================== */
 
 
 .performance-page-new{
 
     width:100%;
-
     min-height:100vh;
 
-    box-sizing:border-box;
-
     padding:25px;
-
-
-    background:
-
-    linear-gradient(
-        145deg,
-        #081120,
-        #111c33
-    );
-
 
     direction:rtl;
 
@@ -45,21 +18,26 @@
 
     color:#e5e7eb;
 
+
+    background:
+    linear-gradient(
+        145deg,
+        #0f1115,
+        #171a20
+    );
+
 }
 
 
 
-
-
-/* =====================================
+/* ================================
    TITLE
-===================================== */
+================================ */
 
 
 .performance-title-new{
 
     display:flex;
-
     align-items:center;
 
     gap:12px;
@@ -69,29 +47,26 @@
 }
 
 
-
 .performance-title-icon-new{
 
-
     width:42px;
-
     height:42px;
 
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
 
-    border-radius:12px;
+    border-radius:13px;
 
 
     background:
+    rgba(255,255,255,.05);
 
-    rgba(99,102,241,.15);
 
+    border:
+    1px solid rgba(255,255,255,.08);
 
 }
 
@@ -99,11 +74,10 @@
 
 .performance-title-icon-new svg{
 
-    width:22px;
+    width:21px;
+    height:21px;
 
-    height:22px;
-
-    color:#818cf8;
+    color:#d1d5db;
 
 }
 
@@ -111,11 +85,11 @@
 
 .performance-title-new h1{
 
-    margin:0;
-
     font-size:22px;
 
-    font-weight:700;
+    font-weight:800;
+
+    color:#f9fafb;
 
 }
 
@@ -123,62 +97,51 @@
 
 .performance-title-new p{
 
-    margin:5px 0 0;
-
-    color:#94a3b8;
+    margin-top:5px;
 
     font-size:12px;
+
+    color:#9ca3af;
 
 }
 
 
 
 
-
-
-
-/* =====================================
-   STAT CARDS
-===================================== */
+/* ================================
+   STATS
+================================ */
 
 
 .performance-stats-new{
 
-
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
+
 
     gap:14px;
 
     margin-bottom:20px;
 
-
 }
-
-
 
 
 
 .performance-stat-card-new{
 
 
-    min-height:110px;
-
+    min-height:105px;
 
     padding:15px;
-
-
-    box-sizing:border-box;
 
 
     display:flex;
 
     flex-direction:column;
 
-
     justify-content:center;
-
 
     gap:8px;
 
@@ -188,24 +151,28 @@
 
     linear-gradient(
         145deg,
-        rgba(30,41,70,.9),
-        rgba(17,28,51,.95)
+        #1b1f26,
+        #15181d
     );
-
 
 
     border:
 
-    1px solid rgba(255,255,255,.08);
+    1px solid rgba(255,255,255,.06);
+
+
+    border-radius:16px;
 
 
 
-    border-radius:15px;
+    box-shadow:
+
+    0 8px 25px
+    rgba(0,0,0,.25);
 
 
 
     transition:.25s;
-
 
 }
 
@@ -214,30 +181,25 @@
 
 .performance-stat-card-new:hover{
 
-
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
 
     border-color:
 
-    rgba(129,140,248,.35);
-
+    rgba(255,255,255,.14);
 
 }
 
 
 
 
-
 .performance-stat-card-new svg{
 
+    width:21px;
 
-    width:22px;
+    height:21px;
 
-    height:22px;
-
-    color:#818cf8;
-
+    color:#d1d5db;
 
 }
 
@@ -245,11 +207,9 @@
 
 .performance-stat-card-new span{
 
-
     font-size:11px;
 
-    color:#94a3b8;
-
+    color:#9ca3af;
 
 }
 
@@ -257,13 +217,9 @@
 
 .performance-stat-card-new strong{
 
-
     font-size:22px;
 
-    color:#ffffff;
-
-    font-weight:700;
-
+    color:#fff;
 
 }
 
@@ -271,51 +227,47 @@
 
 
 
+/* ================================
+   BOX
+================================ */
 
-
-/* =====================================
-   BOXES
-===================================== */
 
 
 .performance-box-new{
 
 
-    width:100%;
-
-
     padding:18px;
 
 
-    box-sizing:border-box;
-
-
     margin-bottom:18px;
-
 
 
     background:
 
     linear-gradient(
         145deg,
-        rgba(30,41,70,.75),
-        rgba(17,28,51,.9)
+        #1b1f26,
+        #15181d
     );
 
 
 
     border:
 
-    1px solid rgba(255,255,255,.08);
+    1px solid rgba(255,255,255,.06);
+
+
+    border-radius:18px;
 
 
 
-    border-radius:16px;
+    box-shadow:
+
+    0 10px 30px
+    rgba(0,0,0,.18);
 
 
 }
-
-
 
 
 
@@ -324,11 +276,9 @@
 
     display:flex;
 
-
     align-items:center;
 
-
-    gap:8px;
+    gap:9px;
 
 
     margin-bottom:15px;
@@ -345,7 +295,7 @@
 
     height:18px;
 
-    color:#818cf8;
+    color:#d1d5db;
 
 
 }
@@ -354,15 +304,9 @@
 
 .performance-box-title-new h2{
 
-
-    margin:0;
-
-
     font-size:14px;
 
-
-    font-weight:600;
-
+    color:#f3f4f6;
 
 }
 
@@ -370,53 +314,10 @@
 
 
 
+/* ================================
+ LESSON CARD
+================================ */
 
-
-/* =====================================
-   ACTIVITY EMPTY
-===================================== */
-
-
-.empty-performance-new{
-
-
-    height:80px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    color:#64748b;
-
-
-    font-size:12px;
-
-
-    border-radius:10px;
-
-
-    background:
-
-    rgba(15,23,42,.45);
-
-
-}
-
-
-
-
-
-
-
-/* =====================================
-   LESSON PROGRESS
-===================================== */
 
 
 .lesson-progress-list-new{
@@ -424,121 +325,49 @@
 
     display:flex;
 
-
     flex-direction:column;
-
 
     gap:10px;
 
-
 }
 
 
 
 
-
-.lesson-progress-card-new{
-
-
-    padding:12px;
-
-
-    border-radius:12px;
-
-
-    background:#111a2e;
-
-
-    border:1px solid rgba(255,255,255,.06);
-
-
-}
-
-
-
-
-
-.lesson-progress-header-new{
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    margin-bottom:8px;
-
-
-}
-
-
-
-.lesson-progress-header-new span{
-
-
-    font-size:12px;
-
-
-}
-
-
-
-.lesson-progress-header-new strong{
-
-
-    font-size:11px;
-
-
-    color:#818cf8;
-
-
-}
-
-
-
-
-
-
-.progress-line-new{
+.lesson-progress-item-new{
 
 
     width:100%;
 
-
-    height:7px;
-
-
-    background:#1e293b;
+    min-height:60px;
 
 
-    border-radius:10px;
+    padding:10px 12px;
 
 
-    overflow:hidden;
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
 
 
-}
+    background:
+
+    rgba(255,255,255,.035);
 
 
 
+    border:
 
-.progress-fill-new{
-
-
-    height:100%;
+    1px solid rgba(255,255,255,.07);
 
 
-    width:0%;
+
+    border-radius:14px;
 
 
-    background:#6366f1;
-
-
-    border-radius:10px;
+    transition:.25s;
 
 
 }
@@ -547,1321 +376,394 @@
 
 
 
+.lesson-progress-item-new:hover{
 
 
-/* =====================================
-   MOBILE
-===================================== */
+    transform:translateY(-2px);
 
+
+    background:
+
+    rgba(255,255,255,.055);
+
+
+    border-color:
+
+    rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+.lesson-progress-icon-new{
+
+
+    width:38px;
+
+    height:38px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    border-radius:11px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    color:#e5e7eb;
+
+
+}
+
+
+
+.lesson-progress-icon-new svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+
+
+.lesson-progress-info-new{
+
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+
+.lesson-progress-info-new strong{
+
+
+    display:block;
+
+    font-size:12px;
+
+    color:#f3f4f6;
+
+}
+
+
+
+.lesson-progress-info-new span{
+
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:9px;
+
+    color:#9ca3af;
+
+}
+
+
+
+
+.lesson-progress-time-new{
+
+
+    min-width:65px;
+
+    height:29px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+    border-radius:8px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+
+    color:#e5e7eb;
+
+
+    font-size:9px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/* ================================
+ ACTIVITY
+================================ */
+
+
+
+.activity-item-new{
+
+
+    min-height:55px;
+
+
+    padding:8px 4px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.05);
+
+
+}
+
+
+
+.activity-icon-new{
+
+
+    width:35px;
+
+    height:35px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    border-radius:10px;
+
+
+    background:
+
+    rgba(255,255,255,.05);
+
+
+    color:#d1d5db;
+
+
+}
+
+
+
+.activity-icon-new svg{
+
+    width:17px;
+
+    height:17px;
+
+}
+
+
+
+.activity-content-new{
+
+    flex:1;
+
+}
+
+
+
+.activity-content-new strong{
+
+    display:block;
+
+    color:#f3f4f6;
+
+    font-size:11px;
+
+}
+
+
+
+.activity-content-new span{
+
+    font-size:8px;
+
+    color:#9ca3af;
+
+}
+
+
+
+.activity-time-new{
+
+    font-size:8px;
+
+    color:#d1d5db;
+
+}
+
+
+
+
+
+/* ================================
+ DELETE BUTTON
+================================ */
+
+
+
+.delete-lesson-btn-new{
+
+
+    width:30px;
+
+    height:30px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+    border-radius:9px;
+
+
+    background:
+
+    rgba(239,68,68,.08);
+
+
+
+    border:
+
+    1px solid rgba(239,68,68,.15);
+
+
+
+    color:#f87171;
+
+
+}
+
+
+
+.delete-lesson-btn-new svg{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+
+
+/* ================================
+ MODAL
+================================ */
+
+
+.delete-confirm-overlay{
+
+
+    background:
+
+    rgba(0,0,0,.55);
+
+
+    backdrop-filter:blur(8px);
+
+}
+
+
+
+.delete-confirm-box{
+
+
+    background:
+
+    #1b1f26;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+.delete-confirm-content h3{
+
+    color:#fff;
+
+}
+
+
+.delete-confirm-content p{
+
+    color:#9ca3af;
+
+}
+
+
+
+/* MOBILE */
 
 @media(max-width:800px){
 
 
-    .performance-page-new{
+.performance-page-new{
 
-        padding:15px;
-
-    }
-
-
-
-    .performance-stats-new{
-
-
-        grid-template-columns:1fr;
-
-
-    }
-
+    padding:15px;
 
 }
 
 
+.performance-stats-new{
 
+    grid-template-columns:1fr;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-   LESSON PROGRESS CARDS
-===================================================== */
-
-.lesson-progress-list-new {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 
-/* =====================================================
-   CARD
-===================================================== */
-
-.lesson-progress-item-new {
-
-    /* رنگ اصلی کارت — بعداً فقط همین را تغییر بده */
-    --lesson-color: #6366f1;
-
-    position: relative;
-
-    width: 100%;
-    min-height: 62px;
-
-    padding: 9px 12px;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-
-    direction: rtl;
-    gap: 10px;
-
-    overflow: hidden;
-
-    border-radius: 15px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(99, 102, 241, 0.18),
-            rgba(99, 102, 241, 0.08)
-        );
-
-    border: 1px solid rgba(99, 102, 241, 0.25);
-
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    box-shadow:
-        0 5px 18px rgba(99, 102, 241, 0.10);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
-
-
-/* =====================================================
-   SHINE EFFECT
-   کل کارت را طی می‌کند
-===================================================== */
-
-.lesson-progress-item-new::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: -100%;
-    left: -120%;
-
-    width: 55%;
-    height: 300%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255,255,255,0.02) 25%,
-            rgba(255,255,255,0.45) 50%,
-            rgba(255,255,255,0.02) 75%,
-            transparent 100%
-        );
-
-    transform: rotate(20deg);
-
-    pointer-events: none;
-
-    transition:
-        left .8s cubic-bezier(.2,.7,.2,1);
-}
-
-
-/* حرکت براق از کل کارت */
-.lesson-progress-item-new:hover::before {
-
-    left: 160%;
-}
-
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-.lesson-progress-item-new:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 28px rgba(99, 102, 241, 0.18);
-
-    border-color:
-        rgba(99, 102, 241, 0.40);
-}
-
-
-/* =====================================================
-   ICON
-===================================================== */
-
-.lesson-progress-icon-new {
-
-    width: 39px;
-    height: 39px;
-
-    flex: 0 0 39px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 11px;
-
-    background:
-        rgba(99, 102, 241, 0.16);
-
-    border:
-        1px solid rgba(99, 102, 241, 0.25);
-
-    color:
-        #6366f1;
-
-    box-shadow:
-        inset 0 1px 3px rgba(255,255,255,.45);
-
-    transition:
-        transform .25s ease;
-}
-
-
-.lesson-progress-item-new:hover
-.lesson-progress-icon-new {
-
-    transform:
-        rotate(-4deg)
-        scale(1.06);
-}
-
-
-.lesson-progress-icon-new svg {
-
-    width: 19px;
-    height: 19px;
-}
-
-
-/* =====================================================
-   LESSON INFO
-===================================================== */
-
-.lesson-progress-info-new {
-
-    min-width: 0;
-
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-
-    gap: 3px;
-
-    text-align: right;
-}
-
-
-.lesson-progress-info-new strong {
-
-    display: block;
-
-    color: #374151;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-
-.lesson-progress-info-new span {
-
-    display: block;
-
-    color: #737984;
-
-    font-size: 9px;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-
-/* =====================================================
-   STUDY TIME
-===================================================== */
-
-.lesson-progress-time-new {
-
-    flex: 0 0 auto;
-
-    min-width: 68px;
-    height: 30px;
-
-    padding: 0 8px;
-
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 8px;
-
-    background:
-        rgba(99, 102, 241, 0.14);
-
-    border:
-        1px solid rgba(99, 102, 241, 0.22);
-
-    color:
-        #6366f1;
-
-    font-size: 9px;
-    font-weight: 800;
-
-    direction: ltr;
-
-    transition:
-        transform .25s ease,
-        background .25s ease;
-}
-
-
-.lesson-progress-item-new:hover
-.lesson-progress-time-new {
-
-    transform: scale(1.04);
-
-    background:
-        rgba(99, 102, 241, 0.20);
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 600px) {
-
-    .lesson-progress-item-new {
-
-        min-height: 56px;
-
-        padding: 7px 9px;
-
-        gap: 8px;
-
-        border-radius: 13px;
-    }
-
-
-    .lesson-progress-icon-new {
-
-        width: 34px;
-        height: 34px;
-
-        flex-basis: 34px;
-
-        border-radius: 9px;
-    }
-
-
-    .lesson-progress-icon-new svg {
-
-        width: 17px;
-        height: 17px;
-    }
-
-
-    .lesson-progress-info-new strong {
-
-        font-size: 11px;
-    }
-
-
-    .lesson-progress-info-new span {
-
-        font-size: 8px;
-    }
-
-
-    .lesson-progress-time-new {
-
-        min-width: 58px;
-
-        height: 27px;
-
-        padding: 0 6px;
-
-        font-size: 8px;
-
-        border-radius: 7px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* اسم درس */
-.lesson-progress-info-new strong {
-    display: block;
-
-    color: #6366f1;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-/* متن زیر اسم درس */
-.lesson-progress-info-new span {
-    display: block;
-
-    color: rgba(99, 102, 241, 0.72);
-
-    font-size: 9px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-/* ساعت مطالعه */
-.lesson-progress-time-new {
-    flex: 0 0 auto;
-
-    min-width: 68px;
-    height: 30px;
-
-    padding: 0 8px;
-
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 8px;
-
-    background: rgba(99, 102, 241, 0.14);
-
-    border: 1px solid rgba(99, 102, 241, 0.22);
-
-    color: #6366f1;
-
-    font-size: 9px;
-    font-weight: 800;
-
-    direction: ltr;
-
-    transition:
-        transform .25s ease,
-        background .25s ease;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-   LAST ACTIVITIES
-===================================================== */
-
-.activity-list-new {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* =====================================================
-   ACTIVITY ITEM
-===================================================== */
-
-.activity-item-new {
-    width: 100%;
-    min-height: 58px;
-
-    padding: 9px 4px;
-
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-
-    direction: rtl;
-
-    gap: 10px;
-
-    position: relative;
-
-    border-bottom:
-        1px solid rgba(99, 102, 241, 0.10);
-
-    transition:
-        background .2s ease,
-        padding .2s ease;
-}
-
-
-/* آخرین مورد خط پایین نداشته باشد */
-
-.activity-item-new:last-child {
-    border-bottom: none;
-}
-
-
-/* Hover */
-
-.activity-item-new:hover {
-    padding-right: 8px;
-    padding-left: 8px;
-
-    background:
-        rgba(99, 102, 241, 0.035);
-}
-
-
-/* =====================================================
-   ACTIVITY ICON
-===================================================== */
-
-.activity-icon-new {
-
-    width: 36px;
-    height: 36px;
-
-    flex: 0 0 36px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    background:
-        rgba(99, 102, 241, 0.09);
-
-    color:
-        #6366f1;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-
-.activity-item-new:hover
-.activity-icon-new {
-
-    transform:
-        scale(1.06);
-
-    background:
-        rgba(99, 102, 241, 0.14);
-}
-
-
-.activity-icon-new svg {
-
-    width: 18px;
-    height: 18px;
-}
-
-
-/* =====================================================
-   ACTIVITY CONTENT
-===================================================== */
-
-.activity-content-new {
-
-    min-width: 0;
-
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 3px;
-
-    text-align: right;
-}
-
-
-.activity-content-new strong {
-
-    display: block;
-
-    color:
-        #374151;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-
-.activity-content-new span {
-
-    display: block;
-
-    color:
-        #8a8f98;
-
-    font-size: 8px;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-
-/* =====================================================
-   HOW LONG AGO
-===================================================== */
-
-.activity-time-new {
-
-    flex: 0 0 auto;
-
-    min-width: 62px;
-
-    text-align: left;
-
-    color:
-        #6366f1;
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 600px) {
-
-    .activity-item-new {
-
-        min-height: 54px;
-
-        padding: 8px 2px;
-
-        gap: 8px;
-    }
-
-
-    .activity-icon-new {
-
-        width: 33px;
-        height: 33px;
-
-        flex-basis: 33px;
-
-        border-radius: 9px;
-    }
-
-
-    .activity-icon-new svg {
-
-        width: 16px;
-        height: 16px;
-    }
-
-
-    .activity-content-new strong {
-
-        font-size: 10px;
-    }
-
-
-    .activity-content-new span {
-
-        font-size: 7px;
-    }
-
-
-    .activity-time-new {
-
-        min-width: 55px;
-
-        font-size: 7px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-   DELETE LESSON BUTTON
-===================================================== */
-
-.delete-lesson-btn-new {
-
-    width: 31px;
-    height: 31px;
-
-    flex: 0 0 31px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0;
-
-    border: 1px solid rgba(239, 68, 68, .14);
-
-    border-radius: 8px;
-
-    background: rgba(239, 68, 68, .07);
-
-    color: #dc2626;
-
-    cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        box-shadow .2s ease;
-}
-
-
-.delete-lesson-btn-new svg {
-
-    width: 15px;
-    height: 15px;
-}
-
-
-.delete-lesson-btn-new:hover {
-
-    background:
-        rgba(239, 68, 68, .14);
-
-    border-color:
-        rgba(239, 68, 68, .25);
-
-    transform:
-        scale(1.08);
-
-    box-shadow:
-        0 4px 12px
-        rgba(239, 68, 68, .12);
-}
-
-
-.delete-lesson-btn-new:active {
-
-    transform:
-        scale(.92);
-}
-
-
-/* موبایل */
-
-@media (max-width: 600px) {
-
-    .delete-lesson-btn-new {
-
-        width: 28px;
-        height: 28px;
-
-        flex-basis: 28px;
-
-        border-radius: 7px;
-    }
-
-    .delete-lesson-btn-new svg {
-
-        width: 14px;
-        height: 14px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-   DELETE CONFIRM MODAL
-===================================================== */
-
-.delete-confirm-overlay {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 99999;
-
-    display: flex;
-
-    align-items: flex-start;
-    justify-content: center;
-
-    padding-top: 70px;
-
-    background:
-        rgba(34, 76, 173, 0.18);
-
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity .25s ease,
-        visibility .25s ease;
-}
-
-
-/* باز شدن */
-
-.delete-confirm-overlay.show {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-}
-
-
-/* =====================================================
-   BOX
-===================================================== */
-
-.delete-confirm-box {
-
-     font-family: "Vazirmatn", sans-serif;
-
-    width: min(
-        390px,
-        calc(100% - 32px)
-    );
-
-    padding: 22px;
-
-    box-sizing: border-box;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-    gap: 15px;
-
-    border-radius: 20px;
-
-           background: rgba(33, 52, 84, 0.996);
-
-    border:
-        1px solid
-        rgba(27, 41, 65, 0.996);
-
-    box-shadow:
-        0 20px 60px
-        rgba(15,23,42,.18);
-
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-
-    transform:
-        translateY(-35px)
-        scale(.96);
-
-    opacity: 0;
-
-    transition:
-        transform .35s cubic-bezier(.2,.8,.2,1),
-        opacity .25s ease;
-}
-
-
-/* انیمیشن ورود */
-
-.delete-confirm-overlay.show
-.delete-confirm-box {
-
-    transform:
-        translateY(0)
-        scale(1);
-
-    opacity: 1;
-}
-
-
-/* =====================================================
-   LOGO
-===================================================== */
-
-.delete-confirm-logo {
-
-    width: 52px;
-    height: 52px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 15px;
-
-    background:
-        rgba(239,68,68,.10);
-
-    border:
-        1px solid
-        rgba(239,68,68,.16);
-
-    color:
-        #dc2626;
-
-    box-shadow:
-        0 8px 20px
-        rgba(239,68,68,.10);
-
-    animation:
-        deleteLogoPulse 2s ease-in-out infinite;
-}
-
-
-.delete-confirm-logo svg {
-
-    width: 23px;
-    height: 23px;
-}
-
-
-@keyframes deleteLogoPulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.06);
-    }
-}
-
-
-/* =====================================================
-   TEXT
-===================================================== */
-
-.delete-confirm-content {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-}
-
-
-.delete-confirm-content h3 {
-
-    margin: 0;
-
-    color:
-        #1f2937;
-
-    font-size: 15px;
-
-    font-weight: 900;
-}
-
-
-.delete-confirm-content p {
-
-    margin: 0;
-
-    max-width: 300px;
-
-    color:
-        #7b8190;
-
-    font-size: 10px;
-
-    line-height: 1.9;
-}
-
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.delete-confirm-actions {
-
-    width: 100%;
-
-    display: flex;
-
-    gap: 8px;
-
-    margin-top: 3px;
-}
-
-
-.delete-confirm-actions button {
-
-    height: 36px;
-
-    border-radius: 10px;
-
-    border: none;
-
-    cursor: pointer;
-
-    font-family: inherit;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
-}
-
-
-/* انصراف */
-
-.delete-confirm-cancel {
-
-    flex: 1;
-
-    background:
-        rgba(100,116,139,.08);
-
-    color:
-        #64748b;
-
-    border:
-        1px solid
-        rgba(100,116,139,.12) !important;
-}
-
-
-.delete-confirm-cancel:hover {
-
-    background:
-        rgba(100,116,139,.13);
-
-    transform:
-        translateY(-1px);
-}
-
-
-/* حذف */
-
-.delete-confirm-submit {
-
-    flex: 1;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 6px;
-
-    background:
-        rgba(239,68,68,.10);
-
-    color:
-        #dc2626;
-
-    border:
-        1px solid
-        rgba(239,68,68,.18) !important;
-}
-
-
-.delete-confirm-submit:hover {
-
-    background:
-        rgba(239,68,68,.16);
-
-    box-shadow:
-        0 6px 16px
-        rgba(239,68,68,.12);
-
-    transform:
-        translateY(-1px);
-}
-
-
-.delete-confirm-submit:active,
-.delete-confirm-cancel:active {
-
-    transform:
-        scale(.96);
-}
-
-
-.delete-confirm-submit svg {
-
-    width: 14px;
-    height: 14px;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 600px) {
-
-    .delete-confirm-overlay {
-
-        padding-top: 50px;
-    }
-
-
-    .delete-confirm-box {
-
-        width:
-            calc(100% - 28px);
-
-        padding: 19px;
-
-        border-radius: 18px;
-    }
-
-
-    .delete-confirm-logo {
-
-        width: 47px;
-        height: 47px;
-
-        border-radius: 13px;
-    }
 
 }
