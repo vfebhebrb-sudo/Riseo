@@ -551,8 +551,6 @@ document.getElementById(
 // API
 // =====================================================
 
-const FILES_API =
- "https://iran-go4q.onrender.com/api";
 
 
 
@@ -908,9 +906,7 @@ throw new Error(
 
 const viewerURL =
 
-`http://localhost:3000/workspace/pdf-viewer/web/viewer.html?file=${encodeURIComponent(data.url)}`;
-
-
+`/workspace/pdf-viewer/web/viewer.html?file=${encodeURIComponent(data.url)}`;
 
 console.log(
 "VIEWER URL:",

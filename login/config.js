@@ -1,26 +1,27 @@
-// =====================================
-// API CONFIG
-// =====================================
+const CONFIG = {
 
-// حالت تست روی سیستم خودت
-// const API_URL = 
-//     window.location.hostname === "localhost" ||
-//     window.location.hostname === "127.0.0.1"
+    API:
+    "https://iran-go4q.onrender.com",
 
-//     ?
+    ENDPOINTS:{
 
-//     "http://localhost:3000/api"
+        FILES:
+        "/api/files",
 
-//     :
+        AUTH:
+        "/api/auth",
 
-//    "https://iran-go4q.onrender.com/api";
+        PLANS:
+        "/api/plans"
 
+    }
 
-//  const API_URL = "http://localhost:3000/api";
-
-const API_URL = "https://iran-go4q.onrender.com/api";
+};
 
 
-// بعد از آنلاین شدن بک‌اند Render فقط همین خط تغییر می‌کند
-// مثال:
-// const API_URL = "https://your-backend.onrender.com";
+const API_URL =
+CONFIG.API;
+
+
+const FILES_API =
+CONFIG.API + CONFIG.ENDPOINTS.FILES;
