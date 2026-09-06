@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="cssکمکی.css">
     <link rel="stylesheet" href="schedule.css">
 
-   <link rel="icon" href="../icon.png">
+   <link rel="icon" href="./icon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="manifest" href="./manifest.json">
@@ -1056,493 +1056,112 @@
 
 <section class="bottom-dashboard page-animate">
 
-    <!-- =====================================================
-         STUDY TIMER
-    ====================================================== -->
+<section class="ultimate-study-card">
 
-    <div class="study-timer-card">
+<div class="ultimate-header">
 
-        <!-- HEADER -->
-        <div class="timer-header">
 
-            <div class="timer-tabs">
+    <div class="ultimate-title">
 
-                <button
-                    class="timer-tab active"
-                    data-timer-mode="study"
-                    type="button"
-                >
-                    تایمر مطالعه
-                </button>
+        <i data-lucide="brain-circuit"></i>
 
-                <button
-                    class="timer-tab"
-                    data-timer-mode="free"
-                    type="button"
-                >
-                    تایمر آزاد
-                </button>
 
+        <h3>
+            جلسه مطالعه
+        </h3>
+
+
+    </div>
+
+
+
+    <div class="running">
+
+        <span></span>
+
+        در حال مطالعه
+
+    </div>
+
+
+</div>
+
+
+<div class="ultimate-main">
+
+
+    <!-- LEFT EMPTY BOX -->
+
+    <div class="building-box">
+
+        <i data-lucide="sparkles"></i>
+
+        <span>
+            در حال ساخت
+        </span>
+
+    </div>
+
+
+
+    <!-- CENTER TIMER -->
+
+    <div class="ultimate-timer">
+
+
+        <div class="time-boxes">
+
+
+            <div>
+                <strong>01</strong>
+                <span>ساعت</span>
             </div>
 
 
-            <!-- دکمه چرخش -->
-            <button
-                type="button"
-                class="timer-flip-btn"
-                id="timerFlipBtn"
-                title="نمای درس"
-            >
-                <i data-lucide="refresh-cw"></i>
+            <div>
+                <strong>24</strong>
+                <span>دقیقه</span>
+            </div>
+
+
+            <div>
+                <strong>35</strong>
+                <span>ثانیه</span>
+            </div>
+
+
+            <div>
+                <strong>80</strong>
+                <span>صدم</span>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="timer-buttons">
+
+
+            <button>
+                <i data-lucide="square"></i>
             </button>
 
+
+            <button class="main-btn">
+                <i data-lucide="pause"></i>
+            </button>
+
+
+            <button>
+                <i data-lucide="rotate-ccw"></i>
+            </button>
+
+
         </div>
 
 
-        <!-- =================================================
-             FLIP AREA
-        ================================================== -->
-
-        <div class="timer-flip">
-
-            <div class="timer-flip-inner" id="timerFlipInner">
-
-
-                <!-- =================================================
-                     FRONT
-                ================================================== -->
-
-                <!-- =================================================
-                    FRONT
-                ================================================== -->
-
-                <div class="timer-face timer-front">
-
-
-                    <div class="timer-layout">
-
-
-                        <!-- فضای خالی سمت چپ برای تعادل -->
-                        <!-- کارت خالی سمت چپ -->
-
-                        <div class="empty-left-card">
-
-                            <button
-                                type="button"
-                                class="finish-study-btn"
-                                id="finishStudyBtn"
-                            >
-                                <i data-lucide="check-circle-2"></i>
-
-                                <span>
-                                    پایان مطالعه
-                                </span>
-                            </button>
-
-                        </div>
-
-
-
-
-                        <!-- =========================
-                            تایمر وسط
-                        ========================== -->
-
-                        <div class="timer-main-center">
-
-
-                            <!-- برچسب جلسه -->
-
-                            <div class="timer-session-badge">
-
-                                <span class="session-dot"></span>
-
-                                <span id="timerSessionText">
-                                    جلسه مطالعه
-                                </span>
-
-                            </div>
-
-
-
-
-
-                            <!-- تایمر -->
-
-                            <div
-                                class="digital-timer"
-                                id="timerCircle"
-                            >
-
-
-                                <div
-                                    class="digital-timer-display"
-                                    id="timerDisplay"
-                                >
-                                    00:00:00
-                                </div>
-
-
-
-                                <div class="digital-timer-label">
-
-                                    ساعت / دقیقه / ثانیه
-
-                                </div>
-
-
-                            </div>
-
-
-
-
-
-
-                            <!-- وضعیت -->
-
-                            <div
-                                class="timer-status"
-                                id="timerStatus"
-                            >
-
-                                آماده شروع
-
-                            </div>
-
-
-
-
-
-
-                            <!-- کنترل ها -->
-
-                            <div class="timer-controls">
-
-
-
-                                <button
-                                    type="button"
-                                    class="timer-control reset"
-                                    id="timerReset"
-                                    title="ریست"
-                                >
-
-                                    <i data-lucide="rotate-ccw"></i>
-
-                                </button>
-
-
-
-
-
-                                <button
-                                    type="button"
-                                    class="timer-control pause"
-                                    id="timerPause"
-                                    title="شروع / توقف"
-                                >
-
-                                    <i
-                                        data-lucide="play"
-                                        id="timerPauseIcon"
-                                    ></i>
-
-                                </button>
-
-
-
-
-
-                                <button
-                                    type="button"
-                                    class="timer-control stop"
-                                    id="timerStop"
-                                    title="توقف"
-                                >
-
-                                    <i data-lucide="square"></i>
-
-                                </button>
-
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-
-
-
-
-
-                        <!-- =========================
-                            کارت درس سمت راست
-                        ========================== -->
-
-
-                        <!-- کارت اطلاعات درس انتخاب شده -->
-
-                        <div class="selected-lesson-card">
-
-
-                        <!-- هدر: لوگو + نام درس -->
-
-                        <div class="lesson-card-header">
-
-
-                        <div class="lesson-logo" id="selectedLessonLogo">
-
-                            <i data-lucide="book-open"></i>
-
-                        </div>
-
-
-
-                            <div class="lesson-title-box">
-
-
-                                <span class="lesson-label">
-                                    درس انتخاب شده
-                                </span>
-
-
-                                <strong id="selectedLessonName">
-                                    هنوز درسی انتخاب نشده
-                                </strong>
-
-
-                            </div>
-
-
-                        </div>
-
-
-
-
-
-                        <!-- مبحث -->
-
-                        <div class="lesson-info-box">
-
-
-                            <div class="info-title">
-                                مبحث
-                            </div>
-
-
-                            <div
-                                class="info-value"
-                                id="selectedLessonTopic"
-                            >
-                                -
-                            </div>
-
-
-                        </div>
-
-
-
-
-
-
-                        <!-- یادداشت -->
-
-                        <div class="lesson-info-box">
-
-
-                            <div class="info-title">
-                                یادداشت
-                            </div>
-
-
-                            <div
-                                class="info-value note"
-                                id="selectedLessonNote"
-                            >
-                                -
-                            </div>
-
-
-                        </div>
-
-
-
-
-
-
-                        <!-- زمان -->
-
-                        <div class="lesson-info-box">
-
-
-                            <div class="info-title">
-                                زمان تقریبی
-                            </div>
-
-
-                            <div
-                                class="info-value"
-                                id="selectedLessonTime"
-                            >
-                                -
-                            </div>
-
-
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-
-                    </div>
-
-
-
-                </div>
-
-
-                <!-- =================================================
-                     BACK
-                ================================================== -->
-
-                <div class="timer-face timer-back">
-
-                    <div class="back-content">
-
-
-                        <!-- اطلاعات درس -->
-                        <div class="back-subject">
-
-                            <div class="back-subject-icon">
-                                <i data-lucide="book-open"></i>
-                            </div>
-
-                            <span class="back-label">
-                                درس فعلی
-                            </span>
-
-                            <strong id="timerSubject">
-                                ریاضی
-                            </strong>
-
-                            <div
-                                class="back-topic"
-                                id="timerTopic"
-                            >
-                                حد و پیوستگی
-                            </div>
-
-                        </div>
-
-
-                        <!-- جداکننده -->
-                        <div class="back-divider"></div>
-
-
-                        <!-- لیست کارها -->
-                        <div class="study-checklist">
-
-                            <div class="checklist-title">
-
-                                <span>
-                                    لیست کارها
-                                </span>
-
-                                <i data-lucide="list-checks"></i>
-
-                            </div>
-
-
-                            <label class="study-task completed">
-
-                                <span class="check-box">
-                                    <i data-lucide="check"></i>
-                                </span>
-
-                                <span>
-                                    مطالعه مبحث
-                                </span>
-
-                            </label>
-
-
-                            <label class="study-task">
-
-                                <span class="check-box"></span>
-
-                                <span>
-                                    حل تمرین
-                                </span>
-
-                            </label>
-
-
-                            <label class="study-task">
-
-                                <span class="check-box"></span>
-
-                                <span>
-                                    تست آموزشی
-                                </span>
-
-                            </label>
-
-
-                            <label class="study-task">
-
-                                <span class="check-box"></span>
-
-                                <span>
-                                    مرور نکات
-                                </span>
-
-                            </label>
-
-
-                            <label class="study-task">
-
-                                <span class="check-box"></span>
-
-                                <span>
-                                    خلاصه نویسی
-                                </span>
-
-                            </label>
-
-                        </div>
-
-
-                        <!-- پایین کارت -->
-                        <div class="back-bottom">
-
-                            <button
-                                type="button"
-                                class="back-action"
-                                id="changeSubjectBtn"
-                            >
-                                <span>
-                                    تغییر درس
-                                </span>
-
-                                <i data-lucide="refresh-cw"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
 
     </div>
 
@@ -1550,41 +1169,158 @@
 
 
 
+    <!-- RIGHT LESSON -->
+
+   <div class="lesson-panel">
+
+
+    <div class="lesson-header">
+
+
+        <div class="lesson-icon">
+            <i data-lucide="book-open"></i>
+        </div>
+
+
+        <div>
+
+            <span>
+                درس انتخاب شده
+            </span>
+
+            <h3 >
+                -----
+            </h3>
+
+        </div>
+
+
+    </div>
 
 
 
 
+    <div class="lesson-topic">
+
+        <small>
+            مبحث
+        </small>
+
+        <strong>
+            -----
+        </strong>
+
+    </div>
 
 
 
 
+    <div class="lesson-info">
+
+
+        <div>
+
+            <span>
+                زمان مطالعه
+            </span>
+
+            <strong>
+               ----
+            </strong>
+
+        </div>
+
+
+
+        <div>
+
+            <span>
+                شروع
+            </span>
+
+            <strong>
+              الان
+            </strong>
+
+        </div>
+
+
+    </div>
 
 
 
 
+    <div class="lesson-note">
+
+
+        <span>
+            یادداشت
+        </span>
+
+
+        <p>
+            ----
+        </p>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+<div class="ultimate-footer">
+
+
+    <div class="tasks">
+
+
+        <span class="task done">
+            <i data-lucide="check"></i>
+            مطالعه
+        </span>
+
+
+        <span class="task done">
+            <i data-lucide="check"></i>
+            تمرین
+        </span>
+
+
+        <span class="task">
+            تست
+        </span>
+
+
+        <span class="task">
+            مرور
+        </span>
+
+
+    </div>
 
 
 
 
+    <button class="finish">
+
+        <i data-lucide="check"></i>
+
+        پایان مطالعه
+
+    </button>
 
 
 
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section>
 
 
 
@@ -1601,163 +1337,201 @@
 
 
 <!-- =====================================================
-     WEEKLY REPORT FLIP CARD
+     WEEKLY LESSON REPORT
 ===================================================== -->
-<div class="weekly-report-card">
+
+<section class="weekly-report-card">
 
 
-<!-- HEADER -->
+    <!-- HEADER -->
 
-<div class="report-header">
-
-
-    
-    <div class="session-report-header">
+    <div class="report-header">
 
 
-        <i data-lucide="notebook-pen"></i>
+        <div class="session-report-header">
 
+            <i data-lucide="book-open-check"></i>
 
-        <h2>
-            گزارش جلسه
-        </h2>
+            <h2>
+                برنامه درس‌ها
+            </h2>
 
-
-    </div>
-
-
-    <!-- تب ها سمت چپ -->
-
-    <div class="report-tabs">
-
-
-        <button  
-            class="report-tab active"
-            data-report="stats">
-
-            گزارش جلسه
-
-        </button>
-
-
-
-        <button  
-            class="report-tab"
-            data-report="lessons">
-
-            درس‌ها
-
-        </button>
+        </div>
 
 
     </div>
 
 
-</div>
+
+    <!-- LESSONS CONTENT -->
+
+    <div class="report-section active" id="lessons">
+
+
+        <div class="lessons-layout">
+
+
+            <!-- =========================
+                 روزهای هفته
+            ========================== -->
+
+            <div class="lessons-week-box">
+
+
+                <div class="box-title">
+
+                    <i data-lucide="calendar-days"></i>
+
+                    <span>
+                        روزهای هفته
+                    </span>
+
+                </div>
 
 
 
-    <!-- گزارش اصلی -->
+                <button
+                    type="button"
+                    class="lesson-day active"
+                    data-day="saturday">
 
-    <div 
-    class="report-section active"
-    id="stats">
+                    <span class="lesson-day-name">
+                        شنبه
+                    </span>
 
+                    <span class="lesson-day-relative">
+                        امروز
+                    </span>
 
-
-        <!-- همین محتوای قبلی گزارش -->
-<!-- =========================
-     SESSION REPORT
-========================= -->
-
-<div class="session-report">
-
-
-    <!-- عنوان -->
+                </button>
 
 
 
+                <button
+                    type="button"
+                    class="lesson-day"
+                    data-day="sunday">
+
+                    <span class="lesson-day-name">
+                        یکشنبه
+                    </span>
+
+                    <span class="lesson-day-relative">
+                        دیروز
+                    </span>
+
+                </button>
 
 
 
+                <button
+                    type="button"
+                    class="lesson-day"
+                    data-day="monday">
 
-    <div class="session-report-body">
+                    <span class="lesson-day-name">
+                        دوشنبه
+                    </span>
+
+                    <span class="lesson-day-relative">
+                        ۲ روز پیش
+                    </span>
+
+                </button>
 
 
 
-        <!-- یادداشت -->
+                <button
+                    type="button"
+                    class="lesson-day"
+                    data-day="tuesday">
 
-        <div class="session-note-box">
+                    <span class="lesson-day-name">
+                        سه‌شنبه
+                    </span>
+
+                    <span class="lesson-day-relative">
+                        ۳ روز پیش
+                    </span>
+
+                </button>
 
 
-            <div class="box-title">
 
-                <i data-lucide="file-text"></i>
+                <button
+                    type="button"
+                    class="lesson-day"
+                    data-day="wednesday">
 
-                <span>
-                    یادداشت امروز
-                </span>
+                    <span class="lesson-day-name">
+                        چهارشنبه
+                    </span>
+
+                    <span class="lesson-day-relative">
+                        ۴ روز پیش
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="lesson-day"
+                    data-day="thursday">
+
+                    <span class="lesson-day-name">
+                        پنجشنبه
+                    </span>
+
+                    <span class="lesson-day-relative">
+                        ۵ روز پیش
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="lesson-day"
+                    data-day="friday">
+
+                    <span class="lesson-day-name">
+                        جمعه
+                    </span>
+
+                    <span class="lesson-day-relative">
+                        استراحت
+                    </span>
+
+                </button>
+
+
 
             </div>
 
 
 
-<textarea 
-    class="today-note-input"
-    placeholder="امروز چه چیزهایی مطالعه کردی؟ نکات مهم یا احساس خودت را بنویس..."
-></textarea>
 
 
-        </div>
+            <!-- =========================
+                 لیست درس ها
+            ========================== -->
 
 
+            <div
+                class="lessons-list-box"
+                id="lessonListContainer">
 
 
+                <!-- JS اینجا کارت درس میسازد -->
 
-        <!-- روز های هفته -->
-
-
-        <div class="week-days-box">
-
-
-            <div class="box-title">
-
-                <i data-lucide="calendar-days"></i>
-
-                <span>
-                    روزهای هفته
-                </span>
 
             </div>
 
 
 
-            <button class="day active">
-                امروز
-            </button>
-
-
-            <button class="day">
-                دیروز
-            </button>
-
-
-            <button class="day">
-                ۲ روز پیش
-            </button>
-
-
-            <button class="day">
-                ۳ روز پیش
-            </button>
-
-
-            <button class="day">
-                هفته قبل
-            </button>
-
-
-
         </div>
 
 
@@ -1765,239 +1539,7 @@
     </div>
 
 
-
-
-
-<!-- ساعت مطالعه دستی -->
-
-<div class="daily-study-bar-new" style="margin-top: 8px;">
-
-
-    <div class="daily-study-label-new" style="display: flex; align-items: center;">
-
-        <!-- <i data-lucide="clock-3"></i> -->
-
-        <!-- From Uiverse.io by vikramsinghnegi --> 
-        <svg
-        class="clock-icon"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        stroke-width="2"
-        fill="none"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        >
-        <path class="clock-circle" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
-        <path class="clock-hand" d="M12 6v6l3 3"></path>
-        </svg>
-
-
-        <span>
-            ساعت مطالعه 
-        </span>
-
-    </div>
-
-
-
-    <div class="study-duration-inputs-new">
-
-
-        <div class="duration-box-new">
-
-            <input 
-                type="number"
-                id="studyHourNew"
-                class="duration-input-new"
-                min="0"
-                max="24"
-                placeholder="00"
-            >
-
-            <span>
-                ساعت
-            </span>
-
-        </div>
-
-
-
-        <b>:</b>
-
-
-
-        <div class="duration-box-new">
-
-            <input 
-                type="number"
-                id="studyMinuteNew"
-                class="duration-input-new"
-                min="0"
-                max="59"
-                placeholder="00"
-            >
-
-            <span>
-                دقیقه
-            </span>
-
-        </div>
-
-
-
-        <b>:</b>
-
-
-
-        <div class="duration-box-new">
-
-            <input 
-                type="number"
-                id="studySecondNew"
-                class="duration-input-new"
-                min="0"
-                max="59"
-                placeholder="00"
-            >
-
-            <span>
-                ثانیه
-            </span>
-
-        </div>
-
-
-    </div>
-
-
-</div>
-
-
-<button
-    class="save-report-btn"
-    id="saveReportBtn"
->
-
-    <i data-lucide="save"></i>
-
-    ذخیره گزارش
-
-</button>
-
-</div>
-
-
-    </div>
-
-<!-- بخش درس ها -->
-<div class="report-section" id="lessons">
-
-    <div class="lessons-layout">
-
-        <!-- =========================
-             ستون روزها - سمت چپ
-        ========================== -->
-        <div class="lessons-week-box">
-
-            <div class="box-title">
-                <i data-lucide="calendar-days"></i>
-
-                <span>
-                    روزهای هفته
-                </span>
-            </div>
-
-            <button
-                type="button"
-                class="lesson-day active"
-                data-day="saturday">
-
-                <span class="lesson-day-name">شنبه</span>
-                <span class="lesson-day-relative">امروز</span>
-
-            </button>
-
-            <button
-                type="button"
-                class="lesson-day"
-                data-day="sunday">
-
-                <span class="lesson-day-name">یکشنبه</span>
-                <span class="lesson-day-relative">دیروز</span>
-
-            </button>
-
-            <button
-                type="button"
-                class="lesson-day"
-                data-day="monday">
-
-                <span class="lesson-day-name">دوشنبه</span>
-                <span class="lesson-day-relative">۲ روز پیش</span>
-
-            </button>
-
-            <button
-                type="button"
-                class="lesson-day"
-                data-day="tuesday">
-
-                <span class="lesson-day-name">سه‌شنبه</span>
-                <span class="lesson-day-relative">۳ روز پیش</span>
-
-            </button>
-
-            <button
-                type="button"
-                class="lesson-day"
-                data-day="wednesday">
-
-                <span class="lesson-day-name">چهارشنبه</span>
-                <span class="lesson-day-relative">۴ روز پیش</span>
-
-            </button>
-
-            <button
-                type="button"
-                class="lesson-day"
-                data-day="thursday">
-
-                <span class="lesson-day-name">پنجشنبه</span>
-                <span class="lesson-day-relative">۵ روز پیش</span>
-
-            </button>
-
-            <button
-                type="button"
-                class="lesson-day"
-                data-day="friday">
-
-                <span class="lesson-day-name">جمعه</span>
-                <span class="lesson-day-relative">روز استراحت</span>
-
-            </button>
-
-        </div>
-
-
-        <!-- =========================
-             لیست برنامه‌های روز
-             سمت راست
-        ========================== -->
-        <div
-            class="lessons-list-box"
-            id="lessonListContainer">
-
-            <!-- برنامه‌های روز انتخاب شده توسط JS اینجا ساخته می‌شوند -->
-
-        </div>
-
-    </div>
-
-</div>
-
-
-</div>
+</section>
 
 </section>
 
@@ -2071,94 +1613,124 @@
 
 
 
+<section class="services-section">
 
 
+    <!-- سمت راست -->
+    <div class="services-list">
 
 
+        <div class="mini-service-card">
 
+            <div class="mini-icon">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
 
+            <div>
+                <h3>بخش تست‌ها</h3>
+                <p>آزمون و تحلیل عملکرد</p>
+            </div>
 
-
-<div class="service-box-container" style="margin-top: 10px;">
-
-
-    <div class="service-card">
-
-        <div class="service-icon">
-            <i class="fa-solid fa-pen-to-square"></i>
-        </div>
-
-        <div class="service-content">
-
-            <h3>بخش تست‌ها</h3>
-
-            <p>
-                آزمون، تست زمان‌دار و تحلیل
-            </p>
+            <a href="./تست/tests.html">
+                ورود
+            </a>
 
         </div>
 
-        <a href="./تست/tests.html">
-            ورود
-        </a>
+
+
+        <div class="mini-service-card">
+
+            <div class="mini-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div>
+                <h3>دستیار هوش مصنوعی</h3>
+                <p>کمک درسی با AI</p>
+            </div>
+
+            <a href="./chat/chat.html">
+                ورود
+            </a>
+
+        </div>
+
+
+
+
+        <div class="mini-service-card">
+
+            <div class="mini-icon">
+                <i class="fa-solid fa-file-arrow-up"></i>
+            </div>
+
+            <div>
+                <h3>آپلود فایل</h3>
+                <p>ارسال جزوه و PDF</p>
+            </div>
+
+            <a href="./F.html">
+                ورود
+            </a>
+
+        </div>
+
+
+
+
+
+        <div class="mini-service-card">
+
+            <div class="mini-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+                <h3>آزمون ماز</h3>
+                <p>ورود به پنل ماز</p>
+            </div>
+
+            <a href="https://biomaze.ir/panel/classes/categories/3f88e832-39c4-461e-b557-c5b333b3ef92?year=43372291-d7d2-412e-a07c-164db8321454&display=category" target="_blank">
+                ورود
+            </a>
+
+        </div>
+
 
     </div>
 
 
 
 
-    <div class="service-card">
 
-        <div class="service-icon">
-            <i class="fa-solid fa-robot"></i>
-        </div>
+    <!-- سمت چپ -->
 
-        <div class="service-content">
+    <div class="coming-card">
 
-            <h3>دستیار هوش مصنوعی</h3>
 
-            <p>
-                پاسخ و کمک درسی با AI
-            </p>
+        <div class="coming-logo">
+
+            <i class="fa-solid fa-cubes"></i>
 
         </div>
 
-        <a href="./chat/chat.html">
-            ورود
-        </a>
+
+        <h2>
+            در حال ساخت
+        </h2>
+
+
+        <p>
+            این بخش به زودی فعال خواهد شد
+        </p>
+
 
     </div>
 
 
 
-
-
-    <div class="service-card">
-
-        <div class="service-icon">
-            <i class="fa-solid fa-file-arrow-up"></i>
-        </div>
-
-        <div class="service-content">
-
-            <h3>آپلود فایل</h3>
-
-            <p>
-                ارسال جزوه و PDF
-            </p>
-
-        </div>
-
-        <a href="./F.html">
-            ورود
-        </a>
-
-    </div>
-
-
-</div>
-
-
+</section>
 
 
 

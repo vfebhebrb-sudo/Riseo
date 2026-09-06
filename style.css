@@ -4920,6 +4920,7 @@ height: 290px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    width: 460px;
 }
 
 .session-report-header {
@@ -6786,10 +6787,14 @@ height: 290px;
 .lessons-list-box {
     flex: 1;
     min-width: 0;
-
+    height: 345px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+        height: 345px;
+    margin-left: 0px;
+    margin-right: 10px;
 }
 
 

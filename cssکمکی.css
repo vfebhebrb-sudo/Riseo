@@ -2907,3 +2907,3229 @@
         transition: none !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ultimate-study-card{
+
+
+
+
+
+background:
+linear-gradient(
+145deg,
+#1b1f25,
+#121417
+);
+
+
+border:1px solid #292e36;
+
+border-radius:20px;
+
+
+padding:18px;
+
+
+box-shadow:
+
+12px 12px 35px #0008;
+
+
+}
+
+
+
+.ultimate-header{
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding-bottom:14px;
+
+border-bottom:1px solid #292e36;
+
+
+}
+
+
+
+.ultimate-title{
+
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+color:white;
+
+
+}
+
+
+
+.ultimate-title i{
+
+color:#94a3b8;
+
+}
+
+
+
+.ultimate-title h3{
+
+font-size:17px;
+
+}
+
+
+
+.ultimate-title span{
+
+font-size:12px;
+
+color:#8b95a5;
+
+}
+
+
+
+
+
+.running{
+
+
+background:#16281e;
+
+color:#22c55e;
+
+font-size:12px;
+
+padding:7px 14px;
+
+border-radius:20px;
+
+display:flex;
+
+gap:8px;
+
+align-items:center;
+
+
+}
+
+
+.running span{
+
+width:8px;
+
+height:8px;
+
+background:#22c55e;
+
+border-radius:50%;
+
+}
+
+
+
+
+
+.ultimate-main{
+
+
+display:grid;
+
+grid-template-columns:1fr 1.2fr .8fr;
+
+
+gap:20px;
+
+
+align-items:center;
+
+
+padding:22px 0;
+
+
+}
+
+
+
+
+
+
+.ultimate-lesson{
+
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+
+}
+
+
+
+
+.lesson-icon{
+
+
+width:58px;
+
+height:58px;
+
+
+background:#252a31;
+
+
+border-radius:17px;
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+color:white;
+
+
+}
+
+
+
+
+
+.ultimate-lesson small{
+
+color:#8b95a5;
+
+}
+
+
+.ultimate-lesson h2{
+
+color:white;
+
+margin:3px 0;
+
+}
+
+
+
+.ultimate-lesson p{
+
+color:#9ca3af;
+
+font-size:13px;
+
+}
+
+
+
+
+
+
+
+
+.ultimate-timer{
+
+
+background:#101216;
+
+padding:16px;
+
+border-radius:18px;
+
+text-align:center;
+
+
+}
+
+
+
+
+.timer-progress{
+
+
+height:5px;
+
+background:#292e36;
+
+border-radius:10px;
+
+overflow:hidden;
+
+
+}
+
+
+
+.timer-progress div{
+
+
+height:100%;
+
+width:70%;
+
+background:#2563eb;
+
+
+}
+
+
+
+
+.ultimate-time{
+
+
+font-size:38px;
+
+font-weight:900;
+
+letter-spacing:3px;
+
+color:white;
+
+margin-top:12px;
+
+
+}
+
+
+
+.ultimate-timer span{
+
+
+font-size:12px;
+
+color:#8b95a5;
+
+}
+
+
+
+
+
+.ultimate-buttons{
+
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+margin-top:15px;
+
+
+}
+
+
+
+.ultimate-buttons button{
+
+
+width:40px;
+
+height:40px;
+
+border-radius:13px;
+
+
+background:#252a31;
+
+border:1px solid #343942;
+
+
+color:white;
+
+
+}
+
+
+
+
+.ultimate-buttons .primary{
+
+
+background:#2563eb;
+
+}
+
+
+
+
+
+.ultimate-info{
+
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+
+}
+
+
+
+
+.ultimate-info div{
+
+
+background:#101216;
+
+
+padding:10px 12px;
+
+
+border-radius:12px;
+
+
+display:flex;
+
+justify-content:space-between;
+
+
+}
+
+
+
+.ultimate-info span{
+
+color:#8b95a5;
+
+font-size:12px;
+
+}
+
+
+.ultimate-info strong{
+
+color:white;
+
+font-size:13px;
+
+}
+
+
+
+
+
+
+
+.ultimate-footer{
+
+
+border-top:1px solid #292e36;
+
+padding-top:14px;
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+}
+
+
+
+
+.tasks span{
+
+
+background:#20242a;
+
+
+padding:7px 12px;
+
+
+border-radius:10px;
+
+
+font-size:12px;
+
+color:#cbd5e1;
+
+
+margin-left:5px;
+
+
+}
+
+
+
+.tasks .checked{
+
+color:#22c55e;
+
+}
+
+
+
+
+.finish{
+
+
+background:#07b81b;
+
+border:none;
+
+
+color:rgb(0, 0, 0);
+
+
+padding:11px 22px;
+
+
+border-radius:14px;
+
+
+font-weight:700;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+.ultimate-study-card{
+
+width:100%;
+
+}
+
+
+.ultimate-main{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ultimate-header{
+
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    height:46px;
+
+
+    margin:10px;
+
+
+    padding:0 14px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #1b1f25,
+        #14171c
+    );
+
+
+
+    border:1px solid #292e36;
+
+
+    border-radius:12px;
+
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.25);
+
+
+
+}
+
+
+
+.ultimate-title{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+
+
+}
+
+
+
+.ultimate-title svg{
+
+
+    width:20px;
+
+    height:20px;
+
+
+    color:#d1d5db;
+
+
+}
+
+
+
+.ultimate-title h3{
+
+
+    margin:0;
+
+
+    font-size:14px;
+
+
+    color:#f8fafc;
+
+
+    font-weight:800;
+
+
+
+}
+
+
+
+
+.running{
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    gap:7px;
+
+
+
+    padding:5px 11px;
+
+
+    border-radius:20px;
+
+
+
+    background:#11151a;
+
+
+    border:1px solid #303641;
+
+
+
+    color:#cbd5e1;
+
+
+
+    font-size:11px;
+
+
+    white-space:nowrap;
+
+
+}
+
+
+
+.running span{
+
+
+    width:7px;
+
+    height:7px;
+
+
+    border-radius:50%;
+
+
+    background:#22c55e;
+
+
+    box-shadow:0 0 8px #22c55e;
+
+
+    animation:pulse 1.5s infinite;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ultimate-main{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 2fr 1fr;
+
+
+    gap:15px;
+
+
+    padding:15px;
+
+}
+
+
+
+/* LEFT */
+
+.building-box{
+
+
+    height:210px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    background:
+    linear-gradient(
+    145deg,
+    #1b1f25,
+    #14171c
+    );
+
+
+    border:1px solid #292e36;
+
+
+    border-radius:16px;
+
+
+
+    color:#9ca3af;
+
+
+
+}
+
+
+
+.building-box svg{
+
+
+    width:45px;
+
+    height:45px;
+
+
+    animation:float 3s infinite;
+
+
+}
+
+
+
+
+/* TIMER */
+
+.ultimate-timer{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+
+}
+
+
+
+
+.time-boxes{
+
+
+    display:flex;
+
+    gap:10px;
+
+
+}
+
+
+
+.time-boxes div{
+
+
+    width:75px;
+
+    height:75px;
+
+
+    background:#171a20;
+
+
+    border:1px solid #303641;
+
+
+    border-radius:15px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+    align-items:center;
+
+
+
+    box-shadow:
+    inset 0 0 20px #0008;
+
+
+
+}
+
+
+
+
+.time-boxes strong{
+
+
+    color:white;
+
+
+    font-size:25px;
+
+
+}
+
+
+
+.time-boxes span{
+
+
+    font-size:11px;
+
+    color:#8b95a5;
+
+
+}
+
+
+
+
+.timer-buttons{
+
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+
+.timer-buttons button{
+
+
+    width:45px;
+
+    height:45px;
+
+
+    border-radius:14px;
+
+
+    border:1px solid #303641;
+
+
+    background:#181b21;
+
+
+    color:white;
+
+
+}
+
+
+
+.timer-buttons .main-btn{
+
+
+    background:#2563eb;
+
+
+}
+
+
+
+
+
+/* LESSON */
+
+
+.lesson-panel{
+
+
+    background:#171a20;
+
+
+    border:1px solid #292e36;
+
+
+    border-radius:16px;
+
+
+    padding:15px;
+
+
+}
+
+
+
+.lesson-header{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    color:white;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.lesson-header svg{
+
+
+    width:25px;
+
+}
+
+
+
+.lesson-panel ul{
+
+
+    list-style:none;
+
+
+}
+
+
+
+.lesson-panel li{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+
+    padding:10px 0;
+
+
+    border-bottom:1px solid #252a33;
+
+
+}
+
+
+
+.lesson-panel span{
+
+    color:#8b95a5;
+
+}
+
+
+.lesson-panel strong{
+
+    color:white;
+
+    font-size:13px;
+
+}
+
+
+
+@keyframes float{
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
+
+
+
+.ultimate-main{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 2fr 1fr;
+
+    gap:15px;
+
+    padding:15px;
+
+    direction:ltr;
+
+}
+
+
+/* باکس سمت چپ */
+.building-box{
+
+    grid-column:1;
+
+}
+
+
+/* تایمر وسط */
+.ultimate-timer{
+
+    grid-column:2;
+
+}
+
+
+/* درس سمت راست */
+.lesson-panel{
+
+    grid-column:3;
+
+    direction:rtl;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lesson-panel{
+
+
+    height:100%;
+
+
+    padding:20px;
+
+
+    background:
+    linear-gradient(
+    145deg,
+    #1b1f25,
+    #13161b
+    );
+
+
+    border:1px solid #292e36;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    justify-content:space-between;
+
+
+
+}
+
+
+
+
+.lesson-top{
+
+
+    display:flex;
+
+
+    align-items:flex-start;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+.lesson-icon{
+
+
+    width:45px;
+
+    height:45px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+    color:white;
+
+
+}
+
+
+
+.lesson-icon svg{
+
+
+    width:35px;
+
+    height:35px;
+
+
+    filter:
+    drop-shadow(
+    0 5px 10px #000
+    );
+
+
+}
+
+
+
+
+.lesson-name span{
+
+
+    font-size:12px;
+
+    color:#8b95a5;
+
+
+}
+
+
+
+.lesson-name h2{
+
+
+    margin-top:5px;
+
+
+    color:white;
+
+
+    font-size:24px;
+
+
+}
+
+
+
+.lesson-name p{
+
+
+    margin-top:4px;
+
+
+    color:#9ca3af;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+.lesson-details{
+
+
+    margin-top:25px;
+
+
+    padding:12px;
+
+
+    border-radius:16px;
+
+
+    background:#111419;
+
+
+}
+
+
+
+.lesson-row{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    padding:12px 5px;
+
+
+}
+
+
+
+.lesson-row:not(:last-child){
+
+    border-bottom:
+    1px solid #252a33;
+
+}
+
+
+
+.lesson-row span{
+
+
+    color:#8b95a5;
+
+    font-size:13px;
+
+
+}
+
+
+
+.lesson-row strong{
+
+
+    color:white;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.lesson-row .active{
+
+
+    color:#22c55e;
+
+
+}
+
+.lesson-panel{
+
+
+    height:100%;
+
+
+    padding:15px;
+
+
+    border-radius:18px;
+
+
+    background:
+    linear-gradient(
+    145deg,
+    #191c21,
+    #121418
+    );
+
+
+    border:1px solid #292e36;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+
+}
+
+
+
+.lesson-header{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+
+}
+
+
+
+.lesson-icon{
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    color:#fff;
+
+
+}
+
+
+
+.lesson-icon svg{
+
+
+    width:32px;
+
+    height:32px;
+
+
+}
+
+
+
+.lesson-header span{
+
+
+    font-size:11px;
+
+    color:#8b95a5;
+
+
+}
+
+
+
+.lesson-header h3{
+
+
+    margin-top:3px;
+
+    font-size:20px;
+
+    color:white;
+
+
+}
+
+
+
+
+.lesson-topic{
+
+
+    background:#111419;
+
+
+    border-radius:12px;
+
+
+    padding:10px 12px;
+
+
+}
+
+
+
+.lesson-topic small,
+.lesson-note span{
+
+
+    color:#8b95a5;
+
+    font-size:11px;
+
+
+}
+
+
+
+.lesson-topic strong{
+
+
+    display:block;
+
+    color:white;
+
+    margin-top:3px;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.lesson-info{
+
+
+    display:flex;
+
+    gap:10px;
+
+
+}
+
+
+
+.lesson-info div{
+
+
+    flex:1;
+
+
+    background:#111419;
+
+
+    padding:10px;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+.lesson-info span{
+
+
+    display:block;
+
+    color:#8b95a5;
+
+    font-size:11px;
+
+
+}
+
+
+
+.lesson-info strong{
+
+
+    color:white;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.lesson-note{
+
+
+    background:#111419;
+
+
+    padding:10px 12px;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+.lesson-note p{
+
+
+    color:#d1d5db;
+
+    font-size:13px;
+
+    margin-top:4px;
+
+
+}
+
+
+.lesson-panel{
+
+    height:210px;
+
+    padding:12px;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #191c21,
+    #121418
+    );
+
+    border:1px solid #292e36;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    overflow:hidden;
+
+}
+
+.lesson-header{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+
+.lesson-icon svg{
+
+    width:28px;
+    height:28px;
+
+}
+
+
+
+.lesson-header h3{
+
+    margin-top:2px;
+
+    font-size:18px;
+
+}
+
+
+
+.lesson-topic{
+
+    padding:8px 10px;
+
+    border-radius:10px;
+
+}
+
+
+
+.lesson-info{
+
+    gap:8px;
+
+}
+
+
+
+.lesson-info div{
+
+    padding:7px 9px;
+
+    border-radius:10px;
+
+}
+
+
+
+.lesson-note{
+
+    padding:7px 10px;
+
+    border-radius:10px;
+
+}
+
+
+.lesson-note p{
+
+    margin-top:2px;
+
+    font-size:12px;
+
+}
+
+.lesson-header h3 {
+        margin-bottom: 10px;
+
+
+}
+
+
+.lesson-header {
+        margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ultimate-footer{
+
+
+    height:48px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+    gap:12px;
+
+
+    padding:6px 10px;
+
+
+    background:#15181d;
+
+
+    border:1px solid #292e36;
+
+
+    border-radius:14px;
+
+
+}
+
+
+
+.tasks{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+
+    overflow:hidden;
+
+}
+
+
+
+
+.task{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+
+    padding:6px 10px;
+
+
+    border-radius:20px;
+
+
+    background:#101318;
+
+
+    border:1px solid #272c34;
+
+
+    color:#8b95a5;
+
+
+    font-size:12px;
+
+
+    white-space:nowrap;
+
+
+}
+
+
+
+.task.done{
+
+
+    color:#22c55e;
+
+
+    border-color:#1f4530;
+
+
+}
+
+
+
+.task svg{
+
+
+    width:13px;
+
+    height:13px;
+
+
+}
+
+
+
+
+.finish{
+
+ font-family: "Vazirmatn", sans-serif;
+    height:34px;
+
+
+    padding:0 16px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    background:#22c55e;
+
+
+    color:#111827;
+
+
+    font-weight:700;
+
+
+    font-size:12px;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.finish svg{
+
+
+    width:15px;
+
+    height:15px;
+
+
+}
+
+
+
+.finish:hover{
+
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ultimate-study-card {
+        padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   WEEKLY LESSON REPORT
+===================================================== */
+
+
+.weekly-report-card{
+
+    height:396px;
+
+    padding:14px;
+
+
+    background:
+    linear-gradient(
+        145deg,
+        #181b20,
+        #111317
+    );
+
+
+    border-radius:22px;
+
+
+    border:1px solid #292e36;
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.04);
+
+
+    overflow:hidden;
+
+}
+
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+
+.report-header{
+
+
+    height:42px;
+
+
+    margin-bottom:12px;
+
+
+    padding:0 14px;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    background:#14171c;
+
+
+    border-radius:14px;
+
+
+    border:1px solid #292e36;
+
+
+    box-shadow:
+    inset 0 1px 0 #ffffff08;
+
+
+}
+
+
+
+.session-report-header{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    color:#e5e7eb;
+
+
+}
+
+
+
+.session-report-header i{
+
+
+    width:20px;
+
+    color:#94a3b8;
+
+
+}
+
+
+
+.session-report-header h2{
+
+
+    font-size:15px;
+
+    font-weight:800;
+
+}
+
+
+
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+
+.lessons-layout{
+
+
+    height:calc(100% - 54px);
+
+
+    display:grid;
+
+
+    grid-template-columns:150px 1fr;
+
+
+    gap:12px;
+
+
+
+}
+
+
+
+
+/* =========================
+   DAYS BOX
+========================= */
+
+
+.lessons-week-box{
+
+
+    height:100%;
+
+
+    padding:10px;
+
+
+    background:#14171c;
+
+
+    border-radius:16px;
+
+
+    border:1px solid #292e36;
+
+
+    box-shadow:
+
+    0 10px 25px #0006,
+
+    inset 0 1px 0 #ffffff08;
+
+
+
+}
+
+
+
+
+.box-title{
+
+
+    height:32px;
+
+
+    margin-bottom:8px;
+
+
+    padding:0 8px;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    gap:6px;
+
+
+    color:#cbd5e1;
+
+
+    background:#101216;
+
+
+    border-radius:10px;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+.box-title i{
+
+    width:15px;
+
+}
+
+
+
+
+/* DAY BUTTON */
+
+.lesson-day{
+
+
+    width:100%;
+
+
+    height:38px;
+
+
+    margin-bottom:6px;
+
+
+    padding:0 10px;
+
+
+    border-radius:10px;
+
+
+    border:1px solid #252a32;
+
+
+    background:#101216;
+
+
+    color:#9ca3af;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.lesson-day-name{
+
+
+    font-size:12px;
+
+    font-weight:700;
+
+
+}
+
+
+
+.lesson-day-relative{
+
+
+    font-size:10px;
+
+
+    color:#6b7280;
+
+
+}
+
+
+
+.lesson-day:hover{
+
+
+    transform:translateX(-2px);
+
+    background:#1b2027;
+
+
+}
+
+
+
+.lesson-day.active{
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #303640,
+        #1b1f26
+    );
+
+
+    color:white;
+
+
+    border-color:#64748b;
+
+
+    box-shadow:
+
+    0 6px 15px #0008;
+
+
+}
+
+
+
+
+/* =========================
+   LESSON LIST
+========================= */
+
+
+.lessons-list-box{
+
+
+    /* height:100%;
+ */
+
+    padding:10px;
+
+
+    overflow-y:auto;
+
+
+    background:#14171c;
+
+
+    border-radius:16px;
+
+
+    border:1px solid #292e36;
+
+
+    box-shadow:
+
+    inset 0 1px 0 #ffffff08;
+
+
+
+}
+
+
+
+/* کارت هایی که JS میسازد */
+
+.lesson-item-card{
+
+
+    min-height:72px;
+
+
+    margin-bottom:8px;
+
+
+    padding:12px;
+
+
+    border-radius:14px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #20242b,
+        #15181d
+    );
+
+
+    border:1px solid #303640;
+
+
+    box-shadow:
+
+    0 8px 20px #0005;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.lesson-item-card:hover{
+
+
+    transform:translateY(-2px);
+
+
+    border-color:#64748b;
+
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+.weekly-report-card{
+
+    height:auto;
+
+}
+
+
+.lessons-layout{
+
+
+    grid-template-columns:1fr;
+
+}
+
+
+.lessons-week-box{
+
+
+    display:flex;
+
+    gap:6px;
+
+    overflow-x:auto;
+
+
+}
+
+
+.lesson-day{
+
+
+    min-width:110px;
+
+}
+
+
+}
+
+
+.report-header{
+
+    height:34px;
+
+    margin-bottom:8px;
+
+    padding:0 10px;
+
+    border-radius:12px;
+
+}
+
+
+
+.session-report-header{
+
+    gap:7px;
+
+}
+
+
+.session-report-header i{
+
+    width:16px;
+
+}
+
+
+.session-report-header h2{
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.lessons-layout{
+
+    height:calc(100% - 44px);
+
+    grid-template-columns:120px 1fr;
+
+    gap:8px;
+
+}
+
+
+
+
+
+.lessons-week-box{
+
+
+    padding:7px;
+
+    border-radius:13px;
+
+}
+
+
+
+
+
+.box-title{
+
+
+    height:26px;
+
+    margin-bottom:5px;
+
+    padding:0 6px;
+
+    gap:5px;
+
+    font-size:10px;
+
+
+}
+
+
+
+.box-title i{
+
+    width:13px;
+
+}
+
+
+
+
+.lesson-day{
+
+
+    height:30px;
+
+    margin-bottom:4px;
+
+    padding:0 7px;
+
+    border-radius:8px;
+
+
+}
+
+
+
+.lesson-day-name{
+
+    font-size:10px;
+
+}
+
+
+.lesson-day-relative{
+
+    font-size:8px;
+
+}
+
+
+
+
+
+.lessons-list-box{
+
+
+    padding:7px;
+
+    border-radius:13px;
+
+
+}
+
+
+
+
+
+.lesson-item-card{
+
+
+    min-height:56px;
+
+
+    margin-bottom:5px;
+
+
+    padding:8px;
+
+
+    border-radius:11px;
+
+
+}
+
+
+
+
+.lesson-item-card h3{
+
+    font-size:12px;
+
+}
+
+
+.lesson-item-card span{
+
+    font-size:10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   BOTTOM DASHBOARD
+===================================== */
+
+
+.bottom-dashboard{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns: 
+    1.35fr 1fr;
+
+
+    gap:14px;
+
+
+    align-items:stretch;
+
+
+    margin-top:20px;
+
+}
+
+
+
+
+
+/* کارت ها */
+
+.ultimate-study-card,
+.weekly-report-card{
+
+
+    height:420px;
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+/* جلوگیری از بهم ریختن تایمر */
+
+.ultimate-study-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+.ultimate-main{
+
+    flex:1;
+
+}
+
+
+
+
+
+.ultimate-footer{
+
+    margin-top:auto;
+
+}
+
+
+
+
+
+/* کارت برنامه درس ها */
+
+
+.weekly-report-card{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+.report-section{
+
+
+    flex:1;
+
+
+}
+
+
+
+.lessons-layout{
+
+
+    height:100%;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.bottom-dashboard{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.ultimate-study-card,
+.weekly-report-card{
+
+
+    height:auto;
+
+    min-height:420px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   BOTTOM DASHBOARD
+===================================== */
+
+
+.bottom-dashboard{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns: 
+    1.35fr 1fr;
+
+
+    gap:14px;
+
+
+    align-items:stretch;
+
+
+    margin-top:20px;
+
+}
+
+
+
+
+
+/* کارت ها */
+
+.ultimate-study-card,
+.weekly-report-card{
+
+
+    height:420px;
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+/* جلوگیری از بهم ریختن تایمر */
+
+.ultimate-study-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+.ultimate-main{
+
+    flex:1;
+
+}
+
+
+
+
+
+.ultimate-footer{
+
+    margin-top:auto;
+
+}
+
+
+
+
+
+/* کارت برنامه درس ها */
+
+
+.weekly-report-card{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+.report-section{
+
+
+    flex:1;
+
+
+}
+
+
+
+.lessons-layout{
+
+
+    height:100%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   MAIN BOTTOM DASHBOARD
+===================================== */
+
+.bottom-dashboard{
+
+    width:100%;
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:stretch;
+
+    margin-top:20px;
+
+}
+
+
+/* کارت مطالعه */
+
+.ultimate-study-card{
+
+    width:65%;
+
+    height:420px;
+
+}
+
+
+
+/* کارت برنامه درس */
+
+.weekly-report-card{
+
+    width:35%;
+
+    height:420px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   FIX WEEKLY LESSON HEIGHT
+===================================== */
+
+
+.weekly-report-card{
+
+    height:520px !important;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.weekly-report-card .report-section{
+
+    flex:1;
+
+    height:auto !important;
+
+}
+
+
+
+.weekly-report-card .lessons-layout{
+
+    height:100% !important;
+
+}
+
+
+
+/* .weekly-report-card .lessons-week-box,
+.weekly-report-card .lessons-list-box{
+
+    height:95% !important;
+
+} */
+
+
+.bottom-dashboard{
+
+    align-items:stretch;
+
+}
+
+
+.weekly-report-card{
+
+    min-height:440px;
+
+}

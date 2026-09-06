@@ -4759,7 +4759,330 @@ if (lessonDays.length > 0) {
 
 
 
+/* =====================================================
+   NEW LESSON PANEL SYSTEM
+===================================================== */
 
+
+const newLessonLogo =
+document.querySelector(".lesson-icon");
+
+
+const newLessonName =
+document.querySelector(".lesson-header h3");
+
+
+const newLessonTopic =
+document.querySelector(".lesson-topic strong");
+
+
+const newLessonTime =
+document.querySelector(".lesson-info div:nth-child(1) strong");
+
+
+const newLessonNote =
+document.querySelector(".lesson-note p");
+
+
+
+/* =====================================================
+   UPDATE LESSON PANEL
+===================================================== */
+
+
+function updateNewLessonPanel(data){
+
+
+    if(!data){
+        return;
+    }
+
+
+
+    /*
+        نام درس
+    */
+
+    if(newLessonName){
+
+        newLessonName.textContent =
+        data.subjectName || "بدون نام";
+
+    }
+
+
+
+    /*
+        مبحث
+    */
+
+    if(newLessonTopic){
+
+        newLessonTopic.textContent =
+        data.topic || "-";
+
+    }
+
+
+
+
+    /*
+        زمان مطالعه
+    */
+
+    if(newLessonTime){
+
+        newLessonTime.textContent =
+        data.duration
+        ? data.duration + " دقیقه"
+        : "-";
+
+    }
+
+
+
+
+
+    /*
+        یادداشت
+    */
+
+    if(newLessonNote){
+
+        newLessonNote.textContent =
+        data.note || "بدون یادداشت";
+
+    }
+
+
+
+
+    /*
+        آیکون درس
+    */
+
+    if(newLessonLogo){
+
+
+        const icon =
+        data.icon || "book-open";
+
+
+        newLessonLogo.innerHTML = `
+
+            <i data-lucide="${icon}"></i>
+
+        `;
+
+
+        if(typeof lucide !== "undefined"){
+
+            lucide.createIcons();
+
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+/* =====================================================
+   CONNECT WITH LESSON CARDS
+===================================================== */
+
+
+document.addEventListener(
+"click",
+function(e){
+
+
+
+    const button =
+    e.target.closest(
+        ".lesson-start-btn"
+    );
+
+
+
+    if(!button){
+        return;
+    }
+
+
+
+    const card =
+    button.closest(
+        ".lesson-item-card"
+    );
+
+
+
+    if(!card){
+        return;
+    }
+
+
+
+
+    const lessonData = {
+
+
+        subjectName:
+        card.dataset.subjectName
+        ||
+        "بدون نام",
+
+
+
+        topic:
+        card.dataset.topic
+        ||
+        "-",
+
+
+
+        duration:
+        card.dataset.duration
+        ||
+        "",
+
+
+
+        note:
+        card.dataset.note
+        ||
+        "",
+
+
+
+        icon:
+        card.dataset.icon
+        ||
+        "book-open"
+
+
+
+    };
+
+
+
+    updateNewLessonPanel(
+        lessonData
+    );
+
+
+
+    /*
+       انتخاب کارت
+    */
+
+
+    document
+    .querySelectorAll(
+        ".lesson-item-card"
+    )
+    .forEach(item=>{
+
+        item.classList.remove(
+            "selected"
+        );
+
+    });
+
+
+
+    card.classList.add(
+        "selected"
+    );
+
+
+
+    console.log(
+        "درس جدید انتخاب شد:",
+        lessonData
+    );
+
+
+});
+
+
+
+/* =====================================================
+   NEW FINISH STUDY BUTTON
+===================================================== */
+
+
+const newFinishBtn =
+document.querySelector(".finish");
+
+
+
+if(newFinishBtn){
+
+
+    newFinishBtn.addEventListener(
+    "click",
+    function(){
+
+
+        if(!currentStudyingTaskCard){
+
+
+            alert(
+                "ابتدا یک درس را انتخاب کنید"
+            );
+
+
+            return;
+
+        }
+
+
+
+        currentStudyingTaskCard.classList.add(
+            "completed"
+        );
+
+
+
+        this.innerHTML = `
+
+            <i data-lucide="check-circle-2"></i>
+
+            مطالعه انجام شد
+
+        `;
+
+
+
+        this.classList.add(
+            "finished"
+        );
+
+
+
+        if(typeof lucide !== "undefined"){
+
+            lucide.createIcons();
+
+        }
+
+
+
+        console.log(
+            "جلسه مطالعه پایان یافت"
+        );
+
+
+    });
+
+
+}
 
 
 
@@ -11266,3 +11589,276 @@ lucide.createIcons();
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   ULTIMATE TIMER
+===================================================== */
+
+
+const hourBox =
+document.querySelector(".time-boxes div:nth-child(1) strong");
+
+
+const minuteBox =
+document.querySelector(".time-boxes div:nth-child(2) strong");
+
+
+const secondBox =
+document.querySelector(".time-boxes div:nth-child(3) strong");
+
+
+const milliBox =
+document.querySelector(".time-boxes div:nth-child(4) strong");
+
+
+
+const timerButtons =
+document.querySelectorAll(
+    ".timer-buttons button"
+);
+
+
+
+let timerInterval = null;
+
+
+let timerRunning = false;
+
+
+let totalMilliseconds = 0;
+
+
+
+/* ==============================
+   UPDATE DISPLAY
+============================== */
+
+
+function updateTimerDisplay(){
+
+
+    let milliseconds =
+        totalMilliseconds;
+
+
+    let hours =
+        Math.floor(
+            milliseconds / 3600000
+        );
+
+
+    milliseconds %= 3600000;
+
+
+    let minutes =
+        Math.floor(
+            milliseconds / 60000
+        );
+
+
+    milliseconds %= 60000;
+
+
+    let seconds =
+        Math.floor(
+            milliseconds / 1000
+        );
+
+
+    let ms =
+        Math.floor(
+            (milliseconds % 1000) / 10
+        );
+
+
+
+    hourBox.textContent =
+        String(hours).padStart(2,"0");
+
+
+    minuteBox.textContent =
+        String(minutes).padStart(2,"0");
+
+
+    secondBox.textContent =
+        String(seconds).padStart(2,"0");
+
+
+    milliBox.textContent =
+        String(ms).padStart(2,"0");
+
+}
+
+
+
+/* ==============================
+   START
+============================== */
+
+
+function startTimer(){
+
+
+    if(timerRunning)
+        return;
+
+
+    timerRunning = true;
+
+
+    timerInterval =
+    setInterval(()=>{
+
+
+        totalMilliseconds += 10;
+
+
+        updateTimerDisplay();
+
+
+    },10);
+
+
+
+}
+
+
+
+
+
+/* ==============================
+   PAUSE
+============================== */
+
+
+function pauseTimer(){
+
+
+    timerRunning=false;
+
+
+    clearInterval(
+        timerInterval
+    );
+
+
+}
+
+
+
+
+
+/* ==============================
+   RESET
+============================== */
+
+
+function resetTimer(){
+
+
+    pauseTimer();
+
+
+    totalMilliseconds=0;
+
+
+    updateTimerDisplay();
+
+
+}
+
+
+
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+
+/*
+  اولی = توقف
+  دومی = شروع / توقف
+  سومی = ریست
+*/
+
+
+if(timerButtons.length >= 3){
+
+
+
+    timerButtons[0]
+    .addEventListener(
+        "click",
+        ()=>{
+
+            pauseTimer();
+
+        }
+    );
+
+
+
+
+    timerButtons[1]
+    .addEventListener(
+        "click",
+        ()=>{
+
+
+            if(timerRunning){
+
+                pauseTimer();
+
+            }
+            else{
+
+                startTimer();
+
+            }
+
+
+        }
+    );
+
+
+
+
+
+    timerButtons[2]
+    .addEventListener(
+        "click",
+        ()=>{
+
+            resetTimer();
+
+        }
+    );
+
+
+
+}
+
+
+
+/* مقدار اولیه */
+
+updateTimerDisplay();

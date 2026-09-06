@@ -5852,12 +5852,12 @@ body{
     -ms-overflow-style: none;
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
     display: none;
     width: 0;
     height: 0;
 }
-
+ */
 
 
 
@@ -6187,3 +6187,981 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-section{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+1fr 300px;
+
+
+gap:10px;
+
+
+margin-top:20px;
+
+
+direction:ltr;
+
+
+}
+
+
+
+.services-list{
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+gap:10px;
+
+
+}
+
+
+
+.mini-service-card{
+
+
+height:85px;
+
+
+padding:10px;
+
+
+border-radius:10px;
+
+
+background:
+
+linear-gradient(
+145deg,
+#1b1e23,
+#121417
+);
+
+
+border:1px solid #292e36;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+gap:12px;
+
+
+direction:rtl;
+
+
+transition:.25s;
+
+
+}
+
+
+
+.mini-service-card:hover{
+
+
+transform:translateX(-4px);
+
+
+border-color:#555;
+
+
+}
+
+
+
+
+.mini-icon{
+
+
+width:45px;
+
+
+height:45px;
+
+
+border-radius:10px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+background:#252a31;
+
+
+color:#ddd;
+
+
+font-size:18px;
+
+
+}
+
+
+
+
+.mini-service-card div:nth-child(2){
+
+
+flex:1;
+
+
+}
+
+
+
+.mini-service-card h3{
+
+
+font-size:14px;
+
+
+color:white;
+
+
+margin-bottom:4px;
+
+
+}
+
+
+
+.mini-service-card p{
+
+
+font-size:11px;
+
+
+color:#8b95a5;
+
+
+}
+
+
+
+
+
+.mini-service-card a{
+
+
+width:55px;
+
+
+height:32px;
+
+
+border-radius:10px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+background:#30353d;
+
+
+border:1px solid #454b55;
+
+
+color:white;
+
+
+font-size:12px;
+
+
+text-decoration:none;
+
+
+}
+
+
+
+
+.coming-card{
+
+
+min-height:370px;
+
+
+border-radius:10px;
+
+
+border:1px solid #292e36;
+
+
+background:
+
+linear-gradient(
+145deg,
+#17191d,
+#101214
+);
+
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+direction:rtl;
+
+
+}
+
+
+
+.coming-logo{
+
+
+width:90px;
+
+
+height:90px;
+
+
+border-radius:20px;
+
+
+background:#252a31;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+font-size:40px;
+
+
+color:#aaa;
+
+
+margin-bottom:20px;
+
+
+box-shadow:0 15px 30px #0008;
+
+
+}
+
+
+
+
+.coming-card h2{
+
+
+color:white;
+
+
+font-size:20px;
+
+
+}
+
+
+
+.coming-card p{
+
+
+color:#8b95a5;
+
+
+font-size:13px;
+
+
+margin-top:8px;
+
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+.services-section{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.coming-card{
+
+
+min-height:250px;
+
+
+}
+
+
+
+}
+
+.services-section{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    direction:ltr;
+
+}
+.services-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1100px;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    direction:rtl;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+   GLOBAL ELEVATED STYLE
+================================= */
+
+
+.elevated{
+
+    background:
+    linear-gradient(
+        145deg,
+        #1b1e23,
+        #111315
+    );
+
+
+    border-radius:14px;
+
+
+    border:1px solid #292d35;
+
+
+    box-shadow:
+
+    8px 8px 18px rgba(0,0,0,.45),
+
+    -5px -5px 15px rgba(255,255,255,.03);
+
+
+    transition:.3s ease;
+
+}
+
+
+
+.elevated:hover{
+
+
+    transform:translateY(-4px);
+
+
+    box-shadow:
+
+    12px 12px 25px rgba(0,0,0,.55),
+
+    -6px -6px 18px rgba(255,255,255,.05);
+
+
+}
+
+
+
+
+/* کارت ها */
+
+.service-card,
+.construction-box,
+.exam-month-box,
+.card,
+.panel,
+.box{
+
+
+    background:
+    linear-gradient(
+        145deg,
+        #1b1e23,
+        #121417
+    );
+
+
+    border:1px solid #292d35;
+
+
+    border-radius:14px;
+
+
+    box-shadow:
+
+    8px 8px 20px #0008,
+
+    -4px -4px 12px rgba(255,255,255,.03);
+
+
+    transition:.3s;
+
+}
+
+
+
+.service-card:hover,
+.construction-box:hover,
+.exam-month-box:hover,
+.card:hover,
+.panel:hover,
+.box:hover{
+
+
+    transform:translateY(-5px);
+
+
+    box-shadow:
+
+    15px 15px 30px #000a,
+
+    -5px -5px 15px rgba(255,255,255,.04);
+
+
+}
+
+
+
+
+/* دکمه های برجسته */
+
+
+button,
+.service-card a{
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #343941,
+        #1c2026
+    );
+
+
+    border:1px solid #454b55;
+
+
+    color:white;
+
+
+    border-radius:10px;
+
+
+    box-shadow:
+
+    5px 5px 12px #0008,
+
+    -3px -3px 8px rgba(255,255,255,.05);
+
+
+    transition:.25s;
+
+
+}
+
+
+
+button:hover,
+.service-card a:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    8px 8px 18px #000a,
+
+    -4px -4px 10px rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+/* اینپوت ها */
+
+
+input,
+textarea,
+select{
+
+
+    background:#121417;
+
+
+    border:1px solid #292d35;
+
+
+    box-shadow:
+
+    inset 5px 5px 10px #0008,
+
+    inset -3px -3px 8px rgba(255,255,255,.03);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   NO LESSON EMPTY STATE
+===================================== */
+
+
+.no-lessons{
+
+    height:100%;
+
+    min-height:250px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-align:center;
+
+
+    color:#9ca3af;
+
+    animation:fadeEmpty .5s ease;
+
+
+}
+
+
+
+
+.no-lessons i{
+
+
+    width:55px;
+
+    height:55px;
+
+
+    color:#64748b;
+
+
+    padding:12px;
+
+
+    border-radius:18px;
+
+
+    background:#171a20;
+
+
+    border:1px solid #292e38;
+
+
+    box-shadow:
+
+    inset 4px 4px 10px rgba(0,0,0,.5),
+
+    0 10px 25px rgba(0,0,0,.25);
+
+
+    animation:emptyFloat 3s ease-in-out infinite;
+
+
+}
+
+
+
+
+.no-lessons span{
+
+
+    max-width:220px;
+
+
+    line-height:2;
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+    color:#a1a8b5;
+
+
+}
+
+
+
+/* animations */
+
+
+@keyframes emptyFloat{
+
+
+    0%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
+
+
+
+@keyframes fadeEmpty{
+
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.95);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   ULTIMATE HEADER RTL
+===================================== */
+
+
+.ultimate-header{
+
+    direction:rtl;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.ultimate-title{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.ultimate-title i{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+
+
+
+
+.running{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+
+
+
+/* =====================================
+   ULTIMATE FOOTER RTL
+===================================== */
+
+
+.ultimate-footer{
+
+    direction:rtl;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+
+
+.tasks{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+.finish{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    align-items:center;
+
+    gap:8px;
+
+}

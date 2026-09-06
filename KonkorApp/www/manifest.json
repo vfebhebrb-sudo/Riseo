@@ -1,6 +1,6 @@
 {
   "name": "Riseo",
-  "short_name": "Konkur",
+  "short_name": "Riseo",
   "description": "برنامه هوشمند کنکور",
 
   "start_url": "./index.html",
@@ -21,7 +21,7 @@
 
   "icons": [
     {
-      "src": "./icon.png",
+      "src": "../ChatGPT Image ۱۴ شهریور ۱۴۰۵، ۲۲_۱۲_۳۵.png",
       "sizes": "512x512",
       "type": "image/png"
     }
