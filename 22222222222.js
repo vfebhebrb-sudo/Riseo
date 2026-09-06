@@ -902,11 +902,18 @@ throw new Error(
 
 }
 
+const pdfUrl =
+data.url.replace(
+    "https://iran-go4q.onrender.com",
+    CONFIG.API
+);
 
 
 const viewerURL =
-
-`/workspace/pdf-viewer/web/viewer.html?file=${encodeURIComponent(data.url)}`;
+CONFIG.API +
+CONFIG.VIEWER +
+"?file=" +
+encodeURIComponent(pdfUrl);
 
 console.log(
 "VIEWER URL:",

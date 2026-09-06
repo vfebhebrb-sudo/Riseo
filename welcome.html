@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riseo</title>
+
+<link rel="stylesheet" href="welcome.css">
+
+</head>
+
+<body id="splashPage">
+
+<div class="intro-section">
+
+    <div 
+    class="intro-text"
+    id="introText">
+    </div>
+
+</div>
+
+<section class="quran-section">
+
+    <div class="quran-glow"></div>
+
+
+    <div class="quran-content">
+
+
+        <div 
+        class="ayah"
+        id="ayah">
+        </div>
+
+
+        <div 
+        class="translation"
+        id="translation">
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<div class="welcome-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="loading-box">
+
+    <div class="loader"></div>
+
+    <div class="loading-text">
+        در حال آماده‌سازی...
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+const quranVerses = [
+
+{
+ayah:"إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+meaning:"همانا با سختی، آسانی است."
+},
+
+{
+ayah:"وَقُل رَّبِّ زِدْنِي عِلْمًا",
+meaning:"و بگو: پروردگارا دانش مرا افزون کن."
+},
+
+{
+ayah:"إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+meaning:"همانا خداوند با شکیبایان است."
+},
+
+{
+ayah:"لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",
+meaning:"از رحمت خدا ناامید نشوید."
+},
+
+{
+ayah:"وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+meaning:"هر کس تقوای الهی پیشه کند، خدا راه نجاتی برای او قرار می‌دهد."
+},
+
+{
+ayah:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+meaning:"پس همانا همراه سختی، آسانی است."
+},
+
+{
+ayah:"وَاللَّهُ خَيْرٌ حَافِظًا",
+meaning:"و خداوند بهترین نگهبان است."
+},
+
+{
+ayah:"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+meaning:"خدا ما را بس است و او بهترین کارساز است."
+},
+
+{
+ayah:"وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ",
+meaning:"موفقیت من جز به یاری خدا نیست."
+},
+
+{
+ayah:"إِنَّ رَبِّي قَرِيبٌ مُّجِيبٌ",
+meaning:"همانا پروردگار من نزدیک و اجابت‌کننده است."
+},
+
+{
+ayah:"فَاذْكُرُونِي أَذْكُرْكُمْ",
+meaning:"پس مرا یاد کنید تا شما را یاد کنم."
+},
+
+{
+ayah:"وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ",
+meaning:"و او هر جا که باشید با شماست."
+},
+
+{
+ayah:"إِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ",
+meaning:"همانا خداوند بسیار آمرزنده و مهربان است."
+},
+
+{
+ayah:"إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ",
+meaning:"همانا خداوند توبه‌کنندگان را دوست دارد."
+},
+
+{
+ayah:"وَبَشِّرِ الصَّابِرِينَ",
+meaning:"و شکیبایان را بشارت ده."
+},
+
+{
+ayah:"وَلَا تَهِنُوا وَلَا تَحْزَنُوا",
+meaning:"سست نشوید و اندوهگین نگردید."
+},
+
+{
+ayah:"إِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ",
+meaning:"خداوند پاداش نیکوکاران را تباه نمی‌کند."
+},
+
+{
+ayah:"وَالْعَاقِبَةُ لِلْمُتَّقِينَ",
+meaning:"و سرانجام نیک برای پرهیزگاران است."
+},
+
+{
+ayah:"رَبِّ اشْرَحْ لِي صَدْرِي",
+meaning:"پروردگارا سینه‌ام را گشاده گردان."
+},
+
+{
+ayah:"رَبِّ زِدْنِي عِلْمًا",
+meaning:"پروردگارا دانش مرا افزون کن."
+},
+
+{
+ayah:"رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً",
+meaning:"پروردگارا از نزد خود رحمتی به ما عطا کن."
+},
+
+{
+ayah:"وَعَلَى اللَّهِ فَتَوَكَّلُوا",
+meaning:"و بر خدا توکل کنید."
+},
+
+{
+ayah:"إِنَّ اللَّهَ يُحِبُّ الْمُتَوَكِّلِينَ",
+meaning:"همانا خداوند توکل‌کنندگان را دوست دارد."
+},
+
+{
+ayah:"وَاذْكُر رَّبَّكَ إِذَا نَسِيتَ",
+meaning:"و هنگامی که فراموش کردی، پروردگارت را یاد کن."
+},
+
+{
+ayah:"وَاصْبِرْ وَمَا صَبْرُكَ إِلَّا بِاللَّهِ",
+meaning:"شکیبا باش که شکیبایی تو جز به یاری خدا نیست."
+},
+
+{
+ayah:"إِنَّ اللَّهَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+meaning:"همانا خداوند بر هر چیزی تواناست."
+},
+
+{
+ayah:"وَهُوَ السَّمِيعُ الْعَلِيمُ",
+meaning:"و او شنوا و داناست."
+},
+
+{
+ayah:"وَهُوَ الْغَفُورُ الرَّحِيمُ",
+meaning:"و او بسیار آمرزنده و مهربان است."
+},
+
+{
+ayah:"إِنَّ اللَّهَ لَطِيفٌ خَبِيرٌ",
+meaning:"همانا خداوند لطیف و آگاه است."
+},
+
+{
+ayah:"وَاللَّهُ مَعَ الْمُؤْمِنِينَ",
+meaning:"و خداوند با مؤمنان است."
+},
+
+{
+ayah:"إِنَّ اللَّهَ يُحِبُّ الْمُحْسِنِينَ",
+meaning:"همانا خداوند نیکوکاران را دوست دارد."
+},
+
+{
+ayah:"وَإِلَىٰ رَبِّكَ فَارْغَب",
+meaning:"و تنها به سوی پروردگارت روی آور."
+},
+
+{
+ayah:"وَإِلَى اللَّهِ تُرْجَعُ الْأُمُورُ",
+meaning:"و همه کارها به سوی خدا بازگردانده می‌شود."
+},
+
+{
+ayah:"وَمَا عِندَ اللَّهِ خَيْرٌ وَأَبْقَىٰ",
+meaning:"و آنچه نزد خداست بهتر و ماندگارتر است."
+},
+
+{
+ayah:"إِنَّ اللَّهَ يَرَىٰ",
+meaning:"همانا خداوند می‌بیند."
+},
+
+{
+ayah:"وَقُلْ رَبِّ اغْفِرْ وَارْحَمْ",
+meaning:"و بگو: پروردگارا بیامرز و رحم کن."
+},
+
+{
+ayah:"سَيَجْعَلُ اللَّهُ بَعْدَ عُسْرٍ يُسْرًا",
+meaning:"خداوند پس از سختی، آسانی قرار خواهد داد."
+},
+
+{
+ayah:"وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
+meaning:"از رحمت خدا ناامید نشوید."
+},
+
+{
+ayah:"اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ",
+meaning:"خداوند نور آسمان‌ها و زمین است."
+},
+
+{
+ayah:"وَهُوَ خَيْرُ الْحَافِظِينَ",
+meaning:"و او بهترین نگهدارنده است."
+}
+
+];
+
+
+
+const randomVerse =
+quranVerses[
+Math.floor(
+Math.random()*quranVerses.length
+)
+];
+
+
+
+document.getElementById("ayah").textContent =
+randomVerse.ayah;
+
+
+
+const translation =
+document.getElementById("translation");
+
+
+translation.textContent="";
+
+
+let i=0;
+
+
+function typeMeaning(){
+
+
+if(i < randomVerse.meaning.length){
+
+
+translation.textContent +=
+randomVerse.meaning[i];
+
+
+i++;
+
+
+setTimeout(
+typeMeaning,
+70
+);
+
+
+}
+
+
+}
+
+
+
+setTimeout(
+typeMeaning,
+1200
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const introText =
+document.getElementById("introText");
+
+
+
+const introMessage =
+
+"رایزو همراه تو در مسیر موفقیت است؛ " +
+"یک فضای هوشمند برای برنامه‌ریزی، مطالعه، " +
+"آزمون و رشد قدم‌به‌قدم. " +
+"هر روز یک قدم نزدیک‌تر به هدف خودت باش.";
+
+
+
+let introIndex = 0;
+
+
+
+function typeIntro(){
+
+
+if(
+introIndex < introMessage.length
+){
+
+
+introText.textContent +=
+introMessage[introIndex];
+
+
+introIndex++;
+
+
+setTimeout(
+typeIntro,
+45
+);
+
+
+}
+
+
+}
+
+
+
+setTimeout(
+typeIntro,
+500
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let dashboardLoaded = false;
+
+let minimumTimePassed = false;
+
+
+
+// زمان شروع
+
+const startTime = Date.now();
+
+
+
+// حداقل 10 ثانیه
+
+setTimeout(()=>{
+
+
+    minimumTimePassed = true;
+
+
+    checkRedirect();
+
+
+},10000);
+
+
+
+
+
+// درخواست آماده شدن داشبورد
+
+function prepareDashboard(){
+
+
+    const iframe =
+    document.createElement("iframe");
+
+
+    iframe.style.display="none";
+
+
+    iframe.src =
+    "dashboard.html";
+
+
+
+    iframe.onload = ()=>{
+
+
+        dashboardLoaded = true;
+
+
+        checkRedirect();
+
+
+    };
+
+
+
+    document.body.appendChild(
+        iframe
+    );
+
+
+}
+
+
+
+
+
+function checkRedirect(){
+
+
+    if(
+        dashboardLoaded &&
+        minimumTimePassed
+    ){
+
+
+        document.body.classList.add(
+            "fade-out"
+        );
+
+
+
+        setTimeout(()=>{
+
+
+            window.location.href =
+            "index1.html";
+
+
+
+        },800);
+
+
+
+    }
+
+
+}
+
+
+
+prepareDashboard();
+</script>
+
+</body>
+
+</html>
