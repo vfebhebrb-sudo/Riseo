@@ -7830,3 +7830,5537 @@ body{
     );
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE — ASSIGNMENTS
+   Designed for mobile width ~450px
+========================================================= */
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.ah-assignments-card{
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    background:#15181c;
+
+    border:1px solid #292e36;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ah-assignments-header{
+
+    width:100%;
+
+    min-height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:11px 12px;
+
+    background:#191c21;
+
+    border-bottom:1px solid #292e36;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignments-title{
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.ah-assignments-icon{
+
+    width:36px;
+    height:36px;
+
+    min-width:36px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    color:#8d96a3;
+
+}
+
+
+.ah-assignments-icon svg{
+
+    width:17px;
+    height:17px;
+
+}
+
+
+.ah-assignments-title > div:last-child{
+
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.ah-assignments-title h2{
+
+    margin:0;
+
+    color:#f1f3f5;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
+
+
+.ah-assignments-title span{
+
+    display:block;
+
+    color:#727b87;
+
+    font-size:8px;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.ah-add-assignment-btn{
+
+    width:34px;
+    height:34px;
+
+    min-width:34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #343a43;
+
+    border-radius:8px;
+
+    background:#20242a;
+
+    color:#9ca5b1;
+
+    cursor:pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .15s ease;
+
+}
+
+
+.ah-add-assignment-btn svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+
+.ah-add-assignment-btn:active{
+
+    transform:scale(.94);
+
+}
+
+
+.ah-add-assignment-btn:hover{
+
+    background:#252a31;
+
+    border-color:#414752;
+
+    color:#f1f3f5;
+
+}
+
+
+/* =========================================================
+   ASSIGNMENTS LIST
+========================================================= */
+
+.ah-assignments-list{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    padding:9px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   ASSIGNMENT ITEM
+========================================================= */
+
+.ah-assignment-item{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:12px;
+
+    background:#111315;
+
+    border:1px solid #292e36;
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.ah-assignment-item:active{
+
+    background:#15181c;
+
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.ah-assignment-card-header{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+}
+
+
+/* =========================================================
+   SUBJECT
+========================================================= */
+
+.ah-assignment-subject{
+
+    width:max-content;
+
+    max-width:calc(100% - 70px);
+
+    height:28px;
+
+    min-height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:0 9px;
+
+    border-radius:7px;
+
+    background:#1d2126;
+
+    border:1px solid #292e36;
+
+    color:#aeb6c1;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignment-subject-dot{
+
+    width:5px;
+    height:5px;
+
+    min-width:5px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.ah-assignment-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.ah-assignment-action{
+
+    width:29px;
+    height:29px;
+
+    min-width:29px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:7px;
+
+    background:#1b1e23;
+
+    color:#7f8996;
+
+    cursor:pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .15s ease;
+
+}
+
+
+.ah-assignment-action svg{
+
+    width:14px;
+    height:14px;
+
+}
+
+
+.ah-assignment-action:active{
+
+    transform:scale(.93);
+
+}
+
+
+.ah-assignment-action:hover{
+
+    background:#242930;
+
+    color:#e5e7eb;
+
+    border-color:#3b424c;
+
+}
+
+
+.ah-delete-assignment{
+
+    color:#8e656b;
+
+    border-color:#30272a;
+
+}
+
+
+.ah-delete-assignment:hover{
+
+    color:#ef4444;
+
+    background:rgba(239,68,68,.07);
+
+    border-color:#473035;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ah-assignment-content{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    margin-top:13px;
+
+}
+
+
+.ah-assignment-content strong{
+
+    display:block;
+
+    width:100%;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:#e7e9ec;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+
+.ah-assignment-content span{
+
+    display:-webkit-box;
+
+    overflow:hidden;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    color:#737d89;
+
+    font-size:9px;
+
+    font-weight:400;
+
+    line-height:1.9;
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.ah-assignment-info{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+
+    margin-top:12px;
+
+    padding-top:11px;
+
+    border-top:1px solid #252a31;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignment-info-item{
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+}
+
+
+.ah-assignment-info-item > svg{
+
+    width:15px;
+    height:15px;
+
+    min-width:15px;
+
+    color:#68727e;
+
+}
+
+
+.ah-assignment-info-item > div{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.ah-assignment-info-item span{
+
+    color:#68717d;
+
+    font-size:7px;
+
+    line-height:1.5;
+
+}
+
+
+.ah-assignment-info-item strong{
+
+    display:block;
+
+    max-width:100%;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:#b9c0c9;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.ah-assignment-bottom{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    margin-top:10px;
+
+}
+
+
+.ah-assignment-status{
+
+    width:max-content;
+
+    height:27px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:0 9px;
+
+    border-radius:7px;
+
+    background:rgba(234,179,8,.07);
+
+    color:#c9a32d;
+
+    font-size:8px;
+
+    font-weight:500;
+
+}
+
+
+.ah-assignment-status-dot{
+
+    width:5px;
+    height:5px;
+
+    min-width:5px;
+
+    border-radius:50%;
+
+    background:#eab308;
+
+}
+
+
+.ah-assignment-status.done{
+
+    background:rgba(34,197,94,.07);
+
+    color:#4ade80;
+
+}
+
+
+.ah-assignment-status.done
+.ah-assignment-status-dot{
+
+    background:#22c55e;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ah-assignments-footer{
+
+    width:100%;
+
+    min-height:39px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+    padding:0 11px;
+
+    background:#191c21;
+
+    border-top:1px solid #292e36;
+
+    color:#69727e;
+
+    font-size:8px;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignments-footer span{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+
+/* =========================================================
+   ASSIGNMENT MODAL
+========================================================= */
+
+.ah-assignment-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px;
+
+    background:rgba(8,10,12,.78);
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignment-modal.active{
+
+    display:flex;
+
+}
+
+
+/* =========================================================
+   MODAL BOX
+========================================================= */
+
+.ah-assignment-modal-box{
+
+    width:100%;
+
+    max-width:430px;
+
+    max-height:calc(100vh - 20px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#15181c;
+
+    border:1px solid #30353d;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45);
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.ah-assignment-modal-header{
+
+    width:100%;
+
+    min-height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:10px 11px;
+
+    background:#191c21;
+
+    border-bottom:1px solid #292e36;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignment-modal-title{
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+}
+
+
+.ah-assignment-modal-icon{
+
+    width:34px;
+    height:34px;
+
+    min-width:34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    color:#8d96a3;
+
+}
+
+
+.ah-assignment-modal-icon svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+
+.ah-assignment-modal-title > div:last-child{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.ah-assignment-modal-title h3{
+
+    margin:0;
+
+    color:#e8eaed;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
+
+
+.ah-assignment-modal-title span{
+
+    color:#707985;
+
+    font-size:8px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.ah-assignment-modal-close{
+
+    width:30px;
+    height:30px;
+
+    min-width:30px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:7px;
+
+    background:#1b1e23;
+
+    color:#7d8793;
+
+    cursor:pointer;
+
+}
+
+
+.ah-assignment-modal-close svg{
+
+    width:15px;
+    height:15px;
+
+}
+
+
+.ah-assignment-modal-close:hover{
+
+    color:#e5e7eb;
+
+    background:#242930;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.ah-assignment-form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    padding:13px;
+
+    overflow-y:auto;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-form-group{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.ah-form-group label{
+
+    margin-bottom:5px;
+
+    color:#9aa3ae;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    line-height:1.5;
+
+}
+
+
+.ah-form-group label span{
+
+    color:#777f8b;
+
+    font-size:9px;
+
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.ah-form-group input,
+.ah-form-group select,
+.ah-form-group textarea{
+
+    width:100%;
+
+    color:#dfe3e8;
+
+    background:#111315;
+
+    border:1px solid #2b3038;
+
+    border-radius:7px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:10px;
+
+    box-sizing:border-box;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+
+}
+
+
+.ah-form-group input,
+.ah-form-group select{
+
+    height:37px;
+
+    padding:0 9px;
+
+}
+
+
+.ah-form-group textarea{
+
+    min-height:82px;
+
+    padding:8px 9px;
+
+    line-height:1.8;
+
+    resize:none;
+
+}
+
+
+.ah-form-group input::placeholder,
+.ah-form-group textarea::placeholder{
+
+    color:#555d68;
+
+}
+
+
+.ah-form-group input:focus,
+.ah-form-group select:focus,
+.ah-form-group textarea:focus{
+
+    background:#15181c;
+
+    border-color:#414852;
+
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.ah-form-group select{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    cursor:pointer;
+
+    padding-left:28px;
+
+}
+
+
+/* =========================================================
+   TWO COLUMN FORM ROW
+========================================================= */
+
+.ah-form-row{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   SPECIFIC USER
+========================================================= */
+
+.ah-specific-user-group{
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.ah-assignment-modal-footer{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.4fr;
+
+    gap:8px;
+
+    padding-top:2px;
+
+}
+
+
+.ah-modal-cancel-btn,
+.ah-modal-submit-btn{
+
+    height:38px;
+
+    min-height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    padding:0 10px;
+
+    border-radius:7px;
+
+    font-family:inherit;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-modal-cancel-btn{
+
+    background:#1b1e23;
+
+    border:1px solid #30353d;
+
+    color:#858e9a;
+
+}
+
+
+.ah-modal-cancel-btn:hover{
+
+    background:#242930;
+
+    color:#e5e7eb;
+
+}
+
+
+.ah-modal-submit-btn{
+
+    background:#20242a;
+
+    border:1px solid #39404a;
+
+    color:#d7dce2;
+
+}
+
+
+.ah-modal-submit-btn:hover{
+
+    background:#272c33;
+
+    border-color:#484f59;
+
+}
+
+
+.ah-modal-submit-btn svg{
+
+    width:14px;
+    height:14px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   AI ASSISTANT
+===================================================== */
+
+.ai-assistant{
+    position:fixed;
+    left:24px;
+    bottom:24px;
+
+    width:90px;
+    height:120px;
+
+    z-index:9999;
+
+    pointer-events:none;
+}
+
+/* ===============================
+   NEST
+=============================== */
+
+.ai-nest{
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:82px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#191c21;
+    border:1px solid #292e36;
+
+    border-radius:14px 14px 18px 18px;
+
+    box-shadow:
+        5px 5px 12px rgba(0,0,0,.35),
+        -3px -3px 8px rgba(255,255,255,.025);
+
+    color:#6b7280;
+
+    pointer-events:auto;
+
+    z-index:1;
+}
+
+.ai-nest svg{
+    width:15px;
+    height:15px;
+}
+
+
+/* ===============================
+   CHARACTER
+=============================== */
+
+.ai-character{
+    position:absolute;
+
+    left:50%;
+    bottom:22px;
+
+    width:68px;
+    height:68px;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+
+    z-index:2;
+
+    animation:
+        aiIdle 3s ease-in-out infinite;
+}
+
+.ai-character img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+    user-select:none;
+    -webkit-user-drag:none;
+
+    filter:
+        drop-shadow(0 7px 12px rgba(0,0,0,.35));
+}
+
+
+/* ===============================
+   IDLE ANIMATION
+=============================== */
+
+@keyframes aiIdle{
+
+    0%,
+    100%{
+        transform:
+            translateX(-50%)
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            translateY(-5px)
+            rotate(-2deg);
+    }
+
+}
+
+
+/* ===============================
+   MESSAGE
+=============================== */
+
+.ai-message{
+    position:absolute;
+
+    left:75px;
+    bottom:55px;
+
+    width:240px;
+
+    padding:12px 14px;
+
+    background:#191c21;
+
+    border:1px solid #292e36;
+
+    border-radius:14px;
+
+    box-shadow:
+        6px 6px 16px rgba(0,0,0,.35),
+        -3px -3px 8px rgba(255,255,255,.025);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+        translateY(8px)
+        scale(.96);
+
+    transform-origin:bottom left;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+    pointer-events:none;
+
+    direction:rtl;
+
+    z-index:3;
+}
+
+.ai-message-text{
+    color:var(--text);
+
+    font-size:13px;
+    line-height:1.8;
+
+    text-align:right;
+}
+
+
+/* ===============================
+   MESSAGE OPEN
+=============================== */
+
+.ai-assistant.show-message
+.ai-message{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ===============================
+   MOBILE
+=============================== */
+
+@media(max-width:600px){
+
+    .ai-assistant{
+        left:14px;
+        bottom:14px;
+
+        transform:scale(.9);
+        transform-origin:bottom left;
+    }
+
+    .ai-message{
+        left:70px;
+        width:210px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   AI CHAT PANEL
+===================================================== */
+
+.ai-chat-panel{
+    position:fixed;
+
+    left:24px;
+    bottom:24px;
+
+    width:360px;
+    height:520px;
+
+    display:flex;
+    flex-direction:column;
+
+    background:#191c21;
+
+    border:1px solid #292e36;
+    border-radius:18px;
+
+    box-shadow:
+        12px 12px 30px rgba(0,0,0,.45),
+        -4px -4px 12px rgba(255,255,255,.025);
+
+    overflow:hidden;
+
+    direction:rtl;
+
+    z-index:10000;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+        translateY(20px)
+        scale(.96);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+}
+
+
+/* OPEN */
+
+.ai-chat-panel.open{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.ai-chat-header{
+
+    height:68px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 14px;
+
+    background:#1d2025;
+
+    border-bottom:1px solid #292e36;
+}
+
+
+.ai-chat-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+
+.ai-chat-avatar{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    border-radius:12px;
+
+    overflow:hidden;
+}
+
+
+.ai-chat-avatar img{
+
+    width:34px;
+    height:34px;
+
+    object-fit:contain;
+}
+
+
+.ai-chat-title strong{
+
+    display:block;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    margin-bottom:3px;
+}
+
+
+.ai-chat-title span{
+
+    display:block;
+
+    color:var(--text-secondary);
+
+    font-size:10px;
+}
+
+
+/* CLOSE */
+
+.ai-chat-close{
+
+    width:34px;
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #30353d;
+
+    border-radius:10px;
+
+    background:#20242a;
+
+    color:var(--text-secondary);
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.ai-chat-close:hover{
+
+    color:#fff;
+
+    background:#292e36;
+}
+
+
+/* =====================================================
+   MESSAGES
+===================================================== */
+
+.ai-chat-messages{
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    padding:16px 13px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+}
+
+
+.ai-chat-message{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:7px;
+
+    max-width:90%;
+}
+
+
+.ai-chat-message.assistant{
+
+    align-self:flex-start;
+}
+
+
+.ai-chat-small-avatar{
+
+    width:28px;
+    height:28px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    border-radius:9px;
+
+    overflow:hidden;
+}
+
+
+.ai-chat-small-avatar img{
+
+    width:23px;
+    height:23px;
+
+    object-fit:contain;
+}
+
+
+.ai-chat-bubble{
+
+    padding:9px 12px;
+
+    border-radius:12px;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    color:var(--text);
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    text-align:right;
+
+    box-shadow:
+        3px 3px 8px rgba(0,0,0,.2);
+}
+
+
+/* USER */
+
+.ai-chat-message.user{
+
+    align-self:flex-end;
+}
+
+
+.ai-chat-message.user .ai-chat-bubble{
+
+    background:#172554;
+
+    border-color:#1e40af;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.ai-chat-input-area{
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+    padding:10px;
+
+    background:#1d2025;
+
+    border-top:1px solid #292e36;
+}
+
+
+.ai-chat-input-area textarea{
+
+    flex:1;
+
+    min-width:0;
+
+    height:42px;
+
+    max-height:100px;
+
+    resize:none;
+
+    padding:11px 12px;
+
+    background:#15181c;
+
+    color:var(--text);
+
+    border:1px solid #292e36;
+
+    border-radius:11px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:12px;
+
+    line-height:1.5;
+}
+
+
+.ai-chat-input-area textarea:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(59,130,246,.08);
+}
+
+
+.ai-chat-send{
+
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:0;
+
+    border-radius:11px;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.ai-chat-send:hover{
+
+    filter:brightness(1.08);
+
+    transform:translateY(-1px);
+}
+
+
+.ai-chat-send svg{
+
+    width:17px;
+    height:17px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .ai-chat-panel{
+
+        left:10px;
+        right:10px;
+
+        bottom:10px;
+
+        width:auto;
+
+        height:min(560px, calc(100vh - 20px));
+
+        border-radius:16px;
+    }
+
+}
+/* =====================================================
+   AI CHAT OPEN STATE
+===================================================== */
+
+.ai-assistant:has(+ .ai-chat-panel.open)
+.ai-character{
+    opacity:0;
+    pointer-events:none;
+}
+
+
+
+/* =====================================================
+   NEW AI CHAT HEADER / FOOTER FLOATING STYLE
+===================================================== */
+
+/* هدر به صورت باکس شناور داخل پنل */
+
+.ai-chat-header{
+    margin:10px 10px 0 10px;
+    height:58px;
+
+    padding:0 10px;
+
+    border:1px solid #292e36;
+    border-radius:14px;
+
+    background:#20242a;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.18);
+
+    animation:aiHeaderFloat 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.ai-chat-footer{
+    flex-shrink:0;
+
+    margin:0 10px 10px 10px;
+
+    padding:8px;
+
+    border:1px solid #292e36;
+    border-radius:14px;
+
+    background:#20242a;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.18);
+
+    animation:aiFooterFloat 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   INPUT WRAPPER
+===================================================== */
+
+.ai-chat-input-wrapper{
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    width:100%;
+
+    direction:rtl;
+}
+
+
+/* =====================================================
+   INPUT AVATAR
+===================================================== */
+
+.ai-chat-input-avatar{
+
+    position:absolute;
+
+    right:8px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:28px;
+    height:28px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+}
+
+
+.ai-chat-input-avatar img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+
+/* =====================================================
+   TEXTAREA NEW STYLE
+===================================================== */
+
+.ai-chat-input-wrapper textarea{
+
+    width:100%;
+
+    min-height:42px;
+    height:42px;
+
+    max-height:100px;
+
+    resize:none;
+
+    padding:11px 48px 11px 48px;
+
+    background:#15181c;
+
+    color:var(--text);
+
+    border:1px solid #292e36;
+
+    border-radius:11px;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    direction:rtl;
+    text-align:right;
+
+    box-sizing:border-box;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.ai-chat-input-wrapper textarea:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(59,130,246,.08);
+}
+
+
+/* =====================================================
+   SEND BUTTON INSIDE INPUT
+===================================================== */
+
+.ai-chat-input-wrapper .ai-chat-send{
+
+    position:absolute;
+
+    left:6px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:32px;
+    height:32px;
+
+    border-radius:9px;
+
+    z-index:3;
+}
+
+
+.ai-chat-input-wrapper .ai-chat-send:hover{
+
+    transform:
+        translateY(-50%)
+        translateY(-1px);
+
+}
+
+
+/* =====================================================
+   HIDE SCROLLBAR
+===================================================== */
+
+.ai-chat-messages{
+
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+
+.ai-chat-messages::-webkit-scrollbar{
+
+    display:none;
+    width:0;
+    height:0;
+}
+
+
+/* =====================================================
+   FLOATING ANIMATION
+===================================================== */
+
+@keyframes aiHeaderFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-2px);
+    }
+
+}
+
+
+@keyframes aiFooterFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(2px);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .ai-chat-header{
+
+        margin:8px 8px 0 8px;
+
+        height:56px;
+
+        border-radius:13px;
+    }
+
+
+    .ai-chat-footer{
+
+        margin:0 8px 8px 8px;
+
+        padding:7px;
+
+        border-radius:13px;
+    }
+
+
+    .ai-chat-messages{
+
+        padding:14px 10px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .ai-chat-header,
+    .ai-chat-footer{
+
+        animation:none;
+    }
+
+}
+
+
+/* =====================================================
+   SEND BUTTON - RIGHT SIDE
+===================================================== */
+
+.ai-chat-input-wrapper .ai-chat-send{
+
+    left:auto;
+    right:6px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+}
+
+
+.ai-chat-input-wrapper .ai-chat-send:hover{
+
+    transform:
+        translateY(-50%)
+        translateY(-1px);
+}
+
+
+/* =====================================================
+   INPUT SPACE FOR RIGHT SEND BUTTON
+===================================================== */
+
+.ai-chat-input-wrapper textarea{
+
+    padding-right:48px;
+    padding-left:12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ai-message{
+
+    position:absolute;
+
+    right:0;
+    bottom:calc(100% + 14px);
+
+    width:270px;
+    max-width:calc(100vw - 30px);
+
+    padding:12px 14px;
+
+    background:rgba(25,28,33,.96);
+
+    border:1px solid #30353d;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.38),
+        0 5px 15px rgba(0,0,0,.18);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    direction:rtl;
+    text-align:right;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+        translateY(10px)
+        scale(.92);
+
+    transform-origin:bottom right;
+
+    transition:
+        opacity .28s ease,
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        visibility .28s ease;
+
+    z-index:10002;
+
+    pointer-events:none;
+}
+
+
+.ai-message.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events:auto;
+}
+
+
+.ai-message::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:24px;
+    bottom:-7px;
+
+    width:13px;
+    height:13px;
+
+    background:#191c21;
+
+    border-right:1px solid #30353d;
+    border-bottom:1px solid #30353d;
+
+    transform:rotate(45deg);
+}
+
+
+.ai-message-text{
+
+    color:var(--text);
+
+    font-size:12px;
+
+    line-height:1.9;
+
+    text-align:right;
+
+    word-break:break-word;
+
+    min-height:20px;
+}
+
+
+.ai-message-text.typing::after{
+
+    content:"";
+
+    display:inline-block;
+
+    width:2px;
+    height:13px;
+
+    margin-right:3px;
+
+    vertical-align:-2px;
+
+    background:var(--accent);
+
+    border-radius:2px;
+
+    animation:
+        aiTypingCursor .75s infinite;
+}
+
+
+@keyframes aiTypingCursor{
+
+    0%,
+    45%{
+        opacity:1;
+    }
+
+    46%,
+    100%{
+        opacity:0;
+    }
+
+}
+
+
+.ai-character{
+
+    position:relative;
+
+    z-index:10001;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.ai-assistant.message-active
+.ai-character{
+
+    animation:
+        aiAssistantTalking 2.2s ease-in-out infinite;
+}
+
+
+@keyframes aiAssistantTalking{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-3px);
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .ai-message{
+
+        right:0;
+
+        width:250px;
+
+        bottom:calc(100% + 12px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ai-assistant{
+    position:fixed !important;
+
+    left:24px !important;
+    bottom:24px !important;
+
+    width:90px !important;
+    height:120px !important;
+
+    z-index:9999;
+
+    pointer-events:none;
+}
+
+
+/* CHARACTER */
+
+.ai-assistant .ai-character{
+
+    position:absolute !important;
+
+    left:50% !important;
+    bottom:22px !important;
+
+    width:68px !important;
+    height:68px !important;
+
+    transform:
+        translateX(-50%)
+        translateY(0) !important;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    pointer-events:auto;
+
+    z-index:2;
+
+    animation:
+        aiIdle 3s ease-in-out infinite;
+}
+
+
+/* MESSAGE */
+
+.ai-assistant .ai-message{
+
+    position:absolute !important;
+
+    left:75px !important;
+    right:auto !important;
+
+    bottom:55px !important;
+
+    width:240px !important;
+    max-width:calc(100vw - 130px);
+
+    padding:12px 14px;
+
+    box-sizing:border-box;
+
+    background:rgba(25,28,33,.96);
+
+    border:1px solid #30353d;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 14px 35px rgba(0,0,0,.38),
+        0 5px 15px rgba(0,0,0,.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+        translateY(8px)
+        scale(.94);
+
+    transform-origin:bottom left;
+
+    transition:
+        opacity .28s ease,
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        visibility .28s ease;
+
+    pointer-events:none;
+
+    direction:rtl;
+
+    z-index:3;
+}
+
+
+/* OPEN */
+
+.ai-assistant .ai-message.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events:auto;
+}
+
+
+/* MESSAGE TEXT */
+
+.ai-assistant .ai-message-text{
+
+    color:var(--text);
+
+    font-size:12px;
+
+    line-height:1.9;
+
+    text-align:right;
+
+    word-break:break-word;
+
+    min-height:20px;
+}
+
+
+/* MESSAGE ARROW */
+
+.ai-assistant .ai-message::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:22px;
+    right:auto;
+
+    bottom:-7px;
+
+    width:13px;
+    height:13px;
+
+    background:#191c21;
+
+    border-right:0;
+    border-bottom:1px solid #30353d;
+    border-left:1px solid #30353d;
+
+    transform:rotate(-45deg);
+}
+
+
+/* TALKING */
+
+.ai-assistant.message-active .ai-character{
+
+    animation:
+        aiTalking 2.2s ease-in-out infinite;
+}
+
+
+@keyframes aiTalking{
+
+    0%,
+    100%{
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            translateY(-4px);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .ai-assistant{
+
+        left:14px !important;
+        bottom:14px !important;
+
+        width:90px !important;
+        height:120px !important;
+
+        transform:none !important;
+    }
+
+
+    .ai-assistant .ai-message{
+
+        left:70px !important;
+        right:auto !important;
+
+        bottom:55px !important;
+
+        width:210px !important;
+
+        max-width:calc(100vw - 95px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+.icon-btn{
+
+    width:42px;
+    height:42px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(12px);
+
+    transition:.25s ease;
+
+}
+
+
+.icon-btn:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateY(-2px);
+
+}
+
+
+.icon-btn svg{
+
+    width:21px;
+    height:21px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-btn{
+
+    width:42px;
+    height:42px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(12px);
+
+    transition:.25s ease;
+
+}
+
+
+.icon-btn:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateY(-2px);
+
+}
+
+
+.icon-btn:active{
+
+    transform:scale(.94);
+
+}
+
+
+.icon-btn svg{
+
+    width:21px;
+    height:21px;
+
+}
+
+
+.icon-btn{
+
+    width:42px;
+    height:42px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    background:
+    rgba(255,255,255,.035);
+
+    color:#f9fafb;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.18);
+
+    transition:.25s ease;
+
+}
+
+
+
+.icon-btn:hover{
+
+    background:
+    rgba(255,255,255,.07);
+
+    border-color:
+    rgba(255,255,255,.06);
+
+    transform:
+    translateY(-1px);
+
+    box-shadow:
+    0 6px 16px rgba(0,0,0,.22);
+
+}
+
+
+
+.icon-btn:active{
+
+    transform:
+    scale(.96);
+
+    box-shadow:none;
+
+}
+
+
+
+.icon-btn svg{
+
+    width:20px;
+    height:20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   ASSIGNMENT MODAL
+====================================================== */
+
+.ah-assignment-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.62);
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignment-modal.show{
+
+    display:flex;
+
+    animation:
+        ahModalFade .2s ease;
+
+}
+
+
+@keyframes ahModalFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ======================================================
+   MODAL BOX
+====================================================== */
+
+.ah-assignment-modal-box{
+
+    width:100%;
+
+    max-width:520px;
+
+    max-height:
+        calc(100vh - 40px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#191c21;
+
+    border:1px solid #30353d;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+    animation:
+        ahModalBoxIn .25s ease;
+
+}
+
+
+@keyframes ahModalBoxIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(12px)
+            scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ======================================================
+   MODAL HEADER
+====================================================== */
+
+.ah-assignment-modal-header{
+
+    min-height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    margin:8px 9px 0;
+
+    padding:9px 11px;
+
+    background:#15181c;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignment-modal-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    min-width:0;
+
+}
+
+
+.ah-assignment-modal-icon{
+
+    width:32px;
+
+    height:32px;
+
+    min-width:32px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:7px;
+
+    background:#20242a;
+
+    color:#8b95a3;
+
+}
+
+
+.ah-assignment-modal-icon svg{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+
+.ah-assignment-modal-title > div:last-child{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+}
+
+
+.ah-assignment-modal-title h3{
+
+    margin:0;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+
+.ah-assignment-modal-title span{
+
+    font-size:8px;
+
+    color:#68717d;
+
+}
+
+
+/* ======================================================
+   CLOSE
+====================================================== */
+
+.ah-assignment-modal-close{
+
+    width:29px;
+
+    height:29px;
+
+    min-width:29px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:6px;
+
+    background:#1b1e23;
+
+    color:#7f8996;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-assignment-modal-close svg{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+.ah-assignment-modal-close:hover{
+
+    color:#ef4444;
+
+    background:#241c1e;
+
+    border-color:#453033;
+
+}
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+.ah-assignment-form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+
+    padding:15px;
+
+    overflow-y:auto;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ======================================================
+   FORM GROUP
+====================================================== */
+
+.ah-form-group{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+
+.ah-form-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:3px;
+
+    font-size:8px;
+
+    color:#8b95a3;
+
+}
+
+
+.ah-form-group label span{
+
+    color:#ef4444;
+
+}
+
+
+/* ======================================================
+   INPUT / SELECT / TEXTAREA
+====================================================== */
+
+.ah-form-group input,
+.ah-form-group select,
+.ah-form-group textarea{
+
+    width:100%;
+
+    min-width:0;
+
+    padding:0 10px;
+
+    border:1px solid #30353d;
+
+    border-radius:7px;
+
+    outline:none;
+
+    background:#15181c;
+
+    color:#e5e7eb;
+
+    font-family:inherit;
+
+    font-size:9px;
+
+    box-sizing:border-box;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+
+}
+
+
+.ah-form-group input,
+.ah-form-group select{
+
+    height:36px;
+
+}
+
+
+.ah-form-group textarea{
+
+    min-height:85px;
+
+    padding:9px 10px;
+
+    resize:vertical;
+
+    line-height:1.7;
+
+}
+
+
+.ah-form-group input::placeholder,
+.ah-form-group textarea::placeholder{
+
+    color:#505864;
+
+}
+
+
+.ah-form-group input:focus,
+.ah-form-group select:focus,
+.ah-form-group textarea:focus{
+
+    border-color:#414852;
+
+    background:#181c21;
+
+}
+
+
+.ah-form-group select{
+
+    cursor:pointer;
+
+}
+
+
+/* ======================================================
+   DATE INPUT
+====================================================== */
+
+.ah-form-group input[type="date"]{
+
+    color-scheme:dark;
+
+}
+
+
+/* ======================================================
+   FORM ROW
+====================================================== */
+
+.ah-form-row{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:10px;
+
+}
+
+
+/* ======================================================
+   SPECIFIC USER
+====================================================== */
+
+.ah-specific-user-group{
+
+    animation:
+        ahSpecificUserIn .2s ease;
+
+}
+
+
+@keyframes ahSpecificUserIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-5px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ======================================================
+   MODAL FOOTER
+====================================================== */
+
+.ah-assignment-modal-footer{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:7px;
+
+    margin-top:2px;
+
+    padding-top:13px;
+
+    border-top:1px solid #252a31;
+
+}
+
+
+/* ======================================================
+   CANCEL
+====================================================== */
+
+.ah-modal-cancel-btn{
+
+    height:34px;
+
+    padding:0 13px;
+
+    border:1px solid #30353d;
+
+    border-radius:7px;
+
+    background:#1b1e23;
+
+    color:#8b95a3;
+
+    font-family:inherit;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-modal-cancel-btn:hover{
+
+    background:#242930;
+
+    color:#e5e7eb;
+
+}
+
+
+/* ======================================================
+   SUBMIT
+====================================================== */
+
+.ah-modal-submit-btn{
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+
+    padding:0 13px;
+
+    border:1px solid #315fa8;
+
+    border-radius:7px;
+
+    background:#1d3761;
+
+    color:#dbeafe;
+
+    font-family:inherit;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-modal-submit-btn svg{
+
+    width:13px;
+
+    height:13px;
+
+}
+
+
+.ah-modal-submit-btn:hover{
+
+    background:#244577;
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width:600px){
+
+    .ah-assignment-modal{
+
+        padding:10px;
+
+    }
+
+
+    .ah-assignment-modal-box{
+
+        max-height:
+            calc(100vh - 20px);
+
+        border-radius:10px;
+
+    }
+
+
+    .ah-form-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ah-assignment-modal-footer{
+
+        justify-content:stretch;
+
+    }
+
+
+    .ah-modal-cancel-btn,
+    .ah-modal-submit-btn{
+
+        flex:1;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE SETTINGS
+   Designed specifically for mobile.html — ~450px
+========================================================= */
+
+.settings-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:none;
+
+    width:100%;
+    height:100%;
+
+    background:#0d0f11;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-modal.active{
+
+    display:block;
+
+}
+
+
+.settings-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#0d0f11;
+
+}
+
+
+/* =========================================================
+   MAIN PANEL
+========================================================= */
+
+.settings-panel{
+
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#111315;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.settings-header{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:10px 12px;
+
+    background:#191c21;
+
+    border-bottom:1px solid #292e36;
+
+    box-sizing:border-box;
+
+    overflow:hidden;
+
+}
+
+
+.settings-header-glow{
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    top:-70px;
+    right:35px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.05);
+
+    pointer-events:none;
+
+}
+
+
+.settings-header-content{
+
+    position:relative;
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+}
+
+
+.settings-header-icon{
+
+    width:36px;
+    height:36px;
+
+    min-width:36px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    color:#8e97a4;
+
+}
+
+
+.settings-header-icon svg{
+
+    width:17px;
+    height:17px;
+
+}
+
+
+.settings-header-text{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.settings-header-text h2{
+
+    margin:0;
+
+    color:#f1f3f5;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
+
+
+.settings-header-text span{
+
+    color:#707985;
+
+    font-size:8px;
+
+    line-height:1.6;
+
+    white-space:nowrap;
+
+}
+
+
+.settings-close{
+
+    position:relative;
+
+    width:32px;
+    height:32px;
+
+    min-width:32px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:8px;
+
+    background:#1b1e23;
+
+    color:#7e8793;
+
+    cursor:pointer;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-close svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+
+.settings-close:active{
+
+    transform:scale(.94);
+
+    background:#242930;
+
+    color:#e5e7eb;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.settings-body{
+
+    width:100%;
+
+    flex:1;
+
+    min-height:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   SETTINGS MENU
+   Horizontal mobile navigation
+========================================================= */
+
+.settings-menu{
+
+    width:100%;
+
+    min-height:72px;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:9px;
+
+    background:#15181c;
+
+    border-bottom:1px solid #292e36;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    box-sizing:border-box;
+
+    scrollbar-width:none;
+
+}
+
+
+.settings-menu::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+/* =========================================================
+   MENU ITEM
+========================================================= */
+
+.settings-menu-item{
+
+    flex:0 0 auto;
+
+    width:82px;
+    height:54px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:4px;
+
+    padding:5px;
+
+    border:1px solid #292e36;
+
+    border-radius:8px;
+
+    background:#191c21;
+
+    color:#737d89;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+
+}
+
+
+.settings-menu-item:active{
+
+    transform:scale(.97);
+
+}
+
+
+.settings-menu-item.active{
+
+    background:#20242a;
+
+    border-color:#3a414b;
+
+    color:#e5e7eb;
+
+}
+
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+.settings-menu-icon{
+
+    width:22px;
+    height:22px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.settings-menu-icon svg{
+
+    width:15px;
+    height:15px;
+
+}
+
+
+.settings-menu-item.active
+.settings-menu-icon{
+
+    color:#aeb6c1;
+
+}
+
+
+/* =========================================================
+   MENU TEXT
+========================================================= */
+
+.settings-menu-text{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:1px;
+
+}
+
+
+.settings-menu-text strong{
+
+    max-width:72px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:inherit;
+
+    font-size:8px;
+
+    font-weight:500;
+
+    line-height:1.5;
+
+}
+
+
+.settings-menu-text small{
+
+    display:block;
+
+    max-width:72px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:#555e6a;
+
+    font-size:6px;
+
+    line-height:1.5;
+
+}
+
+
+.settings-menu-item.active
+.settings-menu-text small{
+
+    color:#777f8b;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.settings-content{
+
+    width:100%;
+
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:10px;
+
+    box-sizing:border-box;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#30353d transparent;
+
+}
+
+
+.settings-content::-webkit-scrollbar{
+
+    width:3px;
+
+}
+
+
+.settings-content::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+.settings-content::-webkit-scrollbar-thumb{
+
+    background:#30353d;
+
+    border-radius:10px;
+
+}
+
+
+/* =========================================================
+   SETTINGS SECTION
+========================================================= */
+
+.settings-section{
+
+    width:100%;
+
+    display:none;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-section.active{
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.settings-section-title{
+
+    width:100%;
+
+    min-height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-bottom:9px;
+
+    padding:11px;
+
+    background:#15181c;
+
+    border:1px solid #292e36;
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-section-title > div:first-child{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.settings-section-title span{
+
+    color:#69727e;
+
+    font-size:8px;
+
+    line-height:1.5;
+
+}
+
+
+.settings-section-title h3{
+
+    margin:0;
+
+    color:#e5e7eb;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+
+.settings-section-title p{
+
+    margin:0;
+
+    color:#707985;
+
+    font-size:8px;
+
+    line-height:1.8;
+
+}
+
+
+.settings-section-big-icon{
+
+    width:36px;
+    height:36px;
+
+    min-width:36px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    color:#737d89;
+
+}
+
+
+.settings-section-big-icon svg{
+
+    width:18px;
+    height:18px;
+
+}
+
+
+/* =========================================================
+   SETTINGS CARD
+========================================================= */
+
+.settings-card{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:11px;
+
+    margin-bottom:9px;
+
+    background:#15181c;
+
+    border:1px solid #292e36;
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-card-info{
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+}
+
+
+.settings-card-icon{
+
+    width:34px;
+    height:34px;
+
+    min-width:34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:#20242a;
+
+    border:1px solid #30353d;
+
+    color:#7f8995;
+
+}
+
+
+.settings-card-icon svg{
+
+    width:16px;
+    height:16px;
+
+}
+
+
+.settings-card-info > div:last-child{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.settings-card-info strong{
+
+    color:#dce1e6;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+
+.settings-card-info p{
+
+    margin:0;
+
+    color:#69727e;
+
+    font-size:7px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.settings-switch{
+
+    position:relative;
+
+    width:38px;
+    height:21px;
+
+    min-width:38px;
+
+    display:block;
+
+    cursor:pointer;
+
+}
+
+
+.settings-switch input{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.settings-switch span{
+
+    position:absolute;
+
+    inset:0;
+
+    display:block;
+
+    background:#252a30;
+
+    border:1px solid #343a43;
+
+    border-radius:20px;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.settings-switch span::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    top:2px;
+    right:2px;
+
+    border-radius:50%;
+
+    background:#737d89;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+}
+
+
+.settings-switch input:checked + span{
+
+    background:#29323d;
+
+    border-color:#46515e;
+
+}
+
+
+.settings-switch input:checked + span::before{
+
+    transform:translateX(-17px);
+
+    background:#d5dbe1;
+
+}
+
+
+/* =========================================================
+   SETTINGS BLOCK
+========================================================= */
+
+.settings-block{
+
+    width:100%;
+
+    margin-bottom:9px;
+
+    padding:11px;
+
+    background:#15181c;
+
+    border:1px solid #292e36;
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =========================================================
+   BLOCK HEADER
+========================================================= */
+
+.settings-block-header{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+    padding-bottom:9px;
+
+    margin-bottom:8px;
+
+    border-bottom:1px solid #252a31;
+
+}
+
+
+.settings-block-header > div{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.settings-block-header strong{
+
+    color:#dce1e6;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+
+.settings-block-header p{
+
+    margin:0;
+
+    color:#69727e;
+
+    font-size:7px;
+
+    line-height:1.8;
+
+}
+
+
+.settings-block-header > svg{
+
+    width:16px;
+    height:16px;
+
+    min-width:16px;
+
+    color:#6e7783;
+
+}
+
+
+/* =========================================================
+   ACCESS LIST
+========================================================= */
+
+.settings-access-list{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+
+/* =========================================================
+   ACCESS OPTION
+========================================================= */
+
+.settings-access-option{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:47px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:7px 9px;
+
+    background:#111315;
+
+    border:1px solid #252a31;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.settings-access-option:active{
+
+    background:#181b20;
+
+}
+
+
+.settings-access-option input{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.settings-radio{
+
+    position:relative;
+
+    width:15px;
+    height:15px;
+
+    min-width:15px;
+
+    border:1px solid #48505a;
+
+    border-radius:50%;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-radio::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    top:3px;
+    left:3px;
+
+    border-radius:50%;
+
+    background:#d8dde3;
+
+    opacity:0;
+
+    transform:scale(.5);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+
+}
+
+
+.settings-access-option
+input:checked
++
+.settings-radio{
+
+    border-color:#7c8794;
+
+}
+
+
+.settings-access-option
+input:checked
++
+.settings-radio::after{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+.settings-access-option > span:last-child{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.settings-access-option strong{
+
+    color:#cfd4da;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    line-height:1.5;
+
+}
+
+
+.settings-access-option small{
+
+    color:#68717d;
+
+    font-size:7px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   PERMISSION LIST
+========================================================= */
+
+.settings-permission-list{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+
+/* =========================================================
+   PERMISSION
+========================================================= */
+
+.settings-permission{
+
+    width:100%;
+
+    min-height:53px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+    padding:7px 8px;
+
+    background:#111315;
+
+    border:1px solid #252a31;
+
+    border-radius:8px;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-permission-info{
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+.settings-permission-icon{
+
+    width:29px;
+    height:29px;
+
+    min-width:29px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:7px;
+
+    background:#1d2126;
+
+    border:1px solid #292e36;
+
+    color:#727c88;
+
+}
+
+
+.settings-permission-icon svg{
+
+    width:14px;
+    height:14px;
+
+}
+
+
+.settings-permission-info > div{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.settings-permission-info strong{
+
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:#cdd2d8;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    line-height:1.5;
+
+}
+
+
+.settings-permission-info small{
+
+    display:block;
+
+    max-width:245px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:#626b77;
+
+    font-size:7px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   EMPTY SECTIONS
+========================================================= */
+
+.settings-empty{
+
+    width:100%;
+
+    min-height:230px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    padding:20px;
+
+    background:#15181c;
+
+    border:1px solid #292e36;
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+}
+
+
+.settings-empty > svg{
+
+    width:30px;
+    height:30px;
+
+    color:#505965;
+
+}
+
+
+.settings-empty h3{
+
+    margin:0;
+
+    color:#aeb5bd;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+.settings-empty p{
+
+    max-width:270px;
+
+    margin:0;
+
+    text-align:center;
+
+    color:#626b76;
+
+    font-size:8px;
+
+    line-height:1.9;
+
+}
+
+
+/* =========================================================
+   TOUCH FEEDBACK
+========================================================= */
+
+.settings-menu-item,
+.settings-close,
+.settings-switch,
+.settings-access-option{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/* =========================================================
+   RTL SAFETY
+========================================================= */
+
+.settings-panel,
+.settings-body,
+.settings-content,
+.settings-section{
+
+    direction:rtl;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile-menu-item{
+    border:0;
+    outline:none;
+    font-family:inherit;
+    cursor:pointer;
+    text-align:inherit;
+}
+
+.mobile-menu-item:active{
+    transform:scale(.97);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    padding:10px;
+
+}
+
+
+
+.mobile-menu-item{
+
+    display:flex;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:12px;
+
+
+    padding:14px 16px;
+
+
+    background:#191c21;
+
+    border:1px solid #292e36;
+
+    border-radius:14px;
+
+
+    color:#9ca3af;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-family:inherit;
+
+}
+
+
+
+.mobile-menu-item i{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+
+
+.mobile-menu-item span{
+
+    font-size:14px;
+
+}
+
+
+
+.mobile-menu-item:hover{
+
+    background:#22262d;
+
+    color:#fff;
+
+    transform:translateX(-3px);
+
+}
+
+
+
+.mobile-menu-item.active{
+
+    background:#3b82f6;
+
+    color:white;
+
+    border-color:#3b82f6;
+
+}
+
+
+
+button.mobile-menu-item{
+
+    appearance:none;
+
+    outline:none;
+
+}
