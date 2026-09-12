@@ -1,4 +1,7 @@
 
+body{
+    font-family: "Vazirmatn", sans-serif;
+}
 
 /* ==========================================
         THEME SYSTEM
@@ -5509,6 +5512,7 @@ grid-template-columns:1fr;
 
 .report-header{
 
+    width: 96%;
     height:34px;
 
     margin-bottom:8px;
@@ -6131,5 +6135,2192 @@ grid-template-columns:1fr;
 .weekly-report-card{
 
     min-height:440px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   ASSIGNMENTS CARD
+====================================================== */
+
+.ah-assignments-card{
+
+    width:100%;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.ah-assignments-header{
+
+    min-height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding:10px 14px;
+
+    border-bottom:1px solid var(--border);
+
+    box-sizing:border-box;
+
+}
+
+
+.ah-assignments-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-width:0;
+
+}
+
+
+.ah-assignments-icon{
+
+    width:34px;
+
+    height:34px;
+
+    min-width:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:#20242a;
+
+    color:#8b95a3;
+
+}
+
+
+.ah-assignments-icon svg{
+
+    width:17px;
+    height:17px;
+
+}
+
+
+.ah-assignments-title > div:last-child{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+}
+
+
+.ah-assignments-title h2{
+
+    margin:0;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+
+.ah-assignments-title span{
+
+    font-size:8px;
+
+    color:#68717d;
+
+}
+
+
+/* ======================================================
+   ADD BUTTON
+====================================================== */
+
+.ah-add-assignment-btn{
+
+    height:32px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding:0 10px;
+
+    border:1px solid #303640;
+
+    border-radius:7px;
+
+    background:#20242a;
+
+    color:#dce1e7;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-add-assignment-btn svg{
+
+    width:13px;
+    height:13px;
+
+}
+
+
+.ah-add-assignment-btn:hover{
+
+    background:#292e36;
+
+    border-color:#414852;
+
+}
+
+
+/* ======================================================
+   LIST
+====================================================== */
+
+.ah-assignments-list{
+
+    width:100%;
+
+    padding:9px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ======================================================
+   ASSIGNMENT ITEM
+====================================================== */
+
+.ah-assignment-item{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:11px;
+
+    background:#15181c;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    box-sizing:border-box;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-assignment-item:hover{
+
+    background:#181c21;
+
+    border-color:#343a43;
+
+}
+
+
+/* ======================================================
+   MAIN
+====================================================== */
+
+.ah-assignment-main{
+
+    flex:1;
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+/* ======================================================
+   SUBJECT
+====================================================== */
+
+.ah-assignment-subject{
+
+    width:64px;
+
+    min-width:64px;
+
+    height:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+
+    border-radius:6px;
+
+    background:#1e2228;
+
+    color:#9ca5b1;
+
+    font-size:8px;
+
+}
+
+
+.ah-assignment-subject-dot{
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+}
+
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.ah-assignment-content{
+
+    min-width:0;
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+
+.ah-assignment-content strong{
+
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+
+.ah-assignment-content span{
+
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:8px;
+
+    color:#68717d;
+
+}
+
+
+/* ======================================================
+   META
+====================================================== */
+
+.ah-assignment-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+.ah-assignment-meta-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    min-width:90px;
+
+}
+
+
+.ah-assignment-meta-item > svg{
+
+    width:14px;
+
+    height:14px;
+
+    color:#68717d;
+
+}
+
+
+.ah-assignment-meta-item > div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.ah-assignment-meta-item span{
+
+    font-size:7px;
+
+    color:#626b76;
+
+}
+
+
+.ah-assignment-meta-item strong{
+
+    font-size:8px;
+
+    color:#c7cdd5;
+
+    font-weight:500;
+
+}
+
+
+/* ======================================================
+   STATUS
+====================================================== */
+
+.ah-assignment-status{
+
+    width:78px;
+
+    min-width:78px;
+
+    height:27px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+
+    border-radius:6px;
+
+    background:rgba(234,179,8,.07);
+
+    color:#d4a72c;
+
+    font-size:8px;
+
+}
+
+
+.ah-assignment-status-dot{
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#eab308;
+
+}
+
+
+/* ======================================================
+   ACTIONS
+====================================================== */
+
+.ah-assignment-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.ah-assignment-action{
+
+    width:29px;
+
+    height:29px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid #30353d;
+
+    border-radius:6px;
+
+    background:#1b1e23;
+
+    color:#7f8996;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-assignment-action svg{
+
+    width:14px;
+    height:14px;
+
+}
+
+
+.ah-assignment-action:hover{
+
+    background:#242930;
+
+    color:#e5e7eb;
+
+}
+
+
+.ah-delete-assignment{
+
+    color:#a66b6b;
+
+    border-color:#30272a;
+
+}
+
+
+.ah-delete-assignment:hover{
+
+    color:#ef4444;
+
+    background:rgba(239,68,68,.08);
+
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.ah-assignments-footer{
+
+    min-height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 13px;
+
+    border-top:1px solid var(--border);
+
+    color:#626b76;
+
+    font-size:7px;
+
+}
+
+
+
+
+
+
+
+
+.ah-assignments-header{
+
+    min-height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin:8px 9px 0;
+
+    padding:10px 12px;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    background:#15181c;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   ASSIGNMENTS LIST
+====================================================== */
+
+.ah-assignments-list{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:9px;
+
+    padding:10px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ======================================================
+   ASSIGNMENT CARD
+====================================================== */
+
+.ah-assignment-item{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:11px;
+
+    background:#15181c;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+
+}
+
+
+.ah-assignment-item:hover{
+
+    background:#181c21;
+
+    border-color:#343a43;
+
+    transform:translateY(-1px);
+
+}
+
+
+/* ======================================================
+   CARD HEADER
+====================================================== */
+
+.ah-assignment-card-header{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+}
+
+
+/* ======================================================
+   SUBJECT
+====================================================== */
+
+.ah-assignment-subject{
+
+    width:max-content;
+
+    min-width:0;
+
+    height:26px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:0 8px;
+
+    border-radius:6px;
+
+    background:#20242a;
+
+    color:#aeb6c1;
+
+    font-size:8px;
+
+}
+
+
+.ah-assignment-subject-dot{
+
+    width:5px;
+
+    height:5px;
+
+    min-width:5px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+
+}
+
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.ah-assignment-content{
+
+    width:100%;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    margin-top:12px;
+
+}
+
+
+.ah-assignment-content strong{
+
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+
+.ah-assignment-content span{
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+    font-size:8px;
+
+    line-height:1.7;
+
+    color:#68717d;
+
+}
+
+
+/* ======================================================
+   INFORMATION
+====================================================== */
+
+.ah-assignment-info{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:7px;
+
+    margin-top:13px;
+
+    padding-top:10px;
+
+    border-top:1px solid #252a31;
+
+}
+
+
+.ah-assignment-info-item{
+
+    min-width:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+
+.ah-assignment-info-item > svg{
+
+    width:13px;
+
+    height:13px;
+
+    min-width:13px;
+
+    color:#68717d;
+
+}
+
+
+.ah-assignment-info-item > div{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+}
+
+
+.ah-assignment-info-item span{
+
+    font-size:7px;
+
+    color:#626b76;
+
+}
+
+
+.ah-assignment-info-item strong{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:8px;
+
+    font-weight:500;
+
+    color:#c7cdd5;
+
+}
+
+
+/* ======================================================
+   BOTTOM
+====================================================== */
+
+.ah-assignment-bottom{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    margin-top:11px;
+
+}
+
+
+/* ======================================================
+   STATUS
+====================================================== */
+
+.ah-assignment-status{
+
+    width:max-content;
+
+    height:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding:0 8px;
+
+    border-radius:6px;
+
+    background:rgba(234,179,8,.07);
+
+    color:#d4a72c;
+
+    font-size:8px;
+
+}
+
+
+.ah-assignment-status-dot{
+
+    width:5px;
+
+    height:5px;
+
+    min-width:5px;
+
+    border-radius:50%;
+
+    background:#eab308;
+
+}
+
+
+/* ======================================================
+   ACTIONS
+====================================================== */
+
+.ah-assignment-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+
+.ah-assignment-action{
+
+    width:28px;
+
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:6px;
+
+    background:#1b1e23;
+
+    color:#7f8996;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.ah-assignment-action svg{
+
+    width:14px;
+
+    height:14px;
+
+}
+
+
+.ah-assignment-action:hover{
+
+    background:#242930;
+
+    color:#e5e7eb;
+
+}
+
+
+.ah-delete-assignment{
+
+    color:#a66b6b;
+
+    border-color:#30272a;
+
+}
+
+
+.ah-delete-assignment:hover{
+
+    color:#ef4444;
+
+    background:rgba(239,68,68,.08);
+
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.ah-assignments-footer{
+
+    min-height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 13px;
+
+    border-top:1px solid var(--border);
+
+    color:#626b76;
+
+    font-size:7px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   ASSIGNMENTS LIST — 3 COLUMNS
+====================================================== */
+
+.ah-assignments-list{
+    width:100%;
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:10px;
+
+    padding:11px;
+
+    box-sizing:border-box;
+}
+
+
+/* ======================================================
+   ASSIGNMENT CARD
+====================================================== */
+
+.ah-assignment-item{
+    width:100%;
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:13px;
+
+    background:#15181c;
+
+    border:1px solid var(--border);
+
+    border-radius:9px;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.ah-assignment-item:hover{
+    background:#181c21;
+
+    border-color:#343a43;
+
+    transform:translateY(-1px);
+}
+
+
+/* ======================================================
+   CARD HEADER
+====================================================== */
+
+.ah-assignment-card-header{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:10px;
+}
+
+
+/* ======================================================
+   SUBJECT
+====================================================== */
+
+.ah-assignment-subject{
+    width:max-content;
+    min-width:0;
+
+    height:29px;
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    padding:0 9px;
+
+    border-radius:6px;
+
+    background:#20242a;
+
+    color:#b7bec8;
+
+    font-size:9px;
+
+    font-weight:500;
+}
+
+
+.ah-assignment-subject-dot{
+    width:6px;
+    height:6px;
+
+    min-width:6px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+}
+
+
+/* ======================================================
+   ACTIONS
+====================================================== */
+
+.ah-assignment-actions{
+    display:flex;
+    align-items:center;
+
+    gap:6px;
+}
+
+
+.ah-assignment-action{
+    width:30px;
+    height:30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:6px;
+
+    background:#1b1e23;
+
+    color:#7f8996;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+
+.ah-assignment-action svg{
+    width:15px;
+    height:15px;
+}
+
+
+.ah-assignment-action:hover{
+    background:#242930;
+
+    color:#e5e7eb;
+}
+
+
+.ah-delete-assignment{
+    color:#a66b6b;
+
+    border-color:#30272a;
+}
+
+
+.ah-delete-assignment:hover{
+    color:#ef4444;
+
+    background:rgba(239,68,68,.08);
+}
+
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.ah-assignment-content{
+    width:100%;
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:6px;
+
+    margin-top:13px;
+}
+
+
+.ah-assignment-content strong{
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    font-weight:600;
+
+    color:var(--text);
+}
+
+
+.ah-assignment-content span{
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+    color:#737c87;
+}
+
+
+/* ======================================================
+   INFO
+====================================================== */
+
+.ah-assignment-info{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:9px;
+
+    margin-top:14px;
+
+    padding-top:11px;
+
+    border-top:1px solid #252a31;
+}
+
+
+.ah-assignment-info-item{
+    min-width:0;
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+}
+
+
+.ah-assignment-info-item > svg{
+    width:14px;
+    height:14px;
+
+    min-width:14px;
+
+    color:#737c87;
+}
+
+
+.ah-assignment-info-item > div{
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:3px;
+}
+
+
+.ah-assignment-info-item span{
+    font-size:8px;
+
+    color:#626b76;
+}
+
+
+.ah-assignment-info-item strong{
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    color:#c7cdd5;
+}
+
+
+/* ======================================================
+   BOTTOM
+====================================================== */
+
+.ah-assignment-bottom{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+
+    margin-top:12px;
+}
+
+
+.ah-assignment-status{
+    width:max-content;
+
+    height:27px;
+
+    display:flex;
+    align-items:center;
+
+    gap:6px;
+
+    padding:0 9px;
+
+    border-radius:6px;
+
+    background:rgba(234,179,8,.07);
+
+    color:#d4a72c;
+
+    font-size:9px;
+}
+
+
+.ah-assignment-status-dot{
+    width:6px;
+    height:6px;
+
+    min-width:6px;
+
+    border-radius:50%;
+
+    background:#eab308;
+}
+
+
+/* ======================================================
+   DONE STATUS
+====================================================== */
+
+.ah-assignment-status.done{
+    background:rgba(34,197,94,.07);
+
+    color:#4ade80;
+}
+
+
+.ah-assignment-status.done
+.ah-assignment-status-dot{
+    background:#22c55e;
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.ah-assignments-footer{
+    min-height:38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 14px;
+
+    border-top:1px solid var(--border);
+
+    color:#707985;
+
+    font-size:8px;
+}
+
+
+/* ======================================================
+   EMPTY
+====================================================== */
+
+.ah-empty-assignment{
+    grid-column:1 / -1;
+
+    width:100%;
+
+    min-height:180px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    background:#15181c;
+
+    border:1px dashed var(--border);
+
+    border-radius:9px;
+
+    color:#737c87;
+}
+
+
+.ah-empty-assignment i{
+    width:30px;
+    height:30px;
+}
+
+
+.ah-empty-assignment span{
+    font-size:10px;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width:1000px){
+
+    .ah-assignments-list{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width:650px){
+
+    .ah-assignments-list{
+        grid-template-columns:1fr;
+
+        gap:9px;
+
+        padding:9px;
+    }
+
+
+    .ah-assignment-item{
+        padding:12px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   ASSIGNMENTS LIST — 3 COLUMNS
+====================================================== */
+
+.ah-assignments-list{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:12px;
+
+    padding:12px;
+
+    box-sizing:border-box;
+}
+
+
+/* ======================================================
+   ASSIGNMENT CARD
+====================================================== */
+
+.ah-assignment-item{
+    width:100%;
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:15px;
+
+    background:#15181c;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    box-sizing:border-box;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.ah-assignment-item:hover{
+    background:#181c21;
+
+    border-color:#343a43;
+
+    transform:translateY(-1px);
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.ah-assignment-card-header{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+}
+
+
+/* ======================================================
+   SUBJECT
+====================================================== */
+
+.ah-assignment-subject{
+    width:max-content;
+    min-width:0;
+
+    height:32px;
+
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+
+    padding:0 10px;
+
+    border-radius:7px;
+
+    background:#20242a;
+
+    color:#c0c7d0;
+
+    font-size:10px;
+
+    font-weight:500;
+}
+
+
+.ah-assignment-subject-dot{
+    width:6px;
+    height:6px;
+
+    min-width:6px;
+
+    border-radius:50%;
+
+    background:#3b82f6;
+}
+
+
+/* ======================================================
+   ACTIONS
+====================================================== */
+
+.ah-assignment-actions{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+}
+
+
+.ah-assignment-action{
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid #30353d;
+
+    border-radius:7px;
+
+    background:#1b1e23;
+
+    color:#858f9d;
+
+    cursor:pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+
+.ah-assignment-action svg{
+    width:16px;
+    height:16px;
+}
+
+
+.ah-assignment-action:hover{
+    background:#242930;
+
+    color:#e5e7eb;
+}
+
+
+.ah-delete-assignment{
+    color:#a66b6b;
+
+    border-color:#30272a;
+}
+
+
+.ah-delete-assignment:hover{
+    color:#ef4444;
+
+    background:rgba(239,68,68,.08);
+}
+
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.ah-assignment-content{
+    width:100%;
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:7px;
+
+    margin-top:16px;
+}
+
+
+.ah-assignment-content strong{
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    font-weight:600;
+
+    color:var(--text);
+}
+
+
+.ah-assignment-content span{
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+    font-size:10px;
+
+    line-height:1.9;
+
+    color:#78818d;
+}
+
+
+/* ======================================================
+   INFO
+====================================================== */
+
+.ah-assignment-info{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:12px;
+
+    margin-top:16px;
+
+    padding-top:13px;
+
+    border-top:1px solid #252a31;
+}
+
+
+.ah-assignment-info-item{
+    min-width:0;
+
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+}
+
+
+.ah-assignment-info-item > svg{
+    width:16px;
+    height:16px;
+
+    min-width:16px;
+
+    color:#737d89;
+}
+
+
+.ah-assignment-info-item > div{
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:4px;
+}
+
+
+.ah-assignment-info-item span{
+    font-size:9px;
+
+    color:#68717d;
+}
+
+
+.ah-assignment-info-item strong{
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    font-size:10px;
+
+    font-weight:500;
+
+    color:#cbd1d9;
+}
+
+
+/* ======================================================
+   BOTTOM
+====================================================== */
+
+.ah-assignment-bottom{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+
+    margin-top:15px;
+}
+
+
+.ah-assignment-status{
+    width:max-content;
+
+    height:30px;
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    padding:0 10px;
+
+    border-radius:7px;
+
+    background:rgba(234,179,8,.07);
+
+    color:#d4a72c;
+
+    font-size:10px;
+
+    font-weight:500;
+}
+
+
+.ah-assignment-status-dot{
+    width:6px;
+    height:6px;
+
+    min-width:6px;
+
+    border-radius:50%;
+
+    background:#eab308;
+}
+
+
+/* ======================================================
+   DONE
+====================================================== */
+
+.ah-assignment-status.done{
+    background:rgba(34,197,94,.07);
+
+    color:#4ade80;
+}
+
+
+.ah-assignment-status.done
+.ah-assignment-status-dot{
+    background:#22c55e;
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.ah-assignments-footer{
+    min-height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 15px;
+
+    border-top:1px solid var(--border);
+
+    color:#707985;
+
+    font-size:9px;
+}
+
+
+/* ======================================================
+   EMPTY
+====================================================== */
+
+.ah-empty-assignment{
+    grid-column:1 / -1;
+
+    width:100%;
+
+    min-height:200px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:14px;
+
+    background:#15181c;
+
+    border:1px dashed var(--border);
+
+    border-radius:10px;
+
+    color:#737c87;
+}
+
+
+.ah-empty-assignment i{
+    width:34px;
+    height:34px;
+}
+
+
+.ah-empty-assignment span{
+    font-size:11px;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width:1050px){
+
+    .ah-assignments-list{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width:650px){
+
+    .ah-assignments-list{
+        grid-template-columns:1fr;
+
+        gap:10px;
+
+        padding:10px;
+    }
+
+
+    .ah-assignment-item{
+        padding:14px;
+    }
+
+
+    .ah-assignment-content strong{
+        font-size:13px;
+    }
+
+
+    .ah-assignment-content span{
+        font-size:10px;
+    }
 
 }

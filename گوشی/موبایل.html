@@ -2497,32 +2497,185 @@ style="display:none">
 
 <script src="../config.js"></script>
 
-<!-- <script>
-    const plannerCollapseBtn =
-document.getElementById(
-    "plannerCollapseBtn"
-);
+<script>
+
+let heartbeatInterval = null;
 
 
-const weeklyPlanner =
-document.querySelector(
-    ".weekly-planner"
-);
+async function sendHeartbeat(){
+
+    const authToken =
+        localStorage.getItem("authToken");
+
+    if(!authToken){
+        console.log("HEARTBEAT: No token");
+        return;
+    }
+
+
+    if(typeof API_URL === "undefined"){
+
+        console.error(
+            "HEARTBEAT: API_URL is not defined"
+        );
+
+        return;
+    }
+
+
+    try{
+
+        const response =
+            await fetch(
+                `${API_URL}/auth/heartbeat`,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Authorization":
+                            `Bearer ${authToken}`
+                    }
+                }
+            );
+
+
+        if(!response.ok){
+
+            console.warn(
+                "Heartbeat failed:",
+                response.status
+            );
+
+            return;
+        }
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "USER HEARTBEAT:",
+            data.lastSeenAt
+        );
+
+    }
+    catch(error){
+
+        console.error(
+            "Heartbeat error:",
+            error
+        );
+
+    }
+
+}
 
 
 
-plannerCollapseBtn.addEventListener(
-"click",
-()=>{
+function startHeartbeat(){
+
+    if(typeof API_URL === "undefined"){
+
+        console.error(
+            "Heartbeat cannot start: API_URL is not defined"
+        );
+
+        return;
+    }
 
 
-    weeklyPlanner.classList.toggle(
-        "collapsed"
+    sendHeartbeat();
+
+
+    heartbeatInterval =
+        setInterval(
+            sendHeartbeat,
+            30 * 1000
+        );
+
+}
+
+
+
+function stopHeartbeat(){
+
+    if(heartbeatInterval){
+
+        clearInterval(
+            heartbeatInterval
+        );
+
+        heartbeatInterval = null;
+
+    }
+
+}
+
+
+
+async function logoutUser(){
+
+    const authToken =
+        localStorage.getItem("authToken");
+
+
+    if(!authToken){
+        return;
+    }
+
+
+    try{
+
+        await fetch(
+            `${API_URL}/auth/logout`,
+            {
+                method:"POST",
+
+                headers:{
+                    "Authorization":
+                        `Bearer ${authToken}`
+                }
+            }
+        );
+
+    }
+    catch(error){
+
+        console.warn(
+            "Logout request failed:",
+            error
+        );
+
+    }
+
+
+    stopHeartbeat();
+
+
+    localStorage.removeItem(
+        "authToken"
     );
 
 
-});
-</script> -->
+    localStorage.removeItem(
+        "currentUser"
+    );
+
+}
+
+
+console.log(
+    "MOBILE API:",
+    typeof API_URL !== "undefined"
+        ? API_URL
+        : "NOT DEFINED"
+);
+
+
+startHeartbeat();
+
+</script>
 
 <script src="mobile.js"></script>
 

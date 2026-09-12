@@ -3266,3 +3266,495 @@ if(themeToggle){
     );
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ======================================================
+// MOBILE SETTINGS + HEARTBEAT + LOGOUT
+// ======================================================
+
+
+// ======================================================
+// SETTINGS ELEMENTS
+// ======================================================
+
+const mobileSettingsBtn =
+    document.getElementById(
+        "mobileSettingsBtn"
+    );
+
+const settingsModal =
+    document.getElementById(
+        "settingsModal"
+    );
+
+const settingsClose =
+    document.getElementById(
+        "settingsClose"
+    );
+
+const settingsOverlay =
+    document.getElementById(
+        "settingsOverlay"
+    );
+
+
+// ======================================================
+// OPEN SETTINGS
+// ======================================================
+
+if(
+    mobileSettingsBtn &&
+    settingsModal
+){
+
+    mobileSettingsBtn.addEventListener(
+        "click",
+        function(){
+
+            settingsModal.classList.add(
+                "active"
+            );
+
+        }
+    );
+
+}
+
+
+// ======================================================
+// CLOSE SETTINGS
+// ======================================================
+
+function closeSettings(){
+
+    if(!settingsModal){
+        return;
+    }
+
+    settingsModal.classList.remove(
+        "active"
+    );
+
+}
+
+
+// ======================================================
+// SETTINGS CLOSE BUTTON
+// ======================================================
+
+if(settingsClose){
+
+    settingsClose.addEventListener(
+        "click",
+        closeSettings
+    );
+
+}
+
+
+// ======================================================
+// SETTINGS OVERLAY
+// ======================================================
+
+if(settingsOverlay){
+
+    settingsOverlay.addEventListener(
+        "click",
+        closeSettings
+    );
+
+}
+
+
+// ======================================================
+// ESC → CLOSE SETTINGS
+// ======================================================
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape" &&
+            settingsModal &&
+            settingsModal.classList.contains(
+                "active"
+            )
+        ){
+
+            closeSettings();
+
+        }
+
+    }
+);
+
+
+// ======================================================
+// MOBILE MENU
+// ======================================================
+// خانه / برنامه هفتگی / عملکرد
+// → بستن پنل تنظیمات
+//
+// تنظیمات
+// → باز کردن پنل تنظیمات
+// ======================================================
+
+const mobileMenuItems =
+    document.querySelectorAll(
+        ".mobile-menu-item"
+    );
+
+
+mobileMenuItems.forEach(
+    function(item){
+
+        item.addEventListener(
+            "click",
+            function(){
+
+                // -------------------------------
+                // SETTINGS
+                // -------------------------------
+
+                if(
+                    item.id ===
+                    "mobileSettingsBtn"
+                ){
+
+                    return;
+
+                }
+
+
+                // -------------------------------
+                // OTHER MENU ITEMS
+                // -------------------------------
+
+                closeSettings();
+
+            }
+        );
+
+    }
+);
+
+
+// ======================================================
+// HEARTBEAT
+// ======================================================
+
+let heartbeatInterval = null;
+
+
+// ======================================================
+// SEND HEARTBEAT
+// ======================================================
+
+async function sendHeartbeat(){
+
+    const authToken =
+        localStorage.getItem(
+            "authToken"
+        );
+
+
+    if(!authToken){
+
+        return;
+
+    }
+
+
+    if(
+        typeof API_URL ===
+        "undefined"
+    ){
+
+        console.error(
+            "HEARTBEAT: API_URL is not defined"
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        const response =
+            await fetch(
+                `${API_URL}/auth/heartbeat`,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Authorization":
+                            `Bearer ${authToken}`
+                    }
+                }
+            );
+
+
+        if(!response.ok){
+
+            console.warn(
+                "Heartbeat failed:",
+                response.status
+            );
+
+            return;
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "USER HEARTBEAT:",
+            data.lastSeenAt
+        );
+
+    }
+    catch(error){
+
+        console.warn(
+            "Heartbeat error:",
+            error
+        );
+
+    }
+
+}
+
+
+// ======================================================
+// START HEARTBEAT
+// ======================================================
+
+function startHeartbeat(){
+
+    if(
+        typeof API_URL ===
+        "undefined"
+    ){
+
+        console.error(
+            "Heartbeat cannot start: API_URL is not defined"
+        );
+
+        return;
+
+    }
+
+
+    const authToken =
+        localStorage.getItem(
+            "authToken"
+        );
+
+
+    if(!authToken){
+
+        return;
+
+    }
+
+
+    // ارسال اولیه
+
+    sendHeartbeat();
+
+
+    // جلوگیری از Interval تکراری
+
+    if(heartbeatInterval){
+
+        clearInterval(
+            heartbeatInterval
+        );
+
+    }
+
+
+    heartbeatInterval =
+        setInterval(
+            sendHeartbeat,
+            30 * 1000
+        );
+
+}
+
+
+// ======================================================
+// STOP HEARTBEAT
+// ======================================================
+
+function stopHeartbeat(){
+
+    if(heartbeatInterval){
+
+        clearInterval(
+            heartbeatInterval
+        );
+
+        heartbeatInterval = null;
+
+    }
+
+}
+
+
+// ======================================================
+// LOGOUT
+// ======================================================
+
+async function logoutUser(){
+
+    const authToken =
+        localStorage.getItem(
+            "authToken"
+        );
+
+
+    if(!authToken){
+
+        return;
+
+    }
+
+
+    try{
+
+        if(
+            typeof API_URL !==
+            "undefined"
+        ){
+
+            await fetch(
+                `${API_URL}/auth/logout`,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Authorization":
+                            `Bearer ${authToken}`
+                    }
+                }
+            );
+
+        }
+
+    }
+    catch(error){
+
+        console.warn(
+            "Logout request failed:",
+            error
+        );
+
+    }
+
+
+    // توقف Heartbeat
+
+    stopHeartbeat();
+
+
+    // پاک کردن ورود
+
+    localStorage.removeItem(
+        "authToken"
+    );
+
+    localStorage.removeItem(
+        "currentUser"
+    );
+
+}
+
+
+// ======================================================
+// START
+// ======================================================
+
+startHeartbeat();
+
+
+// ======================================================
+// SERVICE WORKER
+// ======================================================
+
+if(
+    "serviceWorker" in
+    navigator
+){
+
+    navigator.serviceWorker
+        .register(
+            "service-worker.js"
+        )
+        .then(
+            function(){
+
+                console.log(
+                    "Service Worker Registered"
+                );
+
+            }
+        )
+        .catch(
+            function(error){
+
+                console.log(
+                    "SW Error:",
+                    error
+                );
+
+            }
+        );
+
+}

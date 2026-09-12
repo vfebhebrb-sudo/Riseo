@@ -11862,3 +11862,1385 @@ if(timerButtons.length >= 3){
 /* مقدار اولیه */
 
 updateTimerDisplay();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   ASSIGNMENT MANAGEMENT
+====================================================== */
+
+
+/* ======================================================
+   ELEMENTS
+====================================================== */
+
+const assignmentModal =
+    document.getElementById("assignmentModal");
+
+const assignmentForm =
+    document.getElementById("assignmentForm");
+
+const assignmentModalTitle =
+    document.getElementById("assignmentModalTitle");
+
+const assignmentSubmitText =
+    document.getElementById("assignmentSubmitText");
+
+const closeAssignmentModal =
+    document.getElementById("closeAssignmentModal");
+
+const cancelAssignment =
+    document.getElementById("cancelAssignment");
+
+const assignmentTarget =
+    document.getElementById("assignmentTarget");
+
+const specificUserGroup =
+    document.getElementById("specificUserGroup");
+
+const assignmentUser =
+    document.getElementById("assignmentUser");
+
+const addAssignmentButton =
+    document.querySelector(".ah-add-assignment-btn");
+
+
+/* ======================================================
+   STATE
+====================================================== */
+
+let editingAssignmentId = null;
+
+
+/* ======================================================
+   LOCAL STORAGE
+====================================================== */
+
+const ASSIGNMENTS_STORAGE_KEY =
+    "ah_admin_assignments";
+
+
+function loadAssignments(){
+
+    try{
+
+        const saved =
+            localStorage.getItem(
+                ASSIGNMENTS_STORAGE_KEY
+            );
+
+
+        if(saved){
+
+            const parsed =
+                JSON.parse(saved);
+
+
+            if(Array.isArray(parsed)){
+
+                return parsed;
+
+            }
+
+        }
+
+    }
+    catch(error){
+
+        console.error(
+            "ASSIGNMENTS LOAD ERROR:",
+            error
+        );
+
+    }
+
+
+    return [
+
+        {
+
+            id:
+                "assignment-1",
+
+            subject:
+                "فیزیک",
+
+            title:
+                "حل تست‌های حرکت‌شناسی",
+
+            description:
+                "تست‌های فصل اول را حل کنید و پاسخ‌های خود را بررسی کنید.",
+
+            deadline:
+                "2026-09-11",
+
+            priority:
+                "normal",
+
+            target:
+                "all",
+
+            userId:
+                "",
+
+            status:
+                "pending"
+
+        }
+
+    ];
+
+}
+
+
+let assignments =
+    loadAssignments();
+
+
+function saveAssignments(){
+
+    try{
+
+        localStorage.setItem(
+
+            ASSIGNMENTS_STORAGE_KEY,
+
+            JSON.stringify(
+                assignments
+            )
+
+        );
+
+    }
+    catch(error){
+
+        console.error(
+            "ASSIGNMENTS SAVE ERROR:",
+            error
+        );
+
+    }
+
+}
+
+
+/* ======================================================
+   OPEN MODAL
+====================================================== */
+
+function openAssignmentModal(
+    assignment = null
+){
+
+    if(!assignment){
+
+        editingAssignmentId =
+            null;
+
+
+        assignmentModalTitle.textContent =
+            "افزودن تکلیف";
+
+
+        assignmentSubmitText.textContent =
+            "ایجاد تکلیف";
+
+
+        assignmentForm.reset();
+
+
+        specificUserGroup.style.display =
+            "none";
+
+
+        if(assignmentUser){
+
+            assignmentUser.value =
+                "";
+
+        }
+
+    }
+
+    else{
+
+        editingAssignmentId =
+            assignment.id;
+
+
+        assignmentModalTitle.textContent =
+            "ویرایش تکلیف";
+
+
+        assignmentSubmitText.textContent =
+            "ذخیره تغییرات";
+
+
+        document.getElementById(
+            "assignmentTitle"
+        ).value =
+            assignment.title || "";
+
+
+        document.getElementById(
+            "assignmentSubject"
+        ).value =
+            assignment.subject || "";
+
+
+        document.getElementById(
+            "assignmentDescription"
+        ).value =
+            assignment.description || "";
+
+
+        document.getElementById(
+            "assignmentDeadline"
+        ).value =
+            assignment.deadline || "";
+
+
+        document.getElementById(
+            "assignmentPriority"
+        ).value =
+            assignment.priority ||
+            "normal";
+
+
+        assignmentTarget.value =
+            assignment.target ||
+            "all";
+
+
+        if(
+            assignmentTarget.value ===
+            "user"
+        ){
+
+            specificUserGroup.style.display =
+                "flex";
+
+
+            if(assignmentUser){
+
+                assignmentUser.value =
+                    assignment.userId || "";
+
+            }
+
+        }
+
+        else{
+
+            specificUserGroup.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    assignmentModal.classList.add(
+        "show"
+    );
+
+
+    assignmentModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+
+    if(window.lucide){
+
+        lucide.createIcons();
+
+    }
+
+}
+
+
+/* ======================================================
+   CLOSE MODAL
+====================================================== */
+
+function closeAssignmentModalFunc(){
+
+    if(!assignmentModal){
+
+        return;
+
+    }
+
+
+    assignmentModal.classList.remove(
+        "show"
+    );
+
+
+    assignmentModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+
+    editingAssignmentId =
+        null;
+
+}
+
+
+/* ======================================================
+   BUTTON EVENTS
+====================================================== */
+
+if(addAssignmentButton){
+
+    addAssignmentButton.addEventListener(
+        "click",
+        ()=>{
+
+            openAssignmentModal();
+
+        }
+    );
+
+}
+
+
+if(closeAssignmentModal){
+
+    closeAssignmentModal.addEventListener(
+        "click",
+        closeAssignmentModalFunc
+    );
+
+}
+
+
+if(cancelAssignment){
+
+    cancelAssignment.addEventListener(
+        "click",
+        closeAssignmentModalFunc
+    );
+
+}
+
+
+/* ======================================================
+   CLOSE WITH BACKDROP
+====================================================== */
+
+if(assignmentModal){
+
+    assignmentModal.addEventListener(
+        "click",
+        event => {
+
+            if(
+                event.target ===
+                assignmentModal
+            ){
+
+                closeAssignmentModalFunc();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ======================================================
+   CLOSE WITH ESC
+====================================================== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(
+            event.key === "Escape" &&
+            assignmentModal &&
+            assignmentModal.classList.contains(
+                "show"
+            )
+        ){
+
+            closeAssignmentModalFunc();
+
+        }
+
+    }
+);
+
+
+/* ======================================================
+   TARGET USER
+====================================================== */
+
+if(assignmentTarget){
+
+    assignmentTarget.addEventListener(
+        "change",
+        ()=>{
+
+            if(
+                assignmentTarget.value ===
+                "user"
+            ){
+
+                specificUserGroup.style.display =
+                    "flex";
+
+            }
+
+            else{
+
+                specificUserGroup.style.display =
+                    "none";
+
+
+                if(assignmentUser){
+
+                    assignmentUser.value =
+                        "";
+
+                }
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ======================================================
+   RENDER ASSIGNMENTS
+====================================================== */
+
+function renderAssignments(){
+
+    const list =
+        document.querySelector(
+            ".ah-assignments-list"
+        );
+
+
+    if(!list){
+
+        return;
+
+    }
+
+
+    list.innerHTML = "";
+
+
+    /* ==================================================
+       EMPTY
+    ================================================== */
+
+    if(!assignments.length){
+
+        list.innerHTML = `
+
+            <div class="ah-empty-assignment">
+
+                <i data-lucide="clipboard-x"></i>
+
+                <span>
+                    هنوز تکلیفی ایجاد نشده است
+                </span>
+
+            </div>
+
+        `;
+
+
+        updateAssignmentFooter();
+
+
+        if(window.lucide){
+
+            lucide.createIcons();
+
+        }
+
+
+        return;
+
+    }
+
+
+    /* ==================================================
+       CARDS
+    ================================================== */
+
+    assignments.forEach(
+        assignment => {
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "ah-assignment-item";
+
+
+            card.dataset.id =
+                assignment.id;
+
+
+            const deadline =
+                formatAssignmentDate(
+                    assignment.deadline
+                );
+
+
+            const targetText =
+                assignment.target ===
+                "user"
+
+                    ? "کاربر خاص"
+
+                    : "همه کاربران";
+
+
+            const statusClass =
+                assignment.status ===
+                "done"
+
+                    ? "done"
+
+                    : "";
+
+
+            const statusText =
+                assignment.status ===
+                "done"
+
+                    ? "انجام شده"
+
+                    : "انجام نشده";
+
+
+            card.innerHTML = `
+
+                <div
+                    class="ah-assignment-card-header"
+                >
+
+                    <div
+                        class="ah-assignment-subject"
+                    >
+
+                        <span
+                            class="ah-assignment-subject-dot"
+                        ></span>
+
+                        <span>
+                            ${
+                                escapeAssignmentHTML(
+                                    assignment.subject ||
+                                    "بدون درس"
+                                )
+                            }
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="ah-assignment-actions"
+                    >
+
+                        <button
+                            class="
+                                ah-assignment-action
+                                ah-edit-assignment
+                            "
+                            type="button"
+                            title="ویرایش"
+                        >
+
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                stroke-width="2"
+                            >
+
+                                <path
+                                    d="M7.33301 1.33594H5.99967C2.66634 1.33594 1.33301 2.66927 1.33301 6.0026V10.0026C1.33301 13.3359 2.66634 14.6693 5.99967 14.6693H9.99967C13.333 14.6693 14.6663 13.3359 14.6663 10.0026V8.66927"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path>
+
+                                <path
+                                    d="M10.6933 2.01155L5.43992 7.26488C5.23992 7.46488 5.03992 7.85822 4.99992 8.14488L4.71325 10.1515C4.60659 10.8782 5.11992 11.3849 5.84659 11.2849L7.85325 10.9982C8.13325 10.9582 8.52659 10.7582 8.73325 10.5582L13.9866 5.30488C14.8933 4.39822 15.3199 3.34488 13.9866 2.01155C12.6533 0.678215 11.5999 1.10488 10.6933 2.01155Z"
+                                    stroke="currentColor"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path>
+
+                                <path
+                                    d="M9.94043 2.76562C10.3871 4.35896 11.6338 5.60562 13.2338 6.05896"
+                                    stroke="currentColor"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></path>
+
+                            </svg>
+
+                        </button>
+
+
+                        <button
+                            class="
+                                ah-assignment-action
+                                ah-delete-assignment
+                            "
+                            type="button"
+                            title="حذف"
+                        >
+
+                            <i
+                                data-lucide="trash-2"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="ah-assignment-content"
+                >
+
+                    <strong>
+
+                        ${
+                            escapeAssignmentHTML(
+                                assignment.title ||
+                                "بدون عنوان"
+                            )
+                        }
+
+                    </strong>
+
+
+                    <span>
+
+                        ${
+                            escapeAssignmentHTML(
+                                assignment.description ||
+                                "بدون توضیحات"
+                            )
+                        }
+
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="ah-assignment-info"
+                >
+
+                    <div
+                        class="ah-assignment-info-item"
+                    >
+
+                        <i
+                            data-lucide="calendar-days"
+                        ></i>
+
+                        <div>
+
+                            <span>
+                                مهلت
+                            </span>
+
+                            <strong>
+                                ${deadline}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="ah-assignment-info-item"
+                    >
+
+                        <i
+                            data-lucide="users"
+                        ></i>
+
+                        <div>
+
+                            <span>
+                                اختصاص به
+                            </span>
+
+                            <strong>
+                                ${targetText}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="ah-assignment-bottom"
+                >
+
+                    <div
+                        class="
+                            ah-assignment-status
+                            ${statusClass}
+                        "
+                    >
+
+                        <span
+                            class="
+                                ah-assignment-status-dot
+                            "
+                        ></span>
+
+                        ${statusText}
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            list.appendChild(
+                card
+            );
+
+        }
+    );
+
+
+    updateAssignmentFooter();
+
+
+    bindAssignmentActions();
+
+
+    if(window.lucide){
+
+        lucide.createIcons();
+
+    }
+
+}
+
+
+/* ======================================================
+   HTML ESCAPE
+====================================================== */
+
+function escapeAssignmentHTML(
+    value
+){
+
+    return String(value)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* ======================================================
+   BIND ACTIONS
+====================================================== */
+
+function bindAssignmentActions(){
+
+    document
+        .querySelectorAll(
+            ".ah-edit-assignment"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    ()=>{
+
+                        const card =
+                            button.closest(
+                                ".ah-assignment-item"
+                            );
+
+
+                        if(!card){
+
+                            return;
+
+                        }
+
+
+                        const id =
+                            card.dataset.id;
+
+
+                        const assignment =
+                            assignments.find(
+                                item =>
+                                    item.id ===
+                                    id
+                            );
+
+
+                        if(assignment){
+
+                            openAssignmentModal(
+                                assignment
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+    document
+        .querySelectorAll(
+            ".ah-delete-assignment"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    ()=>{
+
+                        const card =
+                            button.closest(
+                                ".ah-assignment-item"
+                            );
+
+
+                        if(!card){
+
+                            return;
+
+                        }
+
+
+                        const id =
+                            card.dataset.id;
+
+
+                        deleteAssignment(
+                            id
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+/* ======================================================
+   DELETE ASSIGNMENT
+====================================================== */
+
+function deleteAssignment(
+    id
+){
+
+    const assignment =
+        assignments.find(
+            item =>
+                item.id === id
+        );
+
+
+    if(!assignment){
+
+        return;
+
+    }
+
+
+    const confirmed =
+        confirm(
+            `آیا از حذف تکلیف «${assignment.title}» مطمئن هستید؟`
+        );
+
+
+    if(!confirmed){
+
+        return;
+
+    }
+
+
+    assignments =
+        assignments.filter(
+            item =>
+                item.id !== id
+        );
+
+
+    saveAssignments();
+
+
+    renderAssignments();
+
+}
+
+
+/* ======================================================
+   FORM SUBMIT
+====================================================== */
+
+if(assignmentForm){
+
+    assignmentForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const title =
+                document.getElementById(
+                    "assignmentTitle"
+                ).value.trim();
+
+
+            const subject =
+                document.getElementById(
+                    "assignmentSubject"
+                ).value;
+
+
+            const description =
+                document.getElementById(
+                    "assignmentDescription"
+                ).value.trim();
+
+
+            const deadline =
+                document.getElementById(
+                    "assignmentDeadline"
+                ).value;
+
+
+            const priority =
+                document.getElementById(
+                    "assignmentPriority"
+                ).value;
+
+
+            const target =
+                assignmentTarget.value;
+
+
+            const userId =
+                assignmentUser
+                    ? assignmentUser.value
+                    : "";
+
+
+            /* ==========================================
+               VALIDATION
+            ========================================== */
+
+            if(
+                !title ||
+                !subject ||
+                !deadline
+            ){
+
+                return;
+
+            }
+
+
+            /* ==========================================
+               EDIT
+            ========================================== */
+
+            if(editingAssignmentId){
+
+                const assignment =
+                    assignments.find(
+                        item =>
+                            item.id ===
+                            editingAssignmentId
+                    );
+
+
+                if(assignment){
+
+                    assignment.title =
+                        title;
+
+
+                    assignment.subject =
+                        subject;
+
+
+                    assignment.description =
+                        description;
+
+
+                    assignment.deadline =
+                        deadline;
+
+
+                    assignment.priority =
+                        priority;
+
+
+                    assignment.target =
+                        target;
+
+
+                    assignment.userId =
+                        target === "user"
+                            ? userId
+                            : "";
+
+                }
+
+            }
+
+
+            /* ==========================================
+               CREATE
+            ========================================== */
+
+            else{
+
+                assignments.unshift({
+
+                    id:
+                        "assignment-" +
+                        Date.now(),
+
+                    title:
+                        title,
+
+                    subject:
+                        subject,
+
+                    description:
+                        description,
+
+                    deadline:
+                        deadline,
+
+                    priority:
+                        priority,
+
+                    target:
+                        target,
+
+                    userId:
+                        target === "user"
+                            ? userId
+                            : "",
+
+                    status:
+                        "pending"
+
+                });
+
+            }
+
+
+            /* ==========================================
+               SAVE
+            ========================================== */
+
+            saveAssignments();
+
+
+            /* ==========================================
+               RENDER
+            ========================================== */
+
+            renderAssignments();
+
+
+            /* ==========================================
+               CLOSE
+            ========================================== */
+
+            closeAssignmentModalFunc();
+
+        }
+    );
+
+}
+
+
+/* ======================================================
+   DATE FORMAT
+====================================================== */
+
+function formatAssignmentDate(
+    date
+){
+
+    if(!date){
+
+        return "-";
+
+    }
+
+
+    const parts =
+        date.split("-");
+
+
+    if(
+        parts.length !== 3
+    ){
+
+        return date;
+
+    }
+
+
+    return (
+
+        parts[2] +
+        " / " +
+        parts[1] +
+        " / " +
+        parts[0]
+
+    );
+
+}
+
+
+/* ======================================================
+   PRIORITY TEXT
+====================================================== */
+
+function getPriorityText(
+    priority
+){
+
+    if(
+        priority === "urgent"
+    ){
+
+        return "فوری";
+
+    }
+
+
+    if(
+        priority === "important"
+    ){
+
+        return "مهم";
+
+    }
+
+
+    return "عادی";
+
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+function updateAssignmentFooter(){
+
+    const footer =
+        document.querySelector(
+            ".ah-assignments-footer span:first-child"
+        );
+
+
+    if(!footer){
+
+        return;
+
+    }
+
+
+    const count =
+        assignments.length;
+
+
+    footer.textContent =
+        `${count} تکلیف فعال`;
+
+}
+
+
+/* ======================================================
+   INITIAL SAVE
+====================================================== */
+
+saveAssignments();
+
+
+/* ======================================================
+   INITIAL RENDER
+====================================================== */
+
+renderAssignments();
