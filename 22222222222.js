@@ -557,12 +557,19 @@ document.getElementById(
 // =====================================================
 // CHECK
 // =====================================================
+// =====================================================
+// CHECK
+// =====================================================
 
-if(
+console.log("fileLessonsList:", fileLessonsList);
+console.log("fileViewerContent:", fileViewerContent);
+console.log("a4PagesContainer:", a4Container);
+
+if (
     !fileLessonsList ||
     !fileViewerContent ||
     !a4Container
-){
+) {
 
     console.error(
         "FILE SYSTEM ELEMENT ERROR"
@@ -571,9 +578,6 @@ if(
     return;
 
 }
-
-
-
 // =====================================================
 // LESSON BUTTONS
 // =====================================================
@@ -1237,134 +1241,6 @@ lucide.createIcons();
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2120,3 +1996,74 @@ lucide.createIcons();
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =====================================================
+// PDF FULLSCREEN
+// =====================================================
+
+const fullscreenTool =
+    document.getElementById("fullscreenTool");
+
+
+fullscreenTool?.addEventListener(
+    "click",
+    async () => {
+
+        const viewer =
+            document.getElementById(
+                "a4PagesContainer"
+            );
+
+        if (!viewer) {
+            console.error(
+                "PDF CONTAINER NOT FOUND"
+            );
+            return;
+        }
+
+
+        try {
+
+            if (!document.fullscreenElement) {
+
+                await viewer.requestFullscreen();
+
+            } else {
+
+                await document.exitFullscreen();
+
+            }
+
+        }
+        catch(error) {
+
+            console.error(
+                "FULLSCREEN ERROR:",
+                error
+            );
+
+        }
+
+    }
+);

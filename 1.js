@@ -11571,7 +11571,7 @@ workspaceBtn.onclick = ()=>{
 
 
 window.location.href =
-"اتاق کار.html";
+"./تخته/تخته مشکی.html";
 
 
 };

@@ -18,9 +18,23 @@
 
 //  const API_URL = "http://localhost:3000/api";
 
-const API_URL = "https://iran-go4q.onrender.com/api";
+// const API_URL = "https://iran-go4q.onrender.com/api";
 
 
 // بعد از آنلاین شدن بک‌اند Render فقط همین خط تغییر می‌کند
 // مثال:
 // const API_URL = "https://your-backend.onrender.com";
+
+
+const CONFIG = {
+
+    API:
+   "https://iran-go4q.onrender.com/api"
+
+};
+
+
+
+
+const FILES_API =
+CONFIG.API + "/files";

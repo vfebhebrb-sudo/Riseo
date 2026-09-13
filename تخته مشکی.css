@@ -1,0 +1,1340 @@
+:root {
+    --tools-width: 46px;
+    --tools-padding: 6px;
+
+    --tools-bg: rgba(15, 29, 50, 0.96);
+    --tools-border: rgba(91, 137, 199, 0.22);
+
+    --tools-radius: 10px;
+
+    --tools-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   FLOATING TOOLS BOX
+========================================= */
+
+.floating-tools {
+
+    position: fixed;
+
+    top: 50%;
+    right: 24px;
+
+    transform: translateY(-50%);
+
+    width: var(--tools-width);
+
+    min-height: 46px;
+
+    padding: var(--tools-padding);
+
+    box-sizing: border-box;
+
+    background: var(--tools-bg);
+
+    border: 1px solid var(--tools-border);
+
+    border-radius: var(--tools-radius);
+
+    box-shadow: var(--tools-shadow);
+
+    z-index: 1000;
+
+    direction: rtl;
+
+}
+
+/* =========================================
+   FLOATING TOOL BUTTON
+========================================= */
+
+.floating-tool {
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #d8e5f7;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* آیکون */
+
+.floating-tool svg {
+
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 2;
+}
+
+
+/* Hover */
+
+.floating-tool:hover {
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ابزار انتخاب‌شده */
+
+.floating-tool.active {
+
+    background: #3478f6;
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 4px 10px rgba(52, 120, 246, 0.30);
+}
+
+
+/* فشار دادن */
+
+.floating-tool:active {
+
+    transform: scale(0.94);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   THEME
+========================================= */
+
+:root {
+
+    --tools-width: 46px;
+    --tools-padding: 6px;
+
+    --tools-bg: rgba(15, 29, 50, 0.96);
+
+    --tools-border: rgba(91, 137, 199, 0.22);
+
+    --tools-radius: 10px;
+
+    --tools-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+    --tool-size: 34px;
+
+    --tool-radius: 8px;
+
+    --tool-icon-color: #d8e5f7;
+
+    --tool-hover-bg: rgba(255, 255, 255, 0.07);
+
+}
+
+
+/* =========================================
+   FLOATING TOOLS BOX
+========================================= */
+
+.floating-tools {
+
+    position: fixed;
+
+    top: 50%;
+    right: 24px;
+
+    transform: translateY(-50%);
+
+    width: var(--tools-width);
+
+    padding: var(--tools-padding);
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    background: var(--tools-bg);
+
+    border: 1px solid var(--tools-border);
+
+    border-radius: var(--tools-radius);
+
+    box-shadow: var(--tools-shadow);
+
+    z-index: 1000;
+
+    direction: rtl;
+}
+
+
+/* =========================================
+   TOOL BUTTON
+========================================= */
+
+.floating-tool {
+
+    width: var(--tool-size);
+    height: var(--tool-size);
+
+    flex: 0 0 var(--tool-size);
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    border-radius: var(--tool-radius);
+
+    background: transparent;
+
+    color: var(--tool-icon-color);
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.15s ease;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.floating-tool svg {
+
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 1.9;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.floating-tool:hover {
+
+    background: var(--tool-hover-bg);
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   CLICK
+========================================= */
+
+.floating-tool:active {
+
+    transform: scale(0.92);
+}
+
+
+/* =========================================
+   NO SELECTED TOOL
+========================================= */
+
+/*
+   عمداً هیچ .active نداریم.
+   بنابراین هیچ ابزاری در شروع انتخاب‌شده نیست.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   THEME
+========================================= */
+
+:root {
+
+    --header-height: 58px;
+
+    --header-bg: #0b1424;
+
+    --header-border:
+        rgba(255, 255, 255, 0.07);
+
+    --header-text: #e5edf8;
+
+    --header-muted: #8798b0;
+
+    --header-hover:
+        rgba(255, 255, 255, 0.07);
+
+    --header-button-size: 38px;
+
+    --header-radius: 8px;
+
+}
+
+
+/* =========================================
+   WORKSPACE HEADER
+========================================= */
+
+.workspace-header {
+
+    width: 100%;
+    height: var(--header-height);
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    background: var(--header-bg);
+
+    border-bottom:
+        1px solid var(--header-border);
+
+    color: var(--header-text);
+
+    direction: rtl;
+
+    user-select: none;
+
+    position: relative;
+
+    z-index: 9000;
+}
+
+
+/* =========================================
+   RIGHT / LEFT SECTIONS
+========================================= */
+
+.workspace-header-right,
+.workspace-header-left {
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+/* =========================================
+   CENTER PAGE CONTROL
+========================================= */
+
+.workspace-page-control {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+
+/* =========================================
+   HEADER BUTTON
+========================================= */
+
+.header-btn {
+
+    width: var(--header-button-size);
+    height: var(--header-button-size);
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    border-radius: var(--header-radius);
+
+    background: transparent;
+
+    color: var(--header-text);
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.12s ease;
+
+}
+
+
+.header-btn:hover {
+
+    background: var(--header-hover);
+
+    border-color:
+        rgba(255, 255, 255, 0.06);
+
+}
+
+
+.header-btn:active {
+
+    transform: scale(0.94);
+
+}
+
+
+.header-btn svg {
+
+    width: 19px;
+    height: 19px;
+
+    stroke-width: 1.9;
+
+}
+
+
+/* =========================================
+   SMALL BUTTON
+========================================= */
+
+.header-btn.small {
+
+    width: 32px;
+    height: 32px;
+
+}
+
+
+.header-btn.small svg {
+
+    width: 17px;
+    height: 17px;
+
+}
+
+
+/* =========================================
+   FILE INFO
+========================================= */
+
+.workspace-file-info {
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--header-text);
+
+}
+
+
+.workspace-file-info svg {
+
+    width: 19px;
+    height: 19px;
+
+    color: var(--header-muted);
+
+    flex-shrink: 0;
+
+}
+
+
+.workspace-file-info span {
+
+    max-width: 220px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================
+   PAGE COUNTER
+========================================= */
+
+.page-counter {
+
+    min-width: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 13px;
+
+    color: var(--header-text);
+
+}
+
+
+.page-divider {
+
+    color: var(--header-muted);
+
+}
+
+
+/* =========================================
+   ZOOM
+========================================= */
+
+.zoom-value {
+
+    min-width: 44px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--header-muted);
+
+    direction: ltr;
+
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.header-btn:focus-visible {
+
+    outline: 2px solid
+        rgba(80, 140, 255, 0.8);
+
+    outline-offset: 2px;
+
+}
+
+
+
+
+/* =========================================
+   HEADER THEME
+========================================= */
+
+:root {
+
+    --header-height: 58px;
+
+    --header-bg: #0b1628;
+
+    --header-border:
+        rgba(255, 255, 255, 0.06);
+
+    --header-text: #e7eef9;
+
+    --header-muted: #91a1b8;
+
+    --header-hover:
+        rgba(255, 255, 255, 0.055);
+
+    --header-active:
+        rgba(52, 120, 246, 0.16);
+
+    --header-blue: #397cff;
+
+    --header-radius: 8px;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.workspace-header {
+
+    width: 100%;
+    height: var(--header-height);
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--header-bg);
+
+    border-bottom: 1px solid var(--header-border);
+
+    color: var(--header-text);
+
+    direction: ltr;
+
+    user-select: none;
+
+    position: relative;
+
+    z-index: 9000;
+}
+
+
+/* =========================================
+   LEFT
+========================================= */
+
+.header-left {
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.header-logo {
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 8px 0 4px;
+
+    color: var(--header-text);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+
+.logo-icon {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #7eb0ff;
+
+}
+
+
+.logo-icon svg {
+
+    width: 25px;
+    height: 25px;
+
+}
+
+
+/* =========================================
+   ICON BUTTON
+========================================= */
+
+.header-icon-btn {
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    border-radius: var(--header-radius);
+
+    background: transparent;
+
+    color: var(--header-text);
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .12s ease;
+}
+
+
+.header-icon-btn:hover {
+
+    background: var(--header-hover);
+
+    border-color:
+        rgba(255,255,255,.06);
+}
+
+
+.header-icon-btn:active {
+
+    transform: scale(.94);
+}
+
+
+.header-icon-btn svg {
+
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================
+   FILE BUTTON
+========================================= */
+
+.header-file-btn {
+
+    height: 38px;
+
+    max-width: 300px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    border: 1px solid
+        rgba(255,255,255,.045);
+
+    border-radius: var(--header-radius);
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: var(--header-text);
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+}
+
+
+.header-file-btn:hover {
+
+    background:
+        rgba(255,255,255,.055);
+}
+
+
+.file-type-icon {
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ff4b57;
+}
+
+
+.file-type-icon svg {
+
+    width: 17px;
+    height: 17px;
+
+}
+
+
+.header-file-name {
+
+    max-width: 210px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    font-size: 13px;
+
+}
+
+
+.file-chevron {
+
+    width: 15px;
+    height: 15px;
+
+    color: var(--header-muted);
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   CENTER
+========================================= */
+
+.header-center {
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+.header-page-counter {
+
+    min-width: 70px;
+
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: var(--header-text);
+
+    font-size: 13px;
+
+    direction: ltr;
+
+}
+
+
+/* =========================================
+   RIGHT
+========================================= */
+
+.header-right {
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   ZOOM
+========================================= */
+
+.header-zoom-btn {
+
+    height: 38px;
+
+    min-width: 72px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--header-text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.header-zoom-btn:hover {
+
+    background: var(--header-hover);
+}
+
+
+.header-zoom-btn svg {
+
+    width: 14px;
+    height: 14px;
+
+    color: var(--header-muted);
+
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.header-user-btn {
+
+    height: 40px;
+
+    padding: 0 5px 0 9px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--header-text);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.user-avatar {
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #17489d;
+
+    color: #dceaff;
+
+}
+
+
+.user-avatar svg {
+
+    width: 16px;
+    height: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+
+    --view-tools-bg: rgba(10, 24, 43, 0.97);
+
+    --view-tools-border:
+        rgba(91, 137, 199, 0.20);
+
+    --view-tools-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.38);
+
+    --view-tool-color: #dce7f7;
+
+    --view-tool-hover:
+        rgba(255, 255, 255, 0.07);
+
+    --view-tools-radius: 9px;
+
+}
+
+
+
+/* =========================================
+   FLOATING VIEW TOOLS
+========================================= */
+
+.floating-view-tools {
+
+    position: fixed;
+
+    left: 24px;
+    bottom: 24px;
+
+    height: 44px;
+
+    padding: 5px 7px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    background: var(--view-tools-bg);
+
+    border: 1px solid var(--view-tools-border);
+
+    border-radius: var(--view-tools-radius);
+
+    box-shadow: var(--view-tools-shadow);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    z-index: 1000;
+
+    direction: ltr;
+
+}
+
+
+/* =========================================
+   VIEW TOOL BUTTON
+========================================= */
+
+.view-tool-btn {
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--view-tool-color);
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        transform .12s ease;
+}
+
+
+.view-tool-btn:hover {
+
+    background: var(--view-tool-hover);
+
+}
+
+
+.view-tool-btn:active {
+
+    transform: scale(.93);
+
+}
+
+
+.view-tool-btn svg {
+
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 1.9;
+
+}
+
+
+/* =========================================
+   ZOOM VALUE
+========================================= */
+
+.view-zoom-value {
+
+    height: 34px;
+
+    min-width: 48px;
+
+    padding: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: var(--view-tool-color);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.view-zoom-value:hover {
+
+    background: var(--view-tool-hover);
+
+}
+
+
+
+
+
+/* =========================================
+   MOVE FLOATING TOOLS TO LEFT
+========================================= */
+
+#floatingTools.floating-tools {
+    position: fixed !important;
+
+    left: 24px !important;
+    right: auto !important;
+
+    top: 50% !important;
+    bottom: auto !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 9999;
+}
+
+/* =========================================
+   WORKSPACE HEADER - SEPARATED
+========================================= */
+
+.workspace-header {
+
+    position: fixed;
+
+    top: 12px;
+    left: 16px;
+    right: 16px;
+
+    width: auto;
+    height: var(--header-height);
+
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--header-bg);
+
+    border: 1px solid var(--header-border);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.22);
+
+    color: var(--header-text);
+
+    direction: ltr;
+
+    user-select: none;
+
+    z-index: 9000;
+}
+
+
+/* =========================================
+   MORE TOOLS PANEL
+========================================= */
+
+.more-tools-panel {
+    position: fixed;
+
+    /* کنار باکس اصلی */
+    left: 82px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: var(--tools-width);
+    padding: var(--tools-padding);
+
+    box-sizing: border-box;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    background: var(--tools-bg);
+    border: 1px solid var(--tools-border);
+    border-radius: var(--tools-radius);
+
+    box-shadow: var(--tools-shadow);
+
+    z-index: 1001;
+    direction: rtl;
+}
+
+
+/* وقتی باز است */
+.more-tools-panel.show {
+    display: flex;
+}
+
+
+/* همان ظاهر ابزارهای اصلی */
+.more-tools-panel .floating-tool {
+    width: var(--tool-size);
+    height: var(--tool-size);
+    flex: 0 0 var(--tool-size);
+}
+
+
+/* هاور */
+.more-tools-panel .floating-tool:hover {
+    background: var(--tool-hover-bg);
+    border-color: rgba(255,255,255,0.08);
+}
+
+
+/* آیکن‌ها */
+.more-tools-panel .floating-tool svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.9;
+}
+
+
+
+
+
+
+
+

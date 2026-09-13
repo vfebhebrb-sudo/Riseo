@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riseo</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="../icon.png">
+
+<link rel="stylesheet" href="../اتاق کار.css">
+
+<link rel="stylesheet" href="./تخته مشکی.css">
+   <link rel="icon" href="./icon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0b0b0b">
+
+</head>
+<body>
+
+
+
+
+
+
+<!-- =========================================
+     WORKSPACE HEADER
+========================================= -->
+
+<header class="workspace-header" id="workspaceHeader">
+
+    <!-- LEFT -->
+    <div class="header-left">
+
+        <!-- Logo -->
+        <div class="header-logo">
+
+            <!-- <div class="logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <span>
+                MathCode
+            </span> -->
+
+        </div>
+
+
+        <!-- Pages Panel Button -->
+        <button
+            class="header-icon-btn"
+            id="pagesPanelBtn"
+            type="button"
+            title="صفحات"
+        >
+            <i data-lucide="panel-left"></i>
+        </button>
+
+        <!-- باز کردن فایل -->
+          <div class="sidebar-content">
+<button
+    class="header-icon-btn open-file-header-btn"
+    id="openFileBtn"
+    type="button"
+    title="باز کردن فایل"
+>
+    <i data-lucide="folder-open"></i>
+</button>
+</div>
+
+        <button
+    class="header-tool-btn"
+    id="ah-headerPenTool"
+    type="button"
+    title="مداد"
+>
+    <i data-lucide="pen"></i>
+</button>
+
+        <!-- Current File -->
+        <button
+            class="header-file-btn"
+            id="fileInfoBtn"
+            type="button"
+        >
+
+            <span class="file-type-icon">
+                <i data-lucide="file-text"></i>
+            </span>
+
+            <span
+                class="header-file-name"
+                id="workspaceFileName"
+            >
+                فیزیک پایه - فصل ۳
+            </span>
+
+            <i
+                class="file-chevron"
+                data-lucide="chevron-down"
+            ></i>
+
+        </button>
+
+        
+
+    </div>
+
+
+    <!-- CENTER -->
+    <div class="header-center">
+
+        <!-- Previous -->
+        <button
+            class="header-icon-btn"
+            id="previousPageBtn"
+            type="button"
+        >
+            <i data-lucide="chevron-left"></i>
+        </button>
+
+
+        <!-- Page Counter -->
+        <div class="header-page-counter">
+
+            <span id="pageNumber">
+                3
+            </span>
+
+            <span>
+                /
+            </span>
+
+            <span id="pageCount">
+                15
+            </span>
+
+        </div>
+
+
+        <!-- Next -->
+        <button
+            class="header-icon-btn"
+            id="nextPageBtn"
+            type="button"
+        >
+            <i data-lucide="chevron-right"></i>
+        </button>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="header-right">
+
+        <!-- Zoom -->
+        <button
+            class="header-zoom-btn"
+            id="zoomBtn"
+            type="button"
+        >
+
+            <span id="zoomValue">
+                100%
+            </span>
+
+            <i data-lucide="chevron-down"></i>
+
+        </button>
+
+
+        <!-- Refresh / Fit -->
+        <button
+            class="header-icon-btn"
+            id="fitPageBtn"
+            type="button"
+            title="تنظیم صفحه"
+        >
+            <i data-lucide="scan"></i>
+        </button>
+
+
+        <!-- Cloud -->
+        <button
+            class="header-icon-btn"
+            id="cloudBtn"
+            type="button"
+            title="ابر"
+        >
+            <i data-lucide="cloud"></i>
+        </button>
+
+
+        <!-- Cloud Upload -->
+        <button
+            class="header-icon-btn"
+            id="cloudUploadBtn"
+            type="button"
+            title="ذخیره ابری"
+        >
+            <i data-lucide="cloud-upload"></i>
+        </button>
+
+
+        <!-- Settings -->
+        <button
+            class="header-icon-btn"
+            id="settingsBtn"
+            type="button"
+            title="تنظیمات"
+        >
+            <i data-lucide="settings"></i>
+        </button>
+
+
+        <!-- User -->
+        <button
+            class="header-user-btn"
+            id="userBtn"
+            type="button"
+        >
+
+            <span>
+                مدرس
+            </span>
+
+            <span class="user-avatar">
+                <i data-lucide="user"></i>
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+     RISEO DRAWING TOOLS
+     NEW IDs - ah-
+========================================= -->
+
+<div
+    class="floating-tools"
+    id="ah-floatingTools"
+>
+
+
+    <!-- =====================================
+         رنگ ۱
+    ====================================== -->
+
+    <div
+        class="tool-with-panel"
+        id="ah-colorWrapper1"
+    >
+
+        <button
+            class="floating-tool ah-color-tool"
+            id="ah-colorBtn1"
+            type="button"
+            title="رنگ ۱"
+            data-color="#111111"
+        >
+            <span
+                class="ah-color-dot"
+                style="background:#111111;"
+            ></span>
+        </button>
+
+
+        <div
+            class="tool-side-panel ah-color-panel"
+            id="ah-colorPanel1"
+        >
+
+            <div class="tool-panel-title">
+                انتخاب رنگ
+            </div>
+
+            <div class="ah-color-grid">
+
+                <button
+                    class="ah-palette-color active"
+                    type="button"
+                    data-color="#111111"
+                    style="--palette-color:#111111;"
+                    title="مشکی"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#ef4444"
+                    style="--palette-color:#ef4444;"
+                    title="قرمز"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#2563eb"
+                    style="--palette-color:#2563eb;"
+                    title="آبی"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#16a34a"
+                    style="--palette-color:#16a34a;"
+                    title="سبز"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#facc15"
+                    style="--palette-color:#facc15;"
+                    title="زرد"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#9333ea"
+                    style="--palette-color:#9333ea;"
+                    title="بنفش"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#f97316"
+                    style="--palette-color:#f97316;"
+                    title="نارنجی"
+                ></button>
+
+                <button
+                    class="ah-palette-color"
+                    type="button"
+                    data-color="#ec4899"
+                    style="--palette-color:#ec4899;"
+                    title="صورتی"
+                ></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         رنگ ۲
+    ====================================== -->
+
+    <div
+        class="tool-with-panel"
+        id="ah-colorWrapper2"
+    >
+
+        <button
+            class="floating-tool ah-color-tool"
+            id="ah-colorBtn2"
+            type="button"
+            title="رنگ ۲"
+            data-color="#ef4444"
+        >
+            <span
+                class="ah-color-dot"
+                style="background:#ef4444;"
+            ></span>
+        </button>
+
+
+        <div
+            class="tool-side-panel ah-color-panel"
+            id="ah-colorPanel2"
+        >
+
+            <div class="tool-panel-title">
+                انتخاب رنگ
+            </div>
+
+            <div class="ah-color-grid">
+
+                <button class="ah-palette-color active"
+                    type="button"
+                    data-color="#111111"
+                    style="--palette-color:#111111;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#ef4444"
+                    style="--palette-color:#ef4444;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#2563eb"
+                    style="--palette-color:#2563eb;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#16a34a"
+                    style="--palette-color:#16a34a;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#facc15"
+                    style="--palette-color:#facc15;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#9333ea"
+                    style="--palette-color:#9333ea;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#f97316"
+                    style="--palette-color:#f97316;">
+                </button>
+
+                <button class="ah-palette-color"
+                    type="button"
+                    data-color="#ec4899"
+                    style="--palette-color:#ec4899;">
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         رنگ ۳
+    ====================================== -->
+
+    <div
+        class="tool-with-panel"
+        id="ah-colorWrapper3"
+    >
+
+        <button
+            class="floating-tool ah-color-tool"
+            id="ah-colorBtn3"
+            type="button"
+            title="رنگ ۳"
+            data-color="#2563eb"
+        >
+            <span
+                class="ah-color-dot"
+                style="background:#2563eb;"
+            ></span>
+        </button>
+
+
+        <div
+            class="tool-side-panel ah-color-panel"
+            id="ah-colorPanel3"
+        >
+
+            <div class="tool-panel-title">
+                انتخاب رنگ
+            </div>
+
+            <div class="ah-color-grid">
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#111111"
+                    style="--palette-color:#111111;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#ef4444"
+                    style="--palette-color:#ef4444;">
+                </button>
+
+                <button class="ah-palette-color active" type="button"
+                    data-color="#2563eb"
+                    style="--palette-color:#2563eb;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#16a34a"
+                    style="--palette-color:#16a34a;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#facc15"
+                    style="--palette-color:#facc15;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#9333ea"
+                    style="--palette-color:#9333ea;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#f97316"
+                    style="--palette-color:#f97316;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#ec4899"
+                    style="--palette-color:#ec4899;">
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         رنگ ۴
+    ====================================== -->
+
+    <div
+        class="tool-with-panel"
+        id="ah-colorWrapper4"
+    >
+
+        <button
+            class="floating-tool ah-color-tool"
+            id="ah-colorBtn4"
+            type="button"
+            title="رنگ ۴"
+            data-color="#16a34a"
+        >
+            <span
+                class="ah-color-dot"
+                style="background:#16a34a;"
+            ></span>
+        </button>
+
+
+        <div
+            class="tool-side-panel ah-color-panel"
+            id="ah-colorPanel4"
+        >
+
+            <div class="tool-panel-title">
+                انتخاب رنگ
+            </div>
+
+            <div class="ah-color-grid">
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#111111"
+                    style="--palette-color:#111111;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#ef4444"
+                    style="--palette-color:#ef4444;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#2563eb"
+                    style="--palette-color:#2563eb;">
+                </button>
+
+                <button class="ah-palette-color active" type="button"
+                    data-color="#16a34a"
+                    style="--palette-color:#16a34a;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#facc15"
+                    style="--palette-color:#facc15;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#9333ea"
+                    style="--palette-color:#9333ea;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#f97316"
+                    style="--palette-color:#f97316;">
+                </button>
+
+                <button class="ah-palette-color" type="button"
+                    data-color="#ec4899"
+                    style="--palette-color:#ec4899;">
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         پاک کن
+    ====================================== -->
+
+    <button
+        class="floating-tool"
+        id="ah-eraserTool"
+        type="button"
+        title="پاک‌کن"
+        data-ah-tool="eraser"
+    >
+        <i data-lucide="eraser"></i>
+    </button>
+
+
+    <!-- =====================================
+         هایلایتر
+    ====================================== -->
+
+    <button
+        class="floating-tool"
+        id="ah-highlighterTool"
+        type="button"
+        title="هایلایتر"
+        data-ah-tool="highlighter"
+    >
+        <i data-lucide="highlighter"></i>
+    </button>
+
+
+    <!-- =====================================
+         دست / جابه‌جایی
+    ====================================== -->
+
+    <button
+        class="floating-tool"
+        id="ah-handTool"
+        type="button"
+        title="جابه‌جایی"
+        data-ah-tool="hand"
+    >
+        <i data-lucide="hand"></i>
+    </button>
+
+
+    <!-- =====================================
+         جلو رفتن
+    ====================================== -->
+
+    <button
+        class="floating-tool"
+        id="ah-redoTool"
+        type="button"
+        title="جلو رفتن"
+        data-ah-action="redo"
+    >
+        <i data-lucide="redo-2"></i>
+    </button>
+
+
+    <!-- =====================================
+         عقب رفتن
+    ====================================== -->
+
+    <button
+        class="floating-tool"
+        id="ah-undoTool"
+        type="button"
+        title="عقب رفتن"
+        data-ah-action="undo"
+    >
+        <i data-lucide="undo-2"></i>
+    </button>
+
+
+    <!-- =====================================
+         ابزارهای بیشتر
+    ====================================== -->
+
+    <button
+        class="floating-tool more-tool"
+        id="ah-moreToolsBtn"
+        type="button"
+        title="ابزارهای بیشتر"
+        data-ah-action="more"
+    >
+        <i data-lucide="more-horizontal"></i>
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+     AH MORE TOOLS
+========================================= -->
+
+<div
+    class="more-tools-panel"
+    id="ah-moreToolsPanel"
+>
+
+
+    <button
+        class="floating-tool"
+        id="ah-rulerTool"
+        type="button"
+        title="خط‌کش"
+        data-ah-tool="ruler"
+    >
+        <i data-lucide="ruler"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-triangleTool"
+        type="button"
+        title="گونیا"
+        data-ah-tool="triangle"
+    >
+        <i data-lucide="triangle"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-protractorTool"
+        type="button"
+        title="نقاله"
+        data-ah-tool="protractor"
+    >
+        <i data-lucide="circle-dashed"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-arrowTool"
+        type="button"
+        title="فلش"
+        data-ah-tool="arrow"
+    >
+        <i data-lucide="arrow-up-right"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-thickPenTool"
+        type="button"
+        title="قلم ضخیم"
+        data-ah-tool="thick-pen"
+    >
+        <i data-lucide="pen-line"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-shapesTool"
+        type="button"
+        title="اشکال"
+        data-ah-tool="shape"
+    >
+        <i data-lucide="shapes"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-textTool"
+        type="button"
+        title="متن"
+        data-ah-tool="text"
+    >
+        <i data-lucide="type"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-imageTool"
+        type="button"
+        title="افزودن تصویر"
+        data-ah-tool="image"
+    >
+        <i data-lucide="image"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-noteTool"
+        type="button"
+        title="یادداشت"
+        data-ah-tool="note"
+    >
+        <i data-lucide="sticky-note"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-numberTool"
+        type="button"
+        title="شماره‌گذاری"
+        data-ah-tool="number"
+    >
+        <i data-lucide="list-ordered"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-linkTool"
+        type="button"
+        title="لینک"
+        data-ah-tool="link"
+    >
+        <i data-lucide="link"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-deleteTool"
+        type="button"
+        title="حذف"
+        data-ah-action="delete"
+        style="color:#ea2525;"
+    >
+        <i data-lucide="trash-2"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-printTool"
+        type="button"
+        title="چاپ"
+        data-ah-action="print"
+    >
+        <i data-lucide="printer"></i>
+    </button>
+
+
+    <button
+        class="floating-tool"
+        id="ah-downloadTool"
+        type="button"
+        title="دانلود"
+        data-ah-action="download"
+    >
+        <i data-lucide="download"></i>
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+     PDF WORKSPACE
+========================================= -->
+
+<div
+    class="a4-pages-container"
+    id="a4PagesContainer"
+>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+    <button
+        class="open-file-btn"
+        id="openFileBtn"
+        type="button"
+    >
+
+        <i data-lucide="folder-open"></i>
+
+        <span>
+            باز کردن فایل
+        </span>
+
+    </button>
+
+
+
+ -->
+
+
+<!-- =========================================
+     OPEN FILE MODAL
+========================================= -->
+
+<div
+    class="file-modal"
+    id="fileModal"
+>
+
+    <div
+        class="file-modal-box"
+        id="fileModalBox"
+    >
+
+        <div class="file-modal-header">
+
+            <div class="file-modal-title">
+
+                <i data-lucide="folder-open"></i>
+
+                <span>
+                    باز کردن فایل
+                </span>
+
+            </div>
+
+            <button
+                class="file-modal-close"
+                id="fileModalClose"
+                type="button"
+                title="بستن"
+            >
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+<div class="file-modal-content">
+
+    <!-- =========================
+         LESSONS
+    ========================== -->
+
+    <div class="file-lessons-box">
+
+        <div class="file-section-header">
+
+            <i data-lucide="book-open"></i>
+
+            <span>
+                درس‌ها
+            </span>
+
+        </div>
+
+        <div class="file-lessons-list" id="fileLessonsList">
+<div
+    class="file-lessons-list"
+    id="fileLessonsList"
+>
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="شیمی"
+    >
+        <i data-lucide="flask-conical"></i>
+
+        <span>
+            شیمی
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="فیزیک"
+    >
+        <i data-lucide="atom"></i>
+
+        <span>
+            فیزیک
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="حسابان"
+    >
+        <i data-lucide="calculator"></i>
+
+        <span>
+            حسابان
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="هندسه"
+    >
+        <i data-lucide="triangle"></i>
+
+        <span>
+            هندسه
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="گسسته"
+    >
+        <i data-lucide="network"></i>
+
+        <span>
+            گسسته
+        </span>
+    </button>
+
+</div>
+
+<button 
+    class="lesson-item" 
+    type="button" 
+    data-lesson="سایر"
+>
+
+    <i data-lucide="book-open"></i>
+
+    <span>
+        سایر
+    </span>
+
+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FILE VIEWER
+    ========================== -->
+
+    <div class="file-viewer-box">
+
+        <div class="file-section-header">
+
+            <i data-lucide="file-text"></i>
+
+            <span>
+                نمایش فایل
+            </span>
+
+        </div>
+
+        <div class="file-viewer-content" id="fileViewerContent">
+
+            <!-- نمایش فایل بعداً اینجا قرار می‌گیرد -->
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../config1.js"></script>
+
+<script>
+const moreToolsBtn =
+    document.getElementById("moreToolsBtn");
+
+const moreToolsPanel =
+    document.getElementById("moreToolsPanel");
+
+if (moreToolsBtn && moreToolsPanel) {
+
+    moreToolsBtn.addEventListener(
+        "click",
+        function () {
+
+            moreToolsPanel.classList.toggle("show");
+
+        }
+    );
+
+}
+</script>
+
+
+<!-- WORKSPACE معمولی -->
+<script src="./workspace.js"></script>
+<script src="./pdf-tools.js"></script>
+
+<!-- PDF ENGINE جدا -->
+<script type="module">
+
+    import "./pdf-engine.js";
+
+</script>
+
+
+
+<script>
+
+if (window.lucide) {
+
+    lucide.createIcons();
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<title>Server Wake</title>
+
+<style>
+
+body{
+
+    background:#111315;
+    color:white;
+    font-family:tahoma;
+    display:flex;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+}
+
+
+.status{
+
+    padding:20px;
+    background:#191c21;
+    border-radius:15px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="status">
+
+<h2>
+فعال نگه داشتن سرور Riseo
+</h2>
+
+<p id="status">
+در حال اتصال...
+</p>
+
+
+</div>
+
+<script>
+
+async function wakeServer(){
+
+    const status = document.getElementById("status");
+
+    status.innerHTML = "⏳ تست...";
+
+
+    try{
+
+        const response = await fetch(
+            "https://iran-go4q.onrender.com/",
+            {
+                method:"GET",
+                mode:"no-cors"
+            }
+        );
+
+
+        status.innerHTML =
+        "✅ درخواست ارسال شد<br>" +
+        "Status: " + response.type;
+
+
+    }catch(e){
+
+        status.innerHTML =
+        "❌ مشکل شبکه<br>" + e.message;
+
+    }
+
+}
+
+
+wakeServer();
+
+</script>
+</body>
+
+</html>

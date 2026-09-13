@@ -7492,39 +7492,106 @@ dialog :link{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* =====================================
-   CUSTOM PDF PAGES STYLE
+   CLEAN PDF.JS FULL WIDTH MODE
 ===================================== */
 
 
-#viewerContainer{
+/* کل صفحه PDF.js */
 
-    background:#111315 !important;
+html,
+body{
 
-    padding:40px 0 !important;
+    width:100%;
+    height:100%;
+    margin:0;
+
+    overflow:hidden !important;
 
 }
 
 
+
+/* حذف سایدبار */
+
+#sidebarContainer{
+
+    display:none !important;
+
+}
+
+
+
+/* کانتینر اصلی */
+
+#outerContainer,
+#mainContainer{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+
+
+
+
+/* محیط اسکرول */
+
+#viewerContainer{
+
+    position:absolute !important;
+
+    inset:0 !important;
+
+    width:100% !important;
+
+    height:100% !important;
+
+
+    overflow:auto !important;
+
+
+    background:#111315 !important;
+
+
+    padding:40px 0 !important;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+/* خود PDF viewer */
+
 #viewer{
 
---scale-factor: 1.6666666666666665;
-    margin-top: 120px;
+
+    width:max-content !important;
+
+
+    min-width:100% !important;
+
+
+    margin:0 auto !important;
+
+
     display:flex !important;
+
 
     flex-direction:column !important;
 
-    align-items:center !important;
+
+    /* align-items:center !important; */
+
 
     gap:35px !important;
 
@@ -7533,16 +7600,20 @@ dialog :link{
 
 
 
-/* هر صفحه PDF */
 
-.page{
+
+/* صفحات */
+
+.pdfViewer .page{
+
+
+    margin:0 auto !important;
+
+
+    border:none !important;
 
 
     background:white !important;
-
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.35) !important;
 
 
     border-radius:12px !important;
@@ -7551,23 +7622,18 @@ dialog :link{
     overflow:hidden !important;
 
 
-    margin:0 auto !important;
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.35) !important;
 
 
 }
 
 
 
-/* حذف فاصله‌های خود PDF.js */
 
 
-.page{
-
-    border:none !important;
-
-}
-
-
+/* canvas */
 
 .canvasWrapper{
 
@@ -7577,20 +7643,143 @@ dialog :link{
 
 
 
+.page canvas{
 
-
-
-
-#viewerContainer:not(.pdfPresentationMode){
-
-    scrollbar-width:none !important;
-    -ms-overflow-style:none !important;
+    display:block !important;
 
 }
 
 
-#viewerContainer:not(.pdfPresentationMode)::-webkit-scrollbar{
 
-    display:none !important;
+
+
+/* حذف scale دستی */
+
+.pdfViewer{
+
+    padding:0 !important;
 
 }
+
+
+
+
+
+/* iframe */
+
+.pdf-viewer{
+
+
+    width:100% !important;
+
+    height:100% !important;
+
+
+    border:none !important;
+
+
+    display:block !important;
+
+
+}
+
+
+
+
+
+/* =========================================
+   REMOVE WORKSPACE SCROLL
+========================================= */
+
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    margin:0;
+    padding:0;
+
+    overflow:hidden !important;
+
+}
+
+
+
+#app{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden !important;
+
+}
+
+
+
+#a4PagesContainer{
+
+    width:100% !important;
+
+    height:100% !important;
+
+    min-height:0 !important;
+
+
+    overflow:hidden !important;
+
+
+    padding:0 !important;
+
+    margin:0 !important;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+#fileViewerContent{
+
+    overflow:hidden !important;
+
+}
+
+
+
+#pdfFrame{
+
+    width:100% !important;
+
+    height:100% !important;
+
+
+    border:none;
+
+    display:block;
+
+}
+
+
+
+/* حذف scrollbar مرورگر */
+
+::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+*{
+
+    scrollbar-width:none;
+
+}
+
+
+

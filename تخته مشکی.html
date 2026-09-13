@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riseo</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="../icon.png">
+
+<link rel="stylesheet" href="./اتاق کار.css">
+
+<link rel="stylesheet" href="./تخته مشکی.css">
+   <link rel="icon" href="./icon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0b0b0b">
+
+</head>
+<body>
+
+
+
+
+
+
+<!-- =========================================
+     WORKSPACE HEADER
+========================================= -->
+
+<header class="workspace-header" id="workspaceHeader">
+
+    <!-- LEFT -->
+    <div class="header-left">
+
+        <!-- Logo -->
+        <div class="header-logo">
+
+            <!-- <div class="logo-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <span>
+                MathCode
+            </span> -->
+
+        </div>
+
+
+        <!-- Pages Panel Button -->
+        <button
+            class="header-icon-btn"
+            id="pagesPanelBtn"
+            type="button"
+            title="صفحات"
+        >
+            <i data-lucide="panel-left"></i>
+        </button>
+
+        <!-- باز کردن فایل -->
+          <div class="sidebar-content">
+<button
+    class="header-icon-btn open-file-header-btn"
+    id="openFileBtn"
+    type="button"
+    title="باز کردن فایل"
+>
+    <i data-lucide="folder-open"></i>
+</button>
+</div>
+
+        <!-- Current File -->
+        <button
+            class="header-file-btn"
+            id="fileInfoBtn"
+            type="button"
+        >
+
+            <span class="file-type-icon">
+                <i data-lucide="file-text"></i>
+            </span>
+
+            <span
+                class="header-file-name"
+                id="workspaceFileName"
+            >
+                فیزیک پایه - فصل ۳
+            </span>
+
+            <i
+                class="file-chevron"
+                data-lucide="chevron-down"
+            ></i>
+
+        </button>
+
+        
+
+    </div>
+
+
+    <!-- CENTER -->
+    <div class="header-center">
+
+        <!-- Previous -->
+        <button
+            class="header-icon-btn"
+            id="previousPageBtn"
+            type="button"
+        >
+            <i data-lucide="chevron-left"></i>
+        </button>
+
+
+        <!-- Page Counter -->
+        <div class="header-page-counter">
+
+            <span id="pageNumber">
+                3
+            </span>
+
+            <span>
+                /
+            </span>
+
+            <span id="pageCount">
+                15
+            </span>
+
+        </div>
+
+
+        <!-- Next -->
+        <button
+            class="header-icon-btn"
+            id="nextPageBtn"
+            type="button"
+        >
+            <i data-lucide="chevron-right"></i>
+        </button>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="header-right">
+
+        <!-- Zoom -->
+        <button
+            class="header-zoom-btn"
+            id="zoomBtn"
+            type="button"
+        >
+
+            <span id="zoomValue">
+                100%
+            </span>
+
+            <i data-lucide="chevron-down"></i>
+
+        </button>
+
+
+        <!-- Refresh / Fit -->
+        <button
+            class="header-icon-btn"
+            id="fitPageBtn"
+            type="button"
+            title="تنظیم صفحه"
+        >
+            <i data-lucide="scan"></i>
+        </button>
+
+
+        <!-- Cloud -->
+        <button
+            class="header-icon-btn"
+            id="cloudBtn"
+            type="button"
+            title="ابر"
+        >
+            <i data-lucide="cloud"></i>
+        </button>
+
+
+        <!-- Cloud Upload -->
+        <button
+            class="header-icon-btn"
+            id="cloudUploadBtn"
+            type="button"
+            title="ذخیره ابری"
+        >
+            <i data-lucide="cloud-upload"></i>
+        </button>
+
+
+        <!-- Settings -->
+        <button
+            class="header-icon-btn"
+            id="settingsBtn"
+            type="button"
+            title="تنظیمات"
+        >
+            <i data-lucide="settings"></i>
+        </button>
+
+
+        <!-- User -->
+        <button
+            class="header-user-btn"
+            id="userBtn"
+            type="button"
+        >
+
+            <span>
+                مدرس
+            </span>
+
+            <span class="user-avatar">
+                <i data-lucide="user"></i>
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- =========================================
+     FLOATING VIEW TOOLS
+========================================= -->
+
+<div class="floating-view-tools" id="floatingViewTools">
+
+    <!-- دست / جابه‌جایی -->
+    <button
+        class="view-tool-btn"
+        id="handTool"
+        type="button"
+        title="جابه‌جایی"
+    >
+        <i data-lucide="hand"></i>
+    </button>
+
+
+    <!-- بزرگنمایی -->
+    <button
+        class="view-tool-btn"
+        id="zoomTool"
+        type="button"
+        title="بزرگنمایی"
+    >
+        <i data-lucide="search"></i>
+    </button>
+
+
+    <!-- درصد زوم -->
+    <button
+        class="view-zoom-value"
+        id="floatingZoomValue"
+        type="button"
+    >
+        100%
+    </button>
+
+
+    <!-- تنظیم صفحه -->
+    <button
+        class="view-tool-btn"
+        id="fitTool"
+        type="button"
+        title="تنظیم صفحه"
+    >
+        <i data-lucide="scan"></i>
+    </button>
+
+
+    <!-- تمام صفحه -->
+    <button
+        class="view-tool-btn"
+        id="fullscreenTool"
+        type="button"
+        title="تمام صفحه"
+    >
+        <i data-lucide="maximize"></i>
+    </button>
+
+</div>
+
+
+
+
+
+<!-- =========================================
+     FLOATING TOOLS
+========================================= -->
+
+<div class="floating-tools" id="floatingTools">
+
+    <!-- 1. مداد -->
+    <button
+        class="floating-tool"
+        id="penTool"
+        type="button"
+        title="مداد"
+    >
+        <i data-lucide="pen"></i>
+    </button>
+
+
+    <!-- 2. هایلایتر -->
+    <button
+        class="floating-tool"
+        id="highlighterTool"
+        type="button"
+        title="هایلایتر"
+    >
+        <i data-lucide="highlighter"></i>
+    </button>
+
+
+    <!-- 3. پاک‌کن -->
+    <button
+        class="floating-tool"
+        id="eraserTool"
+        type="button"
+        title="پاک‌کن"
+    >
+        <i data-lucide="eraser"></i>
+    </button>
+
+
+    <!-- 4. اشکال -->
+    <button
+        class="floating-tool"
+        id="shapesTool"
+        type="button"
+        title="اشکال"
+    >
+        <i data-lucide="shapes"></i>
+    </button>
+
+
+    <!-- 5. متن -->
+    <button
+        class="floating-tool"
+        id="textTool"
+        type="button"
+        title="متن"
+    >
+        <i data-lucide="type"></i>
+    </button>
+
+
+    <!-- 6. تصویر -->
+    <button
+        class="floating-tool"
+        id="imageTool"
+        type="button"
+        title="افزودن تصویر"
+    >
+        <i data-lucide="image"></i>
+    </button>
+
+
+    <!-- 7. جابه‌جایی -->
+    <button
+        class="floating-tool"
+        id="moveTool"
+        type="button"
+        title="جابه‌جایی"
+    >
+        <i data-lucide="hand"></i>
+    </button>
+
+
+    <!-- 8. Undo -->
+    <button
+        class="floating-tool"
+        id="undoTool"
+        type="button"
+        title="بازگشت"
+    >
+        <i data-lucide="undo-2"></i>
+    </button>
+
+
+<!-- 10. جلو رفتن -->
+<button
+    class="floating-tool"
+    id="redoForwardTool"
+    type="button"
+    title="جلو رفتن"
+>
+    <i data-lucide="redo-2"></i>
+</button>
+
+
+<!-- 11. سطل زباله -->
+<button
+    class="floating-tool"
+    id="deleteTool"
+    type="button"
+    title="حذف"
+    style="color: rgb(234, 37, 37);"
+>
+    <i data-lucide="trash-2"></i>
+</button>
+
+
+<!-- 12. نقطه -->
+<!-- 11. بیشتر -->
+<button
+    class="floating-tool more-tool"
+    id="moreToolsBtn"
+    type="button"
+    title="ابزارهای بیشتر"
+>
+    <i data-lucide="more-horizontal"></i>
+</button>
+
+</div>
+
+
+<!-- =========================================
+     MORE TOOLS
+========================================= -->
+
+<div class="more-tools-panel" id="moreToolsPanel">
+
+    <!-- خط کش -->
+    <button class="floating-tool" type="button" title="خط‌کش">
+        <i data-lucide="ruler"></i>
+    </button>
+
+    <!-- گونیا -->
+    <button class="floating-tool" type="button" title="گونیا">
+        <i data-lucide="triangle"></i>
+    </button>
+
+    <!-- نقاله -->
+    <button class="floating-tool" type="button" title="نقاله">
+        <i data-lucide="circle-dashed"></i>
+    </button>
+
+    <!-- فلش -->
+    <button class="floating-tool" type="button" title="فلش">
+        <i data-lucide="arrow-up-right"></i>
+    </button>
+
+    <!-- قلم ضخیم -->
+    <button class="floating-tool" type="button" title="قلم ضخیم">
+        <i data-lucide="pen-line"></i>
+    </button>
+
+    <!-- یادداشت -->
+    <button class="floating-tool" type="button" title="یادداشت">
+        <i data-lucide="sticky-note"></i>
+    </button>
+
+    <!-- شماره گذاری -->
+    <button class="floating-tool" type="button" title="شماره‌گذاری">
+        <i data-lucide="list-ordered"></i>
+    </button>
+
+    <!-- لینک -->
+    <button class="floating-tool" type="button" title="لینک">
+        <i data-lucide="link"></i>
+    </button>
+
+    <!-- چاپ -->
+    <button class="floating-tool" type="button" title="چاپ">
+        <i data-lucide="printer"></i>
+    </button>
+
+    <!-- دانلود -->
+    <button class="floating-tool" type="button" title="دانلود">
+        <i data-lucide="download"></i>
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+     PDF WORKSPACE
+========================================= -->
+
+<div
+    class="a4-pages-container"
+    id="a4PagesContainer"
+>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+    <button
+        class="open-file-btn"
+        id="openFileBtn"
+        type="button"
+    >
+
+        <i data-lucide="folder-open"></i>
+
+        <span>
+            باز کردن فایل
+        </span>
+
+    </button>
+
+
+
+ -->
+
+
+<!-- =========================================
+     OPEN FILE MODAL
+========================================= -->
+
+<div
+    class="file-modal"
+    id="fileModal"
+>
+
+    <div
+        class="file-modal-box"
+        id="fileModalBox"
+    >
+
+        <div class="file-modal-header">
+
+            <div class="file-modal-title">
+
+                <i data-lucide="folder-open"></i>
+
+                <span>
+                    باز کردن فایل
+                </span>
+
+            </div>
+
+            <button
+                class="file-modal-close"
+                id="fileModalClose"
+                type="button"
+                title="بستن"
+            >
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+<div class="file-modal-content">
+
+    <!-- =========================
+         LESSONS
+    ========================== -->
+
+    <div class="file-lessons-box">
+
+        <div class="file-section-header">
+
+            <i data-lucide="book-open"></i>
+
+            <span>
+                درس‌ها
+            </span>
+
+        </div>
+
+        <div class="file-lessons-list" id="fileLessonsList">
+<div
+    class="file-lessons-list"
+    id="fileLessonsList"
+>
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="شیمی"
+    >
+        <i data-lucide="flask-conical"></i>
+
+        <span>
+            شیمی
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="فیزیک"
+    >
+        <i data-lucide="atom"></i>
+
+        <span>
+            فیزیک
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="حسابان"
+    >
+        <i data-lucide="calculator"></i>
+
+        <span>
+            حسابان
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="هندسه"
+    >
+        <i data-lucide="triangle"></i>
+
+        <span>
+            هندسه
+        </span>
+    </button>
+
+
+    <button
+        class="lesson-item"
+        type="button"
+        data-lesson="گسسته"
+    >
+        <i data-lucide="network"></i>
+
+        <span>
+            گسسته
+        </span>
+    </button>
+
+</div>
+
+<button 
+    class="lesson-item" 
+    type="button" 
+    data-lesson="سایر"
+>
+
+    <i data-lucide="book-open"></i>
+
+    <span>
+        سایر
+    </span>
+
+</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FILE VIEWER
+    ========================== -->
+
+    <div class="file-viewer-box">
+
+        <div class="file-section-header">
+
+            <i data-lucide="file-text"></i>
+
+            <span>
+                نمایش فایل
+            </span>
+
+        </div>
+
+        <div class="file-viewer-content" id="fileViewerContent">
+
+            <!-- نمایش فایل بعداً اینجا قرار می‌گیرد -->
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./config1.js"></script>
+
+<script>
+const moreToolsBtn = document.getElementById("moreToolsBtn");
+const moreToolsPanel = document.getElementById("moreToolsPanel");
+
+moreToolsBtn.addEventListener("click", function () {
+    moreToolsPanel.classList.toggle("show");
+});
+</script>
+
+<script src="./pdfjs/pdf.min.js"></script>
+
+<script src="./pdf-engine.js"></script>
+<!-- MAIN JS -->
+<script src="./22222222222.js"></script>
+
+
+<script>
+
+if(window.lucide){
+
+    lucide.createIcons();
+
+}
+
+</script>
+
+
+</body>
+</html>
