@@ -6616,7 +6616,7 @@ min-height:250px;
 
     gap:10px;
 
-    margin-top:20px;
+    margin-top:10px;
 
     direction:rtl;
 
@@ -7163,5 +7163,2486 @@ select{
     align-items:center;
 
     gap:8px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   DAILY PLANNER
+====================================================== */
+
+.daily-planner-section {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    direction: rtl;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    color: var(--text);
+
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.dp-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 16px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.dp-header-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.dp-header-icon {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        var(--accent-soft);
+
+    color:
+        var(--accent);
+
+}
+
+
+.dp-header-icon svg {
+
+    width: 19px;
+    height: 19px;
+
+}
+
+
+.dp-header-title h2 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+.dp-header-title span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 9px;
+
+}
+
+
+.dp-header-date {
+
+    min-width: 90px;
+
+    text-align: center;
+
+}
+
+
+.dp-header-date span {
+
+    display: block;
+
+    color: var(--text-secondary);
+
+    font-size: 8px;
+
+}
+
+
+.dp-header-date strong {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+}
+
+
+/* ======================================================
+   THREE COLUMNS
+====================================================== */
+
+.dp-columns {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+
+/* ======================================================
+   PANEL
+====================================================== */
+
+.dp-panel {
+
+    min-width: 0;
+
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    background:
+        var(--background);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+}
+
+
+.dp-panel-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.dp-panel-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+
+}
+
+
+.dp-panel-icon {
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--accent);
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.dp-panel-icon svg {
+
+    width: 15px;
+    height: 15px;
+
+}
+
+
+.dp-panel-title h3 {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.dp-panel-title span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 7px;
+
+}
+
+
+.dp-icon-btn {
+
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 7px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.dp-icon-btn:hover {
+
+    color: var(--accent);
+
+    border-color:
+        rgba(59,130,246,.45);
+
+    background:
+        var(--accent-soft);
+
+}
+
+
+.dp-icon-btn svg {
+
+    width: 14px;
+    height: 14px;
+
+}
+
+
+/* ======================================================
+   ITEMS
+====================================================== */
+
+.dp-items {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-top: 10px;
+
+}
+
+
+.dp-item {
+
+    min-height: 49px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    transition: .2s ease;
+
+}
+
+
+.dp-item:hover {
+
+    background:
+        var(--surface-hover);
+
+}
+
+
+.dp-item-icon {
+
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background:
+        var(--accent-soft);
+
+    color:
+        var(--accent);
+
+}
+
+
+.dp-item-icon svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+.dp-item-content {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.dp-item-content strong {
+
+    display: block;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    color: var(--text);
+
+    font-size: 9px;
+
+}
+
+
+.dp-item-content span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    color: var(--text-secondary);
+
+    font-size: 7px;
+
+}
+
+
+.dp-more-btn {
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+}
+
+
+.dp-more-btn:hover {
+
+    color: var(--text);
+
+}
+
+
+.dp-more-btn svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+/* ======================================================
+   TODAY
+====================================================== */
+
+.dp-time {
+
+    width: 37px;
+
+    flex-shrink: 0;
+
+    color: var(--accent);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+}
+
+
+.dp-status {
+
+    padding: 4px 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 5px;
+
+    background:
+        var(--accent-soft);
+
+    color:
+        var(--accent);
+
+    font-size: 6px;
+
+}
+
+
+/* ======================================================
+   ADD BUTTON
+====================================================== */
+
+.dp-panel-add {
+
+    width: 100%;
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 8px;
+
+    border:
+        1px dashed var(--border);
+
+    border-radius: 7px;
+
+    background:
+        transparent;
+
+    color: var(--text-secondary);
+
+    font-family: inherit;
+
+    font-size: 7px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.dp-panel-add:hover {
+
+    color: var(--accent);
+
+    border-color:
+        rgba(59,130,246,.4);
+
+    background:
+        rgba(59,130,246,.04);
+
+}
+
+
+.dp-panel-add svg {
+
+    width: 12px;
+    height: 12px;
+
+}
+
+
+/* ======================================================
+   EVENTS
+====================================================== */
+
+.dp-events-list {
+
+    min-height: 167px;
+
+    margin-top: 10px;
+
+}
+
+
+.dp-empty-events {
+
+    height: 167px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border:
+        1px dashed var(--border);
+
+    border-radius: 8px;
+
+}
+
+
+.dp-empty-icon {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-secondary);
+
+}
+
+
+.dp-empty-icon svg {
+
+    width: 16px;
+    height: 16px;
+
+}
+
+
+.dp-empty-events strong {
+
+    font-size: 8px;
+
+}
+
+
+.dp-empty-events span {
+
+    max-width: 180px;
+
+    margin-top: 5px;
+
+    color: var(--text-secondary);
+
+    font-size: 7px;
+
+    line-height: 1.8;
+
+}
+
+
+/* EVENT ITEM */
+
+.dp-event-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 9px;
+
+    margin-bottom: 6px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    background:
+        var(--surface);
+
+}
+
+
+.dp-event-time {
+
+    color: var(--accent);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+}
+
+
+.dp-event-item strong {
+
+    display: block;
+
+    font-size: 8px;
+
+}
+
+
+.dp-event-item span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 6px;
+
+}
+
+
+/* ======================================================
+   SMART BAR
+====================================================== */
+
+.dp-smart-bar {
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 10px;
+
+    padding: 10px 12px;
+
+    box-sizing: border-box;
+
+    background:
+        var(--background);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+}
+
+
+.dp-smart-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+
+}
+
+
+.dp-ai-icon {
+
+    width: 31px;
+    height: 31px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background:
+        var(--accent-soft);
+
+    color:
+        var(--accent);
+
+}
+
+
+.dp-ai-icon svg {
+
+    width: 15px;
+    height: 15px;
+
+}
+
+
+.dp-smart-info strong {
+
+    display: block;
+
+    font-size: 9px;
+
+}
+
+
+.dp-smart-info span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 7px;
+
+}
+
+
+.dp-generate-btn {
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    padding: 0 12px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background:
+        var(--accent);
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 7px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.dp-generate-btn:hover {
+
+    filter: brightness(1.1);
+
+}
+
+
+.dp-generate-btn svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+/* ======================================================
+   EVENT MODAL
+====================================================== */
+
+.dp-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(0,0,0,.55);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .2s ease;
+
+}
+
+
+.dp-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.dp-modal-box {
+
+    width: min(400px, 100%);
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.dp-modal-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+}
+
+
+.dp-modal-header span {
+
+    color: var(--accent);
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.dp-modal-header h3 {
+
+    margin: 4px 0 0;
+
+    font-size: 13px;
+
+}
+
+
+.dp-modal-close {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 6px;
+
+    background:
+        var(--background);
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+}
+
+
+.dp-modal-close svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+.dp-form-group {
+
+    flex: 1;
+
+}
+
+
+.dp-form-group label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-secondary);
+
+    font-size: 8px;
+
+}
+
+
+.dp-form-group input,
+.dp-form-group select {
+
+    width: 100%;
+
+    height: 35px;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 7px;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+}
+
+
+.dp-form-group input:focus,
+.dp-form-group select:focus {
+
+    border-color:
+        rgba(59,130,246,.55);
+
+}
+
+
+.dp-form-row {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+}
+
+
+.dp-modal-submit {
+
+    width: 100%;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 14px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background:
+        var(--accent);
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.dp-modal-submit svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+/* ======================================================
+   FLOATING PLAN
+====================================================== */
+
+.dp-floating-plan {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 50%;
+
+    z-index: 10000;
+
+    width: min(400px, calc(100% - 30px));
+
+    max-height: calc(100vh - 30px);
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    transform:
+        translate(-50%, -47%)
+        scale(.96);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.55);
+
+    transition: .25s ease;
+
+}
+
+
+.dp-floating-plan.active {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.dp-floating-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.dp-floating-header span {
+
+    color: var(--accent);
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.dp-floating-header h3 {
+
+    margin: 4px 0 0;
+
+    font-size: 13px;
+
+}
+
+
+.dp-floating-header button {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 6px;
+
+    background:
+        var(--background);
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+}
+
+
+.dp-floating-header button svg {
+
+    width: 13px;
+    height: 13px;
+
+}
+
+
+.dp-plan-list {
+
+    margin-top: 12px;
+
+}
+
+
+.dp-plan-item {
+
+    display: grid;
+
+    grid-template-columns:
+        45px 1fr;
+
+    gap: 8px;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.dp-plan-item:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.dp-plan-item time {
+
+    color: var(--accent);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+}
+
+
+.dp-plan-item strong {
+
+    display: block;
+
+    font-size: 9px;
+
+}
+
+
+.dp-plan-item span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 7px;
+
+}
+
+
+.dp-notification-ready {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+    padding: 9px;
+
+    background:
+        var(--background);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 7px;
+
+}
+
+
+.dp-notification-ready > svg {
+
+    width: 15px;
+    height: 15px;
+
+    color: var(--accent);
+
+}
+
+
+.dp-notification-ready strong {
+
+    display: block;
+
+    font-size: 8px;
+
+}
+
+
+.dp-notification-ready span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 6px;
+
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 900px) {
+
+    .dp-columns {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .dp-events-panel {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .daily-planner-section {
+
+        padding: 12px;
+
+    }
+
+
+    .dp-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .dp-header-date {
+
+        display: none;
+
+    }
+
+
+    .dp-columns {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .dp-events-panel {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .dp-smart-bar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .dp-smart-info {
+
+        width: 100%;
+
+    }
+
+
+    .dp-generate-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .dp-header-title h2 {
+
+        font-size: 13px;
+
+    }
+
+
+    .dp-header-title span {
+
+        font-size: 7px;
+
+    }
+
+
+    .dp-panel {
+
+        padding: 11px;
+
+    }
+
+
+    .dp-form-row {
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+/* ======================================================
+   DAILY PLANNER — SIZE BOOST
+====================================================== */
+
+/* عنوان اصلی */
+
+.dp-header-title h2 {
+    font-size: 18px;
+}
+
+.dp-header-title span {
+    font-size: 10px;
+}
+
+
+/* آیکون اصلی */
+
+.dp-header-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.dp-header-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+
+/* عنوان باکس‌ها */
+
+.dp-panel-title h3 {
+    font-size: 13px;
+}
+
+.dp-panel-title span {
+    font-size: 8px;
+}
+
+
+/* آیکون باکس‌ها */
+
+.dp-panel-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.dp-panel-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* دکمه + */
+
+.dp-icon-btn {
+    width: 32px;
+    height: 32px;
+}
+
+.dp-icon-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* آیتم‌های درس / برنامه */
+
+.dp-item {
+    min-height: 58px;
+    padding: 10px;
+    gap: 11px;
+}
+
+
+/* آیکون درس */
+
+.dp-item-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.dp-item-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* عنوان درس */
+
+.dp-item-content strong {
+    font-size: 11px;
+}
+
+.dp-item-content span {
+    margin-top: 4px;
+    font-size: 8px;
+}
+
+
+/* سه‌نقطه */
+
+.dp-more-btn {
+    width: 27px;
+    height: 27px;
+}
+
+.dp-more-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* ساعت برنامه */
+
+.dp-time {
+    width: 45px;
+    font-size: 10px;
+}
+
+
+/* برچسب برنامه */
+
+.dp-status {
+    padding: 5px 7px;
+    font-size: 7px;
+}
+
+
+/* دکمه افزودن */
+
+.dp-panel-add {
+    height: 36px;
+    font-size: 8px;
+}
+
+.dp-panel-add svg {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* بخش اتفاقات خالی */
+
+.dp-empty-events {
+    height: 180px;
+}
+
+.dp-events-list {
+    min-height: 180px;
+}
+
+.dp-empty-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.dp-empty-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.dp-empty-events strong {
+    font-size: 9px;
+}
+
+.dp-empty-events span {
+    font-size: 8px;
+}
+
+
+/* نوار برنامه هوشمند */
+
+.dp-smart-bar {
+    min-height: 65px;
+    padding: 12px 14px;
+}
+
+.dp-ai-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.dp-ai-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+.dp-smart-info strong {
+    font-size: 10px;
+}
+
+.dp-smart-info span {
+    font-size: 8px;
+}
+
+.dp-generate-btn {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 8px;
+}
+
+.dp-generate-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* =========================================================
+   AI GENERATED DAILY PLAN
+========================================================= */
+
+.dp-ai-plan-box {
+
+    width: 100%;
+
+    margin-top: 14px;
+
+    background:
+        #191c21;
+
+    border:
+        1px solid #292e36;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.22);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.dp-ai-plan-header {
+
+    min-height: 68px;
+
+    padding:
+        13px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom:
+        1px solid #292e36;
+
+}
+
+
+.dp-ai-plan-title-wrap {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.dp-ai-plan-icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #3b82f6;
+
+    background:
+        #172554;
+
+    border:
+        1px solid rgba(59,130,246,.18);
+
+}
+
+
+.dp-ai-plan-title-wrap h3 {
+
+    margin: 0;
+
+    color: #f9fafb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.dp-ai-plan-title-wrap span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+}
+
+
+.dp-ai-plan-status {
+
+    padding:
+        5px 9px;
+
+    border-radius: 6px;
+
+    color: #9ca3af;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid #292e36;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.dp-ai-plan-content {
+
+    padding: 14px 16px;
+
+}
+
+
+.dp-ai-plan-empty {
+
+    min-height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 6px;
+
+}
+
+
+.dp-ai-plan-empty-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin-bottom: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #6b7280;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid #292e36;
+
+}
+
+
+.dp-ai-plan-empty strong {
+
+    color: #f9fafb;
+
+    font-size: 12px;
+
+}
+
+
+.dp-ai-plan-empty span {
+
+    max-width: 360px;
+
+    color: #6b7280;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   GENERATED LIST
+========================================================= */
+
+.dp-ai-plan-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+/* =========================================================
+   PLAN ITEM
+========================================================= */
+
+.dp-ai-plan-item {
+
+    display: grid;
+
+    grid-template-columns:
+        75px
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 58px;
+
+    padding:
+        9px 11px;
+
+    background:
+        rgba(255,255,255,.018);
+
+    border:
+        1px solid #292e36;
+
+    border-radius: 8px;
+
+}
+
+
+.dp-ai-plan-time {
+
+    direction: ltr;
+
+    color: #3b82f6;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.dp-ai-plan-item-main {
+
+    min-width: 0;
+
+}
+
+
+.dp-ai-plan-item-title {
+
+    color: #f9fafb;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.dp-ai-plan-item-description {
+
+    margin-top: 3px;
+
+    color: #9ca3af;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+}
+
+
+.dp-ai-plan-type {
+
+    padding:
+        4px 7px;
+
+    color: #9ca3af;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid #292e36;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.dp-ai-plan-footer {
+
+    min-height: 48px;
+
+    padding:
+        8px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    border-top:
+        1px solid #292e36;
+
+}
+
+
+.dp-ai-plan-summary {
+
+    color: #6b7280;
+
+    font-size: 10px;
+
+}
+
+
+.dp-ai-plan-refresh {
+
+    height: 30px;
+
+    padding:
+        0 11px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #d1d5db;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid #292e36;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.dp-ai-plan-refresh:hover {
+
+    color: #fff;
+
+    background:
+        #22262d;
+
+    border-color:
+        #3b82f6;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dp-ai-plan-header {
+
+        align-items: flex-start;
+
+    }
+
+
+    .dp-ai-plan-title-wrap span {
+
+        max-width: 220px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .dp-ai-plan-item {
+
+        grid-template-columns:
+            65px
+            1fr;
+
+        gap: 9px;
+
+    }
+
+
+    .dp-ai-plan-type {
+
+        grid-column: 2;
+
+        justify-self: start;
+
+    }
+
+
+    .dp-ai-plan-footer {
+
+        padding:
+            8px 12px;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .dp-ai-plan-header {
+
+        padding:
+            12px;
+
+    }
+
+
+    .dp-ai-plan-content {
+
+        padding:
+            10px 12px;
+
+    }
+
+
+    .dp-ai-plan-title-wrap h3 {
+
+        font-size: 12px;
+
+    }
+
+
+    .dp-ai-plan-title-wrap span {
+
+        font-size: 9px;
+
+    }
+
+
+    .dp-ai-plan-item {
+
+        grid-template-columns:
+            58px
+            1fr;
+
+    }
 
 }

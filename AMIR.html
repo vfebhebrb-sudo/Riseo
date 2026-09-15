@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>برنامه هفتگی</title>
+
+    <!-- Vazir -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/vazirmatn@33.003.1/Vazirmatn-font-face.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="./planner.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="planner">
+
+
+    <!-- =========================================================
+         WEEK SELECTOR
+    ========================================================= -->
+
+    <section class="week-selector">
+
+        <button class="week-arrow" id="prevWeek">
+            <i data-lucide="chevron-right"></i>
+        </button>
+
+
+        <div class="days" id="days">
+
+            <button class="day"
+                    data-day="شنبه"
+                    data-date="۲۶ مهر">
+
+                <span class="day-name">شنبه</span>
+                <span class="day-date">۲۶ مهر</span>
+
+            </button>
+
+
+            <button class="day"
+                    data-day="یکشنبه"
+                    data-date="۲۷ مهر">
+
+                <span class="day-name">یکشنبه</span>
+                <span class="day-date">۲۷ مهر</span>
+
+            </button>
+
+
+            <button class="day"
+                    data-day="دوشنبه"
+                    data-date="۲۸ مهر">
+
+                <span class="day-name">دوشنبه</span>
+                <span class="day-date">۲۸ مهر</span>
+
+            </button>
+
+
+            <button class="day active"
+                    data-day="سه‌شنبه"
+                    data-date="۲۹ مهر">
+
+                <span class="day-name">سه‌شنبه</span>
+                <span class="day-date">۲۹ مهر</span>
+
+            </button>
+
+
+            <button class="day"
+                    data-day="چهارشنبه"
+                    data-date="۳۰ مهر">
+
+                <span class="day-name">چهارشنبه</span>
+                <span class="day-date">۳۰ مهر</span>
+
+            </button>
+
+
+            <button class="day"
+                    data-day="پنجشنبه"
+                    data-date="۱ آبان">
+
+                <span class="day-name">پنجشنبه</span>
+                <span class="day-date">۱ آبان</span>
+
+            </button>
+
+
+            <button class="day"
+                    data-day="جمعه"
+                    data-date="۲ آبان">
+
+                <span class="day-name">جمعه</span>
+                <span class="day-date">۲ آبان</span>
+
+            </button>
+
+        </div>
+
+
+        <button class="week-arrow" id="nextWeek">
+            <i data-lucide="chevron-left"></i>
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SELECTED DAY
+    ========================================================= -->
+
+ <section class="day-header">
+
+    <div class="day-title">
+
+        <div class="day-title-icon">
+
+            <i data-lucide="calendar-days"></i>
+
+        </div>
+
+
+        <div>
+
+            <h1 id="selectedDay">
+                برنامه سه‌شنبه
+            </h1>
+
+            <p id="selectedDate">
+                ۲۹ مهر ۱۴۰۴
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- <button class="add-program">
+
+        <i data-lucide="plus"></i>
+
+        <span>
+            افزودن برنامه
+        </span>
+
+    </button> -->
+
+
+</section>
+
+
+
+    <!-- =========================================================
+         CONTENT
+    ========================================================= -->
+
+    <main class="planner-content">
+
+
+        <!-- =====================================================
+             PROGRAMS
+        ===================================================== -->
+
+      
+
+
+
+        <!-- =====================================================
+             RIGHT CATEGORIES
+        ===================================================== -->
+
+        <aside class="categories">
+
+
+            <div class="categories-header">
+
+                <h2>
+                    دسته‌بندی برنامه‌ها
+                </h2>
+
+                <span>
+                    فیلتر
+                </span>
+
+            </div>
+
+
+            <div class="category-list">
+
+
+                <!-- ALL -->
+
+                <button class="category-btn active"
+                        data-filter="all">
+
+                    <div class="category-icon"
+                         style="background:rgba(59,130,246,.12);color:#60a5fa">
+
+                        <i data-lucide="layers"></i>
+
+                    </div>
+
+                    <div class="category-info">
+
+                        <span class="category-name">
+                            همه برنامه‌ها
+                        </span>
+
+                        <span class="category-count">
+                            ۸ برنامه
+                        </span>
+
+                    </div>
+
+                    <i class="category-arrow"
+                       data-lucide="chevron-left">
+                    </i>
+
+                </button>
+
+
+
+                <!-- MAZ -->
+
+<!-- MAZ -->
+<button class="category-btn"
+        data-filter="maz"
+        id="mazButton">
+
+    <div class="category-icon"
+         style="background:rgba(59,130,246,.12);color:#60a5fa">
+        <i data-lucide="brain"></i>
+    </div>
+
+    <div class="category-info">
+        <span class="category-name">
+            برنامه ماز
+        </span>
+
+        <span class="category-count" id="mazProgramCount">
+            ۰ برنامه
+        </span>
+    </div>
+
+    <i class="category-arrow"
+       data-lucide="chevron-left">
+    </i>
+
+</button>
+
+
+<!-- MAZ TEACHERS -->
+<div class="maz-subcategories" id="mazTeachers">
+
+    <button class="teacher-btn" data-teacher="shojaei">
+        <span class="teacher-dot"></span>
+        استاد شجاعی
+    </button>
+
+    <button class="teacher-btn" data-teacher="hadian">
+        <span class="teacher-dot"></span>
+        استاد هادیان‌فرد
+    </button>
+
+    <button class="teacher-btn" data-teacher="karami">
+        <span class="teacher-dot"></span>
+        استاد معین‌کرمی
+    </button>
+
+    <button class="teacher-btn" data-teacher="darbi-gos">
+        <span class="teacher-dot"></span>
+        استاد داربی - گسسته
+    </button>
+
+    <button class="teacher-btn" data-teacher="darbi-geometry">
+        <span class="teacher-dot"></span>
+        استاد داربی - هندسه
+    </button>
+
+</div>
+              
+
+
+
+                <!-- SCHOOL -->
+
+                <button class="category-btn"
+                        data-filter="school">
+
+                    <div class="category-icon"
+                         style="background:rgba(16,185,129,.12);color:#34d399">
+
+                        <i data-lucide="school"></i>
+
+                    </div>
+
+                    <div class="category-info">
+
+                        <span class="category-name">
+                            مدرسه
+                        </span>
+
+                        <span class="category-count">
+                            ۱ برنامه
+                        </span>
+
+                    </div>
+
+                    <i class="category-arrow"
+                       data-lucide="chevron-left">
+                    </i>
+
+                </button>
+
+
+
+                <!-- DAILY -->
+
+                <button class="category-btn"
+                        data-filter="daily">
+
+                    <div class="category-icon"
+                         style="background:rgba(245,158,11,.12);color:#fbbf24">
+
+                        <i data-lucide="clipboard-check"></i>
+
+                    </div>
+
+                    <div class="category-info">
+
+                        <span class="category-name">
+                            کارهای روزمره
+                        </span>
+
+                        <span class="category-count">
+                            ۲ برنامه
+                        </span>
+
+                    </div>
+
+                    <i class="category-arrow"
+                       data-lucide="chevron-left">
+                    </i>
+
+                </button>
+
+
+
+                <!-- SPECIAL -->
+
+                <button class="category-btn"
+                        data-filter="special">
+
+                    <div class="category-icon"
+                         style="background:rgba(139,92,246,.12);color:#a78bfa">
+
+                        <i data-lucide="flask-conical"></i>
+
+                    </div>
+
+                    <div class="category-info">
+
+                        <span class="category-name">
+                            تخصصی / تمرین
+                        </span>
+
+                        <span class="category-count">
+                            ۱ برنامه
+                        </span>
+
+                    </div>
+
+                    <i class="category-arrow"
+                       data-lucide="chevron-left">
+                    </i>
+
+                </button>
+
+
+
+                <!-- FUN -->
+
+                <button class="category-btn"
+                        data-filter="fun">
+
+                    <div class="category-icon"
+                         style="background:rgba(236,72,153,.12);color:#f472b6">
+
+                        <i data-lucide="gamepad-2"></i>
+
+                    </div>
+
+                    <div class="category-info">
+
+                        <span class="category-name">
+                            تفریح و استراحت
+                        </span>
+
+                        <span class="category-count">
+                            ۱ برنامه
+                        </span>
+
+                    </div>
+
+                    <i class="category-arrow"
+                       data-lucide="chevron-left">
+                    </i>
+
+                </button>
+
+
+            </div>
+
+        </aside>
+
+
+
+
+          <section class="program-area">
+
+            <div class="program-area-header">
+
+                <div class="program-area-title">
+
+                    <i data-lucide="list-checks"></i>
+
+                    <h2>
+                        برنامه‌های امروز
+                    </h2>
+
+                    <span class="program-count"
+                          id="programCount">
+                        ۸ برنامه
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="program-list"
+                 id="programList">
+
+
+                <!-- MAZ -->
+
+                <article class="program maz"
+                         data-category="maz"
+                         data-teacher="shojaei">
+
+                    <div class="program-time">
+
+                        <strong>۰۵:۰۰</strong>
+
+                        تا
+
+                        <strong>۰۶:۳۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                مطالعه ریاضی — فصل ۳
+                            </div>
+
+                            <div class="program-subtitle">
+                                استاد شجاعی • ماز
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="brain"></i>
+
+                            برنامه ماز
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SCHOOL -->
+
+                <article class="program school"
+                         data-category="school">
+
+                    <div class="program-time">
+
+                        <strong>۰۷:۰۰</strong>
+
+                        تا
+
+                        <strong>۰۸:۳۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="school"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                فیزیک
+                            </div>
+
+                            <div class="program-subtitle">
+                                کلاس مدرسه
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="school"></i>
+
+                            مدرسه
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MAZ -->
+
+                <article class="program maz"
+                         data-category="maz"
+                         data-teacher="hadian">
+
+                    <div class="program-time">
+
+                        <strong>۰۹:۰۰</strong>
+
+                        تا
+
+                        <strong>۱۰:۳۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                آزمون ریاضی
+                            </div>
+
+                            <div class="program-subtitle">
+                                استاد هادیان‌فرد • ماز
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="brain"></i>
+
+                            برنامه ماز
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- DAILY -->
+
+                <article class="program daily"
+                         data-category="daily">
+
+                    <div class="program-time">
+
+                        <strong>۱۱:۰۰</strong>
+
+                        تا
+
+                        <strong>۱۱:۳۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="coffee"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                استراحت و میان‌وعده
+                            </div>
+
+                            <div class="program-subtitle">
+                                کار روزمره
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="clipboard-check"></i>
+
+                            کارهای روزمره
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SPECIAL -->
+
+                <article class="program special"
+                         data-category="special">
+
+                    <div class="program-time">
+
+                        <strong>۱۳:۰۰</strong>
+
+                        تا
+
+                        <strong>۱۴:۳۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="code-2"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                تمرین فیزیک
+                            </div>
+
+                            <div class="program-subtitle">
+                                تست و تمرین تخصصی
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="flask-conical"></i>
+
+                            تخصصی / تمرین
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MAZ -->
+
+                <article class="program maz"
+                         data-category="maz"
+                         data-teacher="karami">
+
+                    <div class="program-time">
+
+                        <strong>۱۵:۰۰</strong>
+
+                        تا
+
+                        <strong>۱۶:۳۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                حل تست شیمی
+                            </div>
+
+                            <div class="program-subtitle">
+                                استاد معین‌کرمی • ماز
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="brain"></i>
+
+                            برنامه ماز
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- DAILY -->
+
+                <article class="program daily"
+                         data-category="daily">
+
+                    <div class="program-time">
+
+                        <strong>۱۷:۰۰</strong>
+
+                        تا
+
+                        <strong>۱۸:۰۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="check-square"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                نماز + استراحت
+                            </div>
+
+                            <div class="program-subtitle">
+                                امور روزمره
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="clipboard-check"></i>
+
+                            کارهای روزمره
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FUN -->
+
+                <article class="program fun"
+                         data-category="fun">
+
+                    <div class="program-time">
+
+                        <strong>۲۱:۰۰</strong>
+
+                        تا
+
+                        <strong>۲۲:۰۰</strong>
+
+                    </div>
+
+
+                    <div class="program-main">
+
+                        <div class="program-icon">
+                            <i data-lucide="gamepad-2"></i>
+                        </div>
+
+                        <div class="program-details">
+
+                            <div class="program-title">
+                                فیلم و استراحت
+                            </div>
+
+                            <div class="program-subtitle">
+                                زمان آزاد
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-category">
+
+                        <span class="category-badge">
+
+                            <i data-lucide="gamepad-2"></i>
+
+                            تفریح و استراحت
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+            <div class="add-program-box" id="addProgramBox">
+
+    <div class="add-program-icon">
+        <i data-lucide="plus"></i>
+    </div>
+
+    <div class="add-program-text">
+        <strong>افزودن برنامه</strong>
+        <span>یک برنامه جدید برای این روز اضافه کنید</span>
+    </div>
+
+</div>
+
+
+            <!-- EMPTY -->
+
+            <div class="empty-state"
+                 id="emptyState">
+
+                <div class="empty-icon">
+                    <i data-lucide="calendar-plus"></i>
+                </div>
+
+                <h3>
+                    برنامه‌ای پیدا نشد
+                </h3>
+
+                <p>
+                    برای این دسته هنوز برنامه‌ای ثبت نشده است.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+<div class="program-modal-overlay" id="programModal">
+
+    <div class="program-modal">
+
+        <!-- HEADER -->
+        <div class="program-modal-header">
+
+            <div>
+                <h2>افزودن برنامه</h2>
+
+                <p id="modalContext">
+                    برنامه جدید
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeProgramModal"
+                aria-label="بستن">
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+        <form id="programForm">
+
+            <!-- عنوان -->
+            <div class="form-group">
+
+                <label for="programTitle">
+                    عنوان برنامه
+                </label>
+
+                <input
+                    id="programTitle"
+                    type="text"
+                    placeholder="مثلاً کلاس ریاضی"
+                    autocomplete="off"
+                    required
+                >
+
+            </div>
+
+
+            <!-- استاد — فقط برای ماز -->
+            <div
+                class="form-group"
+                id="teacherField"
+                style="display:none;"
+            >
+
+                <label for="programTeacher">
+                    استاد
+                </label>
+
+                <select id="programTeacher">
+
+                    <option value="shojaei">
+                        استاد شجاعی
+                    </option>
+
+                    <option value="hadian">
+                        استاد هادیان‌فرد
+                    </option>
+
+                    <option value="karami">
+                        استاد معین‌کرمی
+                    </option>
+
+                    <option value="darbi_gos">
+                        استاد داربی - گسسته
+                    </option>
+
+                    <option value="darbi_geometry">
+                        استاد داربی - هندسه
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- زمان -->
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="programStart">
+                        شروع
+                    </label>
+
+                    <input
+                        id="programStart"
+                        type="time"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="programEnd">
+                        پایان
+                    </label>
+
+                    <input
+                        id="programEnd"
+                        type="time"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- اعلان -->
+            <label class="notification-option">
+
+                <input
+                    type="checkbox"
+                    id="programNotification"
+                    checked
+                >
+
+                <span class="notification-check">
+
+                    <i data-lucide="bell"></i>
+
+                </span>
+
+                <span class="notification-text">
+
+                    <strong>
+                        اعلان شروع برنامه
+                    </strong>
+
+                    <small>
+                        هنگام شروع برنامه به من اطلاع بده
+                    </small>
+
+                </span>
+
+            </label>
+
+
+            <!-- ACTIONS -->
+            <div class="program-modal-actions">
+
+                <button
+                    type="button"
+                    class="modal-cancel"
+                    id="cancelProgram">
+
+                    انصراف
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="modal-submit">
+
+                    <i data-lucide="plus"></i>
+
+                    افزودن برنامه
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./config.js"></script>
+
+
+
+
+
+
+
+<script
+src="./daily-planner.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./weekly-notifications.js"></script>
+
+<script>
+    console.log("🚀 HTML SCRIPT IS WORKING");
+</script>
+</body>
+</html>

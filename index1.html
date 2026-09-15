@@ -1840,6 +1840,30 @@
         </div>
 
 
+
+
+
+        
+        <div class="mini-service-card">
+
+            <div class="mini-icon">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2" class="w-12 h-12 text-neutral-30 mx-auto mb-3"><path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 17H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+
+            <div>
+                <h3>برنامه روزانه</h3>
+                <p>ورود یه پنل برنامه ها </p>
+            </div>
+
+            <a href="./AMIR.html" target="_blank">
+                ورود
+            </a>
+
+        </div>
+
+
+
+
     </div>
 
 
@@ -2428,6 +2452,72 @@
     </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4015,48 +4105,555 @@ data-icon="network">
                 </section>
 
 
-                <section
-                    class="settings-section"
-                    id="settings-section-notifications"
-                >
+<section
+    class="settings-section"
+    id="settings-section-notifications"
+>
 
-                    <div class="settings-empty">
+    <div class="notifications-settings">
 
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <div class="notifications-header">
+
+            <div class="notifications-header-icon">
+                <i data-lucide="bell-ring"></i>
+            </div>
+
+            <div class="notifications-header-content">
+
+                <h3>
+                    اعلان‌ها
+                </h3>
+
+                <p>
+                    نحوه دریافت اعلان‌ها و صدای هشدار را مدیریت کنید.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             NOTIFICATION SETTINGS
+        ========================== -->
+
+        <div class="notification-settings-card">
+
+            <div class="notification-card-header">
+
+                <div>
+                    <strong>
+                        تنظیمات اعلان
+                    </strong>
+
+                    <span>
+                        کنترل اعلان‌های برنامه‌ها
+                    </span>
+                </div>
+
+                <i data-lucide="settings-2"></i>
+
+            </div>
+
+
+            <!-- ENABLE NOTIFICATIONS -->
+
+            <div class="notification-setting-row">
+
+                <div class="notification-setting-info">
+
+                    <div class="notification-setting-icon">
                         <i data-lucide="bell"></i>
+                    </div>
 
-                        <h3>
-                            اعلان‌ها
-                        </h3>
+                    <div>
 
-                        <p>
-                            تنظیمات اعلان‌ها در این بخش قرار می‌گیرد.
-                        </p>
+                        <strong>
+                            اعلان‌های برنامه
+                        </strong>
+
+                        <span>
+                            هنگام شروع برنامه به شما اطلاع داده شود.
+                        </span>
 
                     </div>
 
-                </section>
+                </div>
 
 
-                <section
-                    class="settings-section"
-                    id="settings-section-general"
+                <label class="notification-switch">
+
+                    <input
+                        type="checkbox"
+                        id="weeklyNotificationsEnabled"
+                        checked
+                    >
+
+                    <span class="notification-switch-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <!-- SOUND -->
+
+            <div class="notification-setting-row">
+
+                <div class="notification-setting-info">
+
+                    <div class="notification-setting-icon">
+                        <i data-lucide="volume-2"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            صدای اعلان
+                        </strong>
+
+                        <span>
+                            هنگام رسیدن زمان برنامه صدای هشدار پخش شود.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <label class="notification-switch">
+
+                    <input
+                        type="checkbox"
+                        id="weeklyNotificationSound"
+                        checked
+                    >
+
+                    <span class="notification-switch-slider"></span>
+
+                </label>
+
+            </div>
+
+
+<!-- ========================================
+     WEEKLY NOTIFICATION SOUND SETTINGS
+========================================= -->
+
+<div class="weekly-notification-sound-settings">
+
+    <div class="weekly-setting-header">
+        <div class="weekly-setting-icon">
+            <i data-lucide="volume-2"></i>
+        </div>
+
+        <div>
+            <strong>صدای اعلان</strong>
+            <span>انتخاب و شخصی‌سازی صدای اعلان‌های برنامه</span>
+        </div>
+    </div>
+
+    <!-- Sound Type -->
+    <div class="weekly-setting-row">
+
+        <div class="weekly-setting-info">
+            <div class="weekly-setting-title">
+                <i data-lucide="music-2"></i>
+                نوع صدا
+            </div>
+
+            <div class="weekly-setting-description">
+                صدایی که هنگام شروع برنامه پخش می‌شود را انتخاب کنید.
+            </div>
+        </div>
+
+        <select id="weeklyNotificationSoundType"
+                class="weekly-sound-select">
+
+            <option value="classic">کلاسیک — سه ضربه</option>
+            <option value="soft">ملایم</option>
+            <option value="warning">هشدار</option>
+            <option value="double">دو ضربه‌ای</option>
+            <option value="modern">مدرن</option>
+            <option value="clock">ساعت</option>
+            <option value="none">بدون صدا</option>
+
+        </select>
+
+    </div>
+
+
+</div>
+
+
+
+
+            <!-- VOLUME -->
+
+            <div
+                class="notification-volume-row"
+                id="weeklyNotificationVolumeRow"
+            >
+
+                <div class="notification-volume-header">
+
+                    <div>
+
+                        <strong>
+                            شدت صدای هشدار
+                        </strong>
+
+                        <span>
+                            میزان صدای بوق اعلان
+                        </span>
+
+                    </div>
+
+                    <strong
+                        id="weeklyNotificationVolumeValue"
+                    >
+                        70٪
+                    </strong>
+
+                </div>
+
+
+                <div class="notification-volume-control">
+
+                    <i data-lucide="volume-1"></i>
+
+                    <input
+                        type="range"
+                        id="weeklyNotificationVolume"
+                        min="10"
+                        max="100"
+                        value="70"
+                        step="5"
+                    >
+
+                    <i data-lucide="volume-2"></i>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="notification-test-sound"
+                    id="weeklyNotificationTestSound"
                 >
 
-                    <div class="settings-empty">
+                    <i data-lucide="play"></i>
 
-                        <i data-lucide="sliders-horizontal"></i>
+                    تست صدا
 
-                        <h3>
-                            عمومی
-                        </h3>
+                </button>
 
-                        <p>
-                            تنظیمات عمومی در این بخش قرار می‌گیرد.
-                        </p>
+            </div>
 
-                    </div>
+        </div>
 
-                </section>
+
+        <!-- =========================
+             NOTIFICATION HISTORY
+        ========================== -->
+
+        <div class="notification-history-card">
+
+            <div class="notification-card-header">
+
+                <div>
+
+                    <strong>
+                        تاریخچه اعلان‌ها
+                    </strong>
+
+                    <span>
+                        اعلان‌های دریافت‌شده در ۷ روز اخیر
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="notification-clear-history"
+                    id="weeklyNotificationClearHistory"
+                >
+
+                    <i data-lucide="trash-2"></i>
+
+                    پاک کردن همه
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="notification-history-list"
+                id="weeklyNotificationHistoryList"
+            >
+
+                <!-- JS این قسمت را پر می‌کند -->
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             AUTO DELETE INFO
+        ========================== -->
+
+        <div class="notification-history-info">
+
+            <i data-lucide="clock-3"></i>
+
+            <span>
+                اعلان‌های قدیمی‌تر از ۷ روز به‌صورت خودکار حذف می‌شوند.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     GENERAL / RUBIKA
+========================= -->
+
+<section
+    class="settings-section"
+    id="settings-section-general"
+>
+
+    <!-- =================================================
+         RUBIKA NOTIFICATION SETTINGS
+    ================================================== -->
+
+    <div class="settings-section-header">
+
+        <div class="settings-section-title-wrap">
+
+            <div class="settings-section-icon rubika-notification-icon">
+                <i data-lucide="send"></i>
+            </div>
+
+            <div class="settings-section-title-content">
+
+                <h3>
+                    اعلان‌های روبیکا
+                </h3>
+
+                <p>
+                    دریافت اعلان‌های برنامه در ربات روبیکا
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="rubika-connection-status"
+            id="rubikaNotificationStatus"
+        >
+
+            <span class="rubika-status-dot"></span>
+
+            <span id="rubikaNotificationStatusText">
+                متصل نیست
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="rubika-notification-info">
+
+        <div class="rubika-info-icon">
+            <i data-lucide="info"></i>
+        </div>
+
+        <div class="rubika-info-content">
+
+            <strong>
+                فعال‌سازی اعلان روبیکا
+            </strong>
+
+            <p>
+                ابتدا ربات اعلان‌ها را در روبیکا باز کنید
+                و روی «Start» بزنید. سپس Chat ID نمایش‌داده‌شده
+                توسط ربات را در کادر زیر وارد کنید.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="rubika-notification-form">
+
+        <div class="rubika-field">
+
+            <label for="rubikaNotificationChatId">
+                Chat ID روبیکا
+            </label>
+
+            <div class="rubika-input-wrapper">
+
+                <i data-lucide="hash"></i>
+
+                <input
+                    type="text"
+                    id="rubikaNotificationChatId"
+                    class="rubika-chat-input"
+                    placeholder="Chat ID خود را وارد کنید"
+                    autocomplete="off"
+                    inputmode="numeric"
+                >
+
+            </div>
+
+            <small>
+                این شناسه برای ارسال اعلان‌های برنامه به حساب روبیکای شما استفاده می‌شود.
+            </small>
+
+        </div>
+
+
+        <div class="rubika-notification-actions">
+
+            <a
+                href="https://rubika.ir/NotificationriseoBot"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rubika-open-bot-btn"
+            >
+
+                <i data-lucide="external-link"></i>
+
+                <span>
+                    باز کردن ربات
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                id="rubikaNotificationSave"
+                class="rubika-save-btn"
+            >
+
+                <i data-lucide="save"></i>
+
+                <span>
+                    ذخیره Chat ID
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="rubika-notification-toggle-row">
+
+        <div class="rubika-toggle-content">
+
+            <div class="rubika-toggle-icon">
+                <i data-lucide="bell"></i>
+            </div>
+
+            <div class="rubika-toggle-text">
+
+                <strong>
+                    اعلان‌های روبیکا
+                </strong>
+
+                <p>
+                    ارسال اعلان‌های برنامه به روبیکا
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label
+            class="rubika-switch"
+            aria-label="فعال یا غیرفعال کردن اعلان‌های روبیکا"
+        >
+
+            <input
+                type="checkbox"
+                id="rubikaNotificationEnabled"
+            >
+
+            <span class="rubika-switch-slider"></span>
+
+        </label>
+
+    </div>
+
+
+    <div class="rubika-test-row">
+
+        <div class="rubika-test-content">
+
+            <i data-lucide="message-circle"></i>
+
+            <div>
+
+                <strong>
+                    تست اتصال
+                </strong>
+
+                <p>
+                    ارسال یک پیام آزمایشی به روبیکا
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="rubikaNotificationTest"
+            class="rubika-test-btn"
+        >
+
+            <i data-lucide="send"></i>
+
+            <span>
+                ارسال تست
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="rubikaNotificationMessage"
+        class="rubika-notification-message"
+        hidden
+        role="status"
+        aria-live="polite"
+    ></div>
+
+</section>
+
+
+
 
 
             </main>
@@ -5401,6 +5998,7 @@ console.log("PWA Ready");
     lucide.createIcons();
 </script>
 
+<script src="./weekly-notifications.js"></script>
 <script src="./1.js"></script>
 </body>
 
