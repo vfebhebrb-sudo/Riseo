@@ -57,40 +57,26 @@ body{
         THEME SYSTEM
         سیستم تغییر حالت تاریک و روشن
 ========================================== */
-
-
 :root{
 
+    --background:#171b22;
 
-    --background:#111315;
+    --surface:#202631;
 
+    --surface-hover:#252c37;
 
-    --surface:#191c21;
+    --text:#e5e7eb;
 
+    --text-secondary:#94a3b8;
 
-    --surface-hover:#22262d;
-
-
-    --text:#f9fafb;
-
-
-    --text-secondary:#9ca3af;
-
-
-    --border:#292e36;
-
-
+    --border:#303846;
 
     --accent:#3b82f6;
 
-
-    --accent-soft:#172554;
-
-
+    --accent-soft:#183153;
 
     --shadow:
-    0 8px 25px rgba(0,0,0,.35);
-
+    0 8px 25px rgba(0,0,0,.25);
 
 }
 
@@ -98,39 +84,26 @@ body{
 
 .light-theme{
 
+    --background:#dfe3e8;
 
-    --background:#f5f6f8;
+    --surface:#edf0f4;
 
+    --surface-hover:#e5e8ed;
 
-    --surface:#ffffff;
+    --text:#172033;
 
+    --text-secondary:#7c8797;
 
-    --surface-hover:#f3f4f6;
-
-
-    --text:#111827;
-
-
-    --text-secondary:#6b7280;
-
-
-    --border:#e5e7eb;
-
-
+    --border:#d8dde5;
 
     --accent:#2563eb;
 
-
-    --accent-soft:#eff6ff;
-
-
+    --accent-soft:#e9f1ff;
 
     --shadow:
-    0 8px 25px rgba(0,0,0,.06);
-
+    0 8px 20px rgba(30,38,50,.10);
 
 }
-
 
 
 

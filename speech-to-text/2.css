@@ -1,0 +1,2422 @@
+/* =========================================
+   FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   THEME VARIABLES
+========================================= */
+:root {
+
+    /* ---------- Main ---------- */
+
+    --files-bg: #dfe3e8;
+    --files-text: #172033;
+
+
+
+    /* ---------- Header ---------- */
+
+    --files-header-bg-start: #eef1f4;
+    --files-header-bg-end: #e1e5ea;
+
+    --files-header-border: #d2d7df;
+
+    --files-header-shadow:
+        0 4px 14px rgba(30,38,50,.09);
+
+
+
+    /* ---------- Header Title ---------- */
+
+    --files-title-color: #162033;
+
+    --files-title-icon-color: #3b4658;
+
+    --files-title-icon-bg-start: #d8dde4;
+    --files-title-icon-bg-end: #cdd3dc;
+
+    --files-title-icon-border: #c3cad4;
+
+
+
+    /* ---------- Search ---------- */
+
+    --files-search-bg-start: #e5e8ed;
+    --files-search-bg-end: #d9dee5;
+
+    --files-search-focus-bg: #eef1f5;
+
+    --files-search-border: #cbd2dc;
+
+    --files-search-focus-border: #aeb7c3;
+
+    --files-search-focus-ring:
+        0 0 0 3px rgba(70,80,95,.12);
+
+    --files-search-text: #293548;
+
+    --files-search-placeholder: #7c8797;
+
+    --files-search-icon: #697586;
+
+
+
+    /* ---------- User ---------- */
+
+    --files-user-name: #4b5565;
+
+    --files-user-icon: #7a8595;
+
+
+    --files-avatar-color: #566173;
+
+    --files-avatar-bg-start: #d8dde4;
+
+    --files-avatar-bg-end: #cbd2dc;
+
+    --files-avatar-border: #bec6d1;
+
+    --files-avatar-shadow:
+        inset 0 1px 2px rgba(255,255,255,.6);
+
+
+
+    /* ---------- Subject Cards ---------- */
+
+    --subject-card-bg: #edf0f4;
+
+    --subject-card-border: #d8dde5;
+
+    --subject-card-shadow:
+        0 8px 20px rgba(30,38,50,.10);
+
+
+
+    /* ---------- Subject Icon Colors ---------- */
+
+    --icon-calculus: #3b82f6;
+    --icon-calculus-bg: #dbeafe;
+
+
+    --icon-geometry: #ec4899;
+    --icon-geometry-bg: #fce7f3;
+
+
+    --icon-discrete: #8b5cf6;
+    --icon-discrete-bg: #ede9fe;
+
+
+    --icon-physics: #10b981;
+    --icon-physics-bg: #d1fae5;
+
+
+    --icon-chemistry: #f59e0b;
+    --icon-chemistry-bg: #fef3c7;
+
+
+    --icon-literature: #3b82f6;
+    --icon-literature-bg: #dbeafe;
+
+
+    --icon-arabic: #0891b2;
+    --icon-arabic-bg: #cffafe;
+
+
+    --icon-religion: #a21caf;
+    --icon-religion-bg: #fae8ff;
+
+
+    --icon-english: #ef4444;
+    --icon-english-bg: #fee2e2;
+
+
+    --icon-health: #65a30d;
+    --icon-health-bg: #ecfccb;
+
+
+    --icon-social: #2563eb;
+    --icon-social-bg: #dbeafe;
+
+
+    --icon-other: #64748b;
+    --icon-other-bg: #e2e8f0;
+
+
+    /* =========================================
+   SUBJECT ICON FIXED COLORS
+========================================= */
+
+
+--calculus-icon-bg:#eaf2ff;
+--calculus-icon:#2563eb;
+
+
+--geometry-icon-bg:#fdebf5;
+--geometry-icon:#ec4899;
+
+
+--discrete-icon-bg:#f0eaff;
+--discrete-icon:#7c3aed;
+
+
+--physics-icon-bg:#e7faf2;
+--physics-icon:#10b981;
+
+
+--chemistry-icon-bg:#fff4dc;
+--chemistry-icon:#f59e0b;
+
+
+--literature-icon-bg:#e9f1ff;
+--literature-icon:#2563eb;
+
+
+--arabic-icon-bg:#e5f8fc;
+--arabic-icon:#0891b2;
+
+
+--religion-icon-bg:#f8e8fc;
+--religion-icon:#a21caf;
+
+
+--english-icon-bg:#ffecec;
+--english-icon:#ef4444;
+
+
+--health-icon-bg:#effbdc;
+--health-icon:#65a30d;
+
+
+--social-icon-bg:#e9f1ff;
+--social-icon:#2563eb;
+
+
+--other-icon-bg:#eef1f5;
+--other-icon:#64748b;
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+body.dark-theme {
+
+
+    /* ---------- Main ---------- */
+
+    --files-bg: #171b22;
+    --files-text: #e5e7eb;
+
+
+
+    /* ---------- Header ---------- */
+
+    --files-header-bg-start: #202631;
+    --files-header-bg-end: #1b2029;
+
+    --files-header-border: #303846;
+
+    --files-header-shadow:
+        0 5px 18px rgba(0,0,0,.25);
+
+
+
+    /* ---------- Title ---------- */
+
+    --files-title-color: #f1f5f9;
+
+    --files-title-icon-color: #cbd5e1;
+
+    --files-title-icon-bg-start: #303846;
+    --files-title-icon-bg-end: #252c37;
+
+    --files-title-icon-border: #3b4555;
+
+
+
+    /* ---------- Search ---------- */
+
+    --files-search-bg-start: #252c37;
+    --files-search-bg-end: #202631;
+
+    --files-search-focus-bg: #2b3442;
+
+    --files-search-border: #3a4555;
+
+    --files-search-focus-border: #64748b;
+
+    --files-search-focus-ring:
+        0 0 0 3px rgba(148,163,184,.12);
+
+
+    --files-search-text: #e2e8f0;
+
+    --files-search-placeholder: #94a3b8;
+
+    --files-search-icon: #94a3b8;
+
+
+
+    /* ---------- User ---------- */
+
+    --files-user-name: #cbd5e1;
+
+    --files-user-icon: #94a3b8;
+
+
+    --files-avatar-color: #cbd5e1;
+
+    --files-avatar-bg-start: #303846;
+
+    --files-avatar-bg-end: #252c37;
+
+    --files-avatar-border: #3b4555;
+
+
+    --files-avatar-shadow:
+        inset 0 1px 2px rgba(255,255,255,.05);
+
+
+
+    /* ---------- Cards ---------- */
+
+    --subject-card-bg: #202631;
+
+    --subject-card-border: #303846;
+
+    --subject-card-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+
+
+    /* ---------- Icon backgrounds ---------- */
+
+    --icon-calculus-bg:#1e3a5f;
+    --icon-geometry-bg:#4a2438;
+    --icon-discrete-bg:#35235c;
+    --icon-physics-bg:#164235;
+    --icon-chemistry-bg:#594116;
+    --icon-literature-bg:#1e3a5f;
+    --icon-arabic-bg:#164653;
+    --icon-religion-bg:#52205c;
+    --icon-english-bg:#5b2525;
+    --icon-health-bg:#344d18;
+    --icon-social-bg:#1e3a5f;
+    --icon-other-bg:#334155;
+
+
+
+  
+
+--calculus-icon-bg:#183153;
+--geometry-icon-bg:#4a2038;
+--discrete-icon-bg:#34205b;
+--physics-icon-bg:#123d32;
+--chemistry-icon-bg:#503b13;
+--literature-icon-bg:#183153;
+--arabic-icon-bg:#123d47;
+--religion-icon-bg:#4b174f;
+--english-icon-bg:#542020;
+--health-icon-bg:#304b12;
+--social-icon-bg:#183153;
+--other-icon-bg:#334155;
+
+
+
+}
+
+
+/* =========================================
+   BASE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    background: var(--files-bg);
+
+    color: var(--files-text);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.files-header {
+    width: calc(100% - 32px);
+    height: 60px;
+
+    margin: 5px 16px 0;
+
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+
+    direction: rtl;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start) 0%,
+            var(--files-header-bg-end) 100%
+        );
+
+    border: 1px solid var(--files-header-border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--files-header-shadow);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.files-header-title {
+    width: 190px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+
+/* آیکون */
+
+.files-header-title-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: var(--files-title-icon-color);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--files-title-icon-bg-start),
+            var(--files-title-icon-bg-end)
+        );
+
+    border: 1px solid var(--files-title-icon-border);
+}
+
+.files-header-title-icon svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 2;
+}
+
+
+/* عنوان */
+
+.files-header-title-content {
+    display: flex;
+    align-items: center;
+}
+
+.files-header-title-content h1 {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: var(--files-title-color);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.files-header-search {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 44%;
+    max-width: 565px;
+    min-width: 360px;
+
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    direction: rtl;
+
+    padding: 0 13px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--files-search-bg-start),
+            var(--files-search-bg-end)
+        );
+
+    border: 1px solid var(--files-search-border);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.files-header-search:focus-within {
+    background: var(--files-search-focus-bg);
+
+    border-color: var(--files-search-focus-border);
+
+    box-shadow: var(--files-search-focus-ring);
+}
+
+
+/* input */
+
+.files-header-search input {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    color: var(--files-search-text);
+
+    direction: rtl;
+}
+
+.files-header-search input::placeholder {
+    color: var(--files-search-placeholder);
+
+    opacity: 1;
+}
+
+
+/* search icon */
+
+.files-header-search svg {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+
+    color: var(--files-search-icon);
+
+    stroke-width: 2;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.files-header-user {
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    direction: rtl;
+
+    cursor: pointer;
+}
+
+
+/* avatar */
+
+.files-user-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: var(--files-avatar-color);
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--files-avatar-bg-start),
+            var(--files-avatar-bg-end)
+        );
+
+    border: 1px solid var(--files-avatar-border);
+
+    box-shadow: var(--files-avatar-shadow);
+}
+
+.files-user-avatar svg {
+    width: 20px;
+    height: 20px;
+
+    stroke-width: 2;
+}
+
+
+/* متن کاربر */
+
+.files-user-content {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.files-user-name {
+    font-size: 10px;
+
+    font-weight: 500;
+
+    color: var(--files-user-name);
+
+    white-space: nowrap;
+}
+
+
+/* فلش */
+
+.files-user-content svg {
+    width: 12px;
+    height: 12px;
+
+    color: var(--files-user-icon);
+
+    stroke-width: 2;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .files-header-search {
+        width: 40%;
+        min-width: 260px;
+    }
+
+    .files-header-title {
+        width: 150px;
+    }
+
+    .files-header-title-content h1 {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .files-header {
+        height: 58px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        width: calc(100% - 20px);
+
+        padding: 0 10px;
+    }
+
+    .files-header-title {
+        width: auto;
+    }
+
+    .files-header-title-icon {
+        width: 29px;
+        height: 29px;
+    }
+
+    .files-header-title-content {
+        display: none;
+    }
+
+    .files-header-search {
+        position: relative;
+
+        left: auto;
+        transform: none;
+
+        width: 45%;
+        min-width: 0;
+
+        margin: 0 auto;
+    }
+
+    .files-user-name {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   FILES HERO
+========================================= */
+
+.files-hero {
+
+    position: relative;
+
+    width: 100%;
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+
+    direction: rtl;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.files-hero-content {
+
+    position: absolute;
+
+    right: 38px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 3;
+
+    text-align: right;
+
+    direction: rtl;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.files-hero-title {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: row;
+
+    gap: 8px;
+
+    margin: 0 0 5px 0;
+
+    direction: rtl;
+}
+
+
+.files-hero-title i {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+
+    color: var(--files-title-icon-color);
+
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+
+.files-hero-title h1 {
+
+    margin: 0;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    color: var(--files-title-color);
+
+    letter-spacing: -0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.files-hero-content p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    color: #8993a1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.files-hero-image {
+
+    position: absolute;
+
+    left: 15px;
+    bottom: -4px;
+
+    width: 300px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subjects-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:14px;
+
+    padding:20px;
+
+}
+
+
+.subject-card{
+
+    height:92px;
+
+    background:
+    var(--files-category-bg);
+
+    border:
+    1px solid var(--files-category-border);
+
+    border-radius:16px;
+
+    box-shadow:
+    var(--files-category-shadow);
+
+    display:flex;
+
+    align-items:center;
+
+    padding:14px;
+
+    position:relative;
+
+    transition:.25s ease;
+
+}
+
+
+.subject-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+.subject-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+    145deg,
+    var(--files-title-icon-bg-start),
+    var(--files-title-icon-bg-end)
+    );
+
+    border:
+    1px solid var(--files-title-icon-border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+}
+
+
+.subject-icon img{
+
+    width:23px;
+
+    height:23px;
+
+}
+
+
+.subject-info{
+
+    margin-right:12px;
+
+    text-align:right;
+
+}
+
+
+.subject-info h3{
+
+    margin:0 0 5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:
+    var(--files-category-title);
+
+}
+
+
+.subject-info span{
+
+    font-size:12px;
+
+    color:
+    var(--files-category-count);
+
+}
+
+
+.subject-card i{
+
+    position:absolute;
+
+    left:14px;
+
+    font-size:24px;
+
+    color:#87909d;
+
+}
+
+.subject-icon svg{
+
+    width:22px;
+    height:22px;
+
+    stroke-width:1.8;
+
+    color:var(--files-title-icon-color);
+
+}
+
+
+.subject-card > svg{
+
+    width:18px;
+    height:18px;
+
+    color:#87909d;
+
+    position:absolute;
+
+    left:15px;
+
+}
+
+.subject-card {
+
+    height:90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start) 0%,
+            var(--files-header-bg-end) 100%
+        );
+
+    border: 1px solid var(--files-header-border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--files-header-shadow);
+
+
+    display:flex;
+
+    align-items:center;
+
+    padding:16px;
+
+    position:relative;
+
+    transition:.25s ease;
+
+}
+
+
+.subject-card:hover {
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgba(40,48,60,.10);
+
+}
+
+.subject-icon.calculus {
+
+    background:#e7f0ff;
+    color:#2563eb;
+
+}
+
+
+.subject-icon.geometry {
+
+    background:#fde8f3;
+    color:#ec4899;
+
+}
+
+
+.subject-icon.discrete {
+
+    background:#eee8ff;
+    color:#7c3aed;
+
+}
+
+
+.subject-icon.physics {
+
+    background:#e3f8ef;
+    color:#10b981;
+
+}
+
+
+.subject-icon.chemistry {
+
+    background:#fff1d6;
+    color:#f59e0b;
+
+}
+
+
+.subject-icon.literature {
+
+    background:#e8f1ff;
+    color:#2563eb;
+
+}
+
+
+.subject-icon.arabic {
+
+    background:#e2f7fb;
+    color:#0891b2;
+
+}
+
+
+.subject-icon.religion {
+
+    background:#f8e5fc;
+    color:#a21caf;
+
+}
+
+
+.subject-icon.english {
+
+    background:#ffe8e8;
+    color:#ef4444;
+
+}
+
+
+.subject-icon.health {
+
+    background:#eff9df;
+    color:#65a30d;
+
+}
+
+
+.subject-icon.social {
+
+    background:#e8f1ff;
+    color:#3b82f6;
+
+}
+
+
+.subject-icon.other {
+
+    background:#edf0f4;
+    color:#64748b;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   FILES MAIN CONTAINER
+========================================= */
+
+
+.files-container{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:60% 40%;
+
+    gap:14px;
+
+    padding:20px;
+
+    direction:rtl;
+    padding-top: 0px;
+}
+
+
+
+/* =========================================
+   BOX STYLE
+========================================= */
+
+
+.files-list-box,
+.files-preview-box{
+
+
+       background:
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start) 0%,
+            var(--files-header-bg-end) 100%
+        );
+
+    border: 1px solid var(--files-header-border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--files-header-shadow);
+
+
+    min-height:400px;
+
+
+}
+
+
+/* لیست فایل */
+
+.files-list-box{
+
+    padding:14px;
+
+}
+
+
+/* پیش نمایش */
+
+.files-preview-box{
+
+    padding:12px;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.files-container{
+
+    display:grid;
+
+    grid-template-columns:60% 40%;
+
+    gap:14px;
+
+
+
+    direction:rtl;
+
+}
+
+
+
+
+.files-list-box,
+.files-preview-box{
+
+     background:
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start) 0%,
+            var(--files-header-bg-end) 100%
+        );
+
+    border: 1px solid var(--files-header-border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--files-header-shadow);
+
+
+    padding:12px;
+
+}
+
+
+
+
+/* هدر داخل باکس */
+
+.box-header{
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 12px;
+
+    margin-bottom:12px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--files-header-bg-start),
+        var(--files-header-bg-end)
+    );
+
+
+    border:1px solid var(--files-header-border);
+
+    border-radius:12px;
+
+}
+
+
+
+
+.box-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.box-icon{
+
+    width:32px;
+
+    height:32px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+
+    background:#eef1f5;
+
+    color:#34445d;
+
+}
+
+
+
+.box-icon svg{
+
+    width:17px;
+
+    height:17px;
+
+}
+
+
+
+
+.box-title h3{
+
+    margin:0;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:var(--files-title-color);
+
+}
+
+
+
+.box-title span{
+
+    font-size:11px;
+
+    color:#8993a1;
+
+}
+
+
+
+
+.box-actions{
+
+    display:flex;
+
+    gap:6px;
+
+}
+
+
+
+.box-actions button{
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:9px;
+
+    border:1px solid #e1e5eb;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.box-actions svg{
+
+    width:15px;
+
+    height:15px;
+
+    color:#87909d;
+
+}
+
+
+
+
+.preview-header h3{
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.empty-files {
+
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    color: #929aa7;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+
+.empty-files svg {
+
+    width: 22px;
+    height: 22px;
+
+    color: #a3aab5;
+
+    stroke-width: 1.7;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   FILE PREVIEW CARDS
+========================================= */
+
+
+.files-preview-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    direction:rtl;
+
+}
+
+
+
+
+.file-item{
+
+
+    width:100%;
+
+    min-height:64px;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    direction:rtl;
+
+
+    padding:12px 14px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--files-header-bg-start),
+        var(--files-header-bg-end)
+    );
+
+
+    border:
+    1px solid var(--files-header-border);
+
+
+    border-radius:14px;
+
+
+    box-shadow:
+    var(--files-header-shadow);
+
+
+    transition:.25s ease;
+
+
+    cursor:pointer;
+
+}
+
+
+
+.file-item:hover{
+
+
+    transform:
+    translateY(-2px);
+
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
+
+
+}
+
+
+
+
+
+/* =========================================
+   FILE ICON
+========================================= */
+
+
+.file-icon{
+
+
+    width:38px;
+
+    height:38px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    flex-shrink:0;
+
+
+    border-radius:12px;
+
+
+    background:
+    var(--english-icon-bg);
+
+
+    color:
+    var(--icon-english);
+
+
+    border:
+    1px solid var(--files-header-border);
+
+
+}
+
+
+
+.file-icon svg{
+
+
+    width:22px;
+
+    height:22px;
+
+
+    stroke-width:2;
+
+}
+
+
+
+
+
+/* =========================================
+   FILE INFO
+========================================= */
+
+
+.file-info{
+
+
+    margin-right:12px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    gap:4px;
+
+
+    text-align:right;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.file-info h4{
+
+
+    margin:0;
+
+
+    font-size:13px;
+
+
+    font-weight:600;
+
+
+    color:
+    var(--files-title-color);
+
+
+    white-space:nowrap;
+
+
+    overflow:hidden;
+
+
+    text-overflow:ellipsis;
+
+
+}
+
+
+
+.file-info span{
+
+
+    font-size:11px;
+
+
+    color:
+    var(--files-search-placeholder);
+
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+
+.file-item > svg{
+
+
+    margin-right:auto;
+
+
+    width:17px;
+
+    height:17px;
+
+
+    color:
+    var(--files-search-icon);
+
+
+    stroke-width:2;
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   EMPTY FILES
+========================================= */
+
+
+.empty-files{
+
+
+    width:100%;
+
+
+    min-height:120px;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    flex-direction:column;
+
+
+    gap:8px;
+
+
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--files-header-bg-start),
+        var(--files-header-bg-end)
+    );
+
+
+
+    border:
+    1px solid var(--files-header-border);
+
+
+
+    border-radius:14px;
+
+
+
+    color:
+    var(--files-search-placeholder);
+
+
+
+    font-size:12px;
+
+
+
+}
+
+
+
+
+
+.empty-files svg{
+
+
+    width:24px;
+
+    height:24px;
+
+
+    color:
+    var(--files-search-icon);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.theme-toggle{
+
+    width:36px;
+    height:36px;
+
+    border-radius:12px;
+
+    border:1px solid var(--files-header-border);
+
+    background:
+    linear-gradient(
+        145deg,
+        var(--files-header-bg-start),
+        var(--files-header-bg-end)
+    );
+
+    color:var(--files-title-icon-color);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+        margin-right: 1210px;
+
+}
+
+
+.theme-toggle:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+.theme-toggle svg{
+
+    width:18px;
+    height:18px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subject-icon.calculus{
+
+    background:var(--calculus-icon-bg);
+    color:var(--calculus-icon);
+
+}
+
+
+.subject-icon.geometry{
+
+    background:var(--geometry-icon-bg);
+    color:var(--geometry-icon);
+
+}
+
+
+.subject-icon.discrete{
+
+    background:var(--discrete-icon-bg);
+    color:var(--discrete-icon);
+
+}
+
+
+.subject-icon.physics{
+
+    background:var(--physics-icon-bg);
+    color:var(--physics-icon);
+
+}
+
+
+.subject-icon.chemistry{
+
+    background:var(--chemistry-icon-bg);
+    color:var(--chemistry-icon);
+
+}
+
+
+.subject-icon.literature{
+
+    background:var(--literature-icon-bg);
+    color:var(--literature-icon);
+
+}
+
+
+.subject-icon.arabic{
+
+    background:var(--arabic-icon-bg);
+    color:var(--arabic-icon);
+
+}
+
+
+.subject-icon.religion{
+
+    background:var(--religion-icon-bg);
+    color:var(--religion-icon);
+
+}
+
+
+.subject-icon.english{
+
+    background:var(--english-icon-bg);
+    color:var(--english-icon);
+
+}
+
+
+.subject-icon.health{
+
+    background:var(--health-icon-bg);
+    color:var(--health-icon);
+
+}
+
+
+.subject-icon.social{
+
+    background:var(--social-icon-bg);
+    color:var(--social-icon);
+
+}
+
+
+.subject-icon.other{
+
+    background:var(--other-icon-bg);
+    color:var(--other-icon);
+
+}

@@ -1,53 +1,17 @@
-// const CONFIG = {
-
-//     API:
-//     "https://iran-go4q.onrender.com",
-
-
-//     ENDPOINTS: {
-
-//         FILES:
-//         "/api/files",
-
-//         AUTH:
-//         "/api/auth",
-
-//         PLANS:
-//         "/api/plans"
-
-//     },
-
-
-//     VIEWER:
-//     "/workspace1/pdf-viewer/web/viewer.html"
-
-// };
-
-
-
-// const API_URL =
-// CONFIG.API;
-
-
-
-// const FILES_API =
-// CONFIG.API + CONFIG.ENDPOINTS.FILES;
-
 const CONFIG = {
 
-    API:
-   "https://iran-go4q.onrender.com",
+    API: "https://iran-1.onrender.com",
 
     ENDPOINTS: {
 
-        FILES:
-        "/api/files",
+        FILES: "/api/files",
 
-        AUTH:
-        "/api/auth",
+        AUTH: "/api/auth",
 
-        PLANS:
-        "/api/plans"
+        PLANS: "/api/plans",
+
+        PDF_VIEWER:
+            "/workspace1/pdf-viewer/web/viewer.html"
 
     }
 

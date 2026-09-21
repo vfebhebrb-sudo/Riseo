@@ -1,7 +1,7 @@
 const CONFIG = {
 
     API:
-    "https://iran-go4q.onrender.com",
+    "https://iran-1.onrender.com",
 
     ENDPOINTS:{
 
