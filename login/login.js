@@ -306,7 +306,7 @@ await fetch(
                     // صفحه مخصوص دسکتاپ
 
                     window.location.href =
-                    "../welcome.html";
+                    "../اصلی/index2.html";
 
 
                 }

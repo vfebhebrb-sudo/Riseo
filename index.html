@@ -17,7 +17,7 @@
 
 <link rel="icon" href="./icon.png">
 
-
+<link rel="stylesheet" href="./اصلی/ssss.css">
 <link 
 href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
 rel="stylesheet">
@@ -29,798 +29,344 @@ rel="stylesheet">
     <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#0b0b0b">
 
-
 <style>
-    /* ==========================================
-        RESET
-========================================== */
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:"Vazirmatn",sans-serif;
+    
+/* =========================================
+   THEME VARIABLES
+========================================= */
+:root {
+
+    /* ---------- Main ---------- */
+
+    --files-bg: #dfe3e8;
+    --files-text: #172033;
+
+
+
+    /* ---------- Header ---------- */
+
+    --files-header-bg-start: #eef1f4;
+    --files-header-bg-end: #e1e5ea;
+
+    --files-header-border: #d2d7df;
+
+    --files-header-shadow:
+        0 4px 14px rgba(30,38,50,.09);
+
+
+
+    /* ---------- Header Title ---------- */
+
+    --files-title-color: #162033;
+
+    --files-title-icon-color: #3b4658;
+
+    --files-title-icon-bg-start: #d8dde4;
+    --files-title-icon-bg-end: #cdd3dc;
+
+    --files-title-icon-border: #c3cad4;
+
+
+
+    /* ---------- Search ---------- */
+
+    --files-search-bg-start: #e5e8ed;
+    --files-search-bg-end: #d9dee5;
+
+    --files-search-focus-bg: #eef1f5;
+
+    --files-search-border: #cbd2dc;
+
+    --files-search-focus-border: #aeb7c3;
+
+    --files-search-focus-ring:
+        0 0 0 3px rgba(70,80,95,.12);
+
+    --files-search-text: #293548;
+
+    --files-search-placeholder: #7c8797;
+
+    --files-search-icon: #697586;
+
+
+
+    /* ---------- User ---------- */
+
+    --files-user-name: #4b5565;
+
+    --files-user-icon: #7a8595;
+
+
+    --files-avatar-color: #566173;
+
+    --files-avatar-bg-start: #d8dde4;
+
+    --files-avatar-bg-end: #cbd2dc;
+
+    --files-avatar-border: #bec6d1;
+
+    --files-avatar-shadow:
+        inset 0 1px 2px rgba(255,255,255,.6);
+
+
+
+    /* ---------- Subject Cards ---------- */
+
+    --subject-card-bg: #edf0f4;
+
+    --subject-card-border: #d8dde5;
+
+    --subject-card-shadow:
+        0 8px 20px rgba(30,38,50,.10);
+
+
+
+    /* ---------- Subject Icon Colors ---------- */
+
+    --icon-calculus: #3b82f6;
+    --icon-calculus-bg: #dbeafe;
+
+
+    --icon-geometry: #ec4899;
+    --icon-geometry-bg: #fce7f3;
+
+
+    --icon-discrete: #8b5cf6;
+    --icon-discrete-bg: #ede9fe;
+
+
+    --icon-physics: #10b981;
+    --icon-physics-bg: #d1fae5;
+
+
+    --icon-chemistry: #f59e0b;
+    --icon-chemistry-bg: #fef3c7;
+
+
+    --icon-literature: #3b82f6;
+    --icon-literature-bg: #dbeafe;
+
+
+    --icon-arabic: #0891b2;
+    --icon-arabic-bg: #cffafe;
+
+
+    --icon-religion: #a21caf;
+    --icon-religion-bg: #fae8ff;
+
+
+    --icon-english: #ef4444;
+    --icon-english-bg: #fee2e2;
+
+
+    --icon-health: #65a30d;
+    --icon-health-bg: #ecfccb;
+
+
+    --icon-social: #2563eb;
+    --icon-social-bg: #dbeafe;
+
+
+    --icon-other: #64748b;
+    --icon-other-bg: #e2e8f0;
+
+
+    /* =========================================
+   SUBJECT ICON FIXED COLORS
+========================================= */
+
+
+--calculus-icon-bg:#eaf2ff;
+--calculus-icon:#2563eb;
+
+
+--geometry-icon-bg:#fdebf5;
+--geometry-icon:#ec4899;
+
+
+--discrete-icon-bg:#f0eaff;
+--discrete-icon:#7c3aed;
+
+
+--physics-icon-bg:#e7faf2;
+--physics-icon:#10b981;
+
+
+--chemistry-icon-bg:#fff4dc;
+--chemistry-icon:#f59e0b;
+
+
+--literature-icon-bg:#e9f1ff;
+--literature-icon:#2563eb;
+
+
+--arabic-icon-bg:#e5f8fc;
+--arabic-icon:#0891b2;
+
+
+--religion-icon-bg:#f8e8fc;
+--religion-icon:#a21caf;
+
+
+--english-icon-bg:#ffecec;
+--english-icon:#ef4444;
+
+
+--health-icon-bg:#effbdc;
+--health-icon:#65a30d;
+
+
+--social-icon-bg:#e9f1ff;
+--social-icon:#2563eb;
+
+
+--other-icon-bg:#eef1f5;
+--other-icon:#64748b;
 }
 
 
-html{
-    scroll-behavior:smooth;
-}
+/* =========================================
+   DARK THEME
+========================================= */
 
+body.dark-theme {
 
-body{
 
-    min-height:100vh;
+    /* ---------- Main ---------- */
 
-    background-image: url(./01/ChatGPT\ Image\ Sep\ 1\,\ 2026\,\ 01_56_23\ PM.png);
+    --files-bg: #171b22;
+    --files-text: #e5e7eb;
 
-    color:var(--text);
 
-    overflow-x:hidden;
 
-}
+    /* ---------- Header ---------- */
 
+    --files-header-bg-start: #202631;
+    --files-header-bg-end: #1b2029;
 
+    --files-header-border: #303846;
 
-/* ==========================================
-        THEME SYSTEM
-========================================== */
+    --files-header-shadow:
+        0 5px 18px rgba(0,0,0,.25);
 
 
-:root{
 
+    /* ---------- Title ---------- */
 
-    --background:#111315;
+    --files-title-color: #f1f5f9;
 
-    --surface:#191c21;
+    --files-title-icon-color: #cbd5e1;
 
-    --surface-hover:#22262d;
+    --files-title-icon-bg-start: #303846;
+    --files-title-icon-bg-end: #252c37;
 
+    --files-title-icon-border: #3b4555;
 
-    --text:#f9fafb;
 
-    --text-secondary:#9ca3af;
 
+    /* ---------- Search ---------- */
 
-    --border:#292e36;
+    --files-search-bg-start: #252c37;
+    --files-search-bg-end: #202631;
 
+    --files-search-focus-bg: #2b3442;
 
+    --files-search-border: #3a4555;
 
-    --accent:#3b82f6;
+    --files-search-focus-border: #64748b;
 
-    --accent-soft:#172554;
+    --files-search-focus-ring:
+        0 0 0 3px rgba(148,163,184,.12);
 
 
+    --files-search-text: #e2e8f0;
 
-    --gradient:
-    linear-gradient(
-        135deg,
-        #3b82f6,
-        #8b5cf6
-    );
+    --files-search-placeholder: #94a3b8;
 
+    --files-search-icon: #94a3b8;
 
 
-    --glass:
-    rgba(255,255,255,.05);
 
+    /* ---------- User ---------- */
 
+    --files-user-name: #cbd5e1;
 
-    --glass-border:
-    rgba(255,255,255,.08);
+    --files-user-icon: #94a3b8;
 
 
+    --files-avatar-color: #cbd5e1;
 
-    --shadow:
-    0 15px 40px rgba(0,0,0,.35);
+    --files-avatar-bg-start: #303846;
 
+    --files-avatar-bg-end: #252c37;
 
-}
+    --files-avatar-border: #3b4555;
 
 
+    --files-avatar-shadow:
+        inset 0 1px 2px rgba(255,255,255,.05);
 
-.light-theme{
 
 
-    --background:#f5f6f8;
+    /* ---------- Cards ---------- */
 
+    --subject-card-bg: #202631;
 
-    --surface:#ffffff;
+    --subject-card-border: #303846;
 
+    --subject-card-shadow:
+        0 8px 25px rgba(0,0,0,.25);
 
-    --surface-hover:#f3f4f6;
 
 
+    /* ---------- Icon backgrounds ---------- */
 
-    --text:#111827;
-
-
-    --text-secondary:#6b7280;
-
-
-
-    --border:#e5e7eb;
-
-
-
-    --accent:#2563eb;
-
-
-    --accent-soft:#eff6ff;
-
-
-
-    --glass:
-    rgba(255,255,255,.7);
-
-
-
-    --glass-border:
-    rgba(0,0,0,.08);
-
-
-
-    --shadow:
-    0 15px 40px rgba(0,0,0,.08);
-
-
-}
-
-
-
-/* ==========================================
-        LINKS
-========================================== */
-
-
-a{
-
-    text-decoration:none;
-
-    color:inherit;
-
-}
-
-
-
-/* ==========================================
-        CONTAINER
-========================================== */
-
-
-section{
-
-    width:100%;
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:40px 20px;
-
-}
-
-
-
-
-
-
-/* ==========================================
-        HEADER
-========================================== */
-
-
-.main-header{
-
-    position:sticky;
-
-    top:20px;
-
-    z-index:100;
-
-
-    width:calc(100% - 40px);
-
-    max-width:1200px;
-
-    margin:20px auto 0;
-
-
-    padding:15px 25px;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-
-    background:var(--glass);
-
-    backdrop-filter:blur(18px);
-
-
-    border:1px solid var(--glass-border);
-
-
-    border-radius:22px;
-
-
-    box-shadow:var(--shadow);
-
-}
-
-
-
-
-/* BRAND */
-
-
-.brand{
-
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-
-    font-size:22px;
-
-    font-weight:800;
-
-
-}
-
-
-
-.brand svg{
-
-    width:32px;
-
-    height:32px;
-
-
-    color:var(--accent);
-
-}
-
-
-
-
-
-/* MENU */
-
-
-.main-header nav{
-
-
-    display:flex;
-
-    gap:35px;
-
-
-}
-
-
-
-.main-header nav a{
-
-
-    color:var(--text-secondary);
-
-
-    font-size:15px;
-
-    transition:.3s;
-
-
-}
-
-
-
-.main-header nav a:hover{
-
-
-    color:var(--text);
-
-}
-
-
-
-
-
-/* LOGIN BUTTON */
-
-
-.header-actions a{
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    padding:10px 22px;
-
-
-    border-radius:14px;
-
-
-    background:var(--accent);
-
-
-    color:white;
-
-
-    font-size:14px;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.header-actions a:hover{
-
-
-    transform:translateY(-2px);
-
-
-    box-shadow:
-    0 10px 25px
-    rgba(59,130,246,.35);
-
-
-}
-
-
-@media(max-width:700px){
-
-
-.main-header{
-
-
-    width:calc(100% - 24px);
-
-    padding:12px 16px;
-
-
-}
-
-
-
-.main-header nav{
-
-    display:none;
-
-}
-
-
-
-.brand{
-
-    font-size:18px;
-
-}
-
-
-
-.header-actions a{
-
-
-    padding:8px 15px;
-
-    font-size:13px;
-
-
-}
+    --icon-calculus-bg:#1e3a5f;
+    --icon-geometry-bg:#4a2438;
+    --icon-discrete-bg:#35235c;
+    --icon-physics-bg:#164235;
+    --icon-chemistry-bg:#594116;
+    --icon-literature-bg:#1e3a5f;
+    --icon-arabic-bg:#164653;
+    --icon-religion-bg:#52205c;
+    --icon-english-bg:#5b2525;
+    --icon-health-bg:#344d18;
+    --icon-social-bg:#1e3a5f;
+    --icon-other-bg:#334155;
+
+
+
+  
+
+--calculus-icon-bg:#183153;
+--geometry-icon-bg:#4a2038;
+--discrete-icon-bg:#34205b;
+--physics-icon-bg:#123d32;
+--chemistry-icon-bg:#503b13;
+--literature-icon-bg:#183153;
+--arabic-icon-bg:#123d47;
+--religion-icon-bg:#4b174f;
+--english-icon-bg:#542020;
+--health-icon-bg:#304b12;
+--social-icon-bg:#183153;
+--other-icon-bg:#334155;
 
 
 
 }
 
 
-
-
-/* ==========================================
-        HERO
-========================================== */
-
-
-.hero{
-
-    max-width:1200px;
-
-    margin:80px auto;
-
-
-    padding:20px;
-
-
-    display:grid;
-
-    grid-template-columns:1fr 420px;
-
-
-    gap:60px;
-
-
-    align-items:center;
-
+@font-face {
+    font-family: "Digi SarvenazL";
+    src: url("./speech-to-text/Digi\ Sarvenaz.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
 }
-
-
-
-
-
-.hero-badge{
-
-
-    display:inline-flex;
-
-
-    padding:8px 18px;
-
-
-    border-radius:50px;
-
-
-    background:var(--accent-soft);
-
-
-    color:var(--accent);
-
-
-    font-size:14px;
-
-
-    margin-bottom:25px;
-
-
-}
-
-
-
-.hero h1{
-
-
-    font-size:55px;
-
-
-    line-height:1.3;
-
-
-    font-weight:900;
-
-
-}
-
-
-
-.hero h1 span{
-
-
-    display:block;
-
-
-    background:var(--gradient);
-
-
-    -webkit-background-clip:text;
-
-
-    color:transparent;
-
-
-}
-
-
-
-
-
-.hero p{
-
-
-    margin-top:25px;
-
-
-    color:var(--text-secondary);
-
-
-    font-size:18px;
-
-
-    line-height:2;
-
-
-    max-width:600px;
-
-
-}
-
-
-
-
-
-.hero-buttons{
-
-
-    display:flex;
-
-
-    gap:15px;
-
-
-    margin-top:35px;
-
-
-}
-
-
-
-
-
-.primary-btn,
-.secondary-btn{
-
-
-    padding:15px 30px;
-
-
-    border-radius:16px;
-
-
-    font-weight:700;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-.primary-btn{
-
-
-    background:var(--accent);
-
-
-    color:white;
-
-
-}
-
-
-
-.secondary-btn{
-
-
-    border:1px solid var(--border);
-
-
-    background:var(--surface);
-
-
-}
-
-
-
-
-.primary-btn:hover,
-.secondary-btn:hover{
-
-
-    transform:translateY(-4px);
-
-
-}
-
-
-
-
-
-/* STATS */
-
-
-.hero-stats{
-
-
-    display:flex;
-
-
-    gap:30px;
-
-
-    margin-top:50px;
-
-
-}
-
-
-
-.hero-stats div{
-
-
-    display:flex;
-
-    flex-direction:column;
-
-
-}
-
-
-
-.hero-stats strong{
-
-
-    font-size:22px;
-
-
-}
-
-
-
-.hero-stats span{
-
-
-    color:var(--text-secondary);
-
-
-    font-size:13px;
-
-
-}
-
-.hero-card{
-
-
-    padding:30px;
-
-
-    background:var(--glass);
-
-
-    backdrop-filter:blur(20px);
-
-
-    border:1px solid var(--glass-border);
-
-
-    border-radius:30px;
-
-
-    box-shadow:var(--shadow);
-
-
-}
-
-
-
-.floating-icon{
-
-
-    font-size:45px;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-.study-box{
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    margin-top:15px;
-
-
-    padding:18px;
-
-
-    background:var(--surface);
-
-
-    border-radius:18px;
-
-
-}
-
-
-
-.progress{
-
-
-    height:10px;
-
-
-    background:var(--border);
-
-
-    border-radius:20px;
-
-
-    margin-top:25px;
-
-
-}
-
-
-
-.progress div{
-
-
-    width:75%;
-
-
-    height:100%;
-
-
-    border-radius:20px;
-
-
-    background:var(--accent);
-
-
-}
-
-@media(max-width:850px){
-
-
-.hero{
-
-
-    grid-template-columns:1fr;
-
-    margin-top:10px;
-
-
-}
-
-
-
-.hero h1{
-
-    font-size:38px;
-
-}
-
-
-
-.hero-buttons{
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-.hero-stats{
-
-
-    justify-content:space-between;
-
-}
-
-
-
+.riseo-hero .a4,
+.riseo-hero .a4 p,
+.riseo-hero .a4 p span {
+    font-family: "Digi SarvenazL", sans-serif;
 }
 
 
@@ -831,768 +377,650 @@ section{
 
 
 
-/* ==========================================
-        ARTICLE BOX
-========================================== */
-
-
-.article-box-section{
-
-    max-width:1200px;
-
-    margin:100px auto;
-
-    padding:20px;
-
+.category-nav {
+    animation: notebookPageIn 1s cubic-bezier(.16, 1, .3, 1) both;
+    transform-origin: top center;
 }
 
+@keyframes notebookPageIn {
 
-
-.article-box{
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
-    display:grid;
-
-
-    grid-template-columns:1fr 300px;
-
-
-    gap:40px;
-
-
-    padding:50px;
-
-
-
-    background:var(--glass);
-
-
-    backdrop-filter:blur(25px);
-
-
-    border:1px solid var(--glass-border);
-
-
-    border-radius:35px;
-
-
-    box-shadow:var(--shadow);
-
-
-
-    animation:articleShow 1s ease forwards;
-
-
-}
-
-
-
-
-
-@keyframes articleShow{
-
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(60px);
-
+    0% {
+        opacity: 0;
+        transform:
+            translateY(-70px)
+            rotateX(-12deg);
     }
 
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
+    60% {
+        opacity: 1;
+        transform:
+            translateY(8px)
+            rotateX(2deg);
     }
 
+    82% {
+        transform:
+            translateY(-3px)
+            rotateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            rotateX(0);
+    }
+}
+
+/* =========================================
+   RISEO LOGO ANIMATION
+========================================= */
+
+.riseo-hero .a4 p {
+    animation: riseoLogoIn 1.2s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.riseo-hero .a4 p span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: riseoLetterIn .8s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+/* ورود تک تک حروف */
+
+.riseo-hero .a4 p span:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.riseo-hero .a4 p span:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.riseo-hero .a4 p span:nth-child(3) {
+    animation-delay: .19s;
+}
+
+.riseo-hero .a4 p span:nth-child(4) {
+    animation-delay: .26s;
+}
+
+.riseo-hero .a4 p span:nth-child(5) {
+    animation-delay: .33s;
+}
+
+
+@keyframes riseoLetterIn {
+
+    0% {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes riseoLogoIn {
+
+    from {
+        filter: blur(5px);
+    }
+
+    to {
+        filter: blur(0);
+    }
 
 }
 
 
 
 
-.article-tag{
+/* =========================================
+   RISEO PERIODIC WAVE
+========================================= */
 
+.riseo-hero .a4 p span {
+    position: relative;
+    animation:
+        riseoLetterIn .8s cubic-bezier(.22, 1, .36, 1) forwards,
+        riseoWave 6s ease-in-out infinite;
+}
 
-    color:var(--accent);
+/* تأخیر ورود اولیه */
+.riseo-hero .a4 p span:nth-child(1) {
+    animation-delay: .05s, 2s;
+}
 
+.riseo-hero .a4 p span:nth-child(2) {
+    animation-delay: .12s, 2.12s;
+}
 
-    font-weight:700;
+.riseo-hero .a4 p span:nth-child(3) {
+    animation-delay: .19s, 2.24s;
+}
 
+.riseo-hero .a4 p span:nth-child(4) {
+    animation-delay: .26s, 2.36s;
+}
 
+.riseo-hero .a4 p span:nth-child(5) {
+    animation-delay: .33s, 2.48s;
 }
 
 
+/* موج نرم */
+@keyframes riseoWave {
 
-.article-content h2{
+    0%,
+    58%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 
+    61% {
+        transform: translateY(-7px) rotate(-2deg);
+    }
 
-    margin-top:20px;
+    64% {
+        transform: translateY(3px) rotate(1deg);
+    }
 
+    67% {
+        transform: translateY(-4px) rotate(-1deg);
+    }
 
-    font-size:38px;
-
-
-    line-height:1.5;
-
-
-}
-
-
-
-.article-content p{
-
-
-    margin-top:20px;
-
-
-    color:var(--text-secondary);
-
-
-    line-height:2.2;
-
-
-    font-size:16px;
-
-
-}
-
-
-
-
-
-.article-points{
-
-
-    margin-top:30px;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    gap:15px;
-
-
-}
-
-
-
-.article-points div{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:12px;
-
-
-}
-
-
-
-.article-points i{
-
-
-    color:#22c55e;
-
-
+    70% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 
 
 
 
+/* =========================================
+   RISEO CENTER HERO
+========================================= */
 
-/* Decoration */
+.riseo-hero {
+    width: 100%;
+    min-height: 430px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.article-decoration{
+    padding: 45px 20px 70px;
+}
 
+/* لوگوی RISEO */
+.riseo-hero .a4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    position:relative;
+    width: 100%;
+}
 
+.riseo-hero .a4 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display:flex;
+    margin: 0;
 
+    font-family: Arial, sans-serif;
+    font-size: clamp(90px, 13vw, 190px);
+    font-weight: 800;
+    letter-spacing: 0.08em;
 
-    align-items:center;
+    line-height: 1;
+    direction: ltr;
 
+    color: var(--files-title-color);
+}
 
-    justify-content:center;
-
-
+.riseo-hero .a4 p span {
+    display: inline-block;
 }
 
 
+/* =========================================
+   RISEO - CENTER
+========================================= */
 
+.riseo-hero {
+    width: 100%;
+    min-height: 430px;
 
-.article-decoration i{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
+    padding: 40px 0;
+    margin: 0;
+}
 
-    position:relative;
+.riseo-hero .a4 {
+    width: 100% !important;
+    height: auto;
 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    z-index:2;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
 
+.riseo-hero .a4 p {
+    width: 100% !important;
 
-    font-size:90px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
+    margin: 0 !important;
+    padding: 0 !important;
 
-    color:var(--accent);
+    direction: ltr;
+    text-align: center;
 
+    font-size: clamp(90px, 13vw, 190px);
+    line-height: 1;
+}
+/* =========================================
+   HEADER AUTH BUTTONS
+========================================= */
 
+.header-auth-btn {
+    height: 36px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-family: "Tanha FD-WOL", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        color .2s ease;
 }
 
 
+/* ورود */
 
+.header-login-btn {
+    color: #dbe3ec;
 
+    background: #252c37;
 
-.circle-one,
-.circle-two{
+    border: 1px solid #3a4555;
+}
 
+.header-login-btn:hover {
+    color: #fff;
 
-    position:absolute;
+    background: #2d3542;
 
+    border-color: #566274;
 
-    border-radius:50%;
+    transform: translateY(-1px);
 
-
-    filter:blur(1px);
-
-
+    box-shadow: 0 5px 14px rgba(0,0,0,.18);
 }
 
 
+/* ثبت نام */
 
-.circle-one{
+.header-register-btn {
+    color: #fff;
 
-
-    width:220px;
-
-    height:220px;
-
-
-    background:
-    rgba(59,130,246,.25);
+    background: #ef4444;
 
 
+    border: 1px solid #ef4444;
+
+    box-shadow: 0 4px 12px rgba(37,99,235,.18);
 }
 
+.header-register-btn:hover {
+    background: #373a3f;
 
+    border-color: #2d2f32;
 
-.circle-two{
+    transform: translateY(-1px);
 
-
-    width:140px;
-
-    height:140px;
-
-
-    background:
-    rgba(139,92,246,.25);
-
-
-}
-
-
-@media(max-width:850px){
-
-
-.article-box{
-
-
-    grid-template-columns:1fr;
-
-
-    padding:30px;
-
-
-}
-
-
-
-.article-decoration{
-
-
-    height:200px;
-
-
-}
-
-
-
-.article-content h2{
-
-
-    font-size:28px;
-
-
-}
-
-
+    box-shadow: 0 6px 17px rgba(37,99,235,.28);
 }
 </style>
 
 </head>
+<body class="dark-theme">
+
+  
+    <header class="site-header">
+
+        <div class="header-inner">
+
+        <div class="a4">
+            <p>
+                <span>R</span><span>I</span><span>S</span><span>E</span><span>O</span>
+            </p>
+        </div>
 
 
-<body>
+            <!-- Search -->
+            <div class="header-search">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="m21 21-4.35-4.35
+                           M10.8 18a7.2 7.2 0 1 1 0-14.4
+                           7.2 7.2 0 0 1 0 14.4Z"
+                    />
+                </svg>
+
+                <input
+                    type="search"
+                    placeholder="جستجو در درس‌ها، فایل‌ها و..."
+                    aria-label="جستجو"
+                >
+
+            </div>
 
 
-
-<!-- HEADER -->
-
-<header class="main-header">
+            <!-- Header Actions -->
+            <div class="header-actions">
 
 
-<div class="brand">
-
-
-<i data-lucide="graduation-cap"></i>
-
-
-<span>
-Konkur
-</span>
-
-
-</div>
-
-
-
-<nav>
-
-
-<a href="#">
-خانه
+<a href="./login/login.html" class="header-auth-btn header-login-btn">
+    <span>ورود</span>
 </a>
 
-
-<a href="#">
-امکانات
+<a href="./login/register.html" class="header-auth-btn header-register-btn">
+    <span>ثبت‌نام</span>
 </a>
+            </div>
+
+        </div>
 
 
-<a href="#">
-درباره
-</a>
+        <!-- =========================================
+             CATEGORY NAVIGATION
+        ========================================== -->
+
+        <nav
+            class="category-nav"
+            aria-label="دسته‌بندی اصلی"
+        >
+
+            <div class="category-inner">
 
 
-</nav>
+                <!-- Lessons -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M4 5h16v14H4z"/>
+
+                            <path d="M8 9h8"/>
+
+                            <path d="M8 13h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        درس‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Exams -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="4"
+                                y="4"
+                                width="16"
+                                height="16"
+                                rx="2"
+                            />
+
+                            <path d="M8 9h8"/>
+
+                            <path d="M8 13h6"/>
+
+                            <path d="M8 17h4"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        آزمون‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Archive -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M3 7h7l2 2h9v10H3z"/>
+
+                            <path d="M3 7V5h7l2 2"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        بایگانی
+                    </span>
+
+                </a>
+
+
+                <!-- Schedule -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="4"
+                                y="5"
+                                width="16"
+                                height="15"
+                                rx="2"
+                            />
+
+                            <path d="M8 3v4"/>
+
+                            <path d="M16 3v4"/>
+
+                            <path d="M4 10h16"/>
+
+                            <path d="M8 14h3"/>
+
+                            <path d="M8 17h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        برنامه
+                    </span>
+
+                </a>
+
+
+                <!-- Files -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M5 4h14v16H5z"/>
+
+                            <path d="M8 8h8"/>
+
+                            <path d="M8 12h8"/>
+
+                            <path d="M8 16h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        فایل‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Notifications -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+
+                            <path d="M10 21h4"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        اعلان‌ها
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
 
 
 
-<div class="header-actions">
-
-
-<a href="./login/login.html">
-ورود
-</a>
-
-
-</div>
-
-
-</header>
 
 
 
 
 
-
-<!-- HERO -->
-
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <span class="hero-badge">
-            🚀 برنامه هوشمند کنکور
-        </span>
-
-
-        <h1>
-            مسیر موفقیت در کنکور
-            <span>
-                از امروز شروع می‌شود
-            </span>
-        </h1>
-
-        <p class="seo-text">
-
-روبو من کنکوری ابرکوه یک همراه هوشمند برای دانش‌آموزانی است که می‌خواهند مسیر کنکور خود را با برنامه‌ریزی دقیق و مدیریت زمان بهتر طی کنند.
-
-</p>
-
+<section class="riseo-hero">
+    <div class="a4">
         <p>
-            برنامه‌ریزی، مدیریت زمان و بررسی پیشرفت
-            در یک محیط ساده و هوشمند برای رسیدن به هدف.
+            <span>R</span>
+            <span>I</span>
+            <span>S</span>
+            <span>E</span>
+            <span>O</span>
         </p>
-
-
-        <div class="hero-buttons">
-
-            <a href="./login/login.html" class="primary-btn">
-                شروع برنامه
-            </a>
-
-
-<button id="installAppBtn" class="secondary-btn" style="color: white;">
-
-    <i class="fa-solid fa-mobile-screen-button"></i>
-
-    نصب نسخه موبایل
-
-</button>
-
-        </div>
-
-
-        <div class="hero-stats">
-
-
-            <div>
-                <strong>
-                    24/7
-                </strong>
-                <span>
-                    همراه مطالعه
-                </span>
-            </div>
-
-
-
-            <div>
-                <strong>
-                    10 ماه
-                </strong>
-                <span>
-                    برنامه‌ریزی
-                </span>
-            </div>
-
-
-
-            <div>
-                <strong>
-                    هوشمند
-                </strong>
-                <span>
-                    مدیریت زمان
-                </span>
-            </div>
-
-
-        </div>
-
-
     </div>
-
-
-
-
-    <div class="hero-card">
-
-
-        <div class="floating-icon">
-            🎯
-        </div>
-
-
-        <h3>
-            امروز چه برنامه‌ای داری؟
-        </h3>
-
-
-        <div class="study-box">
-
-            <span>
-                ریاضی
-            </span>
-
-            <strong>
-                2:30 ساعت
-            </strong>
-
-        </div>
-
-
-
-        <div class="study-box">
-
-            <span>
-                فیزیک
-            </span>
-
-            <strong>
-                1:45 ساعت
-            </strong>
-
-        </div>
-
-
-
-        <div class="progress">
-
-            <div></div>
-
-        </div>
-
-
-        <small>
-            پیشرفت امروز ۷۵٪
-        </small>
-
-
-    </div>
-
-
 </section>
 
 
 
-<section class="article-box-section">
 
 
-    <div class="article-box">
 
 
-        <div class="article-content">
 
+    <!-- =========================
+         BOTTOM LINE
+    ========================== -->
 
-            <span class="article-tag">
-                ✨ درباره برنامه کنکور
-            </span>
+    <div class="page-bottom-line"></div>
 
 
-
-            <h2>
-                یک همراه هوشمند برای ساختن آینده‌ای بهتر
-            </h2>
-
-
-
-            <p>
-                موفقیت در کنکور فقط به ساعت‌های زیاد مطالعه وابسته نیست؛
-                داشتن یک برنامه منظم، مدیریت زمان و بررسی مداوم عملکرد
-                نقش بسیار مهمی در رسیدن به هدف دارد.
-                برنامه کنکور طراحی شده تا تمام ابزارهای مورد نیاز یک
-                دانش‌آموز را در یک محیط ساده، زیبا و هوشمند فراهم کند.
-            </p>
-
-
-
-            <p>
-                با استفاده از برنامه هفتگی می‌توانید مسیر مطالعه خود را
-                مشخص کنید، درس‌ها را مدیریت کنید و هر روز بدانید چه کاری
-                باید انجام دهید. تایمر مطالعه به شما کمک می‌کند زمان واقعی
-                مطالعه را ثبت کنید و تمرکز بیشتری روی یادگیری داشته باشید.
-            </p>
-
-
-
-            <p>
-                علاوه بر این، بخش گزارش پیشرفت به شما نشان می‌دهد که در
-                مسیر خود چگونه حرکت کرده‌اید، چه مقدار مطالعه داشته‌اید و
-                برای رسیدن به هدف چه قدم‌هایی باقی مانده است.
-            </p>
-
-
-
-
-            <div class="article-points">
-
-
-                <div>
-                    <i class="fa-solid fa-check"></i>
-                    برنامه‌ریزی دقیق و ساده
-                </div>
-
-
-                <div>
-                    <i class="fa-solid fa-check"></i>
-                    مدیریت زمان مطالعه
-                </div>
-
-
-                <div>
-                    <i class="fa-solid fa-check"></i>
-                    مشاهده رشد و پیشرفت
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-
-
-
-        <div class="article-decoration">
-
-
-            <div class="circle-one"></div>
-
-
-            <div class="circle-two"></div>
-
-
-            <i class="fa-solid fa-graduation-cap"></i>
-
-
-        </div>
-
-
-
-    </div>
-
-
-</section>
-
-<section class="seo-about">
-
-<h2>
-روبو من کنکوری ابرکوه
-</h2>
-
-<p>
-سایت روبو من کنکوری ابرکوه یک سیستم هوشمند برنامه‌ریزی کنکور است که به دانش‌آموزان کمک می‌کند برنامه مطالعه بسازند، زمان خود را مدیریت کنند و پیشرفت خود را بررسی کنند.
-</p>
-
-</section>
-
-<script>
-    // ==========================================
-// PWA INSTALL
-// ==========================================
-
-
-let deferredPrompt;
-
-
-const installBtn = document.getElementById(
-    "installAppBtn"
-);
-
-
-
-window.addEventListener(
-    "beforeinstallprompt",
-    (e)=>{
-
-
-        // جلوگیری از نمایش خودکار
-        e.preventDefault();
-
-
-        // ذخیره برای بعد
-        deferredPrompt = e;
-
-
-        // نمایش دکمه
-        installBtn.style.display = "flex";
-
-
-    }
-);
-
-
-
-
-
-installBtn.addEventListener(
-    "click",
-    async ()=>{
-
-
-        if(!deferredPrompt){
-
-            alert(
-                "امکان نصب در این مرورگر وجود ندارد"
-            );
-
-            return;
-
-        }
-
-
-
-        // باز کردن پنجره نصب
-        deferredPrompt.prompt();
-
-
-
-        const result =
-        await deferredPrompt.userChoice;
-
-
-
-        if(result.outcome === "accepted"){
-
-
-            console.log(
-                "App Installed"
-            );
-
-
-        }
-
-
-
-        deferredPrompt = null;
-
-
-    }
-);
-
-
-
-
-
-window.addEventListener(
-    "appinstalled",
-    ()=>{
-
-
-        console.log(
-            "Konkur App Installed"
-        );
-
-
-        installBtn.style.display="none";
-
-
-    }
-);
-</script>
-
-<script>
-
-lucide.createIcons();
-
-
-</script>
-
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
-
 </html>

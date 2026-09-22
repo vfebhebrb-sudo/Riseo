@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyPro | سامانه آموزشی</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+        <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Vazirmatn -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+        rel="stylesheet"> -->
+
+        
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0b0b0b">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./ssss.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+        <div class="a4">
+            <p>
+                <span>R</span><span>I</span><span>S</span><span>E</span><span>O</span>
+            </p>
+        </div>
+
+
+            <!-- Search -->
+            <div class="header-search">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="m21 21-4.35-4.35
+                           M10.8 18a7.2 7.2 0 1 1 0-14.4
+                           7.2 7.2 0 0 1 0 14.4Z"
+                    />
+                </svg>
+
+                <input
+                    type="search"
+                    placeholder="جستجو در درس‌ها، فایل‌ها و..."
+                    aria-label="جستجو"
+                >
+
+            </div>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+
+                <!-- Notifications -->
+                <button
+                    type="button"
+                    class="header-action"
+                    aria-label="اعلان‌ها"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                        />
+                        <path d="M10 21h4"/>
+
+                    </svg>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- Theme -->
+                <button
+                    type="button"
+                    class="header-action"
+                    aria-label="تغییر حالت نمایش"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        />
+
+                        <path
+                            d="
+                                M12 2v2
+                                M12 20v2
+                                M4.93 4.93l1.42 1.42
+                                M17.65 17.65l1.42 1.42
+                                M2 12h2
+                                M20 12h2
+                                M4.93 19.07l1.42-1.42
+                                M17.65 6.35l1.42-1.42
+                            "
+                        />
+
+                    </svg>
+
+                </button>
+
+
+                <!-- User -->
+                <!-- <button
+                    type="button"
+                    class="user-menu"
+                    aria-label="پروفایل کاربری"
+                >
+
+                    <div class="user-avatar">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="3.2"
+                            />
+
+                            <path
+                                d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong>
+                         
+                        </strong>
+
+                        <span>
+                            دانش‌آموز
+                        </span>
+
+                    </div>
+
+
+                    <svg
+                        class="user-chevron"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="m7 10 5 5 5-5"/>
+                    </svg>
+
+                </button> -->
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             CATEGORY NAVIGATION
+        ========================================== -->
+
+        <nav
+            class="category-nav"
+            aria-label="دسته‌بندی اصلی"
+        >
+
+            <div class="category-inner">
+
+
+                <!-- Lessons -->
+                <a
+                    href="#"
+                    class="category-item active"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M4 5h16v14H4z"/>
+
+                            <path d="M8 9h8"/>
+
+                            <path d="M8 13h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        درس‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Exams -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="4"
+                                y="4"
+                                width="16"
+                                height="16"
+                                rx="2"
+                            />
+
+                            <path d="M8 9h8"/>
+
+                            <path d="M8 13h6"/>
+
+                            <path d="M8 17h4"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        آزمون‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Archive -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M3 7h7l2 2h9v10H3z"/>
+
+                            <path d="M3 7V5h7l2 2"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        بایگانی
+                    </span>
+
+                </a>
+
+
+                <!-- Schedule -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="4"
+                                y="5"
+                                width="16"
+                                height="15"
+                                rx="2"
+                            />
+
+                            <path d="M8 3v4"/>
+
+                            <path d="M16 3v4"/>
+
+                            <path d="M4 10h16"/>
+
+                            <path d="M8 14h3"/>
+
+                            <path d="M8 17h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        برنامه
+                    </span>
+
+                </a>
+
+
+                <!-- Files -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M5 4h14v16H5z"/>
+
+                            <path d="M8 8h8"/>
+
+                            <path d="M8 12h8"/>
+
+                            <path d="M8 16h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        فایل‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Notifications -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+
+                            <path d="M10 21h4"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        اعلان‌ها
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+         
+         بخش‌های اصلی سایت در مراحل بعدی
+         اینجا اضافه می‌شوند.
+    ========================================== -->
+
+    
+
+    <main class="main-content">
+<section class="dashboard-main-row">
+
+<div class="today-schedule-card">
+
+    <div class="schedule-boxes">
+
+        <!-- =========================
+             جلسه پیش
+        ========================== -->
+
+        <div class="meeting-box">
+
+            <div class="meeting-header">
+
+                <div class="meeting-title">
+                    <span class="meeting-dot last"></span>
+                    <strong>جلسه پیش</strong>
+                </div>
+
+                <span class="meeting-status last-status">
+              ------
+                </span>
+
+            </div>
+
+
+            <!-- زمان قرار -->
+
+            <div class="meeting-time-box">
+
+                <div class="meeting-time-icon">
+                    <i data-lucide="clock-3"></i>
+                </div>
+
+                <div class="meeting-time-info">
+
+                    <span>زمان قرار</span>
+
+                    <strong id="last-session-time">
+                       ------
+                    </strong>
+
+                </div>
+
+                <div class="meeting-date">
+                    <span id="last-session-day">
+                   ------
+                    </span>
+
+                    <strong id="last-session-date">
+                ----
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- درس -->
+
+            <div class="meeting-course">
+
+                <div class="course-logo" id="last-session-logo">
+                    <i data-lucide="book-open"></i>
+                </div>
+
+                <div class="course-info">
+
+                    <span>درس</span>
+
+                    <strong id="last-session-title">
+                  ------
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- مبحث -->
+
+            <div class="meeting-topic">
+
+                <i data-lucide="book-marked"></i>
+
+                <div>
+                    <span>مبحث</span>
+
+                    <strong id="last-session-topic">
+                      ------
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- دانش آموز -->
+
+            <div class="meeting-student">
+
+                <div class="student-avatar">
+                    <i data-lucide="user-round"></i>
+                </div>
+
+                <div>
+                    <span>دانش‌آموز</span>
+
+                    <strong id="last-session-student">
+                       ------
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             جلسه پیش رو
+        ========================== -->
+
+        <div class="meeting-box next-box">
+
+            <div class="meeting-header">
+
+                <div class="meeting-title">
+                    <span class="meeting-dot next"></span>
+                    <strong>جلسه پیش‌رو</strong>
+                </div>
+
+                <span class="meeting-status next-status">
+                    پیش رو
+                </span>
+
+            </div>
+
+
+            <!-- زمان قرار -->
+
+            <div class="meeting-time-box">
+
+                <div class="meeting-time-icon next-time-icon">
+                    <i data-lucide="clock-3"></i>
+                </div>
+
+                <div class="meeting-time-info">
+
+                    <span>زمان قرار</span>
+
+                    <strong id="next-session-time">
+                        ۱۷:۰۰ تا ۱۸:۳۰
+                    </strong>
+
+                </div>
+
+                <div class="meeting-date">
+
+                    <span id="next-session-day">
+                        شنبه
+                    </span>
+
+                    <strong id="next-session-date">
+                        ۳۰ شهریور
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- درس -->
+
+            <div class="meeting-course">
+
+                <div class="course-logo next-course-logo" id="next-session-logo">
+                    <i data-lucide="flask-conical"></i>
+                </div>
+
+                <div class="course-info">
+
+                    <span>درس</span>
+
+                    <strong id="next-session-title">
+                        شیمی
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- مبحث -->
+
+            <div class="meeting-topic">
+
+                <i data-lucide="book-marked"></i>
+
+                <div>
+                    <span>مبحث</span>
+
+                    <strong id="next-session-topic">
+                        ساختار اتم
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- دانش آموز -->
+
+            <div class="meeting-student">
+
+                <div class="student-avatar">
+                    <i data-lucide="user-round"></i>
+                </div>
+
+                <div>
+
+                    <span>دانش‌آموز</span>
+
+                    <strong id="next-session-student">
+                        ----
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- ==================================================
+         USER PROFILE CARD
+    ================================================== -->
+
+    <div class="ai-dashboard-card user-info-card" id="user-profile-card">
+
+        <!-- ورود به پنل کاربری -->
+        <a href="../index1.html" class="user-panel-entry">
+
+            <span>
+                ورود به پنل کاربری
+            </span>
+
+            <i data-lucide="external-link"></i>
+
+        </a>
+
+
+        <!-- اطلاعات اصلی کاربر -->
+        <div class="user-info-main">
+
+            <!-- آواتار -->
+            <div class="user-profile-logo" id="user-profile-logo">
+
+                <i data-lucide="user-round"></i>
+
+            </div>
+
+
+            <!-- نام و وضعیت -->
+            <div class="user-profile-heading">
+
+                <span class="user-profile-label">
+                    پروفایل کاربر
+                </span>
+
+                <h3 id="user-profile-name">
+                    در حال بارگذاری...
+                </h3>
+
+                <span class="user-status" id="user-profile-status">
+
+                    <span></span>
+
+                    <span id="user-profile-status-text">
+                        در حال بررسی...
+                    </span>
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             اطلاعات کاربر
+        ================================================== -->
+
+        <div class="user-info-details">
+
+
+            <!-- شماره تلفن -->
+            <div class="user-info-item">
+
+                <div class="user-info-icon">
+
+                    <i data-lucide="phone"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        شماره تلفن
+                    </span>
+
+                    <strong id="user-profile-phone">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- چت آیدی -->
+            <div class="user-info-item">
+
+                <div class="user-info-icon">
+
+                    <i data-lucide="message-circle"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        چت آیدی
+                    </span>
+
+                    <strong id="user-profile-chat-id">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- سابقه حضور -->
+            <div class="user-info-item">
+
+                <div class="user-info-icon">
+
+                    <i data-lucide="calendar-check-2"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        سابقه حضور
+                    </span>
+
+                    <strong id="user-profile-study-days">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="quick-access-section">
+
+    <!-- آزمون -->
+    <div class="quick-access-card quick-exam">
+        <div class="quick-access-top">
+
+            <div class="quick-access-logo">
+                <i data-lucide="clipboard-check"></i>
+            </div>
+
+            <a href="../تست/tests.html" class="quick-access-enter">
+                ورود
+                <i data-lucide="arrow-left"></i>
+            </a>
+
+        </div>
+
+        <div class="quick-access-text">
+            متن توضیحی آزمون
+        </div>
+    </div>
+
+
+    <!-- بایگانی -->
+    <div class="quick-access-card quick-archive">
+        <div class="quick-access-top">
+
+            <div class="quick-access-logo">
+                <i data-lucide="archive"></i>
+            </div>
+
+            <a href="../speech-to-text/1.html" class="quick-access-enter">
+                ورود
+                <i data-lucide="arrow-left"></i>
+            </a>
+
+        </div>
+
+        <div class="quick-access-text">
+            متن توضیحی بایگانی
+        </div>
+    </div>
+
+
+    <!-- ماز -->
+    <div class="quick-access-card quick-maz">
+        <div class="quick-access-top">
+
+            <div class="quick-access-logo">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <a href="#" class="quick-access-enter">
+                ورود
+                <i data-lucide="arrow-left"></i>
+            </a>
+
+        </div>
+
+        <div class="quick-access-text">
+            متن توضیحی ماز
+        </div>
+    </div>
+
+
+    <!-- قلمچی -->
+    <div class="quick-access-card quick-kanoon">
+        <div class="quick-access-top">
+
+            <div class="quick-access-logo">
+                <i data-lucide="book-open-check"></i>
+            </div>
+
+            <a href="#" class="quick-access-enter">
+                ورود
+                <i data-lucide="arrow-left"></i>
+            </a>
+
+        </div>
+
+        <div class="quick-access-text">
+            متن توضیحی قلمچی
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="dashboard-lower-section">
+
+    <!-- =========================
+         اعلان ها
+    ========================== -->
+    <div class="lower-card announcements-card">
+
+        <div class="lower-card-header">
+            <div class="lower-card-title">
+                <i data-lucide="bell"></i>
+                <span>اعلان‌ها</span>
+            </div>
+
+            <a href="#" class="lower-view-all">
+                مشاهده همه
+                <i data-lucide="arrow-left"></i>
+            </a>
+        </div>
+
+        <div class="announcements-list">
+
+            <div class="announcement-item">
+                <div class="announcement-main">
+                    <span class="announcement-dot blue"></span>
+
+                    <div class="announcement-content">
+                        <strong>برگزاری آزمون آزمایشی جامع</strong>
+                        <p>زمان برگزاری آزمون آزمایشی جامع اعلام شد.</p>
+                    </div>
+                </div>
+
+                <div class="announcement-date">
+                    <span>۱۴۰۴/۰۵/۲۶ ۱۴:۴۵</span>
+                    <small>۱۰:۴۵</small>
+                </div>
+            </div>
+
+
+            <div class="announcement-item">
+                <div class="announcement-main">
+                    <span class="announcement-dot green"></span>
+
+                    <div class="announcement-content">
+                        <strong>تغییر در برنامه درسی هفته آینده</strong>
+                        <p>به اطلاع دانش‌آموزان محترم می‌رساند...</p>
+                    </div>
+                </div>
+
+                <div class="announcement-date">
+                    <span>۱۴۰۴/۰۵/۲۵ ۱۶:۲۰</span>
+                    <small>۱۰:۲۰</small>
+                </div>
+            </div>
+
+
+            <div class="announcement-item">
+                <div class="announcement-main">
+                    <span class="announcement-dot purple"></span>
+
+                    <div class="announcement-content">
+                        <strong>آپلود جزوه جدید فیزیک</strong>
+                        <p>جزوه فصل ۴ فیزیک در بخش فایل‌ها قرار گرفت.</p>
+                    </div>
+                </div>
+
+                <div class="announcement-date">
+                    <span>۱۴۰۴/۰۵/۲۴ ۱۳:۲۰</span>
+                    <small>۱۳:۲۰</small>
+                </div>
+            </div>
+
+
+            <div class="announcement-item">
+                <div class="announcement-main">
+                    <span class="announcement-dot red"></span>
+
+                    <div class="announcement-content">
+                        <strong>اطلاعیه مهم درباره آزمون قلمچی</strong>
+                        <p>جزئیات ثبت‌نام و زمان آزمون اعلام شد.</p>
+                    </div>
+                </div>
+
+                <div class="announcement-date">
+                    <span>۱۴۰۴/۰۵/۲۳ ۰۹:۱۵</span>
+                    <small>۰۹:۱۵</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =========================
+         آخرین فایل ها
+    ========================== -->
+ <div class="lower-card uploaded-files-card">
+
+    <div class="lower-card-header">
+
+        <div class="lower-card-title">
+            <div class="lower-card-icon">
+                <i data-lucide="folder-open"></i>
+            </div>
+
+            <div>
+                <h3>فایل‌های آپلود شده</h3>
+                
+            </div>
+        </div>
+
+        <button
+            type="button"
+            class="uploaded-files-refresh"
+            id="uploaded-files-refresh"
+            aria-label="بروزرسانی فایل‌ها"
+        >
+            <i data-lucide="refresh-cw"></i>
+        </button>
+
+    </div>
+
+
+    <div class="uploaded-files-toolbar">
+
+        <div class="uploaded-files-search">
+            <i data-lucide="search"></i>
+
+            <input
+                type="search"
+                id="uploaded-files-search"
+                placeholder="جست‌وجوی فایل..."
+                autocomplete="off"
+            >
+        </div>
+
+    </div>
+
+
+    <div
+        class="uploaded-files-list"
+        id="uploaded-files-list"
+    >
+
+        <!-- فایل‌ها توسط JS اینجا ساخته می‌شوند -->
+
+    </div>
+
+</div>
+    <!-- =========================
+         درس های من
+    ========================== -->
+    <div class="lower-card my-lessons-card">
+
+        <div class="lower-card-header">
+
+            <div class="lower-card-title">
+                <i data-lucide="chart-no-axes-column"></i>
+                <span>درس‌های من</span>
+            </div>
+
+            <a href="#" class="lower-view-all">
+                مشاهده همه
+                <i data-lucide="arrow-left"></i>
+            </a>
+
+        </div>
+
+
+        <div class="lessons-list">
+
+            <div class="lesson-item">
+                <div class="lesson-name">
+                    <span class="lesson-icon math">
+                        <i data-lucide="pi"></i>
+                    </span>
+                    ریاضی
+                </div>
+
+                <div class="lesson-progress">
+                    <span>۷۵٪</span>
+                    <div class="progress-track">
+                        <div class="progress-fill math-fill" style="width:75%"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lesson-item">
+                <div class="lesson-name">
+                    <span class="lesson-icon physics">
+                        <i data-lucide="flask-conical"></i>
+                    </span>
+                    فیزیک
+                </div>
+
+                <div class="lesson-progress">
+                    <span>۶۰٪</span>
+                    <div class="progress-track">
+                        <div class="progress-fill physics-fill" style="width:60%"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lesson-item">
+                <div class="lesson-name">
+                    <span class="lesson-icon chemistry">
+                        <i data-lucide="flask-round"></i>
+                    </span>
+                    شیمی
+                </div>
+
+                <div class="lesson-progress">
+                    <span>۵۰٪</span>
+                    <div class="progress-track">
+                        <div class="progress-fill chemistry-fill" style="width:50%"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lesson-item">
+                <div class="lesson-name">
+                    <span class="lesson-icon english">
+                        <i data-lucide="a-large-small"></i>
+                    </span>
+                    زبان انگلیسی
+                </div>
+
+                <div class="lesson-progress">
+                    <span>۴۰٪</span>
+                    <div class="progress-track">
+                        <div class="progress-fill english-fill" style="width:40%"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lesson-item">
+                <div class="lesson-name">
+                    <span class="lesson-icon literature">
+                        <i data-lucide="book-open"></i>
+                    </span>
+                    ادبیات فارسی
+                </div>
+
+                <div class="lesson-progress">
+                    <span>۳۰٪</span>
+                    <div class="progress-track">
+                        <div class="progress-fill literature-fill" style="width:30%"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lesson-item">
+                <div class="lesson-name">
+                    <span class="lesson-icon arabic">
+                        <i data-lucide="languages"></i>
+                    </span>
+                    عربی
+                </div>
+
+                <div class="lesson-progress">
+                    <span>۲۰٪</span>
+                    <div class="progress-track">
+                        <div class="progress-fill arabic-fill" style="width:20%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    <!-- JavaScript -->
+    <script src="../config.js"></script>
+        <script src="../config1.js"></script>
+
+    <script src="app.js"></script>
+<!-- فعال کردن آیکون ها -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+</body>
+
+</html>
