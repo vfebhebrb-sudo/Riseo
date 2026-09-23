@@ -389,10 +389,10 @@ body {
 ========================================================= */
 
 .header-inner {
-    width: 100%;
+    width: min(1440px, calc(100% - 56px));
     min-height: 76px;
 
-    /* margin: 0 auto; */
+    margin: 0 auto;
 
     padding: 0 22px;
 
@@ -800,11 +800,11 @@ body {
 ========================================================= */
 
 .category-nav {
-    width:100%;
+    width: min(1440px, calc(100% - 56px));
 
     height: 60px;
 
-    margin-top: 5PX;
+    margin: 14px auto 0;
         margin-top: 5px;
     position: relative;
     z-index: 90;
@@ -4585,21 +4585,3 @@ body.dark-theme .next-box {
     width: 15px !important;
     height: 15px !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -14517,3 +14517,1129 @@ body > *:not(.site-header):not(.ai-assistant):not(.ai-chat-panel) {
 .lesson-start-btn:active {
     transform: scale(.96);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--files-bg);
+    color: var(--files-text);
+
+    font-family: "Tanha FD-WOL", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   HEADER — مستقل و جدا از CATEGORY NAV
+========================================================= */
+
+.site-header {
+    width: 100%;
+
+    position: relative;
+    z-index: 100;
+
+    background: transparent;
+
+    border: 0;
+    box-shadow: none;
+
+    padding-top: 14px;
+}
+
+
+/* =========================================================
+   HEADER INNER — کارت مستقل بالایی
+========================================================= */
+
+.header-inner {
+    width: 100%;
+    min-height: 76px;
+
+    /* margin: 0 auto; */
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start),
+            var(--files-header-bg-end)
+        );
+
+    border: 1px solid var(--files-header-border);
+    border-radius: 16px;
+
+    box-shadow:
+        var(--files-header-shadow);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    color: var(--files-title-color);
+
+    text-decoration: none;
+}
+
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--files-title-icon-bg-start),
+            var(--files-title-icon-bg-end)
+        );
+
+    border: 1px solid var(--files-title-icon-border);
+
+    color: var(--files-title-icon-color);
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,.55),
+        0 3px 8px rgba(30,38,50,.06);
+}
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.15;
+}
+
+
+.brand-text strong {
+    color: var(--files-title-color);
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+
+    letter-spacing: -.3px;
+}
+
+
+.brand-text span {
+    margin-top: 5px;
+
+    color: var(--files-user-icon);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   HEADER SEARCH
+========================================================= */
+
+.header-search {
+    width: min(500px, 100%);
+    height: 44px;
+
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--files-search-bg-start),
+            var(--files-search-bg-end)
+        );
+
+    border: 1px solid var(--files-search-border);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.header-search:focus-within {
+    background: var(--files-search-focus-bg);
+
+    border-color: var(--files-search-focus-border);
+
+    box-shadow: var(--files-search-focus-ring);
+}
+
+
+.header-search svg {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    fill: none;
+
+    stroke: var(--files-search-icon);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.header-search input {
+    width: 100%;
+    height: 100%;
+
+    outline: none;
+    border: 0;
+
+    background: transparent;
+
+    color: var(--files-search-text);
+
+    font-family: inherit;
+    font-size: 12px;
+}
+
+
+.header-search input::placeholder {
+    color: var(--files-search-placeholder);
+}
+
+
+.header-search input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.header-action {
+    width: 42px;
+    height: 42px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: var(--files-user-icon);
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+
+.header-action:hover {
+    background: var(--files-search-bg-start);
+    color: var(--files-title-icon-color);
+}
+
+
+.header-action:active {
+    transform: scale(.95);
+}
+
+
+.header-action svg {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   NOTIFICATION DOT
+========================================================= */
+
+.notification-dot {
+    width: 7px;
+    height: 7px;
+
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    border-radius: 50%;
+
+    background: #ef4444;
+
+    border: 2px solid var(--files-header-bg-start);
+}
+
+
+/* =========================================================
+   USER MENU
+========================================================= */
+
+.user-menu {
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 4px 8px 4px 9px;
+
+    border: 0;
+    border-radius: 13px;
+
+    background: transparent;
+
+    direction: rtl;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease;
+}
+
+
+.user-menu:hover {
+    background: var(--files-search-bg-start);
+}
+
+
+/* =========================================================
+   USER AVATAR
+========================================================= */
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--files-avatar-bg-start),
+            var(--files-avatar-bg-end)
+        );
+
+    border: 1px solid var(--files-avatar-border);
+
+    color: var(--files-avatar-color);
+
+    box-shadow: var(--files-avatar-shadow);
+}
+
+
+.user-avatar svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   USER INFO
+========================================================= */
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1.15;
+}
+
+
+.user-info strong {
+    color: var(--files-user-name);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.user-info span {
+    margin-top: 4px;
+
+    color: var(--files-user-icon);
+
+    font-size: 9px;
+}
+
+
+.user-chevron {
+    width: 15px;
+    height: 15px;
+
+    margin-right: 2px;
+
+    fill: none;
+
+    stroke: var(--files-user-icon);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   CATEGORY NAV
+   کارت دوم — کاملاً مستقل از HEADER
+========================================================= */
+
+.category-nav {
+    width:100%;
+
+    height: 60px;
+
+    margin-top: 5PX;
+        margin-top: 5px;
+    position: relative;
+    z-index: 90;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start),
+            var(--files-header-bg-end)
+        );
+
+    border: 1px solid var(--files-header-border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        var(--files-header-shadow);
+
+    overflow: hidden;
+}
+
+
+/* حالت دارک */
+
+body.dark-theme .category-nav {
+    background: rgba(32,38,49,.72);
+
+    border-color: rgba(70,78,92,.65);
+}
+
+
+/* =========================================================
+   CATEGORY INNER
+========================================================= */
+
+.category-inner {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    padding: 5px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   CATEGORY ITEM
+========================================================= */
+
+.category-item {
+    min-width: 112px;
+    height: 48px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 17px;
+
+    border-radius: 11px;
+
+    color: var(--files-user-icon);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+/* خط فعال */
+
+.category-item::after {
+    content: "";
+
+    width: calc(100% - 34px);
+    height: 2px;
+
+    position: absolute;
+
+    right: 17px;
+    bottom: 2px;
+
+    border-radius: 3px;
+
+    background: #3b82f6;
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.category-item:hover {
+    color: var(--files-title-color);
+
+    background: rgba(59,130,246,.055);
+}
+
+
+.category-item:hover::after,
+.category-item.active::after {
+    transform: scaleX(1);
+}
+
+
+.category-item.active {
+    color: #2563eb;
+
+    background: rgba(59,130,246,.065);
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.category-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: var(--files-user-icon);
+
+    transition:
+        color .2s ease,
+        background .2s ease;
+}
+
+
+.category-item:hover .category-icon,
+.category-item.active .category-icon {
+    color: #2563eb;
+
+    background: #e8f0ff;
+}
+
+
+body.dark-theme .category-item:hover .category-icon,
+body.dark-theme .category-item.active .category-icon {
+    background: #1e3a5f;
+}
+
+
+.category-icon svg {
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   فاصله از CATEGORY هم حفظ می‌شود
+========================================================= */
+
+.main-content {
+    width: min(1440px, calc(100% - 56px));
+
+    margin: 0 auto;
+
+    padding: 24px 0 50px;
+        padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-inner,
+    .category-nav,
+    .main-content {
+        width: calc(100% - 36px);
+    }
+
+
+    .header-inner {
+        gap: 16px;
+    }
+
+
+    .header-search {
+        max-width: 380px;
+    }
+
+
+    .category-item {
+        min-width: 100px;
+
+        padding-inline: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .brand-text {
+        display: none;
+    }
+
+
+    .header-search {
+        max-width: none;
+    }
+
+
+    .user-info,
+    .user-chevron {
+        display: none;
+    }
+
+
+    .user-menu {
+        padding: 4px;
+    }
+
+
+    .category-nav {
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+
+    .category-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .category-inner {
+        width: max-content;
+
+        min-width: 100%;
+
+        padding-inline: 12px;
+
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding-top: 10px;
+    }
+
+
+    .header-inner {
+        width: calc(100% - 24px);
+
+        min-height: 68px;
+
+        padding-inline: 12px;
+
+        gap: 8px;
+
+        border-radius: 13px;
+    }
+
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+    }
+
+
+    .header-search {
+        height: 40px;
+
+        padding-inline: 12px;
+
+        border-radius: 10px;
+    }
+
+
+    .header-search svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .header-search input {
+        font-size: 11px;
+    }
+
+
+    .header-action {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .user-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* کارت دسته‌بندی مستقل */
+
+    .category-nav {
+        width: calc(100% - 24px);
+
+        height: 54px;
+
+        margin-top: 10px;
+
+        border-radius: 13px;
+    }
+
+
+    .category-item {
+        min-width: auto;
+
+        height: 44px;
+
+        padding-inline: 10px;
+
+        font-size: 11px;
+    }
+
+
+    .category-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    .category-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .main-content {
+        width: calc(100% - 24px);
+
+        padding-top: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 430px
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .header-inner {
+        gap: 5px;
+    }
+
+
+    .brand {
+        display: none;
+    }
+
+
+    .header-search {
+        flex: 1;
+    }
+
+
+    .header-actions {
+        gap: 0;
+    }
+
+
+    .category-inner {
+        padding-inline: 8px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: "Digi SarvenazL";
+    src: url("../speech-to-text/Digi\ Sarvenaz.otf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+.a4 {
+    font-family: "Digi SarvenazL";
+    font-size: 38px;
+}
+
+.a4 p {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+
+    direction: ltr;
+
+    letter-spacing: 1px;
+}
+
+.a4 p span {
+    display: inline-block;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+}
+
+
+/* R */
+.a4 p span:nth-child(1) {
+     color: #475569;
+}
+
+/* I */
+.a4 p span:nth-child(2) {
+    color: #475569;
+}
+
+/* S */
+.a4 p span:nth-child(3) {
+    color: #475569;
+}
+
+/* E */
+.a4 p span:nth-child(4) {
+   color: #ef4444;
+}
+
+/* O */
+.a4 p span:nth-child(5) {
+    color: #ef4444;
+}
+
+
+/* Hover ظریف */
+.a4:hover span {
+    transform: translateY(-2px);
+}
+
+.a4:hover span:nth-child(1),
+.a4:hover span:nth-child(5) {
+    filter: drop-shadow(0 3px 7px rgba(59,130,246,.25));
+}
+
+.a4:hover span:nth-child(3) {
+    filter: drop-shadow(0 3px 7px rgba(239,68,68,.22));
+}
+.a4 {
+    position: relative;
+    width: 100px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.a4 p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    margin: 0;
+
+    transform: translateY(-50%);
+
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
