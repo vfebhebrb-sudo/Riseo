@@ -333,6 +333,12 @@ body.dark-theme {
 }
 
 
+@font-face {
+    font-family: "Digi SarvenazL";
+    src: url("./speech-to-text/Digi\ Sarvenaz.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
 
 
 
@@ -15545,7 +15551,7 @@ input:focus-visible {
 
 @font-face {
     font-family: "Digi SarvenazL";
-    src: url("../speech-to-text/Digi\ Sarvenaz.otf") format("truetype");
+    src: url("./speech-to-text/Digi\ Sarvenaz.otf") format("truetype");
     font-weight: 100;
     font-style: normal;
 }
@@ -15643,3 +15649,22 @@ input:focus-visible {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* مخفی کردن نوار اسکرول، بدون غیرفعال کردن اسکرول */
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
