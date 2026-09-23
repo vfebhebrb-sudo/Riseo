@@ -4037,57 +4037,31 @@ function loadWeeklyTasks(selectedDay) {
         /* =================================================
            HTML کارت درس
         ================================================= */
+lessonCard.innerHTML = `
+    <div class="lesson-logo">
+        <i data-lucide="${subjectIcon}"></i>
+    </div>
 
-        lessonCard.innerHTML = `
+    <div class="lesson-name">
+        ${subjectName}
+    </div>
 
-            <div class="lesson-item-info">
+    <div class="lesson-note">
+        ${
+            note && note !== "-"
+                ? note
+                : "بدون یادداشت"
+        }
+    </div>
 
-                <div class="lesson-item-title">
-
-                    <i
-                        data-lucide="${subjectIcon}">
-                    </i>
-
-                    <span>
-                        ${subjectName}
-                    </span>
-
-                </div>
-
-
-                <div class="lesson-item-topic">
-                    ${topic}
-                </div>
-
-            </div>
-
-
-            <div class="lesson-item-note">
-
-                ${
-                    note && note !== "-"
-                        ? note
-                        : "بدون یادداشت"
-                }
-
-            </div>
-
-
-            <button
-                type="button"
-                class="lesson-start-btn"
-            >
-
-                <i data-lucide="play"></i>
-
-                <span>
-                    شروع مطالعه
-                </span>
-
-            </button>
-
-        `;
-
+    <button
+        type="button"
+        class="lesson-start-btn"
+    >
+        <i data-lucide="play"></i>
+        <span>شروع مطالعه</span>
+    </button>
+`;
 
         /* -------------------------------------------------
            اضافه کردن کارت به لیست
@@ -12459,7 +12433,7 @@ function renderAssignments(){
                 <i data-lucide="clipboard-x"></i>
 
                 <span>
-                    هنوز تکلیفی ایجاد نشده است
+                         این بخش هنوز راهاندازی نشده است 
                 </span>
 
             </div>
