@@ -1,4689 +1,1245 @@
-/* ==========================================
-        GLOBAL RESET
-        تنظیمات اولیه کل صفحه
-========================================== */
+
+/* =========================================
+   THEME VARIABLES
+========================================= */
+:root {
+
+    /* ---------- Main ---------- */
+
+    --files-bg: #dfe3e8;
+    --files-text: #172033;
 
 
-*{
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    /* ---------- Header ---------- */
+
+    --files-header-bg-start: #eef1f4;
+    --files-header-bg-end: #e1e5ea;
+
+    --files-header-border: #d2d7df;
+
+    --files-header-shadow:
+        0 4px 14px rgba(30,38,50,.09);
+
+
+
+    /* ---------- Header Title ---------- */
+
+    --files-title-color: #162033;
+
+    --files-title-icon-color: #3b4658;
+
+    --files-title-icon-bg-start: #d8dde4;
+    --files-title-icon-bg-end: #cdd3dc;
+
+    --files-title-icon-border: #c3cad4;
+
+
+
+    /* ---------- Search ---------- */
+
+    --files-search-bg-start: #e5e8ed;
+    --files-search-bg-end: #d9dee5;
+
+    --files-search-focus-bg: #eef1f5;
+
+    --files-search-border: #cbd2dc;
+
+    --files-search-focus-border: #aeb7c3;
+
+    --files-search-focus-ring:
+        0 0 0 3px rgba(70,80,95,.12);
+
+    --files-search-text: #293548;
+
+    --files-search-placeholder: #7c8797;
+
+    --files-search-icon: #697586;
+
+
+
+    /* ---------- User ---------- */
+
+    --files-user-name: #4b5565;
+
+    --files-user-icon: #7a8595;
+
+
+    --files-avatar-color: #566173;
+
+    --files-avatar-bg-start: #d8dde4;
+
+    --files-avatar-bg-end: #cbd2dc;
+
+    --files-avatar-border: #bec6d1;
+
+    --files-avatar-shadow:
+        inset 0 1px 2px rgba(255,255,255,.6);
+
+
+
+    /* ---------- Subject Cards ---------- */
+
+    --subject-card-bg: #edf0f4;
+
+    --subject-card-border: #d8dde5;
+
+    --subject-card-shadow:
+        0 8px 20px rgba(30,38,50,.10);
+
+
+
+    /* ---------- Subject Icon Colors ---------- */
+
+    --icon-calculus: #3b82f6;
+    --icon-calculus-bg: #dbeafe;
+
+
+    --icon-geometry: #ec4899;
+    --icon-geometry-bg: #fce7f3;
+
+
+    --icon-discrete: #8b5cf6;
+    --icon-discrete-bg: #ede9fe;
+
+
+    --icon-physics: #10b981;
+    --icon-physics-bg: #d1fae5;
+
+
+    --icon-chemistry: #f59e0b;
+    --icon-chemistry-bg: #fef3c7;
+
+
+    --icon-literature: #3b82f6;
+    --icon-literature-bg: #dbeafe;
+
+
+    --icon-arabic: #0891b2;
+    --icon-arabic-bg: #cffafe;
+
+
+    --icon-religion: #a21caf;
+    --icon-religion-bg: #fae8ff;
+
+
+    --icon-english: #ef4444;
+    --icon-english-bg: #fee2e2;
+
+
+    --icon-health: #65a30d;
+    --icon-health-bg: #ecfccb;
+
+
+    --icon-social: #2563eb;
+    --icon-social-bg: #dbeafe;
+
+
+    --icon-other: #64748b;
+    --icon-other-bg: #e2e8f0;
+
+
+    /* =========================================
+   SUBJECT ICON FIXED COLORS
+========================================= */
+
+
+--calculus-icon-bg:#eaf2ff;
+--calculus-icon:#2563eb;
+
+
+--geometry-icon-bg:#fdebf5;
+--geometry-icon:#ec4899;
+
+
+--discrete-icon-bg:#f0eaff;
+--discrete-icon:#7c3aed;
+
+
+--physics-icon-bg:#e7faf2;
+--physics-icon:#10b981;
+
+
+--chemistry-icon-bg:#fff4dc;
+--chemistry-icon:#f59e0b;
+
+
+--literature-icon-bg:#e9f1ff;
+--literature-icon:#2563eb;
+
+
+--arabic-icon-bg:#e5f8fc;
+--arabic-icon:#0891b2;
+
+
+--religion-icon-bg:#f8e8fc;
+--religion-icon:#a21caf;
+
+
+--english-icon-bg:#ffecec;
+--english-icon:#ef4444;
+
+
+--health-icon-bg:#effbdc;
+--health-icon:#65a30d;
+
+
+--social-icon-bg:#e9f1ff;
+--social-icon:#2563eb;
+
+
+--other-icon-bg:#eef1f5;
+--other-icon:#64748b;
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+body.dark-theme {
+
+
+    /* ---------- Main ---------- */
+
+    --files-bg: #171b22;
+    --files-text: #e5e7eb;
+
+
+
+    /* ---------- Header ---------- */
+
+    --files-header-bg-start: #202631;
+    --files-header-bg-end: #1b2029;
+
+    --files-header-border: #303846;
+
+    --files-header-shadow:
+        0 5px 18px rgba(0,0,0,.25);
+
+
+
+    /* ---------- Title ---------- */
+
+    --files-title-color: #f1f5f9;
+
+    --files-title-icon-color: #cbd5e1;
+
+    --files-title-icon-bg-start: #303846;
+    --files-title-icon-bg-end: #252c37;
+
+    --files-title-icon-border: #3b4555;
+
+
+
+    /* ---------- Search ---------- */
+
+    --files-search-bg-start: #252c37;
+    --files-search-bg-end: #202631;
+
+    --files-search-focus-bg: #2b3442;
+
+    --files-search-border: #3a4555;
+
+    --files-search-focus-border: #64748b;
+
+    --files-search-focus-ring:
+        0 0 0 3px rgba(148,163,184,.12);
+
+
+    --files-search-text: #e2e8f0;
+
+    --files-search-placeholder: #94a3b8;
+
+    --files-search-icon: #94a3b8;
+
+
+
+    /* ---------- User ---------- */
+
+    --files-user-name: #cbd5e1;
+
+    --files-user-icon: #94a3b8;
+
+
+    --files-avatar-color: #cbd5e1;
+
+    --files-avatar-bg-start: #303846;
+
+    --files-avatar-bg-end: #252c37;
+
+    --files-avatar-border: #3b4555;
+
+
+    --files-avatar-shadow:
+        inset 0 1px 2px rgba(255,255,255,.05);
+
+
+
+    /* ---------- Cards ---------- */
+
+    --subject-card-bg: #202631;
+
+    --subject-card-border: #303846;
+
+    --subject-card-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+
+
+
+    /* ---------- Icon backgrounds ---------- */
+
+    --icon-calculus-bg:#1e3a5f;
+    --icon-geometry-bg:#4a2438;
+    --icon-discrete-bg:#35235c;
+    --icon-physics-bg:#164235;
+    --icon-chemistry-bg:#594116;
+    --icon-literature-bg:#1e3a5f;
+    --icon-arabic-bg:#164653;
+    --icon-religion-bg:#52205c;
+    --icon-english-bg:#5b2525;
+    --icon-health-bg:#344d18;
+    --icon-social-bg:#1e3a5f;
+    --icon-other-bg:#334155;
+
+
+
+  
+
+--calculus-icon-bg:#183153;
+--geometry-icon-bg:#4a2038;
+--discrete-icon-bg:#34205b;
+--physics-icon-bg:#123d32;
+--chemistry-icon-bg:#503b13;
+--literature-icon-bg:#183153;
+--arabic-icon-bg:#123d47;
+--religion-icon-bg:#4b174f;
+--english-icon-bg:#542020;
+--health-icon-bg:#304b12;
+--social-icon-bg:#183153;
+--other-icon-bg:#334155;
+
 
 
 }
 
 
 
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-
-
-/* ==========================================
-        BODY
-        استایل اصلی صفحه
-========================================== */
-
-
-body{
-
-
-    min-height:100vh;
-
-
-    background:var(--background);
-
-
-    color:var(--text);
-
-
-    font-family:"Vazirmatn",sans-serif;
-
-
-    direction:rtl;
-
-    margin-top: 10px;
-    margin-left:10px ;
-    margin-right: 10px;
-
-
-}
-
-
-
-/* ==========================================
-        THEME SYSTEM
-        سیستم تغییر حالت تاریک و روشن
-========================================== */
-
-
-:root{
-
-
-    --background:#111315;
-
-
-    --surface:#191c21;
-
-
-    --surface-hover:#22262d;
-
-
-    --text:#f9fafb;
-
-
-    --text-secondary:#9ca3af;
-
-
-    --border:#292e36;
-
-
-
-    --accent:#3b82f6;
-
-
-    --accent-soft:#172554;
-
-
-
-    --shadow:
-    0 8px 25px rgba(0,0,0,.35);
-
-
-}
-
-
-
-.light-theme{
-
-
-    --background:#f5f6f8;
-
-
-    --surface:#ffffff;
-
-
-    --surface-hover:#f3f4f6;
-
-
-    --text:#111827;
-
-
-    --text-secondary:#6b7280;
-
-
-    --border:#e5e7eb;
-
-
-
-    --accent:#2563eb;
-
-
-    --accent-soft:#eff6ff;
-
-
-
-    --shadow:
-    0 8px 25px rgba(0,0,0,.06);
-
-
+ @font-face {
+    font-family: "Tanha FD-WOL";
+    src: url("../speech-to-text/Tanha-FD-WOL.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
 }
 
 
 
 
 
-/* ==========================================
-        DESKTOP CONTAINER
-        فاصله کلی صفحه دسکتاپ
-========================================== */
 
 
-.desktop-app{
+/* =========================================
+   RESET
+========================================= */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    width:100%;
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
 
+body {
+    min-height: 100vh;
 
-    min-height:100vh;
+    background: var(--files-bg);
+    color: var(--files-text);
 
+    font-family: "Tanha FD-WOL", sans-serif;
 
-    padding:10px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
 
+/* =========================================================
+   HEADER — مستقل و جدا از CATEGORY NAV
+========================================================= */
 
+.site-header {
+    width: 100%;
+
+    position: relative;
+    z-index: 100;
+
+    background: transparent;
+
+    border: 0;
+    box-shadow: none;
+
+    padding-top: 14px;
 }
 
 
+/* =========================================================
+   HEADER INNER — کارت مستقل بالایی
+========================================================= */
 
+.header-inner {
+    width: min(1440px, calc(100% - 56px));
+    min-height: 76px;
 
+    margin: 0 auto;
 
-/* ==========================================
-        HEADER
-        هدر اصلی بالای صفحه
-========================================== */
+    padding: 0 22px;
 
+    display: flex;
+    align-items: center;
 
-.header{
-
-
-    width:100%;
-
-
-    height:70px;
-
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:space-between;
-
-
-
-    padding:0 24px;
-
-
-
-    background:var(--surface);
-
-
-
-    border:1px solid var(--border);
-
-
-
-    border-radius:14px;
-
-
-
-    box-shadow:var(--shadow);
-
-
-
-    transition:.3s ease;
-
-
-}
-
-
-
-
-
-/* ==========================================
-        HEADER LOGO
-        لوگوی برنامه
-========================================== */
-
-
-.header-logo{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-
-    color:var(--text);
-
-
-
-    font-size:18px;
-
-
-    font-weight:800;
-
-
-}
-
-
-
-.header-logo svg{
-
-
-    width:26px;
-
-
-    height:26px;
-
-
-    color:var(--accent);
-
-
-}
-
-
-
-
-
-/* ==========================================
-        HEADER BUTTONS
-        دکمه های سمت هدر
-========================================== */
-
-
-.header-actions{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-}
-
-
-
-
-.icon-btn{
-
-
-    width:42px;
-
-
-    height:42px;
-
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-
-    border-radius:12px;
-
-
-
-    cursor:pointer;
-
-
-
-    color:var(--text-secondary);
-
-
+    gap: 28px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.08),
-        transparent
-    );
-
-
-
-    border:1px solid var(--border);
-
-
-
-    transition:.25s ease;
-
-
-}
-
-
-
-.icon-btn svg{
-
-
-    width:20px;
-
-
-    height:20px;
-
-
-}
-
-
-
-
-.icon-btn:hover{
-
-
-    transform:translateY(-3px);
-
-
-    color:var(--text);
-
-
-
-    background:var(--surface-hover);
-
-
-
-    border-color:var(--accent);
-
-
-}
-
-
-
-
-
-/* ==========================================
-        DASHBOARD GRID
-        چیدمان اصلی کارت ها
-========================================== */
-
-
-.exam-dashboard{
-
-
-    width:100%;
-
-
-    margin-top:10px;
-
-
-
-    display:grid;
-
-
-
-    grid-template-columns:
-
-        300px
-
-        minmax(450px,1fr)
-
-        300px;
-
-
-
-    grid-template-areas:
-
-
-        "user active history"
-
-
-        "info info info";
-
-
-
-    gap:10px;
-
-
-
-    direction:rtl;
-
-
-}
-
-
-
-
-
-/* ==========================================
-        ALL CARDS BASE
-        استایل مشترک تمام کارت ها
-========================================== */
-
-
-.exam-user-card,
-.active-exams-card,
-.history-card,
-.exam-info-card{
-
-
-    background:var(--surface);
-
-
-
-    border:1px solid var(--border);
-
-
-
-    border-radius:16px;
-
-
-
-    box-shadow:var(--shadow);
-
-
-
-    transition:.3s ease;
-
-
-}
-
-
-
-
-
-.exam-user-card:hover,
-.active-exams-card:hover,
-.history-card:hover,
-.exam-info-card:hover{
-
-
-    border-color:var(--accent);
-
-
-}
-
-
-
-
-
-/* ==========================================
-        USER CARD
-        کارت اطلاعات دانش آموز سمت راست
-========================================== */
-
-
-.exam-user-card{
-
-
-    grid-area:user;
-
-
-    height:320px;
-
-
-}
-
-
-
-
-
-/* ==========================================
-        ACTIVE EXAMS CARD
-        کارت آزمون های فعال وسط
-========================================== */
-
-
-.active-exams-card{
-
-
-    grid-area:active;
-
-
-    height:320px;
-
-
-}
-
-
-
-
-
-/* ==========================================
-        HISTORY CARD
-        کارت سابقه سمت چپ
-========================================== */
-
-
-.history-card{
-
-
-    grid-area:history;
-
-
-    height:320px;
-
-
-}
-
-
-
-
-
-/* ==========================================
-        EXAM INFORMATION CARD
-        کارت اطلاعات آزمون پایین
-========================================== */
-
-
-.exam-info-card{
-
-
-    grid-area:info;
-
-
-    min-height:260px;
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================
-        USER CARD COMPACT PREMIUM STYLE
-        استایل حرفه ای کارت دانش آموز
-========================================== */
-
-
-/* ==========================================
-        USER HEADER
-========================================== */
-
-
-.exam-user-header{
-
-    height:70px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:12px 14px;
-
-    position:relative;
-
-}
-
-
-
-
-/* آیکون پروفایل */
-
-
-.user-icon-box{
-
-
-    width:46px;
-
-    height:46px;
-
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-
-    border-radius:14px;
-
-
-
-    background:
-
-    linear-gradient(
-        145deg,
-        rgba(59,130,246,.22),
-        rgba(59,130,246,.05)
-    );
-
-
-
-    border:
-
-    1px solid rgba(59,130,246,.22);
-
-
-
-    color:var(--accent);
-
-
-}
-
-
-
-.user-icon-box svg{
-
-    width:23px;
-
-    height:23px;
-
-}
-
-
-
-
-/* اطلاعات */
-
-
-.user-details h3{
-
-
-    font-size:14px;
-
-
-    font-weight:800;
-
-
-    color:var(--text);
-
-
-}
-
-
-
-.user-details span{
-
-
-    margin-top:3px;
-
-
-    font-size:10px;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-
-
-
-/* ==========================================
-        RANK BADGE
-========================================== */
-
-
-.user-rank{
-
-
-    position:absolute;
-
-
-    left:14px;
-
-
-    top:14px;
-
-
-
-    height:24px;
-
-
-    padding:0 8px;
-
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:4px;
-
-
-
-    border-radius:20px;
-
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        rgba(250,204,21,.18),
-        rgba(245,158,11,.08)
-    );
-
-
-
-    border:
-
-    1px solid rgba(250,204,21,.25);
-
-
-
-    color:#facc15;
-
-
-
-    font-size:9px;
-
-
-}
-
-
-
-
-.user-rank svg{
-
-
-    width:12px;
-
-
-    height:12px;
-
-
-}
-
-
-
-
-
-
-/* ==========================================
-        STAT GRID
-========================================== */
-
-
-.exam-info-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:1fr 1fr;
-
-
-    gap:8px;
-
-
-
-    padding:6px 12px;
-
-
-}
-
-
-
-
-
-.user-stat{
-
-
-    height:55px;
-
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-
-    gap:8px;
-
-
-
-    padding:8px;
-
-
-
-    border-radius:11px;
-
-
-
-    background:
-
-
-    rgba(255,255,255,.035);
-
-
-
-    border:
-
-    1px solid rgba(255,255,255,.06);
-
-
-
-    transition:.25s ease;
-
-
-
-}
-
-
-
-
-
-.user-stat:hover{
-
-
-    background:
-
-    rgba(59,130,246,.08);
-
-
-    transform:translateY(-2px);
-
-
-}
-
-
-
-
-
-.user-stat svg{
-
-
-    width:18px;
-
-
-    height:18px;
-
-
-
-    color:#60a5fa;
-
-
-}
-
-
-
-
-.user-stat span{
-
-
-    font-size:9px;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-
-.user-stat strong{
-
-
-    margin-top:2px;
-
-
-    font-size:13px;
-
-
-    color:var(--text);
-
-
-}
-
-
-
-
-
-/* ==========================================
-        MESSAGE BOX
-========================================== */
-
-
-.exam-warning{
-
-
-    margin:8px 12px;
-
-
-    padding:9px 10px;
-
-
-
-    min-height:52px;
-
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-
-    gap:8px;
-
-
-
-    border-radius:11px;
-
-
-
-    background:
-
-
-    linear-gradient(
-        135deg,
-        rgba(59,130,246,.14),
-        rgba(59,130,246,.03)
-    );
-
-
-
-    border:
-
-    1px solid rgba(59,130,246,.16);
-
-
-
-}
-
-
-
-
-.exam-warning svg{
-
-
-    width:18px;
-
-
-    height:18px;
-
-
-    color:#60a5fa;
-
-
-}
-
-
-
-
-.exam-warning p{
-
-
-    font-size:10px;
-
-
-    line-height:1.7;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-/* ==========================================
-        USER STATS PREMIUM GRID
-========================================== */
-
-
-.exam-info-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:10px;
-
-    padding:10px 14px;
-
-}
-
-
-
-
-.user-stat{
-
-    height:62px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-
-    padding:10px;
-
-
-    border-radius:14px;
-
-
-    background:
-
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.07),
-        rgba(255,255,255,.02)
-    );
-
-
-    border:1px solid rgba(255,255,255,.07);
-
-
-    transition:.3s ease;
-
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-
-
-
-/* افکت نور */
-
-
-.user-stat::after{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    width:35px;
-
-    height:100%;
-
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.15),
-
-        transparent
-
-    );
-
-
-    left:-50px;
-
-
-    transition:.5s;
-
-
-}
-
-
-
-.user-stat:hover::after{
-
-    left:120%;
-
-}
-
-
-
-
-
-.user-stat:hover{
-
-
-    transform:translateY(-3px);
-
-
-    border-color:var(--accent);
-
-
-}
-
-
-
-
-
-/* ICON */
-
-
-.user-stat svg{
-
-
-    width:22px;
-
-    height:22px;
-
-
-    padding:4px;
-
-
-    box-sizing:content-box;
-
-
-    border-radius:10px;
-
-
-    color:#60a5fa;
-
-
-    background:
-
-    rgba(59,130,246,.12);
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-.user-stat:hover svg{
-
-
-    transform:scale(1.12) rotate(6deg);
-
-
-}
-
-
-
-
-/* TEXT */
-
-
-.user-stat span{
-
-
-    display:block;
-
-
-    font-size:10px;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-.user-stat strong{
-
-
-    display:block;
-
-
-    margin-top:3px;
-
-
-    font-size:14px;
-
-
-    font-weight:900;
-
-
-}
-
-
-
-
-/* ==========================================
-        WARNING BOX
-========================================== */
-
-
-.exam-warning{
-
-
-    margin:8px 14px;
-
-
-    height:58px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-    padding:10px;
-
-
-    border-radius:14px;
-
-
-    background:
-
-    linear-gradient(
-
-        135deg,
-
-        rgba(59,130,246,.15),
-
-        rgba(59,130,246,.03)
-
-    );
-
-
-    border:1px solid rgba(59,130,246,.2);
-
-
-}
-
-
-
-.exam-warning svg{
-
-
-    width:22px;
-
-    height:22px;
-
-
-    color:#60a5fa;
-
-
-    animation:pulseIcon 2s infinite;
-
-
-}
-
-
-
-@keyframes pulseIcon{
-
-
-    0%,100%{
-
-        transform:scale(1);
-
-    }
-
-
-    50%{
-
-        transform:scale(1.15);
-
-    }
-
-}
-
-
-
-.exam-warning p{
-
-
-    font-size:10px;
-
-    line-height:1.8;
-
-    color:var(--text-secondary);
-
-
-}
-
-/* ==========================================
-        STAT ICON ANIMATIONS
-========================================== */
-
-
-.user-stat svg{
-
-    width:22px;
-    height:22px;
-
-    color:#60a5fa;
-
-    transition:.3s ease;
-
-}
-
-
-
-/* سابقه مطالعه - حرکت زمان */
-
-.user-stat:nth-child(1) svg{
-
-    animation:
-    calendarMove 3s ease-in-out infinite;
-
-}
-
-
-
-@keyframes calendarMove{
-
-    0%,100%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-3px);
-
-    }
-
-}
-
-
-
-
-
-/* آزمون ها - هدف گیری */
-
-
-.user-stat:nth-child(2) svg{
-
-
-    animation:
-
-    targetMove 2.5s ease infinite;
-
-
-}
-
-
-
-@keyframes targetMove{
-
-
-    0%,100%{
-
-        transform:scale(1);
-
-    }
-
-
-    50%{
-
-        transform:scale(1.12);
-
-    }
-
-
-}
-
-
-
-
-
-/* تراز - رشد */
-
-
-.user-stat:nth-child(3) svg{
-
-
-    animation:
-
-    chartMove 3s ease infinite;
-
-
-}
-
-
-
-@keyframes chartMove{
-
-
-    0%,100%{
-
-        transform:translateY(2px);
-
-    }
-
-
-    50%{
-
-        transform:translateY(-4px);
-
-    }
-
-
-}
-
-
-
-
-
-/* روزهای پیوسته - شعله */
-
-
-.user-stat:nth-child(4) svg{
-
-
-    color:#fb923c;
-
-
-    animation:
-
-    fireMove 1.4s ease-in-out infinite;
-
-
-}
-
-
-
-@keyframes fireMove{
-
-
-    0%,100%{
-
-        transform:
-
-        translateY(0)
-
-        rotate(-5deg);
-
-
-    }
-
-
-    50%{
-
-        transform:
-
-        translateY(-4px)
-
-        rotate(5deg);
-
-
-    }
-
-
-}
-
-
-
-
-
-/* هاور کارت */
-
-
-.user-stat:hover svg{
-
-
-    color:var(--accent);
-
-
-    transform:
-
-    scale(1.2)
-
-    rotate(8deg);
-
-
-}
-
-
-/* ==========================================
-        CURRENT EXAM DETAILS CARD
-========================================== */
-
-
-.exam-details-card{
-
-    width:100%;
-
-    height:320px;
-
-    padding:14px;
-
-    background:var(--surface);
-
-    border:1px solid var(--border);
-
-    border-radius:22px;
-
-    box-shadow:var(--shadow);
-
-    transition:.3s ease;
-
-}
-
-
-.exam-details-card:hover{
-
-    border-color:var(--accent);
-
-}
-
-
-
-
-
-
-/* ==========================================
-        TITLE
-========================================== */
-
-
-.exam-details-card .section-title{
-
-    height:38px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:0 14px;
-
-    border-radius:12px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        rgba(59,130,246,.15),
-        rgba(59,130,246,.03)
-    );
-
-    border:1px solid rgba(59,130,246,.18);
-
-    margin-bottom:12px;
-
-}
-
-
-
-.section-title svg{
-
-    width:18px;
-
-    color:var(--accent);
-
-}
-
-
-
-.section-title h3{
-
-    font-size:13px;
-
-    font-weight:900;
-
-}
-
-
-
-
-
-
-/* ==========================================
-        MAIN 3 COLUMN LAYOUT
-========================================== */
-
-
-.exam-details-layout{
-
-
-    height:240px;
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    .85fr 1.5fr .8fr;
-
-
-    gap:18px;
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================
-        COLUMN 1 META
-========================================== */
-
-
-.exam-meta-column{
-
-
-    display:flex;
-
-    flex-direction:column;
-
-
-    justify-content:center;
-
-
-    padding-left:15px;
-
-
-    border-left:1px solid var(--border);
-
-
-}
-
-
-
-
-
-.detail-item{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:12px;
-
-
-    height:38px;
-
-
-}
-
-
-
-.detail-item svg{
-
-
-    width:20px;
-
-    height:20px;
-
-
-    padding:5px;
-
-
-    border-radius:10px;
-
-
-    color:#60a5fa;
-
-
-    background:
-
-    rgba(59,130,246,.12);
-
-
-}
-
-
-
-.detail-item span{
-
-
-    display:block;
-
-
-    font-size:10px;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-.detail-item strong{
-
-
-    display:block;
-
-
-    margin-top:2px;
-
-
-    font-size:13px;
-
-
-    font-weight:900;
-
-
-    color:var(--text);
-
-
-}
-
-
-
-
-
-
-.meta-divider{
-
-
-    height:1px;
-
-
-    background:var(--border);
-
-
-    margin:5px 0;
-
-
-    opacity:.7;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* ==========================================
-        COLUMN 2 CONTENT
-========================================== */
-
-
-.exam-main-column{
-
-
-    padding:0 10px;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-
-
-.subject-header{
-
-
-    height:65px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:14px;
-
-
-}
-
-
-
-
-
-.subject-logo{
-
-
-    width:55px;
-
-    height:55px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    border-radius:16px;
-
-
-    background:
-
-    rgba(255,255,255,.08);
-
-
-    border:1px solid var(--border);
-
-
-    color:var(--accent);
-
-
-}
-
-
-
-
-.subject-logo svg{
-
-
-    width:28px;
-
-}
-
-
-
-
-.subject-info h2{
-
-
-    font-size:16px;
-
-
-    font-weight:900;
-
-
-    color:var(--text);
-
-
-}
-
-
-
-
-.subject-info span{
-
-
-    display:block;
-
-
-    margin-top:5px;
-
-
-    font-size:11px;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-
-
-
-.content-divider{
-
-
-    height:1px;
-
-
-    background:var(--border);
-
-
-    margin:12px 0;
-
-
-}
-
-
-
-
-
-
-.description-title{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:8px;
-
-
-    font-size:12px;
-
-
-    font-weight:900;
-
-
-}
-
-
-
-
-.description-title svg{
-
-
-    width:17px;
-
-
-    color:var(--accent);
-
-
-}
-
-
-
-
-
-.exam-description p{
-
-
-    margin-top:12px;
-
-
-    font-size:11px;
-
-
-    line-height:2;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* ==========================================
-        COLUMN 3 ACTION
-========================================== */
-
-
-.exam-action-column{
-
-
-    padding-right:15px;
-
-
-    border-right:1px solid var(--border);
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    justify-content:center;
-
-
-    gap:12px;
-
-
-}
-
-
-
-
-
-
-.notice-box{
-
-
-    padding:12px;
-
-
-    border-radius:14px;
-
-
-    background:
-
-    rgba(245,158,11,.08);
-
-
-    border:1px solid rgba(245,158,11,.25);
-
-
-}
-
-
-
-
-
-.notice-title{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:7px;
-
-
-    color:#fbbf24;
-
-
-    font-size:11px;
-
-
-    font-weight:900;
-
-
-}
-
-
-
-.notice-title svg{
-
-
-    width:17px;
-
-
-}
-
-
-
-
-
-.notice-box p{
-
-
-    margin-top:8px;
-
-
-    font-size:10px;
-
-
-    line-height:1.8;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-
-
-
-
-.exam-status{
-
-
-    height:32px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    gap:7px;
-
-
-    border-radius:20px;
-
-
-    background:
-
-    rgba(34,197,94,.12);
-
-
-    color:#4ade80;
-
-
-    font-size:11px;
-
-
-    border:
-
-    1px solid rgba(34,197,94,.25);
-
-
-}
-
-
-
-
-.exam-status svg{
-
-
-    width:16px;
-
-
-}
-
-
-
-
-
-
-
-
-/* ==========================================
-        START BUTTON
-========================================== */
-
-
-.start-exam-btn{
-
-
-    height:42px;
-
-
-    border:none;
-
-
-    border-radius:13px;
-
-
-    cursor:pointer;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    gap:8px;
-
-
-    font-family:inherit;
-
-
-    font-size:12px;
-
-
-    font-weight:900;
-
-
-    color:white;
-
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #3b82f6
-    );
-
-
-    transition:.3s ease;
-
-
-}
-
-
-
-
-
-.start-exam-btn svg{
-
-
-    width:17px;
-
-
-}
-
-
-
-.start-exam-btn:hover{
-
-
-    transform:translateY(-3px);
-
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start),
+            var(--files-header-bg-end)
+        );
+
+    border: 1px solid var(--files-header-border);
+    border-radius: 16px;
 
     box-shadow:
-
-    0 10px 25px rgba(59,130,246,.35);
-
-
-}
-
-.exam-dashboard{
-
-    width:100%;
-
-    margin-top:10px;
-
-    display:grid;
-
-    grid-template-columns:
-    300px
-    1fr;
-
-    grid-template-areas:
-
-    "user active"
-
-    "info info";
-
-
-    gap:10px;
-
+        var(--files-header-shadow);
 }
 
 
+/* =========================================================
+   BRAND
+========================================================= */
 
+.brand {
+    flex-shrink: 0;
 
+    display: flex;
+    align-items: center;
 
+    gap: 11px;
 
+    color: var(--files-title-color);
 
-
-/* ======================================================
-        EXAM WORKSPACE
-        MAIN QUESTION + STATUS
-====================================================== */
-
-
-.exam-workspace{
-
-    width:100%;
-
-    /* margin-top:10px; */
-
-    display:grid;
-
-    grid-template-columns:
-
-    minmax(500px,1fr)
-
-    300px;
-
-
-    gap:10px;
-
-    direction:rtl;
-
+    text-decoration: none;
 }
 
 
+.brand-mark {
+    width: 42px;
+    height: 42px;
 
-/* ======================================================
-        QUESTION PANEL
-====================================================== */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-
-.question-panel{
-
-
-    min-height:560px;
-
-
-    padding:22px 28px;
-
-
-    background:var(--surface);
-
-
-    border:1px solid var(--border);
-
-
-    border-radius:22px;
-
-
-    box-shadow:var(--shadow);
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
-    animation:
-
-    questionEnter .5s ease;
-
-
-}
-
-
-
-.question-panel::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    width:300px;
-
-    height:300px;
-
-
-    top:-150px;
-
-    left:-150px;
-
+    border-radius: 12px;
 
     background:
-
-    radial-gradient(
-
-    circle,
-
-    rgba(59,130,246,.18),
-
-    transparent 70%
-
-    );
-
-
-}
-
-
-
-@keyframes questionEnter{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(25px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-
-
-
-/* ======================================================
-        QUESTION TOP
-====================================================== */
-
-
-.question-top{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:space-between;
-
-
-    padding-bottom:20px;
-
-
-    border-bottom:1px solid var(--border);
-
-
-}
-
-
-
-
-.question-number{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:8px;
-
-
-    font-size:14px;
-
-
-    font-weight:900;
-
-
-    color:var(--accent);
-
-
-}
-
-
-
-
-.question-number span{
-
-
-    width:35px;
-
-    height:35px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    border-radius:50%;
-
-
-    color:white;
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    #2563eb,
-
-    #3b82f6
-
-    );
-
+        linear-gradient(
+            145deg,
+            var(--files-title-icon-bg-start),
+            var(--files-title-icon-bg-end)
+        );
+
+    border: 1px solid var(--files-title-icon-border);
+
+    color: var(--files-title-icon-color);
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
 
     box-shadow:
-
-    0 8px 20px rgba(59,130,246,.35);
-
-
+        inset 0 1px 2px rgba(255,255,255,.55),
+        0 3px 8px rgba(30,38,50,.06);
 }
 
 
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.15;
+}
 
 
-.question-tools button{
+.brand-text strong {
+    color: var(--files-title-color);
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+
+    letter-spacing: -.3px;
+}
 
 
-    height:35px;
+.brand-text span {
+    margin-top: 5px;
+
+    color: var(--files-user-icon);
+
+    font-size: 10px;
+}
 
 
-    padding:0 14px;
+/* =========================================================
+   HEADER SEARCH
+========================================================= */
 
+.header-search {
+    width: min(500px, 100%);
+    height: 44px;
 
-    display:flex;
+    margin-inline: auto;
 
+    display: flex;
+    align-items: center;
 
-    align-items:center;
+    gap: 10px;
 
+    padding: 0 15px;
 
-    gap:7px;
-
-
-    border-radius:12px;
-
-
-    border:1px solid var(--border);
-
+    border-radius: 12px;
 
     background:
+        linear-gradient(
+            135deg,
+            var(--files-search-bg-start),
+            var(--files-search-bg-end)
+        );
 
-    rgba(255,255,255,.04);
+    border: 1px solid var(--files-search-border);
 
-
-    color:var(--text-secondary);
-
-
-    cursor:pointer;
-
-
-    font-family:inherit;
-
-
-    transition:.3s;
-
-
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
 
+.header-search:focus-within {
+    background: var(--files-search-focus-bg);
 
-.question-tools button svg{
+    border-color: var(--files-search-focus-border);
 
-
-    width:16px;
-
-
+    box-shadow: var(--files-search-focus-ring);
 }
 
 
+.header-search svg {
+    width: 19px;
+    height: 19px;
 
-.question-tools button:hover{
+    flex-shrink: 0;
 
+    fill: none;
 
-    color:#facc15;
+    stroke: var(--files-search-icon);
 
+    stroke-width: 1.8;
 
-    border-color:#facc15;
-
-
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
+.header-search input {
+    width: 100%;
+    height: 100%;
 
+    outline: none;
+    border: 0;
 
+    background: transparent;
 
+    color: var(--files-search-text);
 
-
-
-/* ======================================================
-        QUESTION BODY
-====================================================== */
-
-
-.question-body{
-
-
-    margin-top:30px;
-
-
+    font-family: inherit;
+    font-size: 12px;
 }
 
 
-
-
-
-#questionText{
-
-
-    font-size:16px;
-
-
-    font-weight:600;
-
-
-    line-height:2.4;
-
-
-    color:var(--text);
-
-
-    min-height:80px;
-
-
-    animation:textShow .35s ease;
-
-
+.header-search input::placeholder {
+    color: var(--files-search-placeholder);
 }
 
 
-
-@keyframes textShow{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(10px);
-
+.header-search input::-webkit-search-cancel-button {
+    display: none;
 }
 
 
-to{
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
 
-opacity:1;
+.header-actions {
+    flex-shrink: 0;
 
-transform:translateY(0);
+    display: flex;
+    align-items: center;
 
+    gap: 5px;
 }
 
 
+.header-action {
+    width: 42px;
+    height: 42px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: var(--files-user-icon);
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
 }
 
 
-
-
-
-
-
-/* ======================================================
-        QUESTION IMAGE / MEDIA
-====================================================== */
-
-
-.question-media{
-
-
-    display:none;
-
-
-    margin:25px auto;
-
-
-    text-align:center;
-
-
+.header-action:hover {
+    background: var(--files-search-bg-start);
+    color: var(--files-title-icon-color);
 }
 
 
-
-.question-media.active{
-
-
-    display:block;
-
-
-    animation:
-
-    imageShow .4s ease;
-
-
+.header-action:active {
+    transform: scale(.95);
 }
 
 
+.header-action svg {
+    width: 20px;
+    height: 20px;
 
-.question-media img{
+    fill: none;
 
+    stroke: currentColor;
 
-    max-width:70%;
+    stroke-width: 1.7;
 
-
-    max-height:260px;
-
-
-    border-radius:18px;
-
-
-    border:1px solid var(--border);
-
-
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
+/* =========================================================
+   NOTIFICATION DOT
+========================================================= */
 
+.notification-dot {
+    width: 7px;
+    height: 7px;
 
-@keyframes imageShow{
+    position: absolute;
 
+    top: 8px;
+    right: 8px;
 
-from{
+    border-radius: 50%;
 
-opacity:0;
+    background: #ef4444;
 
-transform:scale(.9);
-
+    border: 2px solid var(--files-header-bg-start);
 }
 
 
-to{
+/* =========================================================
+   USER MENU
+========================================================= */
 
-opacity:1;
+.user-menu {
+    height: 52px;
 
-transform:scale(1);
+    display: flex;
+    align-items: center;
 
+    gap: 9px;
+
+    padding: 4px 8px 4px 9px;
+
+    border: 0;
+    border-radius: 13px;
+
+    background: transparent;
+
+    direction: rtl;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease;
 }
 
 
+.user-menu:hover {
+    background: var(--files-search-bg-start);
 }
 
 
+/* =========================================================
+   USER AVATAR
+========================================================= */
 
+.user-avatar {
+    width: 40px;
+    height: 40px;
 
+    flex-shrink: 0;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-
-/* ======================================================
-        OPTIONS
-====================================================== */
-
-
-.options-list{
-
-
-    margin-top:30px;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    gap:12px;
-
-
-}
-
-
-
-
-
-.options-list label{
-
-
-    min-height:50px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:14px;
-
-
-    padding:0 15px;
-
-
-    cursor:pointer;
-
-
-    border-radius:14px;
-
-
-    color:var(--text);
-
-
-    transition:.3s;
-
-
-    border:1px solid transparent;
-
-
-}
-
-
-
-
-.options-list label:hover{
-
+    border-radius: 50%;
 
     background:
+        linear-gradient(
+            145deg,
+            var(--files-avatar-bg-start),
+            var(--files-avatar-bg-end)
+        );
 
-    rgba(59,130,246,.08);
+    border: 1px solid var(--files-avatar-border);
 
+    color: var(--files-avatar-color);
 
-    border-color:
-
-    rgba(59,130,246,.3);
-
-
-    transform:translateX(-5px);
-
-
+    box-shadow: var(--files-avatar-shadow);
 }
 
 
+.user-avatar svg {
+    width: 22px;
+    height: 22px;
 
+    fill: none;
 
-.options-list input{
+    stroke: currentColor;
 
+    stroke-width: 1.6;
 
-    width:20px;
-
-
-    height:20px;
-
-
-    accent-color:var(--accent);
-
-
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
+/* =========================================================
+   USER INFO
+========================================================= */
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1.15;
+}
 
 
+.user-info strong {
+    color: var(--files-user-name);
+
+    font-size: 12px;
+    font-weight: 700;
+}
 
 
-.options-list label.selected{
+.user-info span {
+    margin-top: 4px;
 
+    color: var(--files-user-icon);
+
+    font-size: 9px;
+}
+
+
+.user-chevron {
+    width: 15px;
+    height: 15px;
+
+    margin-right: 2px;
+
+    fill: none;
+
+    stroke: var(--files-user-icon);
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   CATEGORY NAV
+   کارت دوم — کاملاً مستقل از HEADER
+========================================================= */
+
+.category-nav {
+    width: min(1440px, calc(100% - 56px));
+
+    height: 60px;
+
+    margin: 14px auto 0;
+        margin-top: 5px;
+    position: relative;
+    z-index: 90;
 
     background:
-
-    rgba(59,130,246,.15);
-
-
-    border-color:var(--accent);
-
-
-}
-
-
-
-
-
-
-
-
-/* ======================================================
-        NAVIGATION
-====================================================== */
-
-
-.question-navigation{
-
-
-    position:absolute;
-
-
-    bottom:20px;
-
-
-    left:28px;
-
-
-    right:28px;
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-}
-
-
-
-
-.question-navigation button{
-
-
-    height:42px;
-
-
-    padding:0 22px;
-
-
-    border-radius:14px;
-
-
-    border:1px solid var(--border);
-
-
-    background:
-
-    rgba(255,255,255,.05);
-
-
-    color:var(--text);
-
-
-    cursor:pointer;
-
-
-    font-family:inherit;
-
-
-    font-weight:800;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:8px;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-.question-navigation button:hover{
-
-
-    background:var(--accent);
-
-
-    color:white;
-
-
-    transform:translateY(-3px);
-
-
-}
-
-
-
-.question-navigation svg{
-
-
-    width:18px;
-
-
-}
-
-
-
-
-
-
-
-/* ======================================================
-        STATUS PANEL
-====================================================== */
-
-
-.status-wrapper{
-
-
-    position:relative;
-
-
-}
-
-
-
-.status-panel{
-
-
-    height:560px;
-
-
-    padding:18px;
-
-
-    background:var(--surface);
-
-
-    border:1px solid var(--border);
-
-
-    border-radius:22px;
-
-
-    box-shadow:var(--shadow);
-
-
-    transition:.45s cubic-bezier(.4,0,.2,1);
-
-
-}
-
-
-
-
-
-
-/* ======================================================
-        STATUS HEADER
-====================================================== */
-
-
-.status-header{
-
-
-    height:45px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-    padding:0 12px;
-
-
-    border-radius:14px;
-
-
-    background:
-
-    rgba(59,130,246,.12);
-
-
-}
-
-
-
-.status-header svg{
-
-
-    width:20px;
-
-
-    color:var(--accent);
-
-
-}
-
-
-
-.status-header h3{
-
-
-    font-size:13px;
-
-
-    font-weight:900;
-
-
-}
-
-
-
-
-
-
-
-/* ======================================================
-        COUNTERS
-====================================================== */
-
-
-.status-counter{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(3,1fr);
-
-
-    gap:8px;
-
-
-    margin:18px 0;
-
-
-}
-
-
-
-.status-counter div{
-
-
-    text-align:center;
-
-
-    padding:10px 5px;
-
-
-    border-radius:14px;
-
-
-    background:
-
-    rgba(255,255,255,.04);
-
-
-}
-
-
-
-.status-counter span{
-
-
-    display:block;
-
-
-    font-size:9px;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-.status-counter strong{
-
-
-    display:block;
-
-
-    margin-top:5px;
-
-
-    font-size:16px;
-
-
-}
-
-
-
-
-
-
-/* ======================================================
-        QUESTIONS GRID
-====================================================== */
-
-
-.questions-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(5,1fr);
-
-
-    gap:9px;
-
-
-}
-
-
-
-.questions-grid button{
-
-
-    aspect-ratio:1;
-
-
-    border-radius:12px;
-
-
-    border:1px solid var(--border);
-
-
-    background:
-
-    rgba(255,255,255,.04);
-
-
-    color:var(--text);
-
-
-    cursor:pointer;
-
-
-    font-weight:900;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.questions-grid button:hover{
-
-
-    transform:translateY(-3px);
-
-
-    border-color:var(--accent);
-
-
-}
-
-
-
-
-.questions-grid .current{
-
-
-    background:var(--accent);
-
-
-    color:white;
-
-
-}
-
-
-
-.questions-grid .answered{
-
-
-    background:
-
-    rgba(34,197,94,.15);
-
-
-    color:#4ade80;
-
-
-    border-color:
-
-    rgba(34,197,94,.4);
-
-
-}
-
-
-
-.questions-grid .marked{
-
-
-    background:
-
-    rgba(250,204,21,.15);
-
-
-    color:#facc15;
-
-
-    border-color:
-
-    rgba(250,204,21,.4);
-
-
-}
-
-
-
-
-
-
-
-/* ======================================================
-        STATUS TOGGLE TAB
-====================================================== */
-
-
-.status-toggle{
-
-
-    position:absolute;
-
-
-    left:-18px;
-
-
-    top:50%;
-
-
-    transform:translateY(-50%);
-
-
-    width:38px;
-
-
-    height:80px;
-
-
-    border-radius:
-
-    20px 0 0 20px;
-
-
-    border:1px solid var(--border);
-
-
-    background:var(--surface);
-
-
-    color:var(--accent);
-
-
-    cursor:pointer;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    z-index:5;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.status-toggle:hover{
-
-
-    width:46px;
-
-
-}
-
-
-
-.status-toggle svg{
-
-
-    transition:.4s;
-
-
-}
-
-
-
-
-
-
-
-.status-wrapper.closed .status-panel{
-
-
-    transform:translateX(320px);
-
-
-    opacity:0;
-
-
-    pointer-events:none;
-
-
-}
-
-
-
-.status-wrapper.closed .status-toggle svg{
-
-
-    transform:rotate(180deg);
-
-
-}
-
-
-
-
-
-
-
-/* ======================================================
-        MOBILE
-====================================================== */
-
-
-@media(max-width:900px){
-
-
-.exam-workspace{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-.status-panel{
-
-
-    height:auto;
-
-
-}
-
-
-
-.question-panel{
-
-
-    min-height:600px;
-
-
-}
-
-
-
-}
-
-/* =====================================
-        NEW QUESTION LAYOUT
-===================================== */
-
-
-.question-content{
-
-    width:100%;
-
-}
-
-
-
-.question-layout{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    45%
-
-    55%;
-
-
-    gap:30px;
-
-
-    direction:ltr;
-
-
-    margin-top:25px;
-
-
-}
-
-
-
-/* فضای شکل */
-
-.question-media{
-
-
-    min-height:220px;
-
-
-    display:none;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-}
-
-
-
-.question-media.active{
-
-
-    display:flex;
-
-
-}
-
-
-
-.question-media img{
-
-
-    max-width:100%;
-
-
-    max-height:280px;
-
-
-    object-fit:contain;
-
-
-}
-
-
-
-
-
-/* متن سوال */
-
-.question-text-side{
-
-
-    direction:rtl;
-
-
-}
-
-
-
-#questionText{
-
-
-    font-size:16px;
-
-
-    line-height:2.4;
-
-
-    font-weight:600;
-
-
-    color:var(--text);
-
-
-    text-align:right;
-
-
-    margin-bottom:30px;
-
-
-}
-
-
-
-
-
-
-
-/* =====================================
-        OPTIONS SIMPLE STYLE
-===================================== */
-
-
-.options-list{
-
-
-    margin-top:20px;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    gap:18px;
-
-
-}
-
-
-
-.options-list label{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:12px;
-
-
-    padding:5px 0;
-
-
-    cursor:pointer;
-
-
-    font-size:15px;
-
-
-    color:var(--text);
-
-
-    transition:.25s;
-
-
-}
-
-
-
-
-.options-list label:hover{
-
-
-    color:var(--accent);
-
-
-    transform:translateX(-4px);
-
-
-}
-
-
-
-
-.options-list input{
-
-
-    width:18px;
-
-
-    height:18px;
-
-
-    accent-color:var(--accent);
-
-
-}
-
-
-
-
-
-
-/* انتخاب شده */
-
-.options-list label.selected{
-
-
-    color:var(--accent);
-
-
-    font-weight:900;
-
-
-}
-
-
-
-
-
-
-/* حذف هرگونه باکس */
-
-.options-list label,
-.options-list input{
-
-
-    background:none;
-
-
-    border:none;
-
-
-    box-shadow:none;
-
-
-}
-
-
-
-
-
-
-
-
-
-
-/* =====================================================
-        QUESTION AREA CLEAN EXAM STYLE
-===================================================== */
-
-
-.question-body{
-
-    width:100%;
-
-    margin-top:25px;
-
-}
-
-
-
-
-.question-layout{
-
-    width:100%;
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    45%
-
-    55%;
-
-
-    gap:30px;
-
-
-    direction:ltr;
-
-
-    align-items:start;
-
-
-}
-
-
-
-
-
-/* =====================================================
-        MEDIA / IMAGE AREA
-===================================================== */
-
-
-.question-media-area{
-
-
-    min-height:260px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    direction:rtl;
-
-
-    opacity:.95;
-
-
-}
-
-
-
-.question-media-area:not(:has(img[src])){
-
-
-    display:none;
-
-}
-
-
-
-.question-image{
-
-
-    max-width:100%;
-
-
-    max-height:300px;
-
-
-    object-fit:contain;
-
-
-    border-radius:16px;
-
-
-    animation:imageAppear .4s ease;
-
-
-}
-
-
-
-
-
-@keyframes imageAppear{
-
-
-from{
-
-    opacity:0;
-
-    transform:scale(.9);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:scale(1);
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* =====================================================
-        QUESTION TEXT
-===================================================== */
-
-
-.question-text-area{
-
-
-    direction:rtl;
-
-
-    text-align:right;
-
-
-}
-
-
-
-.question-text{
-
-
-    font-size:16px;
-
-
-    font-weight:600;
-
-
-    line-height:2.5;
-
-
-    color:var(--text);
-
-
-    margin:0;
-
-
-    min-height:100px;
-
-
-    animation:textAppear .35s ease;
-
-
-}
-
-
-
-
-@keyframes textAppear{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(12px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-
-
-
-/* =====================================================
-        OPTIONS
-===================================================== */
-
-
-.question-options{
-
-
-    margin-top:30px;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    gap:16px;
-
-
-}
-
-
-
-
-
-.option-item{
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:12px;
-
-
-    cursor:pointer;
-
-
-    font-size:15px;
-
-
-    color:var(--text);
-
-
-    padding:6px 0;
-
-
-    transition:.25s ease;
-
-
-    user-select:none;
-
-
-}
-
-
-
-
-
-.option-item:hover{
-
-
-    color:var(--accent);
-
-
-    transform:translateX(-6px);
-
-
-}
-
-
-
-
-
-.option-item input{
-
-
-    width:19px;
-
-
-    height:19px;
-
-
-    cursor:pointer;
-
-
-    accent-color:var(--accent);
-
-
-}
-
-
-
-
-.option-item span{
-
-
-    line-height:2;
-
-
-}
-
-
-
-
-
-.option-item.selected{
-
-
-    color:var(--accent);
-
-
-    font-weight:900;
-
-
-}
-
-
-
-
-
-.option-item.selected input{
-
-
-    transform:scale(1.15);
-
-
-}
-
-
-
-
-
-
-
-/* =====================================================
-        EMPTY MEDIA PLACE
-        وقتی شکل وجود ندارد
-===================================================== */
-
-
-.question-media-area.empty{
-
-
-    display:none;
-
-}
-
-
-
-
-
-
-
-/* =====================================================
-        MOBILE
-===================================================== */
-
-
-@media(max-width:900px){
-
-
-.question-layout{
-
-
-    grid-template-columns:1fr;
-
-
-    gap:20px;
-
-
-    direction:rtl;
-
-
-}
-
-
-
-.question-media-area{
-
-
-    order:2;
-
-
-}
-
-
-
-.question-text-area{
-
-
-    order:1;
-
-
-}
-
-
-
-.question-text{
-
-
-    font-size:14px;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-        EXAM TIMER
-===================================== */
-
-
-.exam-timer{
-
-
-    position:absolute;
-
-
-    left:50%;
-
-
-    transform:translateX(-50%);
-
-
-    height:42px;
-
-
-    padding:0 18px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    gap:8px;
-
-
-    border-radius:10px;
-
-
-    background:
-
-
-    rgba(34,197,94,.15);
-
-
-    border:
-
-    1px solid rgba(34,197,94,.35);
-
-
-    color:#4ade80;
-
-
-    font-size:15px;
-
-
-    font-weight:900;
-
-
-    direction:ltr;
-
-
-    transition:.5s ease;
-
-
-}
-
-
-
-
-.exam-timer svg{
-
-
-    width:20px;
-
-
-}
-
-
-
-
-
-
-/* حالت متوسط */
-
-
-.exam-timer.warning{
-
-
-    background:
-
-
-    rgba(250,204,21,.15);
-
-
-    border-color:
-
-    rgba(250,204,21,.4);
-
-
-    color:#facc15;
-
-
-}
-
-
-
-
-
-
-/* حالت خطر */
-
-
-.exam-timer.danger{
-
-
-    background:
-
-
-    rgba(239,68,68,.15);
-
-
-    border-color:
-
-    rgba(239,68,68,.5);
-
-
-    color:#f87171;
-
-
-    animation:
-
-    timerPulse 1s infinite;
-
-
-}
-
-
-
-
-
-
-@keyframes timerPulse{
-
-
-0%,100%{
-
-
-    transform:
-
-    translateX(-50%)
-
-    scale(1);
-
-
-}
-
-
-
-50%{
-
-
-    transform:
-
-    translateX(-50%)
-
-    scale(1.08);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-        QUESTION STATUS GRID
-===================================== */
-
-
-.questions-grid{
-
-
-    margin-top:20px;
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    repeat(5,1fr);
-
-
-    gap:8px;
-
-
-}
-
-
-
-
-.question-number-btn{
-
-
-    width:36px;
-
-
-    height:36px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    border-radius:8px;
-
-
-    border:1px solid var(--border);
-
-
-    background:
-
-    rgba(255,255,255,.04);
-
-
-    color:var(--text-secondary);
-
-
-    cursor:pointer;
-
-
-    font-size:12px;
-
-
-    font-weight:900;
-
-
-    transition:.25s ease;
-
-
-}
-
-
-
-
-.question-number-btn:hover{
-
-
-    transform:translateY(-3px);
-
-
-    border-color:var(--accent);
-
-
-    color:var(--text);
-
-
-}
-
-
-
-
-
-/* سوال فعلی */
-
-.question-number-btn.current{
-
-
-    background:var(--accent);
-
-
-    color:white;
-
-
-    border-color:var(--accent);
-
+        linear-gradient(
+            135deg,
+            var(--files-header-bg-start),
+            var(--files-header-bg-end)
+        );
+
+    border: 1px solid var(--files-header-border);
+
+    border-radius: 16px;
 
     box-shadow:
+        var(--files-header-shadow);
 
-    0 5px 15px rgba(59,130,246,.35);
+    overflow: hidden;
+}
 
+
+/* حالت دارک */
+
+body.dark-theme .category-nav {
+    background: rgba(32,38,49,.72);
+
+    border-color: rgba(70,78,92,.65);
+}
+
+
+/* =========================================================
+   CATEGORY INNER
+========================================================= */
+
+.category-inner {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    padding: 5px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
+   CATEGORY ITEM
+========================================================= */
+
+.category-item {
+    min-width: 112px;
+    height: 48px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 17px;
+
+    border-radius: 11px;
+
+    color: var(--files-user-icon);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+/* خط فعال */
+
+.category-item::after {
+    content: "";
+
+    width: calc(100% - 34px);
+    height: 2px;
+
+    position: absolute;
+
+    right: 17px;
+    bottom: 2px;
+
+    border-radius: 3px;
+
+    background: #3b82f6;
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.category-item:hover {
+    color: var(--files-title-color);
+
+    background: rgba(59,130,246,.055);
+}
+
+
+.category-item:hover::after,
+.category-item.active::after {
+    transform: scaleX(1);
+}
+
+
+.category-item.active {
+    color: #2563eb;
+
+    background: rgba(59,130,246,.065);
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.category-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: var(--files-user-icon);
+
+    transition:
+        color .2s ease,
+        background .2s ease;
+}
+
+
+.category-item:hover .category-icon,
+.category-item.active .category-icon {
+    color: #2563eb;
+
+    background: #e8f0ff;
+}
+
+
+body.dark-theme .category-item:hover .category-icon,
+body.dark-theme .category-item.active .category-icon {
+    background: #1e3a5f;
+}
+
+
+.category-icon svg {
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   فاصله از CATEGORY هم حفظ می‌شود
+========================================================= */
+
+.main-content {
+    width: min(1440px, calc(100% - 56px));
+
+    margin: 0 auto;
+
+    padding: 24px 0 50px;
+        padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-inner,
+    .category-nav,
+    .main-content {
+        width: calc(100% - 36px);
+    }
+
+
+    .header-inner {
+        gap: 16px;
+    }
+
+
+    .header-search {
+        max-width: 380px;
+    }
+
+
+    .category-item {
+        min-width: 100px;
+
+        padding-inline: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .brand-text {
+        display: none;
+    }
+
+
+    .header-search {
+        max-width: none;
+    }
+
+
+    .user-info,
+    .user-chevron {
+        display: none;
+    }
+
+
+    .user-menu {
+        padding: 4px;
+    }
+
+
+    .category-nav {
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+
+    .category-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .category-inner {
+        width: max-content;
+
+        min-width: 100%;
+
+        padding-inline: 12px;
+
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding-top: 10px;
+    }
+
+
+    .header-inner {
+        width: calc(100% - 24px);
+
+        min-height: 68px;
+
+        padding-inline: 12px;
+
+        gap: 8px;
+
+        border-radius: 13px;
+    }
+
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+    }
+
+
+    .header-search {
+        height: 40px;
+
+        padding-inline: 12px;
+
+        border-radius: 10px;
+    }
+
+
+    .header-search svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .header-search input {
+        font-size: 11px;
+    }
+
+
+    .header-action {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .user-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* کارت دسته‌بندی مستقل */
+
+    .category-nav {
+        width: calc(100% - 24px);
+
+        height: 54px;
+
+        margin-top: 10px;
+
+        border-radius: 13px;
+    }
+
+
+    .category-item {
+        min-width: auto;
+
+        height: 44px;
+
+        padding-inline: 10px;
+
+        font-size: 11px;
+    }
+
+
+    .category-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    .category-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .main-content {
+        width: calc(100% - 24px);
+
+        padding-top: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 430px
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .header-inner {
+        gap: 5px;
+    }
+
+
+    .brand {
+        display: none;
+    }
+
+
+    .header-search {
+        flex: 1;
+    }
+
+
+    .header-actions {
+        gap: 0;
+    }
+
+
+    .category-inner {
+        padding-inline: 8px;
+    }
 
 }
 
@@ -4692,668 +1248,96 @@ transform:translateY(0);
 
 
 
-/* پاسخ داده */
+@font-face {
+    font-family: "Digi SarvenazL";
+    src: url("../speech-to-text/Digi\ Sarvenaz.otf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
 
-.question-number-btn.answered{
+.a4 {
+    font-family: "Digi SarvenazL";
+    font-size: 38px;
+}
 
+.a4 p {
+    margin: 0;
+    padding: 0;
 
-    background:
+    display: flex;
+    align-items: center;
 
-    rgba(34,197,94,.15);
+    direction: ltr;
 
+    letter-spacing: 1px;
+}
 
-    color:#4ade80;
+.a4 p span {
+    display: inline-block;
 
-
-    border-color:
-
-    rgba(34,197,94,.4);
-
-
+    transition:
+        transform .25s ease,
+        filter .25s ease;
 }
 
 
+/* R */
+.a4 p span:nth-child(1) {
+     color: #475569;
+}
 
+/* I */
+.a4 p span:nth-child(2) {
+    color: #475569;
+}
 
+/* S */
+.a4 p span:nth-child(3) {
+    color: #475569;
+}
 
-/* علامت دار */
+/* E */
+.a4 p span:nth-child(4) {
+   color: #ef4444;
+}
 
-.question-number-btn.marked{
-
-
-    background:
-
-    rgba(250,204,21,.15);
-
-
-    color:#facc15;
-
-
-    border-color:
-
-    rgba(250,204,21,.4);
-
-
+/* O */
+.a4 p span:nth-child(5) {
+    color: #ef4444;
 }
 
 
-/* =====================================
-        STATUS DRAWER
-===================================== */
-
-
-.status-wrapper{
-
-
-    position:relative;
-
-
-    transition:.45s cubic-bezier(.4,0,.2,1);
-
-
+/* Hover ظریف */
+.a4:hover span {
+    transform: translateY(-2px);
 }
 
-
-
-.status-panel{
-
-
-    height:560px;
-
-
-    transition:.45s cubic-bezier(.4,0,.2,1);
-
-
-    opacity:1;
-
-
-    transform:translateX(0);
-
-
+.a4:hover span:nth-child(1),
+.a4:hover span:nth-child(5) {
+    filter: drop-shadow(0 3px 7px rgba(59,130,246,.25));
 }
 
-
-
-
-
-
-/* CLOSED */
-
-.status-wrapper.closed{
-
-
-    width:0;
-
-
+.a4:hover span:nth-child(3) {
+    filter: drop-shadow(0 3px 7px rgba(239,68,68,.22));
+}
+.a4 {
+    position: relative;
+    width: 100px;
+    height: 45px;
+    flex-shrink: 0;
 }
 
+.a4 p {
+    position: absolute;
+    top: 50%;
+    left: 0;
 
+    margin: 0;
 
-.status-wrapper.closed .status-panel{
+    transform: translateY(-50%);
 
-
-    transform:translateX(-120%);
-
-
-    opacity:0;
-
-
-    pointer-events:none;
-
-
-}
-
-
-
-
-
-
-/* سوالات وقتی وضعیت بسته است */
-
-.exam-workspace.status-closed{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-
-
-
-/* دکمه بستن داخل هدر */
-
-
-.close-status-btn{
-
-
-    margin-right:auto;
-
-
-    width:30px;
-
-
-    height:30px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    border:none;
-
-
-    background:transparent;
-
-
-    color:var(--text-secondary);
-
-
-    cursor:pointer;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.close-status-btn:hover{
-
-
-    color:#ef4444;
-
-
-    transform:rotate(90deg);
-
-
-}
-
-
-
-
-.close-status-btn svg{
-
-
-    width:18px;
-
-
-}
-
-
-
-
-
-
-/* زبانه مخفی در حالت عادی */
-
-
-.open-status-tab{
-
-
-    display:none;
-
-
-}
-
-
-
-
-
-/* زبانه وقتی بسته است */
-
-
-.status-wrapper.closed .open-status-tab{
-
-
-    display:flex;
-
-
-    position:fixed;
-
-
-    left:0;
-
-
-    top:50%;
-
-
-    transform:translateY(-50%);
-
-
-    width:35px;
-
-
-    height:75px;
-
-
-    border-radius:0 15px 15px 0;
-
-
-    border:1px solid var(--border);
-
-
-    background:var(--surface);
-
-
-    color:var(--accent);
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    cursor:pointer;
-
-
-    z-index:20;
-
-
-    animation:tabShow .4s ease;
-
-
-}
-
-
-
-@keyframes tabShow{
-
-
-from{
-
-
-opacity:0;
-
-transform:translate(-20px,-50%);
-
-}
-
-
-to{
-
-
-opacity:1;
-
-transform:translate(0,-50%);
-
-}
-
-
-}
-/* ==============================
-   MAIN LAYOUT
-============================== */
-
-
-.exam-workspace{
-
-    display:grid;
-
-    grid-template-columns:
-    minmax(0,1fr) 280px;
-
-
-    gap:15px;
-
-
-    transition:.45s ease;
-
-}
-
-
-
-
-/* وقتی پنل بسته شد */
-
-.exam-workspace.status-closed{
-
-
-    grid-template-columns:
-    1fr;
-
-
-}
-
-
-
-
-
-/* ==============================
-   STATUS PANEL
-============================== */
-
-
-.status-wrapper{
-
-
-    position:relative;
-
-
-    width:280px;
-
-
-    transition:.45s ease;
-
-
-}
-
-
-
-.status-panel{
-
-
-    width:280px;
-
-
-    height:100%;
-
-
-    transition:.45s ease;
-
-
-}
-
-
-
-
-
-.status-wrapper.closed{
-
-
-    width:0;
-
-
-}
-
-
-
-
-
-.status-wrapper.closed .status-panel{
-
-
-    transform:translateX(-120%);
-
-
-    opacity:0;
-
-
-    pointer-events:none;
-
-
-}
-
-
-
-
-
-
-/* ==============================
-   OPEN TAB
-============================== */
-
-
-.open-status-tab{
-
-
-    display:none;
-
-
-}
-
-
-
-
-
-.status-wrapper.closed
-+
-.open-status-tab{
-
-
-    display:flex;
-
-
-    position:fixed;
-
-
-    left:0;
-
-
-    top:50%;
-
-
-    transform:translateY(-50%);
-
-
-    width:35px;
-
-
-    height:70px;
-
-
-    border-radius:0 12px 12px 0;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    background:var(--surface);
-
-
-    border:1px solid var(--border);
-
-
-    color:var(--accent);
-
-
-    cursor:pointer;
-
-
-    z-index:100;
-
-
-}
-/* =====================================
-   EXAM WORKSPACE
-===================================== */
-
-
-.exam-workspace{
-
-    display:grid;
-
-    grid-template-columns:
-    minmax(0,1fr) 300px;
-
-
-    gap:15px;
-
-    transition:.45s ease;
-
-}
-
-
-
-
-/* وقتی وضعیت بسته است */
-
-
-.exam-workspace.status-closed{
-
-    grid-template-columns:
-    1fr;
-
-}
-
-
-
-
-
-/* =====================================
- STATUS PANEL
-===================================== */
-
-
-.status-wrapper{
-
-    width:300px;
-
-    transition:.45s ease;
-
-    overflow:hidden;
-
-}
-
-
-
-
-.status-wrapper.closed{
-
-    width:0;
-
-}
-
-
-
-
-
-.status-wrapper.closed .status-panel{
-
-    transform:translateX(-120%);
-
-    opacity:0;
-
-}
-
-
-
-
-
-.status-panel{
-
-    width:300px;
-
-    transition:.45s ease;
-
-}
-
-
-
-
-/* =====================================
- OPEN TAB
-===================================== */
-
-
-.open-status-tab{
-
-
-    display:none;
-
-
-}
-
-
-
-.status-wrapper.closed
-+
-.open-status-tab{
-
-
-    display:flex;
-
-
-    position:fixed;
-
-
-    left:0;
-
-
-    top:50%;
-
-
-    transform:translateY(-50%);
-
-
-
-    width:38px;
-
-
-    height:75px;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-
-    background:var(--surface);
-
-
-    color:var(--accent);
-
-
-    border:1px solid var(--border);
-
-
-    border-radius:0 14px 14px 0;
-
-
-
-    cursor:pointer;
-
-
-    z-index:999;
-
-
-
-    animation:tabShow .4s ease;
-
-
-
-}
-
-
-
-
-@keyframes tabShow{
-
-
-from{
-
-    opacity:0;
-
-    transform:
-    translate(-20px,-50%);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:
-    translate(0,-50%);
-
-}
-
-
+    font-size: 50px;
+    white-space: nowrap;
 }
 
 
@@ -5413,1764 +1397,454 @@ to{
 
 
 
-.ui-bookmark {
-  --icon-size: 24px;
-  --icon-secondary-color: rgb(77, 77, 77);
-  --icon-hover-color: rgb(97, 97, 97);
-  --icon-primary-color: gold;
-  --icon-circle-border: 1px solid var(--icon-primary-color);
-  --icon-circle-size: 35px;
-  --icon-anmt-duration: 0.3s;
-}
 
-.ui-bookmark input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: none;
-}
+/* =========================================================
+   EXAM CONTENT BOX
+   ========================================================= */
 
-.ui-bookmark .bookmark {
-  width: var(--icon-size);
-  height: auto;
-  fill: var(--icon-secondary-color);
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transform-origin: top;
-  -ms-transform-origin: top;
-  transform-origin: top;
-}
+.files-content-box {
+    width: min(1440px, calc(100% - 56px));
+    min-height: 490px;
 
-.bookmark::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
-    30px 0 0 -4px var(--icon-primary-color),
-    0 -30px 0 -4px var(--icon-primary-color),
-    -30px 0 0 -4px var(--icon-primary-color),
-    -22px 22px 0 -4px var(--icon-primary-color),
-    -22px -22px 0 -4px var(--icon-primary-color),
-    22px -22px 0 -4px var(--icon-primary-color),
-    22px 22px 0 -4px var(--icon-primary-color);
-  box-shadow: 0 30px 0 -4px var(--icon-primary-color),
-    30px 0 0 -4px var(--icon-primary-color),
-    0 -30px 0 -4px var(--icon-primary-color),
-    -30px 0 0 -4px var(--icon-primary-color),
-    -22px 22px 0 -4px var(--icon-primary-color),
-    -22px -22px 0 -4px var(--icon-primary-color),
-    22px -22px 0 -4px var(--icon-primary-color),
-    22px 22px 0 -4px var(--icon-primary-color);
-  border-radius: 50%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
+    margin: 10px auto 0;
+    padding: 0 22px 28px;
 
-.bookmark::before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: var(--icon-circle-border);
-  opacity: 0;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-/* actions */
-
-.ui-bookmark:hover .bookmark {
-  fill: var(--icon-hover-color);
-}
-
-.ui-bookmark input:checked + .bookmark::after {
-  -webkit-animation: circles var(--icon-anmt-duration)
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation: circles var(--icon-anmt-duration)
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  -webkit-animation-delay: var(--icon-anmt-duration);
-  animation-delay: var(--icon-anmt-duration);
-}
-
-.ui-bookmark input:checked + .bookmark {
-  fill: var(--icon-primary-color);
-  -webkit-animation: bookmark var(--icon-anmt-duration) forwards;
-  animation: bookmark var(--icon-anmt-duration) forwards;
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-
-.ui-bookmark input:checked + .bookmark::before {
-  -webkit-animation: circle var(--icon-anmt-duration)
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation: circle var(--icon-anmt-duration)
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  -webkit-animation-delay: var(--icon-anmt-duration);
-  animation-delay: var(--icon-anmt-duration);
-}
-
-@-webkit-keyframes bookmark {
-  50% {
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6);
-  }
-
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-}
-
-@keyframes bookmark {
-  50% {
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6);
-  }
-
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-}
-
-@-webkit-keyframes circle {
-  from {
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-
-  90% {
-    width: var(--icon-circle-size);
-    height: var(--icon-circle-size);
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes circle {
-  from {
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-
-  90% {
-    width: var(--icon-circle-size);
-    height: var(--icon-circle-size);
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes circles {
-  from {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  to {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 0;
-  }
-}
-
-@keyframes circles {
-  from {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  to {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 0;
-  }
-}
-
-.mark-question-btn{
-
-    position:relative;
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    padding:10px 18px;
-
-    border-radius:10px;
-
-    border:1px solid transparent;
-
-    background:rgba(255,255,255,.06);
-
-    color:#fff;
-
-    cursor:pointer;
-
-    overflow:hidden;
-
-    transition:.35s ease;
-
-}
-
-
-/* حالت انتخاب شده */
-
-.mark-question-btn.active{
-
-
-    border-color:#ffd700;
-
-    color:#ffd700;
-
-
-    box-shadow:
-    0 0 15px rgba(255,215,0,.35);
-
-
-}
-
-
-/* نور داخلی */
-
-.mark-question-btn.active::before{
-
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-
-    background:
-    radial-gradient(
-    circle at center,
-    rgba(255,215,0,.25),
-    transparent 65%
+    background: linear-gradient(
+        135deg,
+        var(--files-header-bg-start),
+        var(--files-header-bg-end)
     );
 
+    border: 1px solid var(--files-header-border);
+    border-radius: 16px;
 
-    animation:
-    goldWave 1.5s infinite;
+    box-shadow: var(--files-header-shadow);
 
-
+    box-sizing: border-box;
 }
 
 
+/* =========================================================
+   DOWNLOAD QUESTIONS BUTTON
+   ========================================================= */
 
+.download-questions-btn {
+    margin-top: 16px;
 
+    height: 40px;
+    padding: 0 20px;
 
-.mark-question-btn span,
-.mark-question-btn .ui-bookmark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
 
-    position:relative;
+    background: var(--files-search-bg-start);
+    color: var(--files-text);
 
-    z-index:2;
+    border: 1px solid var(--files-search-border);
+    border-radius: 9px;
 
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
+}
+
+.download-questions-btn:hover {
+    border-color: var(--files-text);
+}
+
+.download-questions-btn:active {
+    transform: scale(.98);
 }
 
 
-
-@keyframes goldWave{
-
-
-0%{
-
-transform:scale(.8);
-
-opacity:.4;
-
-}
-
-
-50%{
-
-transform:scale(1.2);
-
-opacity:.8;
-
-}
-
-
-100%{
-
-transform:scale(.8);
-
-opacity:.4;
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================
-   ANSWER CHECKBOX
-========================= */
-
-
-.answer-option{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-cursor:pointer;
-
-width:100%;
-
-padding:8px 0;
-
-
-}
-
-
-
-/* مخفی کردن input */
-
-.answer-option input{
-
-display:none;
-
-}
-
-
-
-/* مربع */
-
-.checkBox{
-
-
-display:block;
-
-
-width:26px;
-
-height:26px;
-
-
-border:2px solid rgba(255,255,255,.35);
-
-
-border-radius:8px;
-
-
-position:relative;
-
-
-overflow:hidden;
-
-
-box-shadow:
-
-0 0 0 2px rgba(255,255,255,.08);
-
-
-transition:.35s ease;
-
-
-flex-shrink:0;
-
-
-}
-
-
-
-/* موج سبز داخل */
-
-.checkBox .transition{
-
-
-width:60px;
-
-height:60px;
-
-
-background:#00d878;
-
-
-position:absolute;
-
-
-top:-55px;
-
-left:-55px;
-
-
-transform:
-
-rotate(45deg);
-
-
-transition:.45s cubic-bezier(.68,-0.55,.27,1.55);
-
-
-}
-
-
-
-/* انتخاب شده */
-
-.answer-option input:checked + .checkBox{
-
-
-border-color:#00d878;
-
-
-box-shadow:
-
-0 0 15px rgba(0,216,120,.6);
-
-
-}
-
-
-
-
-.answer-option input:checked + .checkBox .transition{
-
-
-top:-12px;
-
-left:-12px;
-
-
-}
-
-
-
-
-/* متن گزینه */
-
-.answer-text{
-
-
-color:#ddd;
-
-
-font-size:16px;
-
-
-transition:.35s ease;
-
-
-}
-
-
-
-
-.answer-option input:checked 
-~ .answer-text{
-
-
-color:#00d878;
-
-
-}
-
-
-
-
-/* افکت آرام */
-
-.answer-option input:checked 
-+ .checkBox::after{
-
-
-content:"";
-
-
-position:absolute;
-
-
-inset:0;
-
-
-background:
-
-radial-gradient(
-
-circle,
-
-rgba(255,255,255,.35),
-
-transparent 60%
-
-);
-
-
-animation:
-
-answerGlow 1.5s infinite;
-
-
-}
-
-
-
-
-
-@keyframes answerGlow{
-
-
-0%{
-
-opacity:.3;
-
-transform:scale(.8);
-
-}
-
-
-50%{
-
-opacity:.8;
-
-transform:scale(1.2);
-
-}
-
-
-100%{
-
-opacity:.3;
-
-transform:scale(.8);
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-      FINAL EXAM PANEL
-      SMALL HORIZONTAL GLASS BOX
-===================================== */
-
-
-.exam-workspace{
-
-    position:relative;
-
-}
-
-
-
-/* ===============================
-      OVERLAY
-=============================== */
-
-
-.exam-confirm-modal{
-
-
-    position:absolute;
-
+/* =========================================================
+   ANSWER SHEET
+   ========================================================= */
+
+.answer-sheet {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 28px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
 
     /*
-      تنظیم مکان پنل
+       ستون‌ها از چپ به راست:
+       1-10 | 11-20 | 21-30 | 31-40
     */
+    direction: ltr;
 
-    top:420px;
-
-    left:60.5%;
-
-
-    transform:translateX(-50%);
+    box-sizing: border-box;
+}
 
 
+/* =========================================================
+   ANSWER COLUMN
+   ========================================================= */
+
+.answer-column {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ANSWER ROW
+   ========================================================= */
+
+.answer-row {
+    width: 100%;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
 
     /*
-      اندازه پنل
+       گزینه‌ها از سمت راست:
+       1  2  3  4
+       و شماره سؤال سمت چپ
     */
+    direction: ltr;
 
-    width:1164px;
+    border-bottom: 1px solid var(--files-header-border);
 
-    height: px;
-
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-
-    background:
-
-    rgba(15,23,42,.35);
-
-
-
-    border-radius:28px;
-
-
-
-    border:
-
-    1px solid rgba(255,255,255,.2);
-
-
-
-    backdrop-filter:blur(15px);
-
-
-
-    opacity:0;
-
-    visibility:hidden;
-
-
-
-    transition:.35s ease;
-
-
-
-    z-index:100;
-
+    box-sizing: border-box;
 }
 
 
+/* =========================================================
+   QUESTION NUMBER
+   ========================================================= */
 
+.question-number {
+    width: 32px;
+    min-width: 32px;
 
+    order: 5;
 
-.exam-confirm-modal.show{
+    color: var(--files-text);
 
+    font-size: 14px;
+    font-weight: 700;
 
-    opacity:1;
+    text-align: center;
 
-    visibility:visible;
-
-
+    box-sizing: border-box;
 }
 
 
+/* =========================================================
+   ANSWER OPTIONS
+   ========================================================= */
 
+.answer-row label {
+    cursor: pointer;
 
+    display: block;
 
-.confirm-box{
+    flex-shrink: 0;
+}
 
-width:100%;
-height:100%;
-
-padding:28px 35px;
-
-box-sizing:border-box;
-
-
-background: var(--surface);
-    border: 1px solid var(--border);
-backdrop-filter:blur(25px);
-
-
-box-shadow:
-0 25px 70px rgba(0,0,0,.35);
-
-
-color:var(--text);
-
-animation:
-finalOpen .45s ease;
-
+.answer-row input {
+    display: none;
 }
 
 
+/* =========================================================
+   OPTION BOX
+   ========================================================= */
 
+.answer-row label span {
+    width: 26px;
+    height: 26px;
 
-@keyframes finalOpen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-from{
+    border: 1.5px solid var(--files-search-border);
+    border-radius: 5px;
 
-opacity:0;
+    color: var(--files-text);
 
-transform:
-scale(.9)
-translateY(40px);
+    font-size: 12px;
+    font-weight: 600;
 
-filter:blur(10px);
+    box-sizing: border-box;
 
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
 }
 
 
-to{
+/* =========================================================
+   OPTION ORDER
+   ========================================================= */
 
-opacity:1;
+/*
+   نتیجه از راست به چپ داخل هر ردیف:
 
-transform:
-scale(1)
-translateY(0);
+   [ 1 ] [ 2 ] [ 3 ] [ 4 ]     شماره
 
-filter:blur(0);
+   یعنی گزینه 1 سمت راست قرار می‌گیرد.
+*/
 
+.answer-row label:nth-of-type(1) {
+    order: 4;
 }
 
+.answer-row label:nth-of-type(2) {
+    order: 3;
 }
 
+.answer-row label:nth-of-type(3) {
+    order: 2;
+}
 
-
-
-
-.confirm-box h2{
-
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:10px;
-
-
-font-size:24px;
-
-font-weight:900;
-
-
-margin:0 0 25px;
-
-
+.answer-row label:nth-of-type(4) {
+    order: 1;
 }
 
 
+/* =========================================================
+   HOVER
+   ========================================================= */
 
-.confirm-box h2 svg{
-
-color:var(--accent);
-
+.answer-row label:hover span {
+    border-color: var(--files-text);
+    transform: translateY(-1px);
 }
 
 
+/* =========================================================
+   SELECTED OPTION
+   ========================================================= */
 
+.answer-row input:checked + span {
+    background: var(--files-text);
+    color: var(--files-header-bg-start);
 
-
-.confirm-dashboard{
-
-
-display:grid;
-
-
-grid-template-columns:
-
-1fr 1.4fr 1fr;
-
-
-height:300px;
-
-
-border-top:
-
-1px solid rgba(255,255,255,.15);
-
-
-border-bottom:
-
-1px solid rgba(255,255,255,.15);
-
-
+    border-color: var(--files-text);
 }
 
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
+@media (max-width: 900px) {
 
-.confirm-section{
-
-
-padding:20px;
-
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-
-
-
-
-.confirm-section:not(:last-child){
-
-border-left:
-
-1px solid rgba(255,255,255,.15);
-
-}
-
-
-
-
-
-.confirm-section h3{
-
-
-display:flex;
-
-align-items:center;
-
-gap:8px;
-
-
-font-size:15px;
-
-
-color:var(--accent);
-
-
-margin-bottom:20px;
-
-
-}
-
-
-
-
-
-/* USER */
-
-
-.confirm-user{
-
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-
-padding:14px 5px;
-
-
-border-bottom:
-
-1px solid rgba(255,255,255,.12);
-
-
-}
-
-
-
-.confirm-user svg{
-
-width:22px;
-
-color:var(--accent);
-
-}
-
-
-
-
-
-
-
-/* STATUS CENTER */
-
-
-.confirm-status{
-
-
-display:grid;
-
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-
-height:100%;
-
-
-}
-
-
-
-
-.confirm-status div{
-
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-
-border-left:
-
-1px solid rgba(255,255,255,.12);
-
-
-border-bottom:
-
-1px solid rgba(255,255,255,.12);
-
-
-}
-
-
-
-.confirm-status span{
-
-
-font-size:13px;
-
-color:var(--text-secondary);
-
-}
-
-
-
-.confirm-status strong{
-
-
-font-size:34px;
-
-font-weight:900;
-
-
-color:var(--accent);
-
-
-animation:
-
-numberShow .5s ease;
-
-
-}
-
-
-
-
-@keyframes numberShow{
-
-from{
-
-transform:scale(.4);
-
-opacity:0;
-
-}
-
-
-to{
-
-transform:scale(1);
-
-opacity:1;
-
-}
-
-}
-
-
-
-
-
-
-
-/* WARNING */
-
-
-.warning-section{
-
-
-justify-content:center;
-
-}
-
-
-
-.confirm-warning{
-
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-
-text-align:center;
-
-
-gap:15px;
-
-
-padding:20px;
-
-
-background:
-
-rgba(251,191,36,.12);
-
-
-border:
-
-1px solid rgba(251,191,36,.25);
-
-
-border-radius:22px;
-
-
-}
-
-
-
-.confirm-warning svg{
-
-
-width:40px;
-
-height:40px;
-
-
-color:#fbbf24;
-
-
-animation:
-
-warningMove 2s infinite;
-
-}
-
-
-
-@keyframes warningMove{
-
-50%{
-
-transform:rotate(8deg) scale(1.1);
-
-}
-
-}
-
-
-
-
-.confirm-warning p{
-
-font-size:13px;
-
-line-height:2;
-
-}
-
-
-
-
-
-/* BUTTON */
-
-
-.confirm-actions{
-
-
-display:flex;
-
-gap:10px;
-
-margin-top:20px;
-
-}
-
-
-
-
-#submitFinalExam,
-#cancelFinalExam{
-
-
-flex:1;
-
-
-height:48px;
-
-
-border:none;
-
-
-border-radius:16px;
-
-
-font-family:inherit;
-
-
-font-weight:800;
-
-
-cursor:pointer;
-
-
-transition:.3s;
-
-}
-
-
-
-#submitFinalExam{
-
-background:
-
-linear-gradient(
-135deg,
-#22c55e,
-#16a34a
-);
-
-
-color:white;
-
-}
-
-
-
-#cancelFinalExam{
-
-background:
-
-var(--surface);
-
-
-color:var(--text);
-
-
-border:
-
-1px solid var(--border);
-
-}
-
-
-
-
-#submitFinalExam:hover,
-#cancelFinalExam:hover{
-
-
-transform:
-
-translateY(-4px);
-
-}
-
-
-
-
-@media(max-width:800px){
-
-
-.confirm-dashboard{
-
-
-grid-template-columns:1fr;
-
-
-height:auto;
-
-}
-
-
-
-.confirm-section:not(:last-child){
-
-border-left:none;
-
-border-bottom:
-
-1px solid rgba(255,255,255,.15);
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===============================
-   SUBMIT STATE
-=============================== */
-
-
-.exam-submit-state{
-
-    display:none;
-
-    height:100%;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-}
-
-
-
-.submit-loader,
-.submit-success{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
-
-
-.submit-loader i{
-
-    width:55px;
-
-    height:55px;
-
-    color:var(--accent);
-
-    animation:rotateLoader 1s linear infinite;
-
-}
-
-
-
-@keyframes rotateLoader{
-
-
-from{
-
-transform:rotate(0deg);
-
-}
-
-
-to{
-
-transform:rotate(360deg);
-
-}
-
-
-}
-
-
-
-.submit-loader h3{
-
-    margin-top:20px;
-
-    font-size:20px;
-
-}
-
-
-
-.submit-loader p{
-
-    color:var(--text-secondary);
-
-}
-
-
-
-.submit-success i{
-
-    width:70px;
-
-    height:70px;
-
-    color:#22c55e;
-
-    animation:successPop .5s ease;
-
-}
-
-
-
-.submit-success h2{
-
-    margin-top:20px;
-
-}
-
-
-
-.submit-success p{
-
-    color:var(--text-secondary);
-
-    margin-top:10px;
-
-}
-
-
-
-@keyframes successPop{
-
-
-from{
-
-transform:scale(.5);
-
-opacity:0;
-
-}
-
-
-to{
-
-transform:scale(1);
-
-opacity:1;
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   STATUS FINISH BOX
-===================================== */
-
-
-.status-finish-overlay{
-
-    position:absolute;
-
-    top:420px;
-    left:10px;
-
-
-    width:299px;
-    min-height:560px;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    background: var(--surface);
-    border: 1px solid var(--border);
-
-
-    border-radius:24px;
-
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.25);
-
-
-    color:var(--text);
-
-
-    opacity:0;
-
-    visibility:hidden;
-
-
-    transform:
-
-    translateY(-15px)
-    scale(.95);
-
-
-    transition:.35s ease;
-
-
-    z-index:20;
-
-}
-
-
-
-
-.status-finish-overlay.show{
-
-
-    opacity:1;
-
-    visibility:visible;
-
-
-    transform:
-
-    translateY(0)
-    scale(1);
-
-
-}
-
-
-
-
-
-
-/* محتوا */
-
-
-.status-finish-content{
-
-
-    text-align:center;
-
-
-    padding:20px;
-
-
-}
-
-
-
-.status-finish-content svg{
-
-
-    width:38px;
-
-    height:38px;
-
-
-    color:var(--accent);
-
-
-    margin-bottom:10px;
-
-
-    animation:
-
-    lockPulse 2s infinite;
-
-
-}
-
-
-
-.status-finish-content h3{
-
-
-    margin:0 0 8px;
-
-
-    font-size:16px;
-
-
-    font-weight:900;
-
-
-}
-
-
-
-.status-finish-content p{
-
-
-    margin:0;
-
-
-    font-size:12px;
-
-
-    line-height:1.8;
-
-
-    color:var(--text-secondary);
-
-
-}
-
-
-
-
-
-@keyframes lockPulse{
-
-
-    50%{
-
-        transform:scale(1.15);
-
+    .answer-sheet {
+        gap: 20px;
     }
 
+    .answer-row {
+        gap: 7px;
+    }
 
+    .answer-row label span {
+        width: 24px;
+        height: 24px;
+
+        font-size: 11px;
+    }
+
+    .question-number {
+        width: 28px;
+        min-width: 28px;
+
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .answer-sheet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .files-content-box {
+        width: calc(100% - 24px);
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .answer-sheet {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+.answer-row {
+    width: 100%;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    direction: ltr;
+
+    border-bottom: 1px solid var(--files-header-border);
+}
+
+
+/* گزینه‌ها */
+
+.answer-row label:nth-of-type(1) {
+    order: 4;
+}
+
+.answer-row label:nth-of-type(2) {
+    order: 3;
+}
+
+.answer-row label:nth-of-type(3) {
+    order: 2;
+}
+
+.answer-row label:nth-of-type(4) {
+    order: 1;
+}
+
+
+/* شماره سؤال - سمت چپ گزینه‌ها */
+
+.question-number {
+    order: 5;
+
+    width: 32px;
+    min-width: 32px;
+
+    color: var(--files-text);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+.answer-row {
+    direction: ltr;
+}
+
+.answer-row label:nth-of-type(1) {
+    order: 4;
+}
+
+.answer-row label:nth-of-type(2) {
+    order: 3;
+}
+
+.answer-row label:nth-of-type(3) {
+    order: 2;
+}
+
+.answer-row label:nth-of-type(4) {
+    order: 1;
+}
+
+.question-number {
+    order: 0;
+}
+
+
+
+
+/* ترتیب گزینه‌ها: 4 3 2 1 */
+.answer-row label:nth-of-type(1) {
+    order: 5;
+}
+
+.answer-row label:nth-of-type(2) {
+    order: 4;
+}
+
+.answer-row label:nth-of-type(3) {
+    order: 3;
+}
+
+.answer-row label:nth-of-type(4) {
+    order: 2;
+}
+
+/* شماره سؤال سمت چپ */
+.question-number {
+    order: 1;
+}
+.exam-footer {
+    position: fixed;
+    right: 60px;
+    bottom: 30px;
+
+    z-index: 1000;
+}
+
+.finish-exam-btn {
+    border: none;
+    outline: none;
+
+    padding: 10px 24px;
+    border-radius: 10px;
+
+    background: #ef4444;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.finish-exam-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.22);
+}
+
+.finish-exam-btn:active {
+    transform: translateY(0);
 }
 
 
@@ -7189,154 +1863,226 @@ opacity:1;
 
 
 
-/* =====================================
-   FINAL EXAM LOCK STATE
-===================================== */
 
 
-.exam-confirm-modal.locked,
-.status-finish-overlay.locked{
 
 
-    pointer-events:none;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   EXAM SUCCESS SCREEN
+   ===================================================== */
+
+.exam-success-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    background:
+        rgba(3, 6, 18, 0.96);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    direction: rtl;
+
+    animation:
+        successFadeIn 0.5s ease forwards;
+}
+
+
+/* =====================================================
+   BOX
+   ===================================================== */
+
+.exam-success-box {
+
+    width: min(90%, 520px);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 
+/* =====================================================
+   SUCCESS TEXT
+   ===================================================== */
 
-/* جلوگیری از تغییر ظاهر */
+.success-text {
 
-.exam-confirm-modal.locked .confirm-box,
-.status-finish-overlay.locked .status-finish-content{
+    min-height: 45px;
 
+    color: #ffffff;
 
-    opacity:.75;
+    font-size: 26px;
+    font-weight: 800;
 
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-        BACK BUTTON
-===================================== */
-
-
-.back-btn{
-
-
-    width:38px;
-    height:38px;
-
-
-    border-radius:12px;
-
-
-    border:1px solid var(--border);
-
-
-    background:var(--surface);
-
-
-    color:var(--text-secondary);
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    cursor:pointer;
-
-
-    transition:.3s ease;
-
-
-    box-shadow:var(--shadow);
-
+    letter-spacing: -0.5px;
 
 }
 
 
+/* =====================================================
+   SECOND TEXT
+   ===================================================== */
 
-.back-btn svg{
+.info-text {
 
+    margin-top: 14px;
 
-    width:18px;
+    color: #9ca3af;
 
-    height:18px;
+    font-size: 14px;
 
+    opacity: 0;
 
-    transition:.3s ease;
+    transform:
+        translateY(10px);
 
-
-}
-
-
-
-
-
-.back-btn:hover{
-
-
-    background:var(--surface-hover);
-
-
-    color:var(--accent);
-
-
-    transform:translateX(4px);
-
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
 
 }
 
 
+.info-text.show {
 
+    opacity: 1;
 
-
-.back-btn:active{
-
-
-    transform:scale(.92);
-
-
-}
-/* =====================================
-        GLOBAL BORDER RADIUS CONTROL
-===================================== */
-
-
-*{
-
-    border-radius:10px !important;
+    transform:
+        translateY(0);
 
 }
 
 
-.confirm-box {
-    height: 562px;
+/* =====================================================
+   EXIT BUTTON
+   ===================================================== */
+
+.exit-exam-btn {
+
+    margin-top: 28px;
+
+    padding:
+        10px 30px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #6366f1;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        background 0.2s ease;
+
+}
+
+
+.exit-exam-btn.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.exit-exam-btn:hover {
+
+    background: #4f46e5;
+
+}
+
+
+/* =====================================================
+   PAGE FADE
+   ===================================================== */
+
+@keyframes successFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }

@@ -1,562 +1,155 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>آزمون</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>پنل آزمون</title>
-
-
-
-
-<link rel="stylesheet" href="./م.css">
-<script src="https://unpkg.com/lucide@latest"></script>
-
-
+    <link rel="stylesheet" href="./م.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-
-<body>
-
-
-<!-- =========================
-        HEADER
-========================= -->
-<header class="header">
+<body class="dark-theme">
 
 
-    <button class="icon-btn theme-btn">
 
-        <i data-lucide="moon"></i>
 
+
+
+
+
+
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+        <div class="a4">
+            <p>
+                <span>R</span><span>I</span><span>S</span><span>E</span><span>O</span>
+            </p>
+        </div>
+
+
+            <!-- Search -->
+            <div class="header-search">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="m21 21-4.35-4.35
+                           M10.8 18a7.2 7.2 0 1 1 0-14.4
+                           7.2 7.2 0 0 1 0 14.4Z"
+                    />
+                </svg>
+
+                <input
+                    type="search"
+                    placeholder="جستجو در درس‌ها، فایل‌ها و..."
+                    aria-label="جستجو"
+                >
+
+            </div>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             CATEGORY NAVIGATION
+        ========================================== -->
+
+        <nav
+            class="category-nav"
+            aria-label="دسته‌بندی اصلی"
+        >
+
+
+        <p>
+            <span></span>
+        </p>
+
+
+
+        </nav>
+
+    </header>
+
+
+
+
+
+
+
+
+<main class="exam-page">
+
+    <div class="files-content-box">
+
+        <button class="download-questions-btn">
+            <span class="download-icon">↓</span>
+            دانلود سوالات
+        </button>
+
+
+
+
+<div class="answer-sheet">
+
+    <div class="answer-column"></div>
+
+    <div class="answer-column"></div>
+
+    <div class="answer-column"></div>
+
+    <div class="answer-column"></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="exam-footer">
+    <button id="finish-exam-btn" class="finish-exam-btn">
+        پایان آزمون
     </button>
+</div>
 
 
 
 
-    <div class="header-brand">
 
 
-        <i data-lucide="brain-circuit"></i>
-        <i data-lucide="brain-circuit1"></i>
 
-        <span>
-            برنامه کنکور
-        </span>
+
+
+
+
+
+
 
 
     </div>
 
 
 
-
-
-    <!-- <button class="icon-btn">
-
-        <i data-lucide="settings"></i>
-
-    </button> -->
-
-<!-- BACK BUTTON -->
-
-<button class="back-btn" id="backBtn">
-
-    <i data-lucide="arrow-right"></i>
-
-</button>
-
-</header>
-
-
-<!-- =========================
-        MAIN DASHBOARD
-========================= -->
-
-<main class="exam-dashboard" id="examDashboard">
-
-
-<!-- =========================
-        USER CARD
-========================= -->
-
-<section class="exam-user-card" id="userCard">
-
-
-<div class="exam-user-header">
-
-<div class="user-icon-box">
-<i data-lucide="user-round"></i>
-</div>
-
-
-<div class="user-details">
-
-<h3 id="studentName">
---
-</h3>
-
-<span id="studentCandidateNumber">
-شماره داوطلبی: ---
-</span>
-
-</div>
-
-
-<div class="user-rank">
-
-<i data-lucide="crown"></i>
-
-<span id="studentLeague">
-الماس
-</span>
-
-</div>
-
-
-</div>
-
-
-
-<div class="exam-info-grid">
-
-
-<div class="user-stat">
-
-<i data-lucide="calendar-days"></i>
-
-<div>
-
-<span>
-سابقه مطالعه
-</span>
-
-<strong id="studyDays">
-128 روز
-</strong>
-
-</div>
-
-</div>
-
-
-
-<div class="user-stat">
-
-<i data-lucide="target"></i>
-
-<div>
-
-<span>
-آزمون داده شده
-</span>
-
-<strong id="completedExams">
-24 آزمون
-</strong>
-
-</div>
-
-</div>
-
-
-
-<div class="user-stat">
-
-<i data-lucide="chart-column"></i>
-
-<div>
-
-<span>
-آخرین تراز
-</span>
-
-<strong id="previousScore">
-0
-</strong>
-
-</div>
-
-</div>
-
-
-
-<div class="user-stat">
-
-<i data-lucide="flame"></i>
-
-<div>
-
-<span>
-روزهای پیوسته
-</span>
-
-<strong id="streakDays">
-18 روز
-</strong>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<div class="exam-warning">
-
-<i data-lucide="sparkles"></i>
-
-<p id="progressText">
-
-آفرین! تا امروز مسیر برنامه رو عالی پیش بردی.
-
-</p>
-
-</div>
-</section>
-
-<!-- =========================
-        EXAM DETAILS CARD
-========================= -->
-
-<section class="exam-details-card" id="currentExamDetailsCard">
-
-
-<!-- TITLE -->
-
-<div class="section-title">
-
-<i data-lucide="clipboard-list"></i>
-
-<h3>
-اطلاعات آزمون
-</h3>
-
-</div>
-
-
-
-<div class="exam-details-layout">
-
-
-
-<!-- =========================
-        COLUMN 1
-        EXAM META
-========================= -->
-
-
-<div class="exam-meta-column">
-
-
-<div class="detail-item">
-
-<i data-lucide="file-question"></i>
-
-<div>
-
-<span>
-تعداد سوال
-</span>
-
-<strong id="detailQuestionCount">
-0 سوال
-</strong>
-
-</div>
-
-</div>
-
-
-
-<div class="meta-divider"></div>
-
-
-
-<div class="detail-item">
-
-<i data-lucide="clock"></i>
-
-<div>
-
-<span>
-مدت آزمون
-</span>
-
-<strong id="detailExamDuration">
-0 دقیقه
-</strong>
-
-</div>
-
-</div>
-
-
-
-
-<div class="meta-divider"></div>
-
-
-
-
-<div class="detail-item">
-
-<i data-lucide="calendar-plus"></i>
-
-<div>
-
-<span>
-تاریخ انتشار
-</span>
-
-<strong id="detailCreatedDate">
---
-</strong>
-
-</div>
-
-</div>
-
-
-
-
-<div class="meta-divider"></div>
-
-
-
-
-
-<div class="detail-item">
-
-<i data-lucide="calendar-clock"></i>
-
-<div>
-
-<span>
-آخرین ویرایش
-</span>
-
-<strong id="detailUpdatedDate">
---
-</strong>
-
-</div>
-
-</div>
-
-
-
-
-<div class="meta-divider"></div>
-
-
-
-
-<div class="detail-item">
-
-<i data-lucide="users"></i>
-
-<div>
-
-<span>
-شرکت کنندگان
-</span>
-
-<strong id="detailParticipants">
-0 نفر
-</strong>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-        COLUMN 2
-        EXAM CONTENT
-========================= -->
-
-
-<div class="exam-main-column">
-
-
-
-<div class="subject-header">
-
-
-<div class="subject-logo">
-
-<i data-lucide="book-open"></i>
-
-</div>
-
-
-
-<div class="subject-info">
-
-
-<h2 id="detailExamTitle">
---
-</h2>
-
-
-<span id="detailExamSubject">
---
-</span>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="content-divider"></div>
-
-
-
-
-
-<div class="exam-description">
-
-
-<div class="description-title">
-
-<i data-lucide="info"></i>
-
-<span>
-توضیحات آزمون
-</span>
-
-
-</div>
-
-
-
-<p id="examDescription">
-
-توضیحات آزمون اینجا نمایش داده می‌شود.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- =========================
-        COLUMN 3
-        ACTION
-========================= -->
-
-
-<div class="exam-action-column">
-
-
-
-<div class="notice-box">
-
-
-<div class="notice-title">
-
-<i data-lucide="triangle-alert"></i>
-
-<span>
-تذکرات آزمون
-</span>
-
-</div>
-
-
-
-<p>
-
-قبل از شروع آزمون قوانین را مطالعه کنید و از اتصال اینترنت مطمئن شوید.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="exam-status">
-
-
-<i data-lucide="circle-play"></i>
-
-
-<span id="examStatus">
-آماده شروع
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-<button
-id="startExamButton"
-class="start-exam-btn">
-
-
-<i data-lucide="play"></i>
-
-شروع آزمون
-
-
-</button>
-
-
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-</section>
 
 
 </main>
@@ -565,752 +158,6 @@ class="start-exam-btn">
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-     EXAM QUESTION WORKSPACE
-========================= -->
-
-<section class="exam-workspace" id="examWorkspace">
-
-
-<!-- =========================
-        QUESTION PANEL
-========================= -->
-
-<div class="question-panel">
-
-
-    <div class="question-top">
-
-
-        <div class="question-number">
-
-            سوال
-            <span id="currentQuestionNumber">
-                1
-            </span>
-
-        </div>
-
-        <div class="exam-timer" id="examTimer">
-
-
-    <i data-lucide="clock"></i>
-
-
-    <span id="timerDisplay">
-        01:30:00
-    </span>
-
-
-</div>
-
-        <div class="question-tools">
-
-
-<button id="markQuestion" class="mark-question-btn">
-
-    <label class="ui-bookmark">
-        <input type="checkbox">
-
-        <div class="bookmark">
-            <svg viewBox="0 0 32 32">
-                <path d="M27 4v27a1 1 0 0 1-1.625.781L16 24.281l-9.375 7.5A1 1 0 0 1 5 31V4a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4z"></path>
-            </svg>
-        </div>
-    </label>
-
-    <span>
-        علامت گذاری
-    </span>
-
-</button>
-
-
-        </div>
-
-
-    </div>
-
-
-
-
-
-<div class="question-body" style="margin-right: 20px;">
-
-
-    <div class="question-layout">
-
-
-        <!-- =========================
-             LEFT : QUESTION MEDIA
-        ========================== -->
-
-
-        <div 
-        id="questionMedia"
-        class="question-media-area">
-
-
-            <img 
-            id="questionImage"
-            class="question-image"
-            src="">
-
-
-        </div>
-
-
-
-
-
-        <!-- =========================
-             RIGHT : QUESTION CONTENT
-        ========================== -->
-
-
-        <div class="question-text-area">
-
-
-            <p 
-            id="questionText"
-            class="question-text">
-
-
-                متن سوال اینجا قرار میگیرد
-
-
-            </p>
-
-
-
-
-
-            <!-- OPTIONS -->
-
-<div class="question-options" id="optionsList">
-
-
-<label class="answer-option">
-
-<input 
-type="radio"
-name="answer"
-value="1">
-
-
-<span class="checkBox">
-
-<div class="transition"></div>
-
-</span>
-
-
-<span class="answer-text">
-گزینه اول
-</span>
-
-
-</label>
-
-
-
-
-<label class="answer-option">
-
-<input 
-type="radio"
-name="answer"
-value="2">
-
-
-<span class="checkBox">
-
-<div class="transition"></div>
-
-</span>
-
-
-<span class="answer-text">
-گزینه دوم
-</span>
-
-
-</label>
-
-
-
-
-
-<label class="answer-option">
-
-<input 
-type="radio"
-name="answer"
-value="3">
-
-
-<span class="checkBox">
-
-<div class="transition"></div>
-
-</span>
-
-
-<span class="answer-text">
-گزینه سوم
-</span>
-
-
-</label>
-
-
-
-
-
-<label class="answer-option">
-
-<input 
-type="radio"
-name="answer"
-value="4">
-
-
-<span class="checkBox">
-
-<div class="transition"></div>
-
-</span>
-
-
-<span class="answer-text">
-گزینه چهارم
-</span>
-
-
-</label>
-
-
-</div>
-
-
-        </div>
-
-
-
-    </div>
-
-
-
-</div>
-
-
-
-
-    <div class="question-navigation">
-
-
-        <button id="previousQuestion">
-
-            <i data-lucide="arrow-right"></i>
-
-           بعدی  
-        </button>
-
-
-                <button 
-                id="finishExamBtn"
-                class="finish-exam-btn">
-
-                <i data-lucide="check-circle"></i>
-
-                تمام کردن آزمون
-
-                </button>
-
-
-        <button id="nextQuestion">
-
-           قبلی
-
-
-            <i data-lucide="arrow-left"></i>
-
-        </button>
-
-
-
-    </div>
-
-
-
-</div>
-
-
-
-
-
-
-<!-- =========================
-        STATUS PANEL
-========================= -->
-
-
-<aside class="status-wrapper">
-
-
-
-
-
-
-<div class="status-panel">
-
-
-<div class="status-header">
-
-
-    <i data-lucide="layout-grid"></i>
-
-
-    <h3>
-        وضعیت سوالات
-    </h3>
-
-
-    <button 
-    id="closeStatusPanel"
-    class="close-status-btn">
-
-        <i data-lucide="x"></i>
-
-    </button>
-
-
-</div>
-
-
-
-
-<div class="status-counter">
-
-
-<div>
-
-<span>
-پاسخ داده
-</span>
-
-<strong id="answeredCount">
-0
-</strong>
-
-</div>
-
-
-
-<div>
-
-<span>
-باقی مانده
-</span>
-
-<strong id="remainingCount">
-0
-</strong>
-
-</div>
-
-
-
-<div>
-
-<span>
-علامت دار
-</span>
-
-<strong id="markedCount">
-0
-</strong>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="questions-grid" id="questionsGrid">
-
-</div>
-
-
-
-
-
-<!-- 
-<div class="status-footer">
-
-
-<div>
-<span class="dot answered"></span>
-پاسخ داده
-</div>
-
-
-<div>
-<span class="dot unanswered"></span>
-نزده
-</div>
-
-
-<div>
-<span class="dot marked"></span>
-علامت دار
-</div>
-
-
-</div> -->
-
-
-
-</div>
-
-
-</aside>
-
-<button 
-id="openStatusPanel"
-class="open-status-tab">
-
-
-<i data-lucide="chevron-right"></i>
-
-
-</button>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="examConfirmModal" class="exam-confirm-modal">
-<div class="confirm-box">
-
-
-<h2>
-<i data-lucide="clipboard-check"></i>
-تایید نهایی آزمون
-</h2>
-
-
-
-<div class="confirm-dashboard">
-
-
-<!-- RIGHT USER -->
-
-<div class="confirm-section user-section">
-
-
-<h3>
-<i data-lucide="user-round"></i>
-اطلاعات داوطلب
-</h3>
-
-
-<div class="confirm-user">
-<i data-lucide="user"></i>
-<span id="finalStudentName">--</span>
-</div>
-
-
-<div class="confirm-user">
-<i data-lucide="badge"></i>
-<span id="finalCandidateNumber">--</span>
-</div>
-
-
-</div>
-
-
-
-
-
-
-<!-- CENTER STATUS -->
-
-<div class="confirm-section">
-
-
-<h3>
-<i data-lucide="chart-column"></i>
-وضعیت پاسخنامه
-</h3>
-
-
-<div class="confirm-status">
-
-
-<div>
-<span>کل سوالات</span>
-<strong id="finalTotalQuestions">0</strong>
-</div>
-
-
-<div>
-<span>پاسخ داده</span>
-<strong id="finalAnswered">0</strong>
-</div>
-
-
-<div>
-<span>باقی مانده</span>
-<strong id="finalRemaining">0</strong>
-</div>
-
-
-<div>
-<span>علامت دار</span>
-<strong id="finalMarked">0</strong>
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- LEFT WARNING -->
-
-<div class="confirm-section warning-section">
-
-
-<div class="confirm-warning">
-
-
-<i data-lucide="triangle-alert"></i>
-
-
-<p>
-پس از ثبت پاسخنامه امکان تغییر پاسخ‌ها وجود ندارد.
-</p>
-
-
-</div>
-
-
-<div class="confirm-actions">
-
-
-<button id="submitFinalExam">
-ثبت و ارسال
-</button>
-
-
-<button id="cancelFinalExam">
-بازگشت
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="exam-submit-state" id="examSubmitState">
-
-
-    <div class="submit-loader">
-
-        <i data-lucide="loader-circle"></i>
-
-        <h3>
-            در حال ارسال پاسخ‌ها...
-        </h3>
-
-        <p>
-            لطفاً صبر کنید
-        </p>
-
-    </div>
-
-
-
-    <div class="submit-success">
-
-        <i data-lucide="circle-check"></i>
-
-
-        <h2>
-            شما در این آزمون شرکت کردید
-        </h2>
-
-
-        <p>
-            به زودی نتایج آزمون در پنل شما بارگزاری می‌شود.
-        </p>
-
-
-    </div>
-
-
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =====================================
-     STATUS FINISH OVERLAY
-===================================== -->
-
-
-<div class="status-finish-overlay" id="statusFinishOverlay">
-
- <div class="status-finish-content"> 
-
-
-        <i data-lucide="lock"></i>
-
-
-        <h3>
-            آماده ارسال پاسخنامه
-        </h3>
-
-
-        <p>
-            برای ادامه، تایید نهایی آزمون را انجام دهید.
-        </p>
-
-
-    </div> 
-
-
-</div>
 
 
 
@@ -1332,16 +179,891 @@ class="open-status-tab">
 
 <script src="../config.js"></script>
 
-<script src="exam-result.js"></script>
-
 <script>
 
-lucide.createIcons();
+// =====================================================
+// NEW EXAM ANSWER SHEET
+// =====================================================
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+    console.log("NEW ANSWER SHEET PAGE READY");
+
+
+    // =====================================================
+    // API
+    // =====================================================
+
+    if (typeof API_URL === "undefined") {
+
+        console.error("API_URL پیدا نشد");
+
+        return;
+    }
+
+
+    // =====================================================
+    // TOKEN
+    // =====================================================
+
+    const token =
+        localStorage.getItem("authToken");
+
+
+    if (!token) {
+
+        console.error("NO TOKEN");
+
+        return;
+    }
+
+
+    // =====================================================
+    // EXAM ID
+    // =====================================================
+
+    const examId =
+        sessionStorage.getItem("selectedExamId");
+
+
+    if (!examId) {
+
+        console.error("EXAM ID NOT FOUND");
+
+        return;
+    }
+
+
+    console.log(
+        "SELECTED EXAM ID:",
+        examId
+    );
+
+
+    // =====================================================
+    // ANSWER SHEET
+    // =====================================================
+
+    const answerSheet =
+        document.querySelector(".answer-sheet");
+
+
+    if (!answerSheet) {
+
+        console.error(
+            "ANSWER SHEET NOT FOUND"
+        );
+
+        return;
+    }
+
+
+    // =====================================================
+    // STATE
+    // =====================================================
+
+    let questions = [];
+
+    let answers = {};
+
+
+    // =====================================================
+    // LOAD EXAM
+    // =====================================================
+
+    async function loadExam() {
+
+        try {
+
+            console.log(
+                "GET EXAM:",
+                examId
+            );
+
+
+            const response =
+                await fetch(
+                    `${API_URL}/tests/${examId}`
+                );
+
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "EXAM DATA:",
+                data
+            );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.message ||
+                    "خطا در دریافت آزمون"
+                );
+
+            }
+
+
+            // =================================================
+            // TEST
+            // =================================================
+
+            const test =
+                data.test;
+
+
+            if (!test) {
+
+                throw new Error(
+                    "اطلاعات آزمون پیدا نشد"
+                );
+
+            }
+
+
+            // =================================================
+            // QUESTIONS
+            // =================================================
+
+            questions =
+                test.questions || [];
+
+
+            console.log(
+                "QUESTIONS:",
+                questions
+            );
+
+
+            console.log(
+                "TOTAL QUESTIONS:",
+                questions.length
+            );
+
+
+            // =================================================
+            // CREATE ANSWER SHEET
+            // =================================================
+
+            createAnswerSheet();
+
+
+        } catch (error) {
+
+            console.error(
+                "EXAM LOAD ERROR:",
+                error
+            );
+
+        }
+
+    }
+
+
+    // =====================================================
+    // CREATE ANSWER SHEET
+    // =====================================================
+
+    function createAnswerSheet() {
+
+        // پاک کردن پاسخ نامه قبلی
+        answerSheet.innerHTML = "";
+
+
+        // =================================================
+        // CREATE 4 COLUMNS
+        // =================================================
+
+        const columns = [];
+
+
+        for (let i = 0; i < 4; i++) {
+
+            const column =
+                document.createElement("div");
+
+
+            column.className =
+                "answer-column";
+
+
+            columns.push(column);
+
+
+            answerSheet.appendChild(
+                column
+            );
+
+        }
+
+
+        // =================================================
+        // NO QUESTIONS
+        // =================================================
+
+        if (questions.length === 0) {
+
+            console.warn(
+                "NO QUESTIONS"
+            );
+
+            return;
+        }
+
+
+        // =================================================
+        // 10 QUESTIONS PER COLUMN
+        // =================================================
+
+        const questionsPerColumn = 10;
+
+
+        // =================================================
+        // CREATE QUESTIONS
+        // =================================================
+
+        questions.forEach(
+            (question, index) => {
+
+                const questionNumber =
+                    index + 1;
+
+
+                // =================================================
+                // COLUMN
+                // =================================================
+
+                const columnIndex =
+                    Math.floor(
+                        index /
+                        questionsPerColumn
+                    );
+
+
+                const safeColumnIndex =
+                    Math.min(
+                        columnIndex,
+                        3
+                    );
+
+
+                const column =
+                    columns[
+                        safeColumnIndex
+                    ];
+
+
+                // =================================================
+                // ROW
+                // =================================================
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                row.className =
+                    "answer-row";
+
+
+                // =================================================
+                // QUESTION NUMBER
+                // =================================================
+
+                const number =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                number.className =
+                    "question-number";
+
+
+                number.textContent =
+                    questionNumber;
+
+
+                row.appendChild(
+                    number
+                );
+
+
+                // =================================================
+                // OPTIONS
+                // =================================================
+
+                const optionNumbers =
+                    [4, 3, 2, 1];
+
+
+                optionNumbers.forEach(
+                    optionNumber => {
+
+                        // -----------------------------------------
+                        // LABEL
+                        // -----------------------------------------
+
+                        const label =
+                            document.createElement(
+                                "label"
+                            );
+
+
+                        label.className =
+                            "answer-option";
+
+
+                        // -----------------------------------------
+                        // RADIO
+                        // -----------------------------------------
+
+                        const input =
+                            document.createElement(
+                                "input"
+                            );
+
+
+                        input.type =
+                            "radio";
+
+
+                        input.name =
+                            `question-${questionNumber}`;
+
+
+                        input.value =
+                            optionNumber;
+
+
+                        // -----------------------------------------
+                        // OPTION NUMBER
+                        // -----------------------------------------
+
+                        const optionText =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        optionText.textContent =
+                            optionNumber;
+
+
+                        // -----------------------------------------
+                        // SAVE ANSWER
+                        // -----------------------------------------
+
+                        input.addEventListener(
+                            "change",
+                            () => {
+
+                                /*
+                                    گزینه 1 = index 0
+                                    گزینه 2 = index 1
+                                    گزینه 3 = index 2
+                                    گزینه 4 = index 3
+                                */
+
+                                answers[
+                                    questionNumber
+                                ] =
+                                    optionNumber - 1;
+
+
+                                console.log(
+                                    "ANSWER:",
+                                    questionNumber,
+                                    optionNumber
+                                );
+
+
+                                console.log(
+                                    "ALL ANSWERS:",
+                                    answers
+                                );
+
+                            }
+                        );
+
+
+                        // -----------------------------------------
+                        // APPEND
+                        // -----------------------------------------
+
+                        label.appendChild(
+                            input
+                        );
+
+
+                        label.appendChild(
+                            optionText
+                        );
+
+
+                        row.appendChild(
+                            label
+                        );
+
+                    }
+                );
+
+
+                // =================================================
+                // ADD ROW TO COLUMN
+                // =================================================
+
+                column.appendChild(
+                    row
+                );
+
+            }
+        );
+
+
+        console.log(
+            "ANSWER SHEET CREATED SUCCESSFULLY"
+        );
+
+    }
+
+
+    // =====================================================
+    // FINISH EXAM BUTTON
+    // =====================================================
+
+    const finishExamBtn =
+        document.getElementById(
+            "finish-exam-btn"
+        );
+
+
+    if (finishExamBtn) {
+
+        finishExamBtn.addEventListener(
+            "click",
+            submitExam
+        );
+
+    }
+
+
+    // =====================================================
+    // SUBMIT EXAM
+    // =====================================================
+
+    async function submitExam() {
+
+        // جلوگیری از چند بار کلیک
+        if (finishExamBtn.disabled) {
+            return;
+        }
+
+
+        finishExamBtn.disabled =
+            true;
+
+
+        finishExamBtn.textContent =
+            "در حال ثبت آزمون...";
+
+
+        try {
+
+            // =================================================
+            // FINAL DATA
+            // =================================================
+
+            const finalExamData = {
+
+                examId:
+                    examId,
+
+                answers:
+                    answers,
+
+                totalQuestions:
+                    questions.length,
+
+                answeredCount:
+                    Object.keys(
+                        answers
+                    ).length,
+
+                remainingCount:
+                    questions.length -
+                    Object.keys(
+                        answers
+                    ).length,
+
+                submittedAt:
+                    new Date().toISOString()
+
+            };
+
+
+            console.log(
+                "FINAL EXAM DATA:",
+                finalExamData
+            );
+
+
+            // =================================================
+            // SEND TO SERVER
+            // =================================================
+
+            const response =
+                await fetch(
+                    `${API_URL}/exam-submission/submit`,
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "Authorization":
+                                `Bearer ${token}`
+
+                        },
+
+                        body:
+                            JSON.stringify(
+                                finalExamData
+                            )
+
+                    }
+                );
+
+
+            // =================================================
+            // RESPONSE
+            // =================================================
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "SUBMIT RESPONSE:",
+                data
+            );
+
+
+            // =================================================
+            // CHECK RESPONSE
+            // =================================================
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.message ||
+                    "ثبت آزمون ناموفق بود"
+                );
+
+            }
+
+
+            // =================================================
+            // SUCCESS
+            // =================================================
+
+            showExamSuccess();
+
+
+        } catch (error) {
+
+            console.error(
+                "EXAM SUBMIT ERROR:",
+                error
+            );
+
+
+            finishExamBtn.disabled =
+                false;
+
+
+            finishExamBtn.textContent =
+                "پایان آزمون";
+
+
+            alert(
+                error.message ||
+                "خطایی هنگام ثبت آزمون رخ داد."
+            );
+
+        }
+
+    }
+
+
+    // =====================================================
+    // SUCCESS SCREEN
+    // =====================================================
+
+    function showExamSuccess() {
+
+        // =================================================
+        // OVERLAY
+        // =================================================
+
+        const overlay =
+            document.createElement(
+                "div"
+            );
+
+
+        overlay.className =
+            "exam-success-overlay";
+
+
+        // =================================================
+        // BOX
+        // =================================================
+
+        const box =
+            document.createElement(
+                "div"
+            );
+
+
+        box.className =
+            "exam-success-box";
+
+
+        // =================================================
+        // SUCCESS TEXT
+        // =================================================
+
+        const successText =
+            document.createElement(
+                "div"
+            );
+
+
+        successText.className =
+            "success-text";
+
+
+        box.appendChild(
+            successText
+        );
+
+
+        // =================================================
+        // INFO TEXT
+        // =================================================
+
+        const infoText =
+            document.createElement(
+                "div"
+            );
+
+
+        infoText.className =
+            "info-text";
+
+
+        infoText.textContent =
+            "پس از بررسی، نتیجه در پنل شما قرار خواهد گرفت.";
+
+
+        box.appendChild(
+            infoText
+        );
+
+
+        // =================================================
+        // EXIT BUTTON
+        // =================================================
+
+        const exitButton =
+            document.createElement(
+                "button"
+            );
+
+
+        exitButton.className =
+            "exit-exam-btn";
+
+
+        exitButton.textContent =
+            "خروج";
+
+
+        exitButton.addEventListener(
+            "click",
+            () => {
+
+                window.location.href =
+                    "tests.html";
+
+            }
+        );
+
+
+        box.appendChild(
+            exitButton
+        );
+
+
+        // =================================================
+        // ADD TO PAGE
+        // =================================================
+
+        overlay.appendChild(
+            box
+        );
+
+
+        document.body.appendChild(
+            overlay
+        );
+
+
+        // =================================================
+        // TYPE EFFECT
+        // =================================================
+
+        const text =
+            "آزمون شما با موفقیت ثبت شد";
+
+
+        let index = 0;
+
+
+        function typeText() {
+
+            if (index < text.length) {
+
+                successText.textContent +=
+                    text.charAt(index);
+
+
+                index++;
+
+
+                setTimeout(
+                    typeText,
+                    70
+                );
+
+
+            } else {
+
+                // =============================================
+                // SHOW INFO TEXT
+                // =============================================
+
+                setTimeout(
+                    () => {
+
+                        infoText.classList.add(
+                            "show"
+                        );
+
+
+                        // =========================================
+                        // SHOW EXIT BUTTON
+                        // =========================================
+
+                        setTimeout(
+                            () => {
+
+                                exitButton.classList.add(
+                                    "show"
+                                );
+
+                            },
+                            900
+                        );
+
+                    },
+                    400
+                );
+
+            }
+
+        }
+
+
+        typeText();
+
+    }
+
+
+    // =====================================================
+    // START
+    // =====================================================
+
+    await loadExam();
+
+});
 
 </script>
 
 
-<script src="./100.js"></script>
-</main>
+    
+
+
+
+
+
+
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

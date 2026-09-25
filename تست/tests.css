@@ -4928,3 +4928,449 @@ font-family: "Vazirmatn", sans-serif;
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   Exam Already Submitted Message
+   ========================================= */
+
+.exam-message {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 99999;
+
+    min-width: 280px;
+    max-width: 360px;
+
+    padding: 15px 18px;
+
+    background: rgba(25, 28, 42, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    direction: rtl;
+    text-align: right;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.exam-message.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   FINAL EXAM REPORT
+   بخش کاملاً مستقل و تمام عرض
+========================================= */
+
+.final-exam-report {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 0px;
+    padding: 24px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    direction: rtl;
+    text-align: right;
+
+    color: #fff;
+}
+
+
+/* HEADER */
+
+.final-report-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.final-report-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8f95a8;
+    font-size: 12px;
+}
+
+.final-report-header h2 {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.final-report-status {
+    padding: 8px 13px;
+
+    border-radius: 9px;
+
+    background: rgba(34,197,94,.08);
+    border: 1px solid rgba(34,197,94,.15);
+
+    color: #4ade80;
+
+    font-size: 12px;
+}
+
+
+/* INFO */
+
+.final-report-info {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 180px;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.final-report-exam,
+.final-report-score {
+    min-height: 95px;
+
+    box-sizing: border-box;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.final-report-exam span,
+.final-report-score span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8f95a8;
+    font-size: 12px;
+}
+
+.final-report-exam strong {
+    display: block;
+
+    font-size: 17px;
+}
+
+.final-report-score {
+    text-align: center;
+}
+
+.final-report-score strong {
+    display: inline-block;
+
+    font-size: 30px;
+    line-height: 1;
+
+    margin-left: 5px;
+}
+
+.final-report-score small {
+    color: #8f95a8;
+    font-size: 11px;
+}
+
+
+/* STATS */
+
+.final-report-stats {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.final-report-stat {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    border-radius: 13px;
+
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.final-stat-icon {
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.final-report-stat span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #8f95a8;
+    font-size: 11px;
+}
+
+.final-report-stat strong {
+    display: block;
+
+    font-size: 18px;
+}
+
+
+/* COLORS */
+
+.final-report-stat.correct .final-stat-icon {
+    color: #4ade80;
+    background: rgba(34,197,94,.10);
+}
+
+.final-report-stat.wrong .final-stat-icon {
+    color: #f87171;
+    background: rgba(239,68,68,.10);
+}
+
+.final-report-stat.empty .final-stat-icon {
+    color: #fbbf24;
+    background: rgba(245,158,11,.10);
+}
+
+.final-report-stat.answered .final-stat-icon {
+    color: #60a5fa;
+    background: rgba(59,130,246,.10);
+}
+
+.final-report-stat.total .final-stat-icon {
+    color: #c084fc;
+    background: rgba(168,85,247,.10);
+}
+
+
+/* FOOTER */
+
+.final-report-footer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.final-report-footer span {
+    color: #cbd0dc;
+    font-size: 12px;
+}
+
+.final-report-footer small {
+    color: #70778a;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .final-report-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .final-report-info {
+        grid-template-columns: 1fr 160px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .final-exam-report {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .final-report-header {
+        align-items: flex-start;
+    }
+
+    .final-report-header h2 {
+        font-size: 19px;
+    }
+
+    .final-report-status {
+        font-size: 10px;
+        padding: 7px 9px;
+    }
+
+    .final-report-info {
+        grid-template-columns: 1fr;
+    }
+
+    .final-report-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .final-report-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .final-report-stats {
+        grid-template-columns: 1fr;
+    }
+}

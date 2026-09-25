@@ -427,7 +427,7 @@ ${test.title || "آزمون بدون عنوان"}
 
 <span>
 
-${test.description || "آزمون جامع"}
+${test.description || "آزمون تستی"}
 
 </span>
 
@@ -594,51 +594,6 @@ refreshIcons();
 // =====================================================
 
 
-document
-.querySelectorAll(".enter-exam-btn")
-.forEach(
-
-(btn)=>{
-
-
-btn.onclick = ()=>{
-
-
-const examId =
-btn.dataset.id;
-
-
-
-console.log(
-"SELECTED EXAM:",
-examId
-);
-
-
-
-sessionStorage.setItem(
-
-"selectedExamId",
-
-examId
-
-);
-
-
-
-window.location.href =
-"exam.html";
-
-
-};
-
-
-
-}
-
-);
-
-
 
 }
 
@@ -769,7 +724,7 @@ let icon =
 
 
 if(
-exam.subject?.includes("ریاضی")
+exam.subject?.includes("ریاضی-")
 ){
 
 icon="calculator";
@@ -777,7 +732,7 @@ icon="calculator";
 }
 
 else if(
-exam.subject?.includes("فیزیک")
+exam.subject?.includes("فیزیک-")
 ){
 
 icon="atom";
@@ -785,7 +740,7 @@ icon="atom";
 }
 
 else if(
-exam.subject?.includes("شیمی")
+exam.subject?.includes("شیمی-")
 ){
 
 icon="flask-conical";
@@ -1278,76 +1233,78 @@ error
 
 
 
-
 // ==========================================
 // ENTER EXAM BUTTON
 // ==========================================
+document.addEventListener("click", async (e) => {
+    const button = e.target.closest(".enter-exam-btn");
+    if (!button) return;
 
+    const examId = button.dataset.id;
 
-document.addEventListener(
-"click",
-(e)=>{
+    console.log("SELECTED EXAM:", examId);
 
+    try {
+        const token = localStorage.getItem("authToken");
 
-const button = 
-e.target.closest(".enter-exam-btn");
+        if (!token) {
+            showExamMessage("لطفاً ابتدا وارد حساب کاربری خود شوید.");
+            return;
+        }
 
+        const url = `${API_URL}/exam-submission/check/${examId}`;
 
-if(!button) return;
+        console.log("CHECK URL:", url);
 
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            }
+        });
 
+        console.log("CHECK STATUS:", response.status);
+        console.log("CHECK CONTENT TYPE:", response.headers.get("content-type"));
 
-const examId =
-button.dataset.id;
+        const raw = await response.text();
 
+        console.log("CHECK RAW RESPONSE:", raw);
 
+        if (!response.ok) {
+            showExamMessage("خطا در بررسی وضعیت آزمون.");
+            return;
+        }
 
-console.log(
-"Selected Exam:",
-examId
-);
+        let data;
 
+        try {
+            data = JSON.parse(raw);
+        } catch (jsonError) {
+            console.error("INVALID JSON RESPONSE:", raw);
+            showExamMessage("پاسخ نامعتبر از سرور دریافت شد.");
+            return;
+        }
 
+        console.log("EXAM CHECK:", data);
 
-// ذخیره آزمون انتخاب شده
+        if (data.alreadySubmitted) {
+            showExamMessage("شما قبلاً در این آزمون شرکت کرده‌اید.");
+            return;
+        }
 
-localStorage.setItem(
-"activeExam",
-examId
-);
+        localStorage.setItem("activeExam", examId);
+        sessionStorage.setItem("selectedExamId", examId);
 
+        console.log("ENTERING EXAM:", examId);
 
+        window.location.href = "exam.html";
 
-// رفتن به صفحه آزمون
-
-window.location.href =
-"exam.html";
-
-
+    } catch (error) {
+        console.error("CHECK EXAM ERROR:", error);
+        showExamMessage("خطا در بررسی وضعیت آزمون. دوباره تلاش کنید.");
+    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1739,7 +1696,7 @@ item.innerHTML = `
 
 <div class="recent-exam-icon">
 
-<i data-lucide="clipboard-check"></i>
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2" class="w-12 h-12 text-neutral-30 mx-auto mb-3"><path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 17H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 
 </div>
 
@@ -1999,3 +1956,143 @@ if(window.lucide){
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==========================================
+// EXAM MESSAGE
+// ==========================================
+
+function showExamMessage(message) {
+
+    const oldMessage =
+        document.querySelector(".exam-message");
+
+    if (oldMessage) {
+        oldMessage.remove();
+    }
+
+
+    const messageBox =
+        document.createElement("div");
+
+    messageBox.className = "exam-message";
+
+    messageBox.textContent = message;
+
+
+    document.body.appendChild(messageBox);
+
+
+    requestAnimationFrame(() => {
+
+        messageBox.classList.add("show");
+
+    });
+
+
+    setTimeout(() => {
+
+        messageBox.classList.remove("show");
+
+        setTimeout(() => {
+
+            messageBox.remove();
+
+        }, 300);
+
+    }, 3500);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

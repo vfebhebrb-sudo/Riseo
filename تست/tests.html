@@ -10,8 +10,9 @@
 <title>پنل آزمون</title>
 
 
-<link rel="stylesheet" href="./tests.css">
+<!-- <link rel="stylesheet" href="./tests.css"> -->
 
+<link rel="stylesheet" href="./22222.css">
 
 <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -19,822 +20,906 @@
 </head>
 
 
-<body>
-
-
-<!-- =========================
-        HEADER
-========================= -->
-<header class="header">
-
-
-    <button class="icon-btn theme-btn">
-
-        <i data-lucide="moon"></i>
-
-    </button>
+<body class="dark-theme">
 
 
 
 
-    <div class="header-brand">
+    <header class="site-header">
+
+        <div class="header-inner">
+
+        <div class="a4">
+            <p>
+                <span>R</span><span>I</span><span>S</span><span>E</span><span>O</span>
+            </p>
+        </div>
 
 
-        <i data-lucide="brain-circuit"></i>
+            <!-- Search -->
+            <div class="header-search">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="m21 21-4.35-4.35
+                           M10.8 18a7.2 7.2 0 1 1 0-14.4
+                           7.2 7.2 0 0 1 0 14.4Z"
+                    />
+                </svg>
+
+                <input
+                    type="search"
+                    placeholder="جستجو در درس‌ها، فایل‌ها و..."
+                    aria-label="جستجو"
+                >
+
+            </div>
 
 
-        <span>
-            برنامه کنکور
-        </span>
+            <!-- Header Actions -->
+            <div class="header-actions">
 
 
-    </div>
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             CATEGORY NAVIGATION
+        ========================================== -->
+
+        <!-- <nav
+            class="category-nav"
+            aria-label="دسته‌بندی اصلی"
+        >
+
+
+        <p>
+            <span></span>
+        </p>
 
 
 
-<!-- BACK BUTTON -->
+        </nav> -->
 
-<button class="back-btn" id="backBtn">
+    </header>
 
-    <i data-lucide="arrow-right"></i>
-
-</button>
-
-    <!-- <button class="icon-btn">
-
-        <i data-lucide="settings"></i>
-
-    </button> -->
-
-
-
-</header>
-
-
-<!-- =========================
-        MAIN DASHBOARD
-========================= -->
+<!-- =========================================================
+     EXAM DASHBOARD
+========================================================= -->
 
 <main class="exam-dashboard" id="examDashboard">
 
 
-<!-- =========================
-        RIGHT USER CARD
-========================= -->
+    <!-- =====================================================
+         SECTION 01
+         USER + ACTIVE EXAMS
+    ====================================================== -->
 
+    <section class="dashboard-section dashboard-section-main">
 
-<section class="exam-user-card" id="userCard">
+        <!-- USER INFORMATION -->
+        <section class="exam-user-card" id="userCard">
 
+            <div class="exam-user-header" id="userHeader">
 
+                <div class="user-icon-box" id="userIconBox">
+                    <i data-lucide="user-round"></i>
+                </div>
 
-<!-- ==========================================
-        USER HEADER
-        پروفایل دانش آموز
-========================================== -->
+                <div class="user-details" id="userDetails">
 
+                    <span class="user-details-label">
+                        پروفایل دانش‌آموز
+                    </span>
 
-<div class="exam-user-header" id="userHeader">
+                    <h3 id="studentName">
+                        --
+                    </h3>
 
+                    <span id="studentCandidateNumber">
+                        شماره داوطلبی: ---
+                    </span>
 
-<div class="user-icon-box" id="userIconBox">
+                </div>
 
-<i data-lucide="user-round"></i>
+                <div class="user-rank" id="userRank">
 
-</div>
+                    <i data-lucide="crown"></i>
 
+                    <span id="studentLeague">
+                        الماس
+                    </span>
 
+                </div>
 
+            </div>
 
 
-<div class="user-details" id="userDetails">
+            <!-- USER STATS -->
 
+            <div class="exam-info-grid" id="userStatsGrid">
 
-<h3 id="studentName">
+                <div class="user-stat" id="studyHistoryStat">
 
---
+                    <i data-lucide="calendar-days"></i>
 
-</h3>
+                    <div>
+                        <span>سابقه مطالعه</span>
 
+                        <strong id="studyDays">
+                            128 روز
+                        </strong>
+                    </div>
 
-<span id="studentCandidateNumber">
+                </div>
 
-شماره داوطلبی: ---
 
-</span>
+                <div class="user-stat" id="scoreStat">
 
-</div>
+                    <i data-lucide="chart-column"></i>
 
+                    <div>
+                        <span>آخرین تراز</span>
 
+                        <strong id="previousScore">
+                            0
+                        </strong>
+                    </div>
 
+                </div>
 
 
+                <div class="user-stat" id="examCountStat">
 
-<div class="user-rank" id="userRank">
+                    <i data-lucide="target"></i>
 
+                    <div>
+                        <span>آزمون داده شده</span>
 
-<i data-lucide="crown"></i>
+                        <strong id="completedExams">
+                            24 آزمون
+                        </strong>
+                    </div>
 
+                </div>
 
-<span id="studentLeague">
 
-الماس
+                <div class="user-stat" id="streakStat">
 
-</span>
+                    <i data-lucide="flame"></i>
 
-</div>
+                    <div>
+                        <span>روزهای پیوسته</span>
 
+                        <strong id="streakDays">
+                            18 روز
+                        </strong>
+                    </div>
 
+                </div>
 
+            </div>
 
-</div>
 
+            <!-- PROGRESS -->
 
+            <div class="exam-warning" id="progressBox">
 
+                <div class="progress-icon">
+                    <i data-lucide="sparkles"></i>
+                </div>
 
+                <div class="progress-content">
 
+                    <span>
+                        وضعیت مسیر
+                    </span>
 
+                    <p id="progressText">
+                        آفرین! تا امروز ۷۰٪ مسیر برنامه رو کامل کردی.
+                        ادامه بده تا به هدف نزدیک‌تر بشی.
+                    </p>
 
+                </div>
 
+            </div>
 
-<!-- ==========================================
-        USER STATS
-        اطلاعات آماری
-========================================== -->
+        </section>
 
 
-<div class="exam-info-grid" id="userStatsGrid">
+        <!-- ACTIVE EXAMS -->
 
+        <section class="active-exams-card" id="activeExamsCard">
 
+            <div class="section-title">
 
+                <div class="section-title-icon">
+                    <i data-lucide="files"></i>
+                </div>
 
+                <div class="section-title-text">
 
-<div class="user-stat" id="studyHistoryStat">
+                    <span>
+                        برنامه آزمون
+                    </span>
 
+                    <h3>
+                        آزمون‌های فعال
+                    </h3>
 
-<i data-lucide="calendar-days"></i>
+                </div>
 
+                <div class="section-title-line"></div>
 
-<div>
+            </div>
 
 
-<span>
+            <div
+                class="active-exams-list"
+                id="activeExamsList">
+            </div>
 
-سابقه مطالعه
+        </section>
 
-</span>
+    </section>
 
 
-<strong id="studyDays">
 
-128 روز
+    <!-- =====================================================
+         SECTION 02
+         RECENT EXAMS + PERFORMANCE
+    ====================================================== -->
 
-</strong>
+    <section class="dashboard-section dashboard-section-results">
 
-</div>
 
+        <!-- RECENT EXAMS -->
 
-</div>
+        <section class="history-card" id="recentExamsCard">
 
+            <div
+                class="section-title"
+                id="recentExamsTitle">
 
+                <div class="section-title-icon">
+                    <i data-lucide="history"></i>
+                </div>
 
+                <div class="section-title-text">
 
+                    <span>
+                        سابقه عملکرد
+                    </span>
 
+                    <h3>
+                        آزمون‌های اخیر
+                    </h3>
 
+                </div>
 
+                <div class="section-title-line"></div>
 
-<div class="user-stat" id="examCountStat">
+            </div>
 
 
-<i data-lucide="target"></i>
+            <div
+                class="recent-exams-list"
+                id="recentExamsList">
+            </div>
 
+        </section>
 
-<div>
 
 
-<span>
+        <!-- FINAL EXAM REPORT -->
 
-آزمون داده شده
+        <section class="final-exam-report">
 
-</span>
 
+            <div class="section-title">
 
-<strong id="completedExams">
+                <div class="section-title-icon">
+                    <i data-lucide="chart-column"></i>
+                </div>
 
-24 آزمون
+                <div class="section-title-text">
 
-</strong>
+                    <span>
+                        گزارش آزمون
+                    </span>
 
-</div>
+                    <h3>
+                        عملکرد شما
+                    </h3>
 
+                </div>
 
-</div>
+                <div class="section-title-line"></div>
 
+            </div>
 
 
+            <div class="final-report-header">
 
+                <div>
 
+                    <span class="final-report-label">
+                        آخرین نتیجه
+                    </span>
 
+                    <h2>
+                        عملکرد شما
+                    </h2>
 
+                </div>
 
-<div class="user-stat" id="scoreStat">
+                <div class="final-report-status">
+                    آزمون تکمیل شده
+                </div>
 
+            </div>
 
-<i data-lucide="chart-column"></i>
 
+            <div class="final-report-info">
 
-<div>
+                <div class="final-report-exam">
 
+                    <span>
+                        آزمون اخیر
+                    </span>
 
-<span>
+                    <strong id="studentExamName">
+                        نام آزمون
+                    </strong>
 
-آخرین تراز
+                </div>
 
-</span>
 
+                <div class="final-report-score">
 
+                    <span>
+                        نمره نهایی
+                    </span>
 
-<strong id="previousScore">
+                    <strong id="studentFinalScore">
+                        0
+                    </strong>
 
-0
+                    <small>
+                        از ۱۰۰
+                    </small>
 
-</strong>
+                </div>
 
+            </div>
 
-</div>
 
+            <div class="final-report-stats">
 
-</div>
 
+                <div class="final-report-stat correct">
 
+                    <div class="final-stat-icon">
+                        ✓
+                    </div>
 
+                    <div>
 
+                        <span>
+                            درست
+                        </span>
 
+                        <strong id="studentCorrectCount">
+                            0
+                        </strong>
 
+                    </div>
 
+                </div>
 
-<div class="user-stat" id="streakStat">
 
+                <div class="final-report-stat wrong">
 
-<i data-lucide="flame"></i>
+                    <div class="final-stat-icon">
+                        ×
+                    </div>
 
+                    <div>
 
-<div>
+                        <span>
+                            غلط
+                        </span>
 
+                        <strong id="studentWrongCount">
+                            0
+                        </strong>
 
-<span>
+                    </div>
 
-روزهای پیوسته
+                </div>
 
-</span>
 
+                <div class="final-report-stat empty">
 
+                    <div class="final-stat-icon">
+                        −
+                    </div>
 
-<strong id="streakDays">
-18 روز
-</strong>
+                    <div>
 
+                        <span>
+                            نزده
+                        </span>
 
-</div>
+                        <strong id="studentEmptyCount">
+                            0
+                        </strong>
 
+                    </div>
 
-</div>
+                </div>
 
 
+                <div class="final-report-stat answered">
 
+                    <div class="final-stat-icon">
+                        ✓
+                    </div>
 
+                    <div>
 
+                        <span>
+                            پاسخ داده
+                        </span>
 
-</div>
+                        <strong id="studentAnsweredCount">
+                            0
+                        </strong>
 
+                    </div>
 
+                </div>
 
 
+                <div class="final-report-stat total">
 
+                    <div class="final-stat-icon">
+                        #
+                    </div>
 
+                    <div>
 
+                        <span>
+                            کل سوالات
+                        </span>
 
+                        <strong id="studentQuestionCount">
+                            0
+                        </strong>
 
-<!-- ==========================================
-        PROGRESS BOX
-        وضعیت مسیر
-========================================== -->
+                    </div>
 
+                </div>
 
-<div class="exam-warning" id="progressBox">
+            </div>
 
 
-<i data-lucide="sparkles"></i>
+            <div class="final-report-footer">
 
+                <span>
+                    نتیجه آزمون ثبت شده است
+                </span>
 
+                <small>
+                    این نتیجه پس از ۲۴ ساعت از پنل حذف می‌شود.
+                </small>
 
+            </div>
 
-<p id="progressText">
+        </section>
 
-
-آفرین! تا امروز ۷۰٪ مسیر برنامه رو کامل کردی.
-ادامه بده تا به هدف نزدیک‌تر بشی.
-
-
-</p>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-</section>
-<section class="active-exams-card" id="activeExamsCard">
-
-
-<div class="section-title">
-
-<i data-lucide="files"></i>
-
-<h3>
-آزمون‌های فعال
-</h3>
-
-</div>
-
-
-<div class="active-exams-list" id="activeExamsList">
-
-</div>
-
-
-</section>
-<section class="history-card" id="recentExamsCard">
-
-
-
-<div class="section-title" id="recentExamsTitle">
-
-
-<i data-lucide="history"></i>
-
-
-<h3>
-آزمون‌های اخیر
-</h3>
-
-
-</div>
-
-
-
-
-
-<div class="recent-exams-list" id="recentExamsList">
-
-
-
-</div>
-
-
-
-
-
-</section>
-
-
-<!-- =========================
-        EXAM INFORMATION
-========================= -->
-<section class="exam-info-card" id="examInfoCard">
-
-
-
-<!-- ==========================================
-        EXAM INFO HEADER
-========================================== -->
-
-
-<div class="exam-info-header" id="examInfoHeader">
-
-
-    <div class="info-line"></div>
-
-
-    <div class="info-title" id="examInfoTitle">
-
-        <i data-lucide="info"></i>
-
-        <h3 id="examInfoTitleText">
-            اطلاعات آزمون
-        </h3>
-
-    </div>
-
-
-    <div class="info-line"></div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="exam-info-layout" id="examInfoLayout">
-
-
-
-
-
-
-<div class="exam-details-panel" id="examDetailsPanel">
-
-
-
-
-
-<div class="exam-summary-grid" id="examSummaryGrid">
-
-
-
-
-<!-- 
-<div class="exam-summary-item" id="questionCountBox">
-
-<i data-lucide="file-question"></i>
-
-<div>
-
-<span>
-تعداد سوال
-</span>
-
-
-<strong id="questionCountValue">
-70
-</strong>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="exam-summary-item" id="examTimeBox">
-
-<i data-lucide="clock"></i>
-
-<div>
-
-<span>
-زمان آزمون
-</span>
-
-
-<strong id="examTimeValue">
-90 دقیقه
-</strong>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="exam-summary-item" id="answeredCountBox">
-
-<i data-lucide="check-circle"></i>
-
-<div>
-
-<span>
-پاسخ داده شده
-</span>
-
-
-<strong id="answeredCountValue">
-54
-</strong>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="exam-summary-item" id="examPercentBox">
-
-<i data-lucide="percent"></i>
-
-<div>
-
-<span>
-درصد
-</span>
-
-
-<strong id="examPercentValue">
-78٪
-</strong>
-
-
-</div>
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="exam-analysis-box" id="examAnalysisBox">
-
-
-
-
-
-<div class="analysis-title" id="analysisTitle">
-
-<i data-lucide="chart-line"></i>
-
-تحلیل عملکرد
-
-</div>
-
-
-
-
-
-
-
-
-<div class="analysis-row" id="biologyAnalysisRow">
-
-<span>
-زیست
-</span>
-
-
-<div class="bar">
-
-<div id="biologyProgressBar" style="width:82%"></div>
-
-</div>
-
-
-<strong id="biologyPercent">
-82٪
-</strong>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="analysis-row" id="mathAnalysisRow">
-
-<span>
-ریاضی
-</span>
-
-
-<div class="bar">
-
-<div id="mathProgressBar" style="width:64%"></div>
-
-</div>
-
-
-<strong id="mathPercent">
-64٪
-</strong>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="analysis-row" id="physicsAnalysisRow">
-
-<span>
-فیزیک
-</span>
-
-
-<div class="bar">
-
-<div id="physicsProgressBar" style="width:73%"></div>
-
-</div>
-
-
-<strong id="physicsPercent">
-73٪
-</strong>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="ai-analysis-card" id="aiAnalysisCard">
-
-
-
-
-
-<div class="ai-header" id="aiHeader">
-
-
-
-
-
-<div class="ai-icon" id="aiIcon">
-
-<i data-lucide="bot"></i>
-
-</div>
-
-
-
-
-
-<div>
-
-<h4 id="aiTitle">
-دستیار هوشمند
-</h4>
-
-
-<span id="aiSubtitle">
-تحلیل آزمون با هوش مصنوعی
-</span>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="ai-message" id="aiMessage">
-
-
-سلام امیرحسین 👋
-
-<br>
-
-آزمونت بررسی شد.
-
-<br><br>
-
-نقطه قوت:
-زیست عملکرد خوبی داشته.
-
-<br>
-
-پیشنهاد:
-ریاضی نیاز به مرور بیشتر دارد.
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="ai-input-box" id="aiInputBox">
-
-
-
-
-
-<input 
-id="aiQuestionInput"
-type="text"
-placeholder="از هوش مصنوعی سوال بپرس..."
->
-
-
-
-
-
-<button id="aiSendButton">
-
-<i data-lucide="send"></i>
-
-</button>
-
-
-
-
-
-</div> -->
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-</section>
-
-
+    </section>
 
 </main>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="../config.js"></script>
+
+<script>
+
+/* =========================================
+   بررسی شرکت قبلی در آزمون
+   ========================================= */
+
+async function enterExam(examId) {
+
+    try {
+
+        const token = localStorage.getItem("authToken");
+
+        if (!token) {
+            showExamMessage("لطفاً ابتدا وارد حساب کاربری خود شوید.");
+            return;
+        }
+
+        const response = await fetch(
+            `${API_URL}/exam-submission/check/${examId}`,
+            {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            }
+        );
+
+        const data = await response.json();
+
+        /* قبلاً در آزمون شرکت کرده */
+        if (data.alreadySubmitted) {
+
+            showExamMessage(
+                "شما قبلاً در این آزمون شرکت کرده‌اید."
+            );
+
+            return;
+        }
+
+        /* اجازه ورود به آزمون */
+        sessionStorage.setItem(
+            "selectedExamId",
+            examId
+        );
+
+        window.location.href = "exam.html";
+
+    } catch (error) {
+
+        console.error(
+            "CHECK EXAM ERROR:",
+            error
+        );
+
+        showExamMessage(
+            "خطا در بررسی وضعیت آزمون. دوباره تلاش کنید."
+        );
+    }
+}
+
+
+/* =========================================
+   نمایش پیام سمت راست
+   ========================================= */
+
+function showExamMessage(message) {
+
+    const oldMessage =
+        document.querySelector(".exam-message");
+
+    if (oldMessage) {
+        oldMessage.remove();
+    }
+
+    const messageBox =
+        document.createElement("div");
+
+    messageBox.className = "exam-message";
+
+    messageBox.textContent = message;
+
+    document.body.appendChild(messageBox);
+
+    requestAnimationFrame(() => {
+
+        messageBox.classList.add("show");
+
+    });
+
+    setTimeout(() => {
+
+        messageBox.classList.remove("show");
+
+        setTimeout(() => {
+
+            messageBox.remove();
+
+        }, 300);
+
+    }, 3500);
+}
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("STUDENT EXAM ANALYSIS READY");
+
+
+    // =====================================
+    // IDS
+    // =====================================
+
+    const userId =
+        localStorage.getItem("analysisUserId");
+
+    const examId =
+        localStorage.getItem("analysisExamId");
+
+
+    console.log("USER ID:", userId);
+    console.log("EXAM ID:", examId);
+
+
+    if (!userId || !examId) {
+
+        console.error("USER ID OR EXAM ID NOT FOUND");
+
+        return;
+    }
+
+
+    // =====================================
+    // STUDENT RESULT ELEMENTS
+    // =====================================
+
+    const examName =
+        document.getElementById("studentExamName");
+
+    const finalScore =
+        document.getElementById("studentFinalScore");
+
+    const correctCount =
+        document.getElementById("studentCorrectCount");
+
+    const wrongCount =
+        document.getElementById("studentWrongCount");
+
+    const emptyCount =
+        document.getElementById("studentEmptyCount");
+
+    const answeredCount =
+        document.getElementById("studentAnsweredCount");
+
+    const questionCount =
+        document.getElementById("studentQuestionCount");
+
+
+    // =====================================
+    // LOAD SAME ADMIN ANALYSIS API
+    // =====================================
+
+    async function loadStudentResult() {
+
+        try {
+
+            const url =
+                `${API_URL}/admin/analysis/${examId}/${userId}`;
+
+
+            console.log(
+                "STUDENT ANALYSIS URL:",
+                url
+            );
+
+
+            const response =
+                await fetch(url);
+
+
+            const raw =
+                await response.text();
+
+
+            console.log(
+                "STUDENT ANALYSIS RAW:",
+                raw
+            );
+
+
+            let data;
+
+            try {
+
+                data = JSON.parse(raw);
+
+            } catch {
+
+                throw new Error(
+                    "SERVER JSON RETURN نکرد"
+                );
+
+            }
+
+
+            console.log(
+                "STUDENT ANALYSIS DATA:",
+                data
+            );
+
+
+            if (!data.success) {
+
+                throw new Error(
+                    data.message ||
+                    "تحلیل آزمون پیدا نشد"
+                );
+
+            }
+
+
+            // =====================================
+            // DATA
+            // =====================================
+
+            const user =
+                data.user || {};
+
+            const exam =
+                data.exam || {};
+
+            const summary =
+                data.summary || {};
+
+
+            console.log(
+                "USER:",
+                user
+            );
+
+            console.log(
+                "EXAM:",
+                exam
+            );
+
+            console.log(
+                "SUMMARY:",
+                summary
+            );
+
+
+            // =====================================
+            // EXAM NAME
+            // =====================================
+
+            if (examName) {
+
+                examName.textContent =
+                    exam.title || "-";
+
+            }
+
+
+            // =====================================
+            // TOTAL QUESTIONS
+            // =====================================
+
+            if (questionCount) {
+
+                questionCount.textContent =
+                    exam.totalQuestions ??
+                    summary.total ??
+                    0;
+
+            }
+
+
+            // =====================================
+            // CORRECT
+            // =====================================
+
+            if (correctCount) {
+
+                correctCount.textContent =
+                    summary.correct || 0;
+
+            }
+
+
+            // =====================================
+            // WRONG
+            // =====================================
+
+            if (wrongCount) {
+
+                wrongCount.textContent =
+                    summary.wrong || 0;
+
+            }
+
+
+            // =====================================
+            // EMPTY
+            // =====================================
+
+            if (emptyCount) {
+
+                emptyCount.textContent =
+                    summary.empty || 0;
+
+            }
+
+
+            // =====================================
+            // ANSWERED
+            // =====================================
+
+            if (answeredCount) {
+
+                answeredCount.textContent =
+                    (summary.correct || 0) +
+                    (summary.wrong || 0);
+
+            }
+
+
+            // =====================================
+            // SCORE
+            // =====================================
+
+            if (finalScore) {
+
+                finalScore.textContent =
+                    summary.percent || 0;
+
+            }
+
+
+            console.log(
+                "STUDENT RESULT LOADED SUCCESSFULLY"
+            );
+
+        }
+
+
+        catch (error) {
+
+            console.error(
+                "STUDENT ANALYSIS ERROR:",
+                error
+            );
+
+        }
+
+    }
+
+
+    // =====================================
+    // RUN
+    // =====================================
+
+    loadStudentResult();
+
+});
+
+</script>
+
 
 <script>
 
