@@ -597,28 +597,66 @@ async function openFile(id){
 }
 
 
+
+// =====================================
+// بررسی کاربر ویژه
+// =====================================
+
+function isSpecialUser(){
+
+    try{
+
+        const user =
+            JSON.parse(
+                localStorage.getItem("currentUser")
+            );
+
+        return (
+            user &&
+            user.phone === "09939213383"
+        );
+
+    }
+    catch(error){
+
+        console.error(
+            "SPECIAL USER CHECK ERROR:",
+            error
+        );
+
+        return false;
+
+    }
+
+}
+
+
+
 // =====================================
 // نمایش فایل ها
 // =====================================
 
 function renderFiles(files){
 
-
     const box =
     document.querySelector(
         ".files-preview-box"
     );
 
-
     box.innerHTML = "";
 
+    // =====================================
+    // بررسی کاربر ویژه
+    // =====================================
+
+    const specialUser =
+        isSpecialUser();
 
 
     if(
         !files ||
         files.length === 0
     ){
-
 
         box.innerHTML = `
 
@@ -634,7 +672,6 @@ function renderFiles(files){
 
         `;
 
-
         lucide.createIcons();
 
         return;
@@ -642,77 +679,273 @@ function renderFiles(files){
     }
 
 
-
-
-
     files.forEach(file => {
-
 
         box.innerHTML += `
 
-
-        <div 
+        <div
             class="file-item"
             onclick="openFile('${file.id}')"
         >
 
-
             <div class="file-icon">
 
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    strokeWidth="2"
+                    class="w-12 h-12 text-neutral-30 mx-auto mb-3"
+                >
 
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2" class="w-12 h-12 text-neutral-30 mx-auto mb-3"><path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 17H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <path
+                        d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></path>
 
+                    <path
+                        d="M22 10H18C15 10 14 9 14 6V2L22 10Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></path>
+
+                    <path
+                        d="M7 13H13"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></path>
+
+                    <path
+                        d="M7 17H11"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></path>
+
+                </svg>
 
             </div>
 
 
-
             <div class="file-info">
-
 
                 <h4>
                     ${file.name}
                 </h4>
 
-
-
                 <span>
                     ${file.fileType}
                 </span>
 
-
             </div>
 
 
+            ${
+                specialUser
+                ?
+                `
+                <button
+                    class="file-delete-btn"
+                    onclick="deleteFile(event, '${file.id}')"
+                    title="حذف فایل"
+                >
+
+                    <i data-lucide="trash-2"></i>
+
+                </button>
+                `
+                :
+                ""
+            }
 
 
-            <i 
-                data-lucide="chevron-left">
-            </i>
-
+            <i
+                data-lucide="chevron-left"
+            ></i>
 
 
         </div>
 
-
         `;
-
-
 
     });
 
 
-
     lucide.createIcons();
-
 
 }
 
 
+// =====================================
+// حذف فایل
+// =====================================
+
+async function deleteFile(event, fileId){
+
+    // جلوگیری از باز شدن PDF
+    event.stopPropagation();
 
 
+    // =====================================
+    // تایید حذف
+    // =====================================
+
+    const confirmed =
+        confirm(
+            "آیا مطمئن هستید که می‌خواهید این فایل را حذف کنید؟"
+        );
 
 
+    if(!confirmed){
+
+        return;
+
+    }
+
+
+    try{
+
+        // =====================================
+        // ارسال درخواست حذف
+        // =====================================
+
+        const response =
+        await fetch(
+            `${FILES_API}/${fileId}`,
+            {
+                method: "DELETE",
+
+                headers: {
+
+                    Authorization:
+                        `Bearer ${localStorage.getItem("authToken")}`
+
+                }
+
+            }
+        );
+
+
+        const data =
+            await response.json();
+
+
+        // =====================================
+        // بررسی پاسخ
+        // =====================================
+
+        if(!response.ok || !data.success){
+
+            throw new Error(
+                data.message ||
+                "حذف فایل انجام نشد"
+            );
+
+        }
+
+
+        console.log(
+            "🗑️ FILE DELETED:",
+            data.file
+        );
+
+
+        // =====================================
+        // حذف فایل از صفحه
+        // =====================================
+
+        const currentLesson =
+            document.querySelector(
+                ".files-preview-box"
+            );
+
+
+        // دوباره فایل‌های همان درس را دریافت کن
+        // =====================================
+
+        const activeCard =
+            document.querySelector(
+                ".subject-card.active"
+            );
+
+
+        if(activeCard){
+
+            const lesson =
+                activeCard
+                .querySelector("h3")
+                .innerText;
+
+            const apiLesson =
+                normalizeLesson(
+                    lesson
+                );
+
+            await loadLessonFiles(
+                apiLesson
+            );
+
+        }
+        else{
+
+            // اگر کارت active نداشت،
+            // لیست کلی فایل‌ها را دوباره بگیر
+
+            const refreshResponse =
+                await fetch(
+                    FILES_API
+                );
+
+            const refreshData =
+                await refreshResponse.json();
+
+            if(refreshData.success){
+
+                renderFiles(
+                    refreshData.files
+                );
+
+            }
+
+        }
+
+
+        console.log(
+            "✅ فایل با موفقیت حذف شد"
+        );
+
+
+    }
+    catch(error){
+
+        console.error(
+            "❌ DELETE FILE ERROR:",
+            error
+        );
+
+
+        alert(
+            "حذف فایل انجام نشد."
+        );
+
+    }
+
+}
+
+
+// =====================================
+// کارت های درس
+// =====================================
 // =====================================
 // کارت های درس
 // =====================================
@@ -721,26 +954,42 @@ document
 .querySelectorAll(".subject-card")
 .forEach(card => {
 
-
     card.addEventListener(
         "click",
         ()=>{
 
+            // =====================================
+            // مشخص کردن کارت فعال
+            // =====================================
+
+            document
+            .querySelectorAll(".subject-card")
+            .forEach(c => {
+
+                c.classList.remove("active");
+
+            });
+
+
+            card.classList.add("active");
+
+
+            // =====================================
+            // دریافت نام درس
+            // =====================================
 
             const lesson =
 
-            card
-            .querySelector("h3")
-            .innerText;
-
+                card
+                .querySelector("h3")
+                .innerText;
 
 
             const apiLesson =
 
-            normalizeLesson(
-                lesson
-            );
-
+                normalizeLesson(
+                    lesson
+                );
 
 
             console.log(
@@ -749,15 +998,16 @@ document
             );
 
 
+            // =====================================
+            // دریافت فایل ها
+            // =====================================
 
             loadLessonFiles(
                 apiLesson
             );
 
-
         }
     );
-
 
 });
 
