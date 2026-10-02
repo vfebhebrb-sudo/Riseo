@@ -14,5 +14,5 @@
 
 
 
-const API_URL = "https://iran-1.onrender.com/api";
+const API_URL = "https://iran-production-d9c4.up.railway.app//api";
 // const API_URL = "http://localhost:3000/api";

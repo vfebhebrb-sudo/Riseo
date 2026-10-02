@@ -1,7 +1,7 @@
 const CONFIG = {
 
     API:
-    "https://iran-1.onrender.com",
+    "https://iran-production-d9c4.up.railway.app/",
 
     ENDPOINTS:{
 
