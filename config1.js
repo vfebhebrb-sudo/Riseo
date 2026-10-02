@@ -1,6 +1,6 @@
 const CONFIG = {
 
-    API: "https://iran-production-d9c4.up.railway.app/",
+    API: "https://iran-production-d9c4.up.railway.app",
 
     ENDPOINTS: {
 
