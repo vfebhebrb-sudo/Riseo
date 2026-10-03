@@ -1,3 +1,4 @@
+
 /* =================================
         OTP SYSTEM
 ================================= */
@@ -273,9 +274,9 @@ headers:{
 
 body:JSON.stringify({
 
-phone:phone,
+    phone:phone,
 
-chatId:rubikaChatId
+    chatId:userChatId
 
 })
 

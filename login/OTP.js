@@ -184,9 +184,8 @@ phoneNumber.value.trim();
 
 
 
-const rubikaChatId =
+const userChatId =
 chatId.value.trim();
-
 
 
 
@@ -210,18 +209,14 @@ if(!validatePhone(phone)){
 
 
 
-if(!rubikaChatId){
-
+if(!userChatId){
 
     alert(
-        "شناسه روبیکا را وارد کنید"
+        "شناسه تلگرام یا روبیکا را وارد کنید"
     );
 
-
     return;
-
 }
-
 
 
 
@@ -273,9 +268,9 @@ headers:{
 
 body:JSON.stringify({
 
-phone:phone,
+    phone:phone,
 
-chatId:rubikaChatId
+    chatId:userChatId
 
 })
 
@@ -535,8 +530,7 @@ if (otpForm) {
                     RUBIKA CHAT ID
             ============================= */
 
-            const rubikaChatId =
-                chatId.value.trim();
+const userChatId = chatId.value.trim();
 
 
             /* =============================
@@ -644,33 +638,24 @@ if (otpForm) {
 
                             },
 
-                            body: JSON.stringify({
+                        body: JSON.stringify({
 
-                                phone:
+                            phone: phone,
 
-                                    phone,
+                            chatId: userChatId,
 
-                                chatId:
+                            otp: otpCode,
 
-                                    rubikaChatId,
+                            fullname:
+                                registerData.fullname,
 
-                                otp:
+                            email:
+                                registerData.email,
 
-                                    otpCode,
+                            password:
+                                registerData.password
 
-                                fullname:
-
-                                    registerData.fullname,
-
-                                email:
-
-                                    registerData.email,
-
-                                password:
-
-                                    registerData.password
-
-                            })
+                        })
 
                         }
 

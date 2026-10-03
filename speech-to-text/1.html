@@ -559,11 +559,7 @@ async function loadLessonFiles(lesson){
 // =====================================
 // باز کردن فایل
 // =====================================
-// =====================================
-// باز کردن فایل
-// =====================================
-
-async function openFile(id){
+async function openFile(id, source){
 
     try{
 
@@ -576,11 +572,30 @@ async function openFile(id){
 
 
         // =========================================
-        // مسیر PDF
+        // انتخاب Route بر اساس منبع فایل
         // =========================================
 
-        const PDF_URL =
-            `${CONFIG.API}${CONFIG.ENDPOINTS.FILES}/${id}/pdf`;
+        let PDF_URL;
+
+if(source === "telegram"){
+
+    PDF_URL =
+        `${CONFIG.API}/api/telegram-files/${id}/pdf`;
+
+}
+        else{
+
+            PDF_URL =
+                `${CONFIG.API}${CONFIG.ENDPOINTS.FILES}/${id}/pdf`;
+
+        }
+
+
+        console.log(
+            "📂 OPEN FILE:",
+            source,
+            PDF_URL
+        );
 
 
         // =========================================
@@ -611,7 +626,6 @@ async function openFile(id){
     }
 
 }
-
 
 
 // =====================================
@@ -699,10 +713,10 @@ function renderFiles(files){
 
         box.innerHTML += `
 
-        <div
-            class="file-item"
-            onclick="openFile('${file.id}')"
-        >
+<div
+    class="file-item"
+    onclick="openFile('${file.id}', '${file.source}')"
+>
 
             <div class="file-icon">
 
