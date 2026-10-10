@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>دستیار هوشمند</title>
+
+    <link
+        rel="stylesheet"
+        href="AI.css"
+    >
+
+        <link
+        rel="stylesheet"
+        href="./14.css"
+    >
+
+</head>
+
+<body class="dark-theme">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+        <div class="a4">
+            <p>
+                <span>R</span><span>I</span><span>S</span><span>E</span><span>O</span>
+            </p>
+        </div>
+
+
+            <!-- Search -->
+            <div class="header-search">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="m21 21-4.35-4.35
+                           M10.8 18a7.2 7.2 0 1 1 0-14.4
+                           7.2 7.2 0 0 1 0 14.4Z"
+                    />
+                </svg>
+
+                <input
+                    type="search"
+                    placeholder="جستجو در درس‌ها، فایل‌ها و..."
+                    aria-label="جستجو"
+                >
+
+            </div>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+
+                <!-- Notifications -->
+                <button
+                    type="button"
+                    class="header-action"
+                    aria-label="اعلان‌ها"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                        />
+                        <path d="M10 21h4"/>
+
+                    </svg>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- Theme -->
+                <button
+                    type="button"
+                    class="header-action"
+                    aria-label="تغییر حالت نمایش"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        />
+
+                        <path
+                            d="
+                                M12 2v2
+                                M12 20v2
+                                M4.93 4.93l1.42 1.42
+                                M17.65 17.65l1.42 1.42
+                                M2 12h2
+                                M20 12h2
+                                M4.93 19.07l1.42-1.42
+                                M17.65 6.35l1.42-1.42
+                            "
+                        />
+
+                    </svg>
+
+                </button>
+
+
+                <!-- User -->
+                <!-- <button
+                    type="button"
+                    class="user-menu"
+                    aria-label="پروفایل کاربری"
+                >
+
+                    <div class="user-avatar">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="3.2"
+                            />
+
+                            <path
+                                d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong>
+                         
+                        </strong>
+
+                        <span>
+                            دانش‌آموز
+                        </span>
+
+                    </div>
+
+
+                    <svg
+                        class="user-chevron"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="m7 10 5 5 5-5"/>
+                    </svg>
+
+                </button> -->
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             CATEGORY NAVIGATION
+        ========================================== -->
+
+        <nav
+            class="category-nav"
+            aria-label="دسته‌بندی اصلی"
+        >
+
+            <div class="category-inner">
+
+
+                <!-- Lessons -->
+                <a
+                    href="#"
+                    class="category-item active"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M4 5h16v14H4z"/>
+
+                            <path d="M8 9h8"/>
+
+                            <path d="M8 13h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        درس‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Exams -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="4"
+                                y="4"
+                                width="16"
+                                height="16"
+                                rx="2"
+                            />
+
+                            <path d="M8 9h8"/>
+
+                            <path d="M8 13h6"/>
+
+                            <path d="M8 17h4"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        آزمون‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Archive -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M3 7h7l2 2h9v10H3z"/>
+
+                            <path d="M3 7V5h7l2 2"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        بایگانی
+                    </span>
+
+                </a>
+
+
+                <!-- Schedule -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="4"
+                                y="5"
+                                width="16"
+                                height="15"
+                                rx="2"
+                            />
+
+                            <path d="M8 3v4"/>
+
+                            <path d="M16 3v4"/>
+
+                            <path d="M4 10h16"/>
+
+                            <path d="M8 14h3"/>
+
+                            <path d="M8 17h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        برنامه
+                    </span>
+
+                </a>
+
+
+                <!-- Files -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M5 4h14v16H5z"/>
+
+                            <path d="M8 8h8"/>
+
+                            <path d="M8 12h8"/>
+
+                            <path d="M8 16h5"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        فایل‌ها
+                    </span>
+
+                </a>
+
+
+                <!-- Notifications -->
+                <a
+                    href="#"
+                    class="category-item"
+                >
+
+                    <span class="category-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+
+                            <path d="M10 21h4"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        اعلان‌ها
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ai-workspace">
+
+    <!-- پنل سمت راست -->
+
+    <aside class="ai-side-panel ai-right-panel">
+
+        <div class="ai-panel-header">
+            <div class="ai-panel-icon">
+                <i data-lucide="sliders-horizontal"></i>
+            </div>
+
+            <div>
+                <h2>کنترل دستیار</h2>
+                <p>تنظیمات و کنترل‌ها</p>
+            </div>
+        </div>
+
+        <div class="ai-panel-content" id="aiRightPanelContent">
+            <!-- کنترل‌های فعلی را در این قسمت قرار می‌دهیم -->
+        </div>
+
+    </aside>
+
+
+    <!-- بخش مرکزی -->
+
+    <main class="ai-center-column">
+
+        <section class="ai-robot-card">
+
+            <div class="ai-robot-header">
+                <div>
+                    <span class="ai-status-dot"></span>
+                    <span>دستیار هوشمند</span>
+                </div>
+
+                <span class="ai-status-label">آماده به کار</span>
+            </div>
+
+            <!-- چشم‌های ربات: بدون تغییر در ساختار داخلی -->
+
+            <main class="ai-screen" id="aiScreen">
+                <!-- فقط دو چشم ربات -->
+                <div class="robot-eyes" id="robotEyes">
+                    <div class="eye-unit left-eye">
+                        <div class="robot-eye" id="leftEye"></div>
+                    </div>
+
+                    <div class="eye-unit right-eye">
+                        <div class="robot-eye" id="rightEye"></div>
+                    </div>
+                </div>
+            </main>
+
+
+        </section>
+
+
+        <!-- بخش چت در پایین -->
+
+        <section class="ai-chat-card" id="aiChatCard">
+
+            <div class="ai-chat-header">
+                <div>
+                    <h2>گفت‌وگو</h2>
+                    <p>با دستیار هوشمند صحبت کن</p>
+                </div>
+
+                <i data-lucide="messages-square"></i>
+            </div>
+
+            <div class="ai-chat-messages" id="aiChatMessages">
+                <div class="ai-chat-empty">
+                    <i data-lucide="message-circle"></i>
+                    <p>گفت‌وگوی شما اینجا نمایش داده می‌شود.</p>
+                </div>
+            </div>
+
+            <form class="ai-chat-form" id="aiChatForm">
+
+                <textarea
+                    id="aiChatInput"
+                    placeholder="پیامت رو بنویس..."
+                    rows="1"
+                ></textarea>
+
+                <button
+                    type="submit"
+                    id="aiChatSend"
+                    aria-label="ارسال پیام"
+                >
+                    <i data-lucide="send"></i>
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- پنل سمت چپ -->
+
+    <aside class="ai-side-panel ai-left-panel">
+
+        <div class="ai-panel-header">
+            <div class="ai-panel-icon">
+                <i data-lucide="layout-grid"></i>
+            </div>
+
+            <div>
+                <h2>ابزارها</h2>
+                <p>امکانات دستیار</p>
+            </div>
+        </div>
+
+        <div class="ai-panel-content" id="aiLeftPanelContent">
+            <!-- ابزارهای فعلی را در این قسمت قرار می‌دهیم -->
+        </div>
+
+    </aside>
+
+</div>
+
+
+<!-- فایل‌های اصلی پروژه -->
+
+<script src="./apiConfig.js"></script>
+<script src="./aiConfig.js"></script>
+<script src="./چشم‌های اصلی.js"></script>
+<script src="./حرکات چشم.js"></script>
+<script src="./AI-controls.js"></script>
+<script src="./aiTools.js"></script>
+<script src="script.js"></script>
+
+<!-- آیکون‌ها -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+</script>
+
+</body>
+
+</html>

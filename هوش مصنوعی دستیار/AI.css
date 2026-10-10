@@ -1,0 +1,1320 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+/* =====================================================
+   01. VARIABLES
+===================================================== */
+
+:root {
+    color-scheme: light;
+
+    --files-bg: #f1f3f6;
+    --files-text: #263143;
+
+    --ai-bg: #f1f3f6;
+    --ai-text: #263143;
+
+    --ai-card-bg: #f7f8fa;
+    --ai-card-border: #e5e8ed;
+    --ai-card-shadow: 0 2px 8px rgba(30, 38, 50, .035);
+
+    --ai-soft-bg: #edf0f4;
+    --ai-soft-border: #e1e5eb;
+
+    --ai-muted: #8993a2;
+    --ai-secondary: #596579;
+
+    --header-start: #f3f5f7;
+    --header-end: #eef1f4;
+
+    --border: #e3e7ec;
+    --title: #263143;
+
+    --icon: #596579;
+    --icon-bg-start: #edf0f4;
+    --icon-bg-end: #e8ecf1;
+    --icon-border: #e1e5eb;
+
+    --control-bg: #f0f2f5;
+    --control-bg-hover: #e9edf2;
+    --control-border: #e0e5ec;
+    --control-text: #263143;
+    --control-placeholder: #929baa;
+
+    --eye-blue: #1677ff;
+    --eye-glow: rgba(22, 119, 255, .28);
+
+    --accent: #3b82f6;
+    --accent-soft: rgba(59, 130, 246, .10);
+
+    --ai-panel-bg: var(--ai-card-bg);
+    --ai-border: var(--ai-card-border);
+    --ai-input-bg: #ffffff;
+
+    --sidebar-width: 250px;
+    --layout-gap: 15px;
+    --panel-radius: 14px;
+}
+
+body.dark-theme {
+    color-scheme: dark;
+
+    --files-bg: #171b22;
+    --files-text: #e5e7eb;
+
+    --ai-bg: #171b22;
+    --ai-text: #e5e7eb;
+
+    --ai-card-bg: #1d222b;
+    --ai-card-border: #292f3a;
+    --ai-card-shadow: 0 2px 10px rgba(0, 0, 0, .10);
+
+    --ai-soft-bg: #222833;
+    --ai-soft-border: #303744;
+
+    --ai-muted: #929dad;
+    --ai-secondary: #c5cedb;
+
+    --header-start: #20252e;
+    --header-end: #1d222b;
+
+    --border: #292f3a;
+    --title: #f1f5f9;
+
+    --icon: #c5cedb;
+    --icon-bg-start: #292f3a;
+    --icon-bg-end: #252b35;
+    --icon-border: #343c49;
+
+    --control-bg: #252b35;
+    --control-bg-hover: #2b323e;
+    --control-border: #343c49;
+    --control-text: #e5e7eb;
+    --control-placeholder: #929dad;
+
+    --eye-blue: #3b8cff;
+    --eye-glow: rgba(59, 140, 255, .30);
+
+    --accent: #60a5fa;
+    --accent-soft: rgba(96, 165, 250, .12);
+
+    --ai-panel-bg: #1d222b;
+    --ai-border: #292f3a;
+    --ai-input-bg: #191e26;
+}
+
+
+/* =====================================================
+   02. RESET & PAGE SCROLL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: var(--ai-bg);
+    color: var(--ai-text);
+
+    font-family: "Vazirmatn", sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   03. ORIGINAL AI SCREEN
+   کلاس‌ها و شناسه‌های چشم‌ها حفظ شده‌اند.
+===================================================== */
+
+.ai-app {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+.ai-screen {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 300px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(59, 130, 246, .09),
+            transparent 40%
+        ),
+        var(--ai-bg);
+}
+
+.robot-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.robot-eyes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+.eye-unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.robot-eye {
+    width: 90px;
+    height: 90px;
+
+    background: var(--eye-blue);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 20px var(--eye-glow),
+        0 0 45px rgba(59, 130, 246, .25);
+
+    transition: .3s ease;
+}
+
+.robot-eye.blink {
+    transform: scaleY(.08);
+}
+
+.robot-eye.state-surprised {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.robot-eye.state-sleepy {
+    height: 45px;
+    border-radius: 20px;
+}
+
+.robot-eye.state-happy {
+    border-radius: 35px 35px 15px 15px;
+}
+
+.robot-eye.state-sad {
+    border-radius: 15px 15px 35px 35px;
+}
+
+
+/* =====================================================
+   04. ROBOT EXPRESSION: ANGRY
+===================================================== */
+
+.ai-screen.angry .robot-eyes {
+    gap: 68px;
+}
+
+.ai-screen.angry .left-eye .robot-eye {
+    width: 104px;
+    height: 104px;
+    border-radius: 14px;
+
+    clip-path: polygon(
+        0% 8%,
+        68% 0%,
+        100% 32%,
+        100% 100%,
+        0% 100%
+    );
+
+    box-shadow:
+        0 0 9px rgba(22, 119, 255, .28),
+        0 0 24px rgba(22, 119, 255, .40);
+}
+
+.ai-screen.angry .right-eye .robot-eye {
+    width: 104px;
+    height: 104px;
+    border-radius: 14px;
+
+    clip-path: polygon(
+        32% 0%,
+        100% 8%,
+        100% 100%,
+        0% 100%,
+        0% 32%
+    );
+
+    box-shadow:
+        0 0 9px rgba(22, 119, 255, .28),
+        0 0 24px rgba(22, 119, 255, .40);
+}
+
+
+/* =====================================================
+   05. ROBOT EXPRESSION: HAPPY
+===================================================== */
+
+.ai-screen.happy .robot-eyes {
+    gap: 76px;
+}
+
+.ai-screen.happy .left-eye .robot-eye,
+.ai-screen.happy .right-eye .robot-eye {
+    width: 116px;
+    height: 108px;
+
+    border-radius: 58px 58px 18px 18px;
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .30),
+        0 0 30px rgba(22, 119, 255, .48);
+}
+
+
+/* =====================================================
+   06. ROBOT EXPRESSION: SEARCHING
+===================================================== */
+
+.ai-screen.searching .robot-eyes {
+    gap: 72px;
+}
+
+.ai-screen.searching .left-eye .robot-eye {
+    width: 108px;
+    height: 92px;
+
+    border-radius: 18px 42px 42px 18px;
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .30),
+        0 0 28px rgba(22, 119, 255, .46);
+}
+
+.ai-screen.searching .right-eye .robot-eye {
+    width: 108px;
+    height: 92px;
+
+    border-radius: 42px 18px 18px 42px;
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .30),
+        0 0 28px rgba(22, 119, 255, .46);
+}
+
+
+/* =====================================================
+   07. ROBOT EXPRESSION: THINKING
+===================================================== */
+
+.ai-screen.thinking .robot-eyes {
+    gap: 70px;
+}
+
+.ai-screen.thinking .left-eye .robot-eye {
+    width: 108px;
+    height: 96px;
+
+    border-radius: 22px 42px 18px 38px;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .28),
+        0 0 27px rgba(22, 119, 255, .44);
+}
+
+.ai-screen.thinking .right-eye .robot-eye {
+    width: 108px;
+    height: 96px;
+
+    border-radius: 42px 22px 38px 18px;
+    transform: translateY(5px);
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .28),
+        0 0 27px rgba(22, 119, 255, .44);
+}
+
+
+/* =====================================================
+   08. ROBOT EXPRESSION: SURPRISED
+===================================================== */
+
+.ai-screen.surprised .robot-eyes {
+    gap: 72px;
+}
+
+.ai-screen.surprised .left-eye .robot-eye,
+.ai-screen.surprised .right-eye .robot-eye {
+    width: 112px;
+    height: 124px;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px rgba(22, 119, 255, .32),
+        0 0 34px rgba(22, 119, 255, .52);
+}
+
+
+/* =====================================================
+   09. ROBOT EXPRESSION: LISTENING
+===================================================== */
+
+.ai-screen.listening .robot-eyes {
+    gap: 74px;
+}
+
+.ai-screen.listening .left-eye .robot-eye,
+.ai-screen.listening .right-eye .robot-eye {
+    width: 114px;
+    height: 112px;
+
+    border-radius: 28px 28px 34px 34px;
+
+    box-shadow:
+        0 0 11px rgba(22, 119, 255, .30),
+        0 0 30px rgba(22, 119, 255, .48);
+}
+
+
+/* =====================================================
+   10. ROBOT EXPRESSION: SPEAKING
+===================================================== */
+
+.ai-screen.speaking .robot-eyes {
+    gap: 78px;
+}
+
+.ai-screen.speaking .left-eye .robot-eye,
+.ai-screen.speaking .right-eye .robot-eye {
+    width: 120px;
+    height: 104px;
+
+    border-radius: 30px 30px 22px 22px;
+
+    box-shadow:
+        0 0 12px rgba(22, 119, 255, .32),
+        0 0 32px rgba(22, 119, 255, .50);
+}
+
+
+/* =====================================================
+   11. ROBOT EXPRESSION: CONFUSED
+===================================================== */
+
+.ai-screen.confused .robot-eyes {
+    gap: 70px;
+}
+
+.ai-screen.confused .left-eye .robot-eye {
+    width: 108px;
+    height: 112px;
+
+    border-radius: 42px 20px 28px 20px;
+    transform: translateY(5px) rotate(-4deg);
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .28),
+        0 0 28px rgba(22, 119, 255, .44);
+}
+
+.ai-screen.confused .right-eye .robot-eye {
+    width: 108px;
+    height: 112px;
+
+    border-radius: 20px 42px 20px 28px;
+    transform: translateY(-5px) rotate(4deg);
+
+    box-shadow:
+        0 0 10px rgba(22, 119, 255, .28),
+        0 0 28px rgba(22, 119, 255, .44);
+}
+
+
+/* =====================================================
+   12. WORKSPACE LAYOUT
+===================================================== */
+
+.ai-workspace,
+.ai-workspace * {
+    box-sizing: border-box;
+}
+
+.ai-workspace {
+    direction: rtl;
+
+    display: grid;
+    grid-template-columns:
+        minmax(210px, var(--sidebar-width))
+        minmax(0, 1fr)
+        minmax(210px, var(--sidebar-width));
+
+    align-items: start;
+    gap: var(--layout-gap);
+
+    width: 100%;
+    max-width: 1700px;
+    min-height: 100vh;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 16px;
+
+    overflow: visible;
+
+    color: var(--ai-text);
+}
+
+.ai-side-panel,
+.ai-robot-card,
+.ai-chat-card {
+    min-width: 0;
+
+    border: 1px solid var(--ai-card-border);
+    border-radius: var(--panel-radius);
+
+    background: var(--ai-card-bg);
+    box-shadow: var(--ai-card-shadow);
+}
+
+
+/* =====================================================
+   13. SIDE PANELS
+===================================================== */
+
+.ai-side-panel {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.ai-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 10px 11px 0;
+    padding: 11px 10px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: var(--ai-soft-bg);
+}
+
+.ai-panel-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid var(--ai-soft-border);
+    border-radius: 10px;
+
+    background: var(--ai-card-bg);
+    color: var(--accent);
+}
+
+.ai-panel-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.ai-panel-header h2 {
+    margin: 0;
+
+    color: var(--ai-text);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.ai-panel-header p {
+    margin: 2px 0 0;
+
+    color: var(--ai-muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.ai-panel-content {
+    flex: 1;
+    min-width: 0;
+
+    padding: 12px;
+}
+
+
+/* =====================================================
+   14. CENTER COLUMN
+===================================================== */
+
+.ai-center-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-gap);
+
+    min-width: 0;
+    width: 100%;
+}
+
+
+/* =====================================================
+   15. ROBOT CARD
+===================================================== */
+
+.ai-robot-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 370px;
+
+    overflow: hidden;
+}
+
+.ai-robot-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin: 10px 11px 0;
+    padding: 10px 12px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: var(--ai-soft-bg);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ai-robot-header > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-status-dot {
+    flex-shrink: 0;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #35c994;
+
+    box-shadow: 0 0 8px rgba(53, 201, 148, .22);
+}
+
+.ai-status-label {
+    color: var(--ai-muted);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/*
+   ظرف نمایش چشم‌ها.
+   ساختار داخلی #aiScreen تغییر نمی‌کند.
+   این قانون فقط ظاهر aiScreen داخل کارت را تنظیم می‌کند.
+*/
+
+.ai-robot-card .ai-screen {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    width: 100%;
+    height: auto;
+    min-height: 245px;
+
+    margin: 0;
+    padding: 12px;
+
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(59, 130, 246, .075),
+            transparent 48%
+        ),
+        transparent;
+}
+
+.ai-robot-caption {
+    padding: 0 16px 20px;
+    text-align: center;
+}
+
+.ai-robot-caption h2 {
+    margin: 0;
+
+    color: var(--ai-text);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ai-robot-caption p {
+    margin: 5px 0 0;
+
+    color: var(--ai-muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   16. CHAT CARD
+===================================================== */
+
+.ai-chat-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 300px;
+
+    overflow: hidden;
+}
+
+.ai-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin: 10px 11px 0;
+    padding: 10px 12px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: var(--ai-soft-bg);
+}
+
+.ai-chat-header h2 {
+    margin: 0;
+
+    color: var(--ai-text);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ai-chat-header p {
+    margin: 3px 0 0;
+
+    color: var(--ai-muted);
+    font-size: 10px;
+}
+
+.ai-chat-header > svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    color: var(--accent);
+}
+
+.ai-chat-messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+
+    min-height: 150px;
+    padding: 15px;
+}
+
+.ai-chat-empty {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 120px;
+
+    color: var(--ai-muted);
+    text-align: center;
+}
+
+.ai-chat-empty svg {
+    width: 26px;
+    height: 26px;
+
+    color: var(--accent);
+    opacity: .85;
+}
+
+.ai-chat-empty p {
+    margin: 0;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   17. CHAT INPUT
+===================================================== */
+
+.ai-chat-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+
+    margin: 0 11px 11px;
+    padding: 9px;
+
+    border: 1px solid var(--ai-card-border);
+    border-radius: 12px;
+
+    background: var(--ai-input-bg);
+}
+
+.ai-chat-form textarea {
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    max-height: 140px;
+
+    resize: vertical;
+
+    padding: 10px 11px;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+    outline: none;
+
+    background: transparent;
+    color: var(--ai-text);
+
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.ai-chat-form textarea::placeholder {
+    color: var(--control-placeholder);
+}
+
+.ai-chat-form textarea:focus {
+    border-color: var(--accent);
+    background: var(--ai-card-bg);
+}
+
+.ai-chat-form button {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+
+    background: var(--accent);
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.ai-chat-form button:hover {
+    background: #3478df;
+}
+
+.ai-chat-form button:active {
+    transform: scale(.96);
+}
+
+.ai-chat-form button svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =====================================================
+   18. GENERAL PANEL CONTENT
+===================================================== */
+
+.ai-panel-content > :first-child {
+    margin-top: 0;
+}
+
+.ai-panel-content > :last-child {
+    margin-bottom: 0;
+}
+
+.ai-panel-content button,
+.ai-panel-content input,
+.ai-panel-content textarea,
+.ai-panel-content select {
+    max-width: 100%;
+}
+
+.ai-panel-content input,
+.ai-panel-content textarea,
+.ai-panel-content select {
+    color: var(--control-text);
+    background: var(--control-bg);
+    border-color: var(--control-border);
+}
+
+.ai-panel-content input::placeholder,
+.ai-panel-content textarea::placeholder {
+    color: var(--control-placeholder);
+}
+
+
+/* =====================================================
+   19. TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+    :root {
+        --layout-gap: 12px;
+    }
+
+    .ai-workspace {
+        grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+        padding: 13px;
+    }
+
+    .ai-left-panel {
+        grid-column: 1 / -1;
+        min-height: 160px;
+    }
+
+    .ai-left-panel .ai-panel-content {
+        min-height: 70px;
+    }
+}
+
+
+/* =====================================================
+   20. MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+    :root {
+        --layout-gap: 12px;
+        --panel-radius: 12px;
+    }
+
+    html,
+    body {
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .ai-workspace {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 10px;
+        overflow: visible;
+    }
+
+    .ai-center-column {
+        order: 1;
+    }
+
+    .ai-right-panel {
+        order: 2;
+    }
+
+    .ai-left-panel {
+        order: 3;
+        min-height: 130px;
+    }
+
+    .ai-side-panel {
+        width: 100%;
+        min-height: 125px;
+    }
+
+    .ai-panel-header {
+        margin: 8px 8px 0;
+        padding: 9px;
+    }
+
+    .ai-panel-content {
+        padding: 10px;
+    }
+
+    .ai-robot-card {
+        min-height: 330px;
+    }
+
+    .ai-robot-header {
+        margin: 8px 8px 0;
+        padding: 9px 10px;
+    }
+
+    .ai-robot-card .ai-screen {
+        min-height: 220px;
+        padding: 8px;
+    }
+
+    .ai-robot-caption {
+        padding: 0 12px 17px;
+    }
+
+    .ai-robot-caption h2 {
+        font-size: 14px;
+    }
+
+    .ai-robot-caption p {
+        font-size: 10px;
+    }
+
+    .robot-eyes {
+        gap: 35px;
+    }
+
+    .robot-eye {
+        width: 65px;
+        height: 65px;
+    }
+
+    .ai-chat-card {
+        min-height: 280px;
+    }
+
+    .ai-chat-header {
+        margin: 8px 8px 0;
+        padding: 9px 10px;
+    }
+
+    .ai-chat-messages {
+        padding: 12px;
+    }
+
+    .ai-chat-form {
+        margin: 0 8px 8px;
+        padding: 7px;
+    }
+
+    .ai-chat-form textarea {
+        min-height: 40px;
+        font-size: 12px;
+    }
+
+    .ai-chat-form button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* =====================================================
+   21. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+    .ai-workspace {
+        padding: 7px;
+    }
+
+    .ai-robot-card {
+        min-height: 305px;
+    }
+
+    .ai-robot-card .ai-screen {
+        min-height: 200px;
+    }
+
+    .robot-eyes {
+        gap: 27px;
+    }
+
+    .ai-status-label {
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   22. REDUCED MOTION ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .robot-eye,
+    .ai-chat-form button {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   01. CUSTOM SCROLLBAR
+========================================= */
+
+html,
+body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--ai-soft-border) transparent;
+}
+
+/* Chrome, Edge, Safari */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ai-soft-border);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ai-muted);
+    background-clip: padding-box;
+}
+
+
+/* =========================================
+   02. SIDE PANELS — FILL EMPTY SPACE
+========================================= */
+
+.ai-workspace {
+    align-items: stretch;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+.ai-side-panel {
+    align-self: stretch;
+    height: auto;
+    min-height: 100%;
+}
+
+/* هر دو پنل از بالا تا انتهای ستون امتداد می‌یابند */
+
+.ai-right-panel,
+.ai-left-panel {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    min-height: 100%;
+}
+
+.ai-panel-content {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+/* =========================================
+   03. TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+    .ai-workspace {
+        align-items: stretch;
+    }
+
+    .ai-right-panel {
+        min-height: 100%;
+    }
+
+    .ai-left-panel {
+        grid-column: 1 / -1;
+        min-height: 180px;
+    }
+}
+
+/* =========================================
+   04. MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .ai-workspace {
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
+    }
+
+    .ai-right-panel,
+    .ai-left-panel {
+        height: auto;
+        min-height: 125px;
+    }
+
+    .ai-panel-content {
+        min-height: 55px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SMALLER ROBOT CARD
+========================================= */
+
+.ai-robot-card {
+    min-height: 290px;
+}
+
+.ai-robot-card .ai-screen {
+    min-height: 185px;
+}
+
+/* چشم‌های عادی */
+
+.ai-robot-card .robot-eyes {
+    gap: 38px;
+}
+
+.ai-robot-card .robot-eye {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+}
+
+/* موبایل */
+
+@media (max-width: 650px) {
+    .ai-robot-card {
+        min-height: 255px;
+    }
+
+    .ai-robot-card .ai-screen {
+        min-height: 160px;
+    }
+
+    .ai-robot-card .robot-eyes {
+        gap: 27px;
+    }
+
+    .ai-robot-card .robot-eye {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+    }
+}
+
+
+/* =========================================
+   GLOBAL PAGE SIDE SPACING
+   تمام بخش‌ها به‌جز هدر
+========================================= */
+/* =========================================
+ALIGN AI WORKSPACE WITH HEADER
+========================================= */
+
+.ai-workspace {
+width: min(1440px, calc(100% - 32px));
+margin-right: auto;
+margin-left: auto;
+box-sizing: border-box;
+}
